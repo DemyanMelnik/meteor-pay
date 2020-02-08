@@ -1,0 +1,52 @@
+<form (ngSubmit)="pay()" [formGroup]="paymentForm" novalidate>
+  <div class="form-group">
+    <label class="d-block">
+      <input
+        type="text"
+        class="form-control"
+        formControlName="phoneNumber"
+        aria-label="'Phone number' | translate"
+        [placeholder]="'Phone number' | translate"
+        prefix="+7"
+        mask="(000) 000-00-00"
+        [showMaskTyped]="true"
+        placeHolderCharacter="*"
+        required
+      />
+
+      <small [hidden]="!isPhoneNumberRequiredErrorVisible" class="text-danger" translate>
+        Phone number is required
+      </small>
+    </label>
+
+    <label class="d-block">
+      <input
+        type="text"
+        class="form-control"
+        formControlName="paymentAmount"
+        aria-label="'Payment amount' | translate"
+        [placeholder]="'Payment amount' | translate"
+        suffix="₽"
+        mask="0000"
+        required
+      />
+
+      <small [hidden]="!isPaymentAmountRequiredErrorVisible"
+             class="text-danger"
+             translate>
+        Payment amount is required
+      </small>
+
+      <small [hidden]="!isPaymentAmountMaxValueErrorVisible"
+             class="text-danger"
+             translate>
+        {{'Payment amount must be less than' | translate}} {{ maxValueOfPaymentAmount }}
+      </small>
+    </label>
+  </div>
+
+  <button class="btn btn-dark w-100" type="submit" [disabled]="!isPaymentFormValid">
+    <i class="fas fa-meteor main-color"></i>&nbsp;
+    <span translate>Pay</span>
+  </button>
+</form>
