@@ -82,7 +82,7 @@ export class PaymentFormComponent {
   }
 
   get isPaymentFormValid() {
-    return this.paymentForm.valid && this.operatorParams?.operator;
+    return this.paymentForm.valid;
   }
 
   private createForm() {
