@@ -4,10 +4,12 @@ import { RouteReuseStrategy, RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { RouteReusableStrategy } from './route-reusable-strategy';
+import { PaymentsApiServiceProvider } from '@app/core/http/payments.api.service';
 
 @NgModule({
   imports: [CommonModule, TranslateModule, RouterModule],
   providers: [
+    PaymentsApiServiceProvider,
     {
       provide: RouteReuseStrategy,
       useClass: RouteReusableStrategy

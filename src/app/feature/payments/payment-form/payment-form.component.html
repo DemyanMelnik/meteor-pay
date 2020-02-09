@@ -21,26 +21,24 @@
 
     <label class="d-block">
       <input
-        type="text"
+        type="number"
         class="form-control"
         formControlName="paymentAmount"
         aria-label="'Payment amount' | translate"
         [placeholder]="'Payment amount' | translate"
-        suffix="₽"
-        mask="0000"
         required
       />
 
-      <small [hidden]="!isPaymentAmountRequiredErrorVisible"
-             class="text-danger"
-             translate>
+      <small [hidden]="!isPaymentAmountRequiredErrorVisible" class="text-danger" translate>
         Payment amount is required
       </small>
 
-      <small [hidden]="!isPaymentAmountMaxValueErrorVisible"
-             class="text-danger"
-             translate>
-        {{'Payment amount must be less than' | translate}} {{ maxValueOfPaymentAmount }}
+      <small [hidden]="!isPaymentAmountMaxValueErrorVisible" class="text-danger" translate>
+        {{ 'Payment amount must be less than' | translate }} {{ maxValueOfPaymentAmount }}
+      </small>
+
+      <small [hidden]="!isPaymentAmountMinValueErrorVisible" class="text-danger" translate>
+        {{ 'Payment amount must be more than' | translate }} {{ minValueOfPaymentAmount }}
       </small>
     </label>
   </div>

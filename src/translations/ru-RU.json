@@ -3,5 +3,8 @@
   "Pay": "Оплатить",
   "Phone number": "Номер телефона",
   "Payment amount": "Сумма платежа",
-  "Payment amount must be less than": "Сумма платежа должна быть меньше, чем"
+  "Phone number is required": "Номер телефона обязателен",
+  "Payment amount is required": "Сумма платежа обязательна",
+  "Payment amount must be less than": "Сумма платежа должна быть меньше, чем",
+  "Payment amount must be more than": "Сумма платежа должна быть больше, чем"
 }

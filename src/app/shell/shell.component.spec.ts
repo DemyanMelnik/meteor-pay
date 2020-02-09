@@ -3,12 +3,11 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { AuthenticationService, CredentialsService, CoreModule } from '@app/core';
-import { MockAuthenticationService } from '@app/core/authentication/authentication.service.mock';
-import { MockCredentialsService } from '@app/core/authentication/credentials.service.mock';
+import { CoreModule } from '@app/core';
 
-import { ShellComponent } from './shell.component';
-import { HeaderComponent } from './header/header.component';
+import { ShellComponent } from '@app/shell/shell.component';
+import { HeaderComponent } from '@app/shell/header/header.component';
+import { LoaderComponent } from '@app/shared';
 
 describe('ShellComponent', () => {
   let component: ShellComponent;
@@ -17,11 +16,7 @@ describe('ShellComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule, TranslateModule.forRoot(), NgbModule, CoreModule],
-      providers: [
-        { provide: AuthenticationService, useClass: MockAuthenticationService },
-        { provide: CredentialsService, useClass: MockCredentialsService }
-      ],
-      declarations: [HeaderComponent, ShellComponent]
+      declarations: [HeaderComponent, ShellComponent, LoaderComponent]
     }).compileComponents();
   }));
 

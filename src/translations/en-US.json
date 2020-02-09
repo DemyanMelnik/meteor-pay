@@ -3,5 +3,8 @@
   "Pay": "Pay",
   "Phone number": "Phone number",
   "Payment amount": "Payment amount",
-  "Payment amount must be less than": "Payment amount must be less than"
+  "Phone number is required": "Phone number is required",
+  "Payment amount is required": "Phone number is required",
+  "Payment amount must be less than": "Payment amount must be less than",
+  "Payment amount must be more than": "Payment amount must be more than"
 }

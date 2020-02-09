@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Params } from '@angular/router';
+import { PaymentsApiServiceProvider } from '@app/core/http/payments.api.service';
 
 @Component({
   selector: 'app-about',
@@ -10,10 +11,14 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class PaymentFormComponent implements OnInit {
   paymentForm!: FormGroup;
-  minValueOfPaymentAmount = 0;
+  minValueOfPaymentAmount = 1;
   maxValueOfPaymentAmount = 1000;
 
-  constructor(private formBuilder: FormBuilder, private activatedRoute: ActivatedRoute) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private activatedRoute: ActivatedRoute,
+    private paymentsApiService: PaymentsApiServiceProvider
+  ) {
     this.activatedRoute.queryParams.subscribe((params: Params) => {
       console.log(params);
     });
@@ -22,18 +27,31 @@ export class PaymentFormComponent implements OnInit {
 
   ngOnInit() {}
 
-  pay() {}
+  pay() {
+    this.paymentsApiService.sendPayment().subscribe(
+      response => {
+        console.log(response);
+      },
+      error => {
+        throw error;
+      }
+    );
+  }
 
   get isPhoneNumberRequiredErrorVisible() {
-    return this.paymentForm.controls.phoneNumber.errors.required && this.paymentForm.controls.phoneNumber.touched;
+    return this.paymentForm.controls.phoneNumber.errors?.required && this.paymentForm.controls.phoneNumber.touched;
   }
 
   get isPaymentAmountRequiredErrorVisible() {
-    return this.paymentForm.controls.paymentAmount.errors.required && this.paymentForm.controls.paymentAmount.touched;
+    return this.paymentForm.controls.paymentAmount.errors?.required && this.paymentForm.controls.paymentAmount.touched;
   }
 
   get isPaymentAmountMaxValueErrorVisible() {
-    return this.paymentForm.controls.paymentAmount.errors.max && this.paymentForm.controls.paymentAmount.touched
+    return this.paymentForm.controls.paymentAmount.errors?.max && this.paymentForm.controls.paymentAmount.touched;
+  }
+
+  get isPaymentAmountMinValueErrorVisible() {
+    return this.paymentForm.controls.paymentAmount.errors?.min && this.paymentForm.controls.paymentAmount.touched;
   }
 
   get isPaymentFormValid() {
