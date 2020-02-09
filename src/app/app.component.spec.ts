@@ -4,12 +4,13 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { CoreModule } from '@app/core';
 import { AppComponent } from './app.component';
+import { LoaderComponent } from '@app/shared';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule, TranslateModule.forRoot(), CoreModule],
-      declarations: [AppComponent],
+      declarations: [AppComponent, LoaderComponent],
       providers: []
     }).compileComponents();
   }));

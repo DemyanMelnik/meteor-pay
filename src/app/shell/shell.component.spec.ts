@@ -7,7 +7,6 @@ import { CoreModule } from '@app/core';
 
 import { ShellComponent } from '@app/shell/shell.component';
 import { HeaderComponent } from '@app/shell/header/header.component';
-import { LoaderComponent } from '@app/shared';
 
 describe('ShellComponent', () => {
   let component: ShellComponent;
@@ -16,7 +15,7 @@ describe('ShellComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule, TranslateModule.forRoot(), NgbModule, CoreModule],
-      declarations: [HeaderComponent, ShellComponent, LoaderComponent]
+      declarations: [HeaderComponent, ShellComponent]
     }).compileComponents();
   }));
 
