@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { I18nService } from '@app/core';
@@ -6,18 +6,11 @@ import { I18nService } from '@app/core';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HeaderComponent implements OnInit {
-  menuHidden = true;
-
+export class HeaderComponent {
   constructor(private router: Router, private i18nService: I18nService) {}
-
-  ngOnInit() {}
-
-  toggleMenu() {
-    this.menuHidden = !this.menuHidden;
-  }
 
   setLanguage(language: string) {
     this.i18nService.language = language;

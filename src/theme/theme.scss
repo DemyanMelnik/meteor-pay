@@ -3,6 +3,11 @@
  * Framework overrides and customization goes here.
  */
 
+html,
+body {
+  height: 100%;
+}
+
 .main-color {
   color: #e91e63;
 }

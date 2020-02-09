@@ -3,17 +3,30 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  max-width: 800px;
-  margin: 20px auto;
+  margin: 60px auto;
 }
 
 .operators-list__link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 20px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  width: 170px;
+  height: 100px;
+  overflow: hidden;
+  transition: border-color 0.3s linear;
+  background-color: #fff;
 
-  &:hover,
-  &--active {
-    opacity: 0.5;
+  &:hover {
+    border-color: #ccc;
+  }
+
+  &--active,
+  &--active:hover {
+    border-color: #28a745;
+    cursor: default;
   }
 }
 

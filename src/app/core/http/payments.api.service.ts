@@ -7,14 +7,20 @@ import { Injectable } from '@angular/core';
 import { HttpErrorResponse, HttpResponse, HttpEvent } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 
+interface IPayment {
+  operator: string;
+  phoneNumber: string;
+  paymentAmount: string;
+}
+
 @Injectable()
 export class PaymentsApiServiceProvider {
-  sendPayment(): Observable<HttpEvent<any>> {
+  sendPayment(paymentData: IPayment): Observable<HttpEvent<any>> {
     if (this.isRequestSuccess) {
       return of(
         new HttpResponse({
           status: 200,
-          body: {}
+          body: paymentData
         })
       );
     } else {

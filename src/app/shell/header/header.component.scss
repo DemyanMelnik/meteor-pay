@@ -1,5 +1,23 @@
 @import "src/theme/theme-variables";
 
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo__icon {
+  font-size: 35px;
+  transform: rotate(185deg);
+  margin-left: 10px;
+}
+
 .navbar {
   margin-bottom: $spacer;
 }

@@ -1,10 +1,12 @@
 {
-  "Please choose operator": "Please choose operator",
+  "Choose operator": "Choose operator",
   "Pay": "Pay",
   "Phone number": "Phone number",
   "Payment amount": "Payment amount",
   "Phone number is required": "Phone number is required",
   "Payment amount is required": "Phone number is required",
   "Payment amount must be less than": "Payment amount must be less than",
-  "Payment amount must be more than": "Payment amount must be more than"
+  "Payment amount must be more than": "Payment amount must be more than",
+  "Payment was successfully sent": "Payment was successfully sent",
+  "Error. Try again": "Error. Try again"
 }

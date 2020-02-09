@@ -1,10 +1,12 @@
 {
-  "Please choose operator": "Пожалуйста выберите оператора",
+  "Choose operator": "Выберите оператора",
   "Pay": "Оплатить",
   "Phone number": "Номер телефона",
   "Payment amount": "Сумма платежа",
   "Phone number is required": "Номер телефона обязателен",
   "Payment amount is required": "Сумма платежа обязательна",
   "Payment amount must be less than": "Сумма платежа должна быть меньше, чем",
-  "Payment amount must be more than": "Сумма платежа должна быть больше, чем"
+  "Payment amount must be more than": "Сумма платежа должна быть больше, чем",
+  "Payment was successfully sent": "Платеж успешно отправлен",
+  "Error. Try again": "Ошибка. Попробуйте еще"
 }

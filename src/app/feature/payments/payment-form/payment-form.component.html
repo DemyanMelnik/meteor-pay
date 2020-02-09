@@ -1,18 +1,28 @@
 <form (ngSubmit)="pay()" [formGroup]="paymentForm" novalidate>
-  <div class="form-group">
+  <div class="form-group text-center">
     <label class="d-block">
-      <input
-        type="text"
-        class="form-control"
-        formControlName="phoneNumber"
-        aria-label="'Phone number' | translate"
-        [placeholder]="'Phone number' | translate"
-        prefix="+7"
-        mask="(000) 000-00-00"
-        [showMaskTyped]="true"
-        placeHolderCharacter="*"
-        required
-      />
+      <div class="input-group">
+        <input
+          type="text"
+          class="form-control"
+          [class.is-valid]="isPhoneNumberValid"
+          [class.is-invalid]="isPhoneNumberInvalid"
+          formControlName="phoneNumber"
+          aria-label="'Phone number' | translate"
+          [placeholder]="'Phone number' | translate"
+          prefix="+7"
+          mask="(000) 000-00-00"
+          [showMaskTyped]="true"
+          placeHolderCharacter="*"
+          required
+        />
+
+        <div class="input-group-append">
+          <span class="input-group-text">
+            <i class="fas fa-mobile-alt"></i>
+          </span>
+        </div>
+      </div>
 
       <small [hidden]="!isPhoneNumberRequiredErrorVisible" class="text-danger" translate>
         Phone number is required
@@ -20,31 +30,52 @@
     </label>
 
     <label class="d-block">
-      <input
-        type="number"
-        class="form-control"
-        formControlName="paymentAmount"
-        aria-label="'Payment amount' | translate"
-        [placeholder]="'Payment amount' | translate"
-        required
-      />
+      <div class="input-group">
+        <input
+          type="text"
+          class="form-control"
+          [class.is-invalid]="isPaymentAmountInvalid"
+          [class.is-valid]="isPaymentAmountValid"
+          formControlName="paymentAmount"
+          aria-label="'Payment amount' | translate"
+          [placeholder]="'Payment amount' | translate"
+          minlength="1"
+          maxlength="4"
+          required
+        />
+
+        <div class="input-group-append">
+          <span class="input-group-text">
+            <i class="fas fa-ruble-sign"></i>
+          </span>
+        </div>
+      </div>
 
       <small [hidden]="!isPaymentAmountRequiredErrorVisible" class="text-danger" translate>
         Payment amount is required
       </small>
 
       <small [hidden]="!isPaymentAmountMaxValueErrorVisible" class="text-danger" translate>
-        {{ 'Payment amount must be less than' | translate }} {{ maxValueOfPaymentAmount }}
+        {{ 'Payment amount must be less than' | translate }} {{ maxValueOfPaymentAmount + 1 }}
       </small>
 
       <small [hidden]="!isPaymentAmountMinValueErrorVisible" class="text-danger" translate>
-        {{ 'Payment amount must be more than' | translate }} {{ minValueOfPaymentAmount }}
+        {{ 'Payment amount must be more than' | translate }} {{ minValueOfPaymentAmount - 1 }}
       </small>
     </label>
   </div>
 
-  <button class="btn btn-dark w-100" type="submit" [disabled]="!isPaymentFormValid">
-    <i class="fas fa-meteor main-color"></i>&nbsp;
-    <span translate>Pay</span>
-  </button>
+  <div class="button-container">
+    <div [hidden]="isErrorHidden" class="text-danger" translate>
+      Error. Try again
+    </div>
+
+    <div [hidden]="isSuccessMessageHidden" class="text-success" translate>
+      Payment was successfully sent
+    </div>
+
+    <button class="btn btn-dark btn-lg" type="submit" [disabled]="!isPaymentFormValid">
+      <span translate>Pay</span>
+    </button>
+  </div>
 </form>

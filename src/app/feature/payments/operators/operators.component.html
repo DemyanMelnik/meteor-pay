@@ -1,37 +1,34 @@
-<div class="container-fluid">
-  <div class="text-center">
-    <h1>
-      <span translate>Please choose operator</span>
-    </h1>
-    <div class="operators-list">
-      <a
-        routerLink="/pay"
-        [queryParams]="{ operator: 'beeline' }"
-        routerLinkActive="operators-list__link--active"
-        class="operators-list__link"
-      >
-        <img class="operators-list__logo" src="assets/operators-logos/beeline.png" alt="beeline logo" />
-      </a>
+<h1 class="text-center text-dark" translate>
+  Choose operator
+</h1>
 
-      <a
-        routerLink="/pay"
-        [queryParams]="{ operator: 'megafon' }"
-        routerLinkActive="operators-list__link--active"
-        class="operators-list__link"
-      >
-        <img class="operators-list__logo" src="assets/operators-logos/megafon.png" alt="megafon logo" />
-      </a>
+<div class="operators-list">
+  <a
+    routerLink="/pay"
+    [queryParams]="{ operator: 'beeline' }"
+    routerLinkActive="operators-list__link--active"
+    class="operators-list__link"
+  >
+    <img class="operators-list__logo" src="assets/operators-logos/beeline.png" alt="beeline logo" />
+  </a>
 
-      <a
-        routerLink="/pay"
-        [queryParams]="{ operator: 'mts' }"
-        routerLinkActive="operators-list__link--active"
-        class="operators-list__link"
-      >
-        <img class="operators-list__logo" src="assets/operators-logos/mts.png" alt="mts logo" />
-      </a>
-    </div>
+  <a
+    routerLink="/pay"
+    [queryParams]="{ operator: 'megafon' }"
+    routerLinkActive="operators-list__link--active"
+    class="operators-list__link"
+  >
+    <img class="operators-list__logo" src="assets/operators-logos/megafon.png" alt="megafon logo" />
+  </a>
 
-    <router-outlet></router-outlet>
-  </div>
+  <a
+    routerLink="/pay"
+    [queryParams]="{ operator: 'mts' }"
+    routerLinkActive="operators-list__link--active"
+    class="operators-list__link"
+  >
+    <img class="operators-list__logo" src="assets/operators-logos/mts.png" alt="mts logo" />
+  </a>
 </div>
+
+<router-outlet></router-outlet>
