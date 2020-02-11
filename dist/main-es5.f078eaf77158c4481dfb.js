@@ -2185,7 +2185,7 @@ function _createClass(e, t, n) {
       }
       var x,
         E,
-        T = (function(e) {
+        A = (function(e) {
           function t() {
             var e;
             return (
@@ -2217,7 +2217,7 @@ function _createClass(e, t, n) {
             t
           );
         })(C),
-        A = (function() {
+        T = (function() {
           function e(t) {
             _classCallCheck(this, e), (this._cd = t);
           }
@@ -2275,8 +2275,8 @@ function _createClass(e, t, n) {
               return _classCallCheck(this, t), _possibleConstructorReturn(this, _getPrototypeOf(t).call(this, e));
             }
             return _inherits(t, e), t;
-          })(A)).ɵfac = function(e) {
-            return new (e || E)(i.Mb(T, 2));
+          })(T)).ɵfac = function(e) {
+            return new (e || E)(i.Mb(A, 2));
           }),
           (E.ɵdir = i.Hb({
             type: E,
@@ -2305,7 +2305,7 @@ function _createClass(e, t, n) {
               return _classCallCheck(this, t), _possibleConstructorReturn(this, _getPrototypeOf(t).call(this, e));
             }
             return _inherits(t, e), t;
-          })(A)).ɵfac = function(e) {
+          })(T)).ɵfac = function(e) {
             return new (e || x)(i.Mb(w, 2));
           }),
           (x.ɵdir = i.Hb({
@@ -2661,7 +2661,7 @@ function _createClass(e, t, n) {
                 {
                   key: 'ngOnInit',
                   value: function() {
-                    (this._control = this._injector.get(T)), this._checkName(), this._registry.add(this._control, this);
+                    (this._control = this._injector.get(A)), this._checkName(), this._registry.add(this._control, this);
                   }
                 },
                 {
@@ -3467,7 +3467,7 @@ function _createClass(e, t, n) {
                                 ? e.controls.hasOwnProperty(t)
                                   ? e.controls[t]
                                   : null
-                                : (e instanceof Te && e.at(t)) || null;
+                                : (e instanceof Ae && e.at(t)) || null;
                             }, e));
                   })(this, e);
                 }
@@ -3958,7 +3958,7 @@ function _createClass(e, t, n) {
             t
           );
         })(Oe),
-        Te = (function(e) {
+        Ae = (function(e) {
           function t(e, n, r) {
             var i;
             return (
@@ -4172,7 +4172,7 @@ function _createClass(e, t, n) {
             t
           );
         })(Oe),
-        Ae =
+        Te =
           (((be = (function(e) {
             function t() {
               return (
@@ -4233,7 +4233,7 @@ function _createClass(e, t, n) {
           }),
           (be.ɵdir = i.Hb({ type: be, features: [i.wb] })),
           be),
-        Pe = i.Tb(Ae),
+        Pe = i.Tb(Te),
         je =
           (((ke = function e() {
             _classCallCheck(this, e);
@@ -4489,7 +4489,7 @@ function _createClass(e, t, n) {
               ]),
               t
             );
-          })(Ae)).ɵfac = function(e) {
+          })(Te)).ɵfac = function(e) {
             return new (e || we)(i.Mb(w, 13), i.Mb(I, 10), i.Mb(M, 10));
           }),
           (we.ɵdir = i.Hb({
@@ -4593,7 +4593,7 @@ function _createClass(e, t, n) {
         Ge,
         We,
         Ke = {
-          provide: T,
+          provide: A,
           useExisting: Object(i.S)(function() {
             return Qe;
           })
@@ -4676,7 +4676,7 @@ function _createClass(e, t, n) {
                 {
                   key: '_checkParentType',
                   value: function() {
-                    !(this._parent instanceof De) && this._parent instanceof Ae
+                    !(this._parent instanceof De) && this._parent instanceof Te
                       ? re.ngModelGroupException()
                       : this._parent instanceof De ||
                         this._parent instanceof Me ||
@@ -4728,7 +4728,7 @@ function _createClass(e, t, n) {
               ]),
               t
             );
-          })(T)).ɵfac = function(e) {
+          })(A)).ɵfac = function(e) {
             return new (e || He)(i.Mb(w, 13), i.Mb(I, 10), i.Mb(M, 10), i.Mb(g, 10), i.Mb(Re, 8));
           }),
           (He.ɵdir = i.Hb({
@@ -4975,7 +4975,7 @@ function _createClass(e, t, n) {
                       i = e.map(function(e) {
                         return r._createControl(e);
                       });
-                    return new Te(i, t, n);
+                    return new Ae(i, t, n);
                   }
                 },
                 {
@@ -4994,7 +4994,7 @@ function _createClass(e, t, n) {
                 {
                   key: '_createControl',
                   value: function(e) {
-                    return e instanceof xe || e instanceof Ee || e instanceof Te
+                    return e instanceof xe || e instanceof Ee || e instanceof Ae
                       ? e
                       : Array.isArray(e)
                       ? this.control(e[0], e.length > 1 ? e[1] : null, e.length > 2 ? e[2] : null)
@@ -5611,7 +5611,7 @@ function _createClass(e, t, n) {
             (this.url = t.url || null),
             (this.ok = this.status >= 200 && this.status < 300);
         },
-        Tt = (function(e) {
+        At = (function(e) {
           function t() {
             var e,
               n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -5640,7 +5640,7 @@ function _createClass(e, t, n) {
             t
           );
         })(Et),
-        At = (function(e) {
+        Tt = (function(e) {
           function t() {
             var e,
               n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -5747,7 +5747,7 @@ function _createClass(e, t, n) {
                     if (e instanceof Ot || 'events' === i.observe) return s;
                     var l = s.pipe(
                       dt(function(e) {
-                        return e instanceof At;
+                        return e instanceof Tt;
                       })
                     );
                     switch (i.observe || 'body') {
@@ -5968,7 +5968,7 @@ function _createClass(e, t, n) {
                                   ? e.getResponseHeader('X-Request-URL')
                                   : null;
                               })(r) || e.url;
-                          return (s = new Tt({ headers: i, status: t, statusText: n, url: a }));
+                          return (s = new At({ headers: i, status: t, statusText: n, url: a }));
                         },
                         l = function() {
                           var t = u(),
@@ -5990,7 +5990,7 @@ function _createClass(e, t, n) {
                             }
                           }
                           c
-                            ? (n.next(new At({ body: l, headers: i, status: a, statusText: o, url: s || void 0 })),
+                            ? (n.next(new Tt({ body: l, headers: i, status: a, statusText: o, url: s || void 0 })),
                               n.complete())
                             : n.error(new Pt({ error: l, headers: i, status: a, statusText: o, url: s || void 0 }));
                         },
@@ -6448,14 +6448,14 @@ function _createClass(e, t, n) {
               {
                 key: 'call',
                 value: function(e, t) {
-                  return t.subscribe(new Tn(e, this.total));
+                  return t.subscribe(new An(e, this.total));
                 }
               }
             ]),
             e
           );
         })(),
-        Tn = (function(e) {
+        An = (function(e) {
           function t(e, n) {
             var r;
             return (
@@ -6480,7 +6480,7 @@ function _createClass(e, t, n) {
             t
           );
         })(ft.a);
-      function An(e, t, n) {
+      function Tn(e, t, n) {
         return function(r) {
           return r.lift(new jn(e, t, n));
         };
@@ -6999,7 +6999,7 @@ function _createClass(e, t, n) {
                   return this.worker
                     .pipe(
                       xn(1),
-                      An(function(n) {
+                      Tn(function(n) {
                         n.postMessage(Object.assign({ action: e }, t));
                       })
                     )
@@ -7612,14 +7612,13 @@ function _createClass(e, t, n) {
         return e && 'object' == typeof e && !Array.isArray(e);
       }
       var Er,
-        Tr,
         Ar,
+        Tr,
         Pr,
-        jr,
-        Rr = function e() {
+        jr = function e() {
           _classCallCheck(this, e);
         },
-        Ir =
+        Rr =
           (((Er = (function(e) {
             function t() {
               var e;
@@ -7682,13 +7681,13 @@ function _createClass(e, t, n) {
               ]),
               t
             );
-          })(Rr)).ɵfac = function(e) {
-            return Mr(e || Er);
+          })(jr)).ɵfac = function(e) {
+            return Ir(e || Er);
           }),
           (Er.ɵprov = i.Ib({ token: Er, factory: Er.ɵfac })),
           Er),
-        Mr = i.Tb(Ir),
-        Nr = function e() {
+        Ir = i.Tb(Rr),
+        Mr = function e() {
           _classCallCheck(this, e),
             (this.currentLang = this.defaultLang),
             (this.translations = {}),
@@ -7697,10 +7696,10 @@ function _createClass(e, t, n) {
             (this.onLangChange = new i.n()),
             (this.onDefaultLangChange = new i.n());
         },
-        Dr = new i.q('USE_STORE'),
-        Vr = new i.q('USE_DEFAULT_LANG'),
-        Lr =
-          (((jr = (function() {
+        Nr = new i.q('USE_STORE'),
+        Dr = new i.q('USE_DEFAULT_LANG'),
+        Vr =
+          (((Pr = (function() {
             function e(t, n, r, a, o) {
               var s = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
                 u = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
@@ -8098,136 +8097,12 @@ function _createClass(e, t, n) {
               e
             );
           })()).ɵfac = function(e) {
-            return new (e || jr)(i.Zb(Nr), i.Zb(gr), i.Zb(kr), i.Zb(Rr), i.Zb(_r), i.Zb(Vr), i.Zb(Dr));
+            return new (e || Pr)(i.Zb(Mr), i.Zb(gr), i.Zb(kr), i.Zb(jr), i.Zb(_r), i.Zb(Dr), i.Zb(Nr));
           }),
-          (jr.ɵprov = i.Ib({ token: jr, factory: jr.ɵfac })),
-          jr),
-        Fr =
-          (((Pr = (function() {
-            function e(t, n, r) {
-              var i = this;
-              _classCallCheck(this, e),
-                (this.translateService = t),
-                (this.element = n),
-                (this._ref = r),
-                this.onTranslationChangeSub ||
-                  (this.onTranslationChangeSub = this.translateService.onTranslationChange.subscribe(function(e) {
-                    e.lang === i.translateService.currentLang && i.checkNodes(!0, e.translations);
-                  })),
-                this.onLangChangeSub ||
-                  (this.onLangChangeSub = this.translateService.onLangChange.subscribe(function(e) {
-                    i.checkNodes(!0, e.translations);
-                  })),
-                this.onDefaultLangChangeSub ||
-                  (this.onDefaultLangChangeSub = this.translateService.onDefaultLangChange.subscribe(function(e) {
-                    i.checkNodes(!0);
-                  }));
-            }
-            return (
-              _createClass(e, [
-                {
-                  key: 'ngAfterViewChecked',
-                  value: function() {
-                    this.checkNodes();
-                  }
-                },
-                {
-                  key: 'checkNodes',
-                  value: function() {
-                    var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-                      t = arguments.length > 1 ? arguments[1] : void 0,
-                      n = this.element.nativeElement.childNodes;
-                    n.length ||
-                      (this.setContent(this.element.nativeElement, this.key),
-                      (n = this.element.nativeElement.childNodes));
-                    for (var r = 0; r < n.length; ++r) {
-                      var i = n[r];
-                      if (3 === i.nodeType) {
-                        var a = void 0;
-                        if (this.key) (a = this.key), e && (i.lastKey = null);
-                        else {
-                          var o = this.getContent(i),
-                            s = o.trim();
-                          s.length &&
-                            (o !== i.currentValue
-                              ? ((a = s), (i.originalContent = this.getContent(i)))
-                              : i.originalContent && e && ((i.lastKey = null), (a = i.originalContent.trim())));
-                        }
-                        this.updateValue(a, i, t);
-                      }
-                    }
-                  }
-                },
-                {
-                  key: 'updateValue',
-                  value: function(e, t, n) {
-                    var r = this;
-                    if (e) {
-                      if (t.lastKey === e && this.lastParams === this.currentParams) return;
-                      this.lastParams = this.currentParams;
-                      var i = function(n) {
-                        n !== e && (t.lastKey = e),
-                          t.originalContent || (t.originalContent = r.getContent(t)),
-                          (t.currentValue = Or(n) ? n : t.originalContent || e),
-                          r.setContent(t, r.key ? t.currentValue : t.originalContent.replace(e, t.currentValue)),
-                          r._ref.markForCheck();
-                      };
-                      if (Or(n)) {
-                        var a = this.translateService.getParsedResult(n, e, this.currentParams);
-                        'function' == typeof a.subscribe ? a.subscribe(i) : i(a);
-                      } else this.translateService.get(e, this.currentParams).subscribe(i);
-                    }
-                  }
-                },
-                {
-                  key: 'getContent',
-                  value: function(e) {
-                    return Or(e.textContent) ? e.textContent : e.data;
-                  }
-                },
-                {
-                  key: 'setContent',
-                  value: function(e, t) {
-                    Or(e.textContent) ? (e.textContent = t) : (e.data = t);
-                  }
-                },
-                {
-                  key: 'ngOnDestroy',
-                  value: function() {
-                    this.onLangChangeSub && this.onLangChangeSub.unsubscribe(),
-                      this.onDefaultLangChangeSub && this.onDefaultLangChangeSub.unsubscribe(),
-                      this.onTranslationChangeSub && this.onTranslationChangeSub.unsubscribe();
-                  }
-                },
-                {
-                  key: 'translate',
-                  set: function(e) {
-                    e && ((this.key = e), this.checkNodes());
-                  }
-                },
-                {
-                  key: 'translateParams',
-                  set: function(e) {
-                    Sr(this.currentParams, e) || ((this.currentParams = e), this.checkNodes(!0));
-                  }
-                }
-              ]),
-              e
-            );
-          })()).ɵfac = function(e) {
-            return new (e || Pr)(i.Mb(Lr), i.Mb(i.l), i.Mb(i.h));
-          }),
-          (Pr.ɵdir = i.Hb({
-            type: Pr,
-            selectors: [
-              ['', 'translate', ''],
-              ['', 'ngx-translate', '']
-            ],
-            inputs: { translate: 'translate', translateParams: 'translateParams' }
-          })),
+          (Pr.ɵprov = i.Ib({ token: Pr, factory: Pr.ɵfac })),
           Pr),
-        Hr =
-          (((Ar = (function() {
+        Lr =
+          (((Tr = (function() {
             function e(t, n) {
               _classCallCheck(this, e), (this.translate = t), (this._ref = n), (this.value = '');
             }
@@ -8312,13 +8187,13 @@ function _createClass(e, t, n) {
               e
             );
           })()).ɵfac = function(e) {
-            return new (e || Ar)(i.Mb(Lr), i.bc());
+            return new (e || Tr)(i.Mb(Vr), i.bc());
           }),
-          (Ar.ɵpipe = i.Lb({ name: 'translate', type: Ar, pure: !1 })),
-          (Ar.ɵprov = i.Ib({ token: Ar, factory: Ar.ɵfac })),
-          Ar),
-        Ur =
-          (((Tr = (function() {
+          (Tr.ɵpipe = i.Lb({ name: 'translate', type: Tr, pure: !1 })),
+          (Tr.ɵprov = i.Ib({ token: Tr, factory: Tr.ɵfac })),
+          Tr),
+        Fr =
+          (((Ar = (function() {
             function e() {
               _classCallCheck(this, e);
             }
@@ -8333,12 +8208,12 @@ function _createClass(e, t, n) {
                       providers: [
                         t.loader || { provide: gr, useClass: yr },
                         t.compiler || { provide: kr, useClass: Cr },
-                        t.parser || { provide: Rr, useClass: Ir },
+                        t.parser || { provide: jr, useClass: Rr },
                         t.missingTranslationHandler || { provide: _r, useClass: br },
-                        Nr,
-                        { provide: Dr, useValue: t.isolate },
-                        { provide: Vr, useValue: t.useDefaultLang },
-                        Lr
+                        Mr,
+                        { provide: Nr, useValue: t.isolate },
+                        { provide: Dr, useValue: t.useDefaultLang },
+                        Vr
                       ]
                     };
                   }
@@ -8352,11 +8227,11 @@ function _createClass(e, t, n) {
                       providers: [
                         t.loader || { provide: gr, useClass: yr },
                         t.compiler || { provide: kr, useClass: Cr },
-                        t.parser || { provide: Rr, useClass: Ir },
+                        t.parser || { provide: jr, useClass: Rr },
                         t.missingTranslationHandler || { provide: _r, useClass: br },
-                        { provide: Dr, useValue: t.isolate },
-                        { provide: Vr, useValue: t.useDefaultLang },
-                        Lr
+                        { provide: Nr, useValue: t.isolate },
+                        { provide: Dr, useValue: t.useDefaultLang },
+                        Vr
                       ]
                     };
                   }
@@ -8364,15 +8239,15 @@ function _createClass(e, t, n) {
               ]),
               e
             );
-          })()).ɵmod = i.Kb({ type: Tr })),
-          (Tr.ɵinj = i.Jb({
+          })()).ɵmod = i.Kb({ type: Ar })),
+          (Ar.ɵinj = i.Jb({
             factory: function(e) {
-              return new (e || Tr)();
+              return new (e || Ar)();
             }
           })),
-          Tr),
-        Br = n('9ppp'),
-        zr = (function(e) {
+          Ar),
+        Hr = n('9ppp'),
+        Ur = (function(e) {
           function t(e) {
             var n;
             return (
@@ -8395,7 +8270,7 @@ function _createClass(e, t, n) {
                 key: 'getValue',
                 value: function() {
                   if (this.hasError) throw this.thrownError;
-                  if (this.closed) throw new Br.a();
+                  if (this.closed) throw new Hr.a();
                   return this._value;
                 }
               },
@@ -8415,8 +8290,8 @@ function _createClass(e, t, n) {
             t
           );
         })(pn.a),
-        qr = {},
-        Zr = (function() {
+        Br = {},
+        zr = (function() {
           function e(t) {
             _classCallCheck(this, e), (this.resultSelector = t);
           }
@@ -8425,14 +8300,14 @@ function _createClass(e, t, n) {
               {
                 key: 'call',
                 value: function(e, t) {
-                  return t.subscribe(new Gr(e, this.resultSelector));
+                  return t.subscribe(new qr(e, this.resultSelector));
                 }
               }
             ]),
             e
           );
         })(),
-        Gr = (function(e) {
+        qr = (function(e) {
           function t(e, n) {
             var r;
             return (
@@ -8450,7 +8325,7 @@ function _createClass(e, t, n) {
               {
                 key: '_next',
                 value: function(e) {
-                  this.values.push(qr), this.observables.push(e);
+                  this.values.push(Br), this.observables.push(e);
                 }
               },
               {
@@ -8478,7 +8353,7 @@ function _createClass(e, t, n) {
                 key: 'notifyNext',
                 value: function(e, t, n, r, i) {
                   var a = this.values,
-                    o = this.toRespond ? (a[n] === qr ? --this.toRespond : this.toRespond) : 0;
+                    o = this.toRespond ? (a[n] === Br ? --this.toRespond : this.toRespond) : 0;
                   (a[n] = t),
                     0 === o && (this.resultSelector ? this._tryResultSelector(a) : this.destination.next(a.slice()));
                 }
@@ -8499,7 +8374,7 @@ function _createClass(e, t, n) {
             t
           );
         })(mn.a),
-        Wr = (function() {
+        Zr = (function() {
           function e() {
             _classCallCheck(this, e);
           }
@@ -8508,14 +8383,14 @@ function _createClass(e, t, n) {
               {
                 key: 'call',
                 value: function(e, t) {
-                  return t.subscribe(new Kr(e));
+                  return t.subscribe(new Gr(e));
                 }
               }
             ]),
             e
           );
         })(),
-        Kr = (function(e) {
+        Gr = (function(e) {
           function t(e) {
             var n;
             return (
@@ -8570,12 +8445,12 @@ function _createClass(e, t, n) {
             t
           );
         })(mn.a);
-      function Qr(e) {
+      function Wr(e) {
         return function(t) {
-          return t.lift(new Jr(e));
+          return t.lift(new Kr(e));
         };
       }
-      var Jr = (function() {
+      var Kr = (function() {
           function e(t) {
             _classCallCheck(this, e), (this.notifier = t);
           }
@@ -8584,7 +8459,7 @@ function _createClass(e, t, n) {
               {
                 key: 'call',
                 value: function(e, t) {
-                  var n = new $r(e),
+                  var n = new Qr(e),
                     r = Object(bn.a)(n, this.notifier);
                   return r && !n.seenValue ? (n.add(r), t.subscribe(n)) : n;
                 }
@@ -8593,7 +8468,7 @@ function _createClass(e, t, n) {
             e
           );
         })(),
-        $r = (function(e) {
+        Qr = (function(e) {
           function t(e) {
             var n;
             return (
@@ -8616,14 +8491,14 @@ function _createClass(e, t, n) {
             t
           );
         })(mn.a);
-      function Yr() {
+      function Jr() {
         for (var e = arguments.length, t = new Array(e), n = 0; n < e; n++) t[n] = arguments[n];
         return function(e) {
           var n;
-          return 'function' == typeof t[t.length - 1] && (n = t.pop()), e.lift(new Xr(t, n));
+          return 'function' == typeof t[t.length - 1] && (n = t.pop()), e.lift(new $r(t, n));
         };
       }
-      var Xr = (function() {
+      var $r = (function() {
           function e(t, n) {
             _classCallCheck(this, e), (this.observables = t), (this.project = n);
           }
@@ -8632,14 +8507,14 @@ function _createClass(e, t, n) {
               {
                 key: 'call',
                 value: function(e, t) {
-                  return t.subscribe(new ei(e, this.observables, this.project));
+                  return t.subscribe(new Yr(e, this.observables, this.project));
                 }
               }
             ]),
             e
           );
         })(),
-        ei = (function(e) {
+        Yr = (function(e) {
           function t(e, n, r) {
             var i;
             _classCallCheck(this, t),
@@ -8696,7 +8571,7 @@ function _createClass(e, t, n) {
           );
         })(mn.a);
       $localize(_templateObject());
-      var ti = ['*'];
+      var Xr = ['*'];
       $localize(_templateObject2()),
         $localize(_templateObject3()),
         $localize(_templateObject4()),
@@ -8707,8 +8582,8 @@ function _createClass(e, t, n) {
         $localize(_templateObject9()),
         $localize(_templateObject10()),
         $localize(_templateObject11());
-      var ni = ['dialog'];
-      function ri(e) {
+      var ei = ['dialog'];
+      function ti(e) {
         return null != e;
       }
       $localize(_templateObject12()),
@@ -8749,44 +8624,23 @@ function _createClass(e, t, n) {
             } while (null !== t && 1 === t.nodeType);
             return null;
           }));
-      var ii,
+      var ni,
+        ri,
+        ii,
         ai,
         oi,
-        si,
-        ui,
-        li =
-          (((ui = function e() {
-            _classCallCheck(this, e);
-          }).ɵmod = i.Kb({ type: ui })),
-          (ui.ɵinj = i.Jb({
-            factory: function(e) {
-              return new (e || ui)();
-            },
-            imports: [[a.b]]
-          })),
-          ui),
-        ci =
-          (((si = function e() {
-            _classCallCheck(this, e);
-          }).ɵmod = i.Kb({ type: si })),
-          (si.ɵinj = i.Jb({
-            factory: function(e) {
-              return new (e || si)();
-            },
-            imports: [[a.b]]
-          })),
-          si),
-        hi =
+        si =
           (((oi = function e() {
             _classCallCheck(this, e);
           }).ɵmod = i.Kb({ type: oi })),
           (oi.ɵinj = i.Jb({
             factory: function(e) {
               return new (e || oi)();
-            }
+            },
+            imports: [[a.b]]
           })),
           oi),
-        fi =
+        ui =
           (((ai = function e() {
             _classCallCheck(this, e);
           }).ɵmod = i.Kb({ type: ai })),
@@ -8797,7 +8651,7 @@ function _createClass(e, t, n) {
             imports: [[a.b]]
           })),
           ai),
-        di =
+        li =
           (((ii = function e() {
             _classCallCheck(this, e);
           }).ɵmod = i.Kb({ type: ii })),
@@ -8807,7 +8661,28 @@ function _createClass(e, t, n) {
             }
           })),
           ii),
-        pi = (function() {
+        ci =
+          (((ri = function e() {
+            _classCallCheck(this, e);
+          }).ɵmod = i.Kb({ type: ri })),
+          (ri.ɵinj = i.Jb({
+            factory: function(e) {
+              return new (e || ri)();
+            },
+            imports: [[a.b]]
+          })),
+          ri),
+        hi =
+          (((ni = function e() {
+            _classCallCheck(this, e);
+          }).ɵmod = i.Kb({ type: ni })),
+          (ni.ɵinj = i.Jb({
+            factory: function(e) {
+              return new (e || ni)();
+            }
+          })),
+          ni),
+        fi = (function() {
           var e = {
             Tab: 9,
             Enter: 13,
@@ -8838,7 +8713,7 @@ function _createClass(e, t, n) {
             e
           );
         })(),
-        vi = function(e, t) {
+        di = function(e, t) {
           return (
             !!t &&
             t.some(function(t) {
@@ -8846,7 +8721,7 @@ function _createClass(e, t, n) {
             })
           );
         },
-        gi = function(e, t) {
+        pi = function(e, t) {
           return (
             !t ||
             null !=
@@ -8855,9 +8730,9 @@ function _createClass(e, t, n) {
               })(e, t)
           );
         },
-        yi = !1;
-      'undefined' != typeof navigator && (yi = !!navigator.userAgent && /iPad|iPhone|iPod/.test(navigator.userAgent));
-      var mi = [
+        vi = !1;
+      'undefined' != typeof navigator && (vi = !!navigator.userAgent && /iPad|iPhone|iPod/.test(navigator.userAgent));
+      var gi = [
         'a[href]',
         'button:not([disabled])',
         'input:not([disabled]):not([type="hidden"])',
@@ -8866,13 +8741,15 @@ function _createClass(e, t, n) {
         '[contenteditable]',
         '[tabindex]:not([tabindex="-1"])'
       ].join(', ');
-      function _i(e) {
-        var t = Array.from(e.querySelectorAll(mi)).filter(function(e) {
+      function yi(e) {
+        var t = Array.from(e.querySelectorAll(gi)).filter(function(e) {
           return -1 !== e.tabIndex;
         });
         return [t[0], t[t.length - 1]];
       }
-      var bi,
+      var mi,
+        _i,
+        bi,
         ki,
         Ci,
         wi,
@@ -8880,8 +8757,8 @@ function _createClass(e, t, n) {
         Oi,
         xi,
         Ei,
-        Ti,
         Ai,
+        Ti,
         Pi,
         ji,
         Ri,
@@ -8897,10 +8774,8 @@ function _createClass(e, t, n) {
         Bi,
         zi,
         qi,
-        Zi,
-        Gi,
-        Wi = /\s+/,
-        Ki = new ((function() {
+        Zi = /\s+/,
+        Gi = new ((function() {
           function e() {
             _classCallCheck(this, e);
           }
@@ -9058,44 +8933,44 @@ function _createClass(e, t, n) {
             e
           );
         })())(),
-        Qi =
-          (((Ai = function e() {
+        Wi =
+          (((Ei = function e() {
             _classCallCheck(this, e);
-          }).ɵmod = i.Kb({ type: Ai })),
-          (Ai.ɵinj = i.Jb({
+          }).ɵmod = i.Kb({ type: Ei })),
+          (Ei.ɵinj = i.Jb({
             factory: function(e) {
-              return new (e || Ai)();
+              return new (e || Ei)();
             },
             imports: [[a.b, it]]
           })),
-          Ai),
-        Ji =
-          (((Ti = function e() {
+          Ei),
+        Ki =
+          (((xi = function e() {
             _classCallCheck(this, e),
               (this.autoClose = !0),
               (this.placement = ['bottom-left', 'bottom-right', 'top-left', 'top-right']);
           }).ɵfac = function(e) {
-            return new (e || Ti)();
+            return new (e || xi)();
           }),
-          (Ti.ɵprov = i.Ib({ token: Ti, factory: Ti.ɵfac, providedIn: 'root' })),
-          (Ti.ngInjectableDef = Object(i.Ib)({
+          (xi.ɵprov = i.Ib({ token: xi, factory: xi.ɵfac, providedIn: 'root' })),
+          (xi.ngInjectableDef = Object(i.Ib)({
             factory: function() {
-              return new Ti();
+              return new xi();
             },
-            token: Ti,
+            token: xi,
             providedIn: 'root'
           })),
-          Ti),
-        $i =
-          (((Ei = function e() {
+          xi),
+        Qi =
+          (((Oi = function e() {
             _classCallCheck(this, e);
           }).ɵfac = function(e) {
-            return new (e || Ei)();
+            return new (e || Oi)();
           }),
-          (Ei.ɵdir = i.Hb({ type: Ei, selectors: [['', 8, 'navbar']] })),
-          Ei),
-        Yi =
-          (((xi = (function() {
+          (Oi.ɵdir = i.Hb({ type: Oi, selectors: [['', 8, 'navbar']] })),
+          Oi),
+        Ji =
+          (((Si = (function() {
             function e(t) {
               _classCallCheck(this, e), (this.elementRef = t), (this._disabled = !1);
             }
@@ -9114,10 +8989,10 @@ function _createClass(e, t, n) {
               e
             );
           })()).ɵfac = function(e) {
-            return new (e || xi)(i.Mb(i.l));
+            return new (e || Si)(i.Mb(i.l));
           }),
-          (xi.ɵdir = i.Hb({
-            type: xi,
+          (Si.ɵdir = i.Hb({
+            type: Si,
             selectors: [['', 'ngbDropdownItem', '']],
             hostAttrs: [1, 'dropdown-item'],
             hostVars: 2,
@@ -9126,25 +9001,25 @@ function _createClass(e, t, n) {
             },
             inputs: { disabled: 'disabled' }
           })),
-          xi),
-        Xi =
-          (((Oi = function e(t) {
+          Si),
+        $i =
+          (((wi = function e(t) {
             _classCallCheck(this, e), (this.dropdown = t), (this.placement = 'bottom'), (this.isOpen = !1);
           }).ɵfac = function(e) {
-            return new (e || Oi)(
+            return new (e || wi)(
               i.Mb(
                 Object(i.S)(function() {
-                  return na;
+                  return ea;
                 })
               )
             );
           }),
-          (Oi.ɵdir = i.Hb({
-            type: Oi,
+          (wi.ɵdir = i.Hb({
+            type: wi,
             selectors: [['', 'ngbDropdownMenu', '']],
             contentQueries: function(e, t, n) {
               var r;
-              1 & e && i.Fb(n, Yi, !1), 2 & e && i.rc((r = i.ec())) && (t.menuItems = r);
+              1 & e && i.Fb(n, Ji, !1), 2 & e && i.rc((r = i.ec())) && (t.menuItems = r);
             },
             hostVars: 5,
             hostBindings: function(e, t) {
@@ -9165,9 +9040,9 @@ function _createClass(e, t, n) {
                 2 & e && (i.Ab('x-placement', t.placement), i.Eb('dropdown-menu', !0)('show', t.dropdown.isOpen()));
             }
           })),
-          Oi),
-        ea =
-          (((Si = (function() {
+          wi),
+        Yi =
+          (((Ci = (function() {
             function e(t, n) {
               _classCallCheck(this, e), (this.dropdown = t), (this._elementRef = n), (this.anchorEl = n.nativeElement);
             }
@@ -9183,17 +9058,17 @@ function _createClass(e, t, n) {
               e
             );
           })()).ɵfac = function(e) {
-            return new (e || Si)(
+            return new (e || Ci)(
               i.Mb(
                 Object(i.S)(function() {
-                  return na;
+                  return ea;
                 })
               ),
               i.Mb(i.l)
             );
           }),
-          (Si.ɵdir = i.Hb({
-            type: Si,
+          (Ci.ɵdir = i.Hb({
+            type: Ci,
             selectors: [['', 'ngbDropdownAnchor', '']],
             hostAttrs: ['aria-haspopup', 'true', 1, 'dropdown-toggle'],
             hostVars: 1,
@@ -9201,25 +9076,25 @@ function _createClass(e, t, n) {
               2 & e && i.Ab('aria-expanded', t.dropdown.isOpen());
             }
           })),
-          Si),
-        ta =
-          (((wi = (function(e) {
+          Ci),
+        Xi =
+          (((ki = (function(e) {
             function t(e, n) {
               return _classCallCheck(this, t), _possibleConstructorReturn(this, _getPrototypeOf(t).call(this, e, n));
             }
             return _inherits(t, e), t;
-          })(ea)).ɵfac = function(e) {
-            return new (e || wi)(
+          })(Yi)).ɵfac = function(e) {
+            return new (e || ki)(
               i.Mb(
                 Object(i.S)(function() {
-                  return na;
+                  return ea;
                 })
               ),
               i.Mb(i.l)
             );
           }),
-          (wi.ɵdir = i.Hb({
-            type: wi,
+          (ki.ɵdir = i.Hb({
+            type: ki,
             selectors: [['', 'ngbDropdownToggle', '']],
             hostAttrs: ['aria-haspopup', 'true', 1, 'dropdown-toggle'],
             hostVars: 1,
@@ -9241,18 +9116,18 @@ function _createClass(e, t, n) {
             features: [
               i.yb([
                 {
-                  provide: ea,
+                  provide: Yi,
                   useExisting: Object(i.S)(function() {
-                    return wi;
+                    return ki;
                   })
                 }
               ]),
               i.wb
             ]
           })),
-          wi),
-        na =
-          (((Ci = (function() {
+          ki),
+        ea =
+          (((bi = (function() {
             function e(t, n, r, a, o, s, u) {
               var l = this;
               _classCallCheck(this, e),
@@ -9317,11 +9192,11 @@ function _createClass(e, t, n) {
                         e.runOutsideAngular(
                           ((c = function() {
                             var l = cn(t, 'keydown').pipe(
-                                Qr(i),
+                                Wr(i),
                                 dt(function(e) {
-                                  return e.which === pi.Escape;
+                                  return e.which === fi.Escape;
                                 }),
-                                An(function(e) {
+                                Tn(function(e) {
                                   return e.preventDefault();
                                 })
                               ),
@@ -9330,15 +9205,15 @@ function _createClass(e, t, n) {
                                   var t = e.target;
                                   return (
                                     2 !== e.button &&
-                                    !vi(t, o) &&
+                                    !di(t, o) &&
                                     ('inside' === n
-                                      ? vi(t, a) && gi(t, '.dropdown-item,.dropdown-divider')
+                                      ? di(t, a) && pi(t, '.dropdown-item,.dropdown-divider')
                                       : 'outside' === n
-                                      ? !vi(t, a)
-                                      : gi(t, '.dropdown-item,.dropdown-divider') || !vi(t, a))
+                                      ? !di(t, a)
+                                      : pi(t, '.dropdown-item,.dropdown-divider') || !di(t, a))
                                   );
                                 }),
-                                Qr(i)
+                                Wr(i)
                               );
                             (function() {
                               for (var e = arguments.length, t = new Array(e), n = 0; n < e; n++) t[n] = arguments[n];
@@ -9346,23 +9221,23 @@ function _createClass(e, t, n) {
                                 if (!Object(s.a)(t[0])) return t[0];
                                 t = t[0];
                               }
-                              return Object(st.a)(t, void 0).lift(new Wr());
+                              return Object(st.a)(t, void 0).lift(new Zr());
                             })([
                               l,
                               cn(t, 'mouseup').pipe(
-                                Yr(c),
+                                Jr(c),
                                 dt(function(e) {
                                   var t = _slicedToArray(e, 2);
                                   return t[0], t[1];
                                 }),
                                 Ln(0),
-                                Qr(i)
+                                Wr(i)
                               )
                             ]).subscribe(function() {
                               return e.run(r);
                             });
                           }),
-                          yi
+                          vi
                             ? function() {
                                 return setTimeout(function() {
                                   return c();
@@ -9421,25 +9296,25 @@ function _createClass(e, t, n) {
                         r.forEach(function(n, r) {
                           n.contains(e.target) && (a = !0), n === t._document.activeElement && (i = r);
                         }),
-                      n !== pi.Space && n !== pi.Enter)
+                      n !== fi.Space && n !== fi.Enter)
                     ) {
                       if (o || a) {
                         if ((this.open(), r.length)) {
                           switch (n) {
-                            case pi.ArrowDown:
+                            case fi.ArrowDown:
                               i = Math.min(i + 1, r.length - 1);
                               break;
-                            case pi.ArrowUp:
+                            case fi.ArrowUp:
                               if (this._isDropup() && -1 === i) {
                                 i = r.length - 1;
                                 break;
                               }
                               i = Math.max(i - 1, 0);
                               break;
-                            case pi.Home:
+                            case fi.Home:
                               i = 0;
                               break;
-                            case pi.End:
+                            case fi.End:
                               i = r.length - 1;
                           }
                           r[i].focus();
@@ -9485,7 +9360,7 @@ function _createClass(e, t, n) {
                       this._applyPlacementClasses(
                         'dynamic' === this.display
                           ? (function(e, t, n, r, i) {
-                              var a = Array.isArray(n) ? n : n.split(Wi),
+                              var a = Array.isArray(n) ? n : n.split(Zi),
                                 o = function(e) {
                                   var t = _slicedToArray(e.split('-'), 2);
                                   return t[0], t[1], [];
@@ -9525,7 +9400,7 @@ function _createClass(e, t, n) {
                                 d = void 0;
                               try {
                                 for (var p, v = a[Symbol.iterator](); !(h = (p = v.next()).done); h = !0)
-                                  if ((o((u = p.value)), Ki.positionElements(e, t, u, r))) {
+                                  if ((o((u = p.value)), Gi.positionElements(e, t, u, r))) {
                                     c = !0;
                                     break;
                                   }
@@ -9538,7 +9413,7 @@ function _createClass(e, t, n) {
                                   if (f) throw d;
                                 }
                               }
-                              return c || (o((u = a[0])), Ki.positionElements(e, t, u, r)), u;
+                              return c || (o((u = a[0])), Gi.positionElements(e, t, u, r)), u;
                             })(
                               this._anchor.anchorEl,
                               this._bodyContainer || this._menuElement.nativeElement,
@@ -9608,14 +9483,14 @@ function _createClass(e, t, n) {
               e
             );
           })()).ɵfac = function(e) {
-            return new (e || Ci)(i.Mb(i.h), i.Mb(Ji), i.Mb(a.c), i.Mb(i.z), i.Mb(i.l), i.Mb(i.D), i.Mb($i, 8));
+            return new (e || bi)(i.Mb(i.h), i.Mb(Ki), i.Mb(a.c), i.Mb(i.z), i.Mb(i.l), i.Mb(i.D), i.Mb(Qi, 8));
           }),
-          (Ci.ɵdir = i.Hb({
-            type: Ci,
+          (bi.ɵdir = i.Hb({
+            type: bi,
             selectors: [['', 'ngbDropdown', '']],
             contentQueries: function(e, t, n) {
               var r;
-              1 & e && (i.Fb(n, Xi, !0), i.Fb(n, Xi, !0, i.l), i.Fb(n, ea, !0)),
+              1 & e && (i.Fb(n, $i, !0), i.Fb(n, $i, !0, i.l), i.Fb(n, Yi, !0)),
                 2 & e &&
                   (i.rc((r = i.ec())) && (t._menu = r.first),
                   i.rc((r = i.ec())) && (t._menuElement = r.first),
@@ -9636,38 +9511,38 @@ function _createClass(e, t, n) {
             exportAs: ['ngbDropdown'],
             features: [i.xb()]
           })),
-          Ci),
-        ra =
-          (((ki = function e() {
+          bi),
+        ta =
+          (((_i = function e() {
             _classCallCheck(this, e);
-          }).ɵmod = i.Kb({ type: ki })),
-          (ki.ɵinj = i.Jb({
+          }).ɵmod = i.Kb({ type: _i })),
+          (_i.ɵinj = i.Jb({
             factory: function(e) {
-              return new (e || ki)();
+              return new (e || _i)();
             }
           })),
-          ki),
-        ia =
-          (((bi = function e() {
+          _i),
+        na =
+          (((mi = function e() {
             _classCallCheck(this, e), (this.backdrop = !0), (this.keyboard = !0);
           }).ɵfac = function(e) {
-            return new (e || bi)();
+            return new (e || mi)();
           }),
-          (bi.ɵprov = i.Ib({ token: bi, factory: bi.ɵfac, providedIn: 'root' })),
-          (bi.ngInjectableDef = Object(i.Ib)({
+          (mi.ɵprov = i.Ib({ token: mi, factory: mi.ɵfac, providedIn: 'root' })),
+          (mi.ngInjectableDef = Object(i.Ib)({
             factory: function() {
-              return new bi();
+              return new mi();
             },
-            token: bi,
+            token: mi,
             providedIn: 'root'
           })),
-          bi),
-        aa = function e(t, n, r) {
+          mi),
+        ra = function e(t, n, r) {
           _classCallCheck(this, e), (this.nodes = t), (this.viewRef = n), (this.componentRef = r);
         },
-        oa = function() {},
-        sa =
-          (((ji = (function() {
+        ia = function() {},
+        aa =
+          (((Ti = (function() {
             function e(t) {
               _classCallCheck(this, e), (this._document = t);
             }
@@ -9677,7 +9552,7 @@ function _createClass(e, t, n) {
                   key: 'compensate',
                   value: function() {
                     var e = this._getWidth();
-                    return this._isPresent(e) ? this._adjustBody(e) : oa;
+                    return this._isPresent(e) ? this._adjustBody(e) : ia;
                   }
                 },
                 {
@@ -9716,25 +9591,25 @@ function _createClass(e, t, n) {
               e
             );
           })()).ɵfac = function(e) {
-            return new (e || ji)(i.Zb(a.c));
+            return new (e || Ti)(i.Zb(a.c));
           }),
-          (ji.ɵprov = i.Ib({ token: ji, factory: ji.ɵfac, providedIn: 'root' })),
-          (ji.ngInjectableDef = Object(i.Ib)({
+          (Ti.ɵprov = i.Ib({ token: Ti, factory: Ti.ɵfac, providedIn: 'root' })),
+          (Ti.ngInjectableDef = Object(i.Ib)({
             factory: function() {
-              return new ji(Object(i.Zb)(a.c));
+              return new Ti(Object(i.Zb)(a.c));
             },
-            token: ji,
+            token: Ti,
             providedIn: 'root'
           })),
-          ji),
-        ua =
-          (((Pi = function e() {
+          Ti),
+        oa =
+          (((Ai = function e() {
             _classCallCheck(this, e);
           }).ɵfac = function(e) {
-            return new (e || Pi)();
+            return new (e || Ai)();
           }),
-          (Pi.ɵcmp = i.Gb({
-            type: Pi,
+          (Ai.ɵcmp = i.Gb({
+            type: Ai,
             selectors: [['ngb-modal-backdrop']],
             hostAttrs: [2, 'z-index', '1050'],
             hostVars: 2,
@@ -9747,8 +9622,8 @@ function _createClass(e, t, n) {
             template: function(e, t) {},
             encapsulation: 2
           })),
-          Pi),
-        la = (function() {
+          Ai),
+        sa = (function() {
           function e() {
             _classCallCheck(this, e);
           }
@@ -9760,7 +9635,7 @@ function _createClass(e, t, n) {
             e
           );
         })(),
-        ca = (function() {
+        ua = (function() {
           function e(t, n, r, i) {
             var a = this;
             _classCallCheck(this, e),
@@ -9832,12 +9707,12 @@ function _createClass(e, t, n) {
             e
           );
         })(),
-        ha = (function() {
+        la = (function() {
           var e = { BACKDROP_CLICK: 0, ESC: 1 };
           return (e[e.BACKDROP_CLICK] = 'BACKDROP_CLICK'), (e[e.ESC] = 'ESC'), e;
         })(),
-        fa =
-          (((Zi = (function() {
+        ca =
+          (((zi = (function() {
             function e(t, n, r) {
               _classCallCheck(this, e),
                 (this._document = t),
@@ -9871,28 +9746,28 @@ function _createClass(e, t, n) {
                       (this._zone.runOutsideAngular(function() {
                         cn(t, 'keydown')
                           .pipe(
-                            Qr(e._closed$),
+                            Wr(e._closed$),
                             dt(function(t) {
-                              return t.which === pi.Escape && e.keyboard;
+                              return t.which === fi.Escape && e.keyboard;
                             })
                           )
                           .subscribe(function(t) {
                             return requestAnimationFrame(function() {
                               t.defaultPrevented ||
                                 e._zone.run(function() {
-                                  return e.dismiss(ha.ESC);
+                                  return e.dismiss(la.ESC);
                                 });
                             });
                           });
                         var n = !1;
                         cn(e._dialogEl.nativeElement, 'mousedown')
                           .pipe(
-                            Qr(e._closed$),
-                            An(function() {
+                            Wr(e._closed$),
+                            Tn(function() {
                               return (n = !1);
                             }),
                             kn(function() {
-                              return cn(t, 'mouseup').pipe(Qr(e._closed$), xn(1));
+                              return cn(t, 'mouseup').pipe(Wr(e._closed$), xn(1));
                             }),
                             dt(function(e) {
                               var n = e.target;
@@ -9903,14 +9778,14 @@ function _createClass(e, t, n) {
                             n = !0;
                           }),
                           cn(t, 'click')
-                            .pipe(Qr(e._closed$))
+                            .pipe(Wr(e._closed$))
                             .subscribe(function(r) {
                               var i = r.target;
                               !0 !== e.backdrop ||
                                 t !== i ||
                                 n ||
                                 e._zone.run(function() {
-                                  return e.dismiss(ha.BACKDROP_CLICK);
+                                  return e.dismiss(la.BACKDROP_CLICK);
                                 }),
                                 (n = !1);
                             });
@@ -9918,7 +9793,7 @@ function _createClass(e, t, n) {
                       !t.contains(document.activeElement))
                     ) {
                       var n = t.querySelector('[ngbAutofocus]'),
-                        r = _i(t)[0];
+                        r = yi(t)[0];
                       (n || r || t).focus();
                     }
                   }
@@ -9944,14 +9819,14 @@ function _createClass(e, t, n) {
               e
             );
           })()).ɵfac = function(e) {
-            return new (e || Zi)(i.Mb(a.c), i.Mb(i.l), i.Mb(i.z));
+            return new (e || zi)(i.Mb(a.c), i.Mb(i.l), i.Mb(i.z));
           }),
-          (Zi.ɵcmp = i.Gb({
-            type: Zi,
+          (zi.ɵcmp = i.Gb({
+            type: zi,
             selectors: [['ngb-modal-window']],
             viewQuery: function(e, t) {
               var n;
-              1 & e && i.xc(ni, !0), 2 & e && i.rc((n = i.ec())) && (t._dialogEl = n.first);
+              1 & e && i.xc(ei, !0), 2 & e && i.rc((n = i.ec())) && (t._dialogEl = n.first);
             },
             hostAttrs: ['role', 'dialog', 'tabindex', '-1'],
             hostVars: 4,
@@ -9970,7 +9845,7 @@ function _createClass(e, t, n) {
               windowClass: 'windowClass'
             },
             outputs: { dismissEvent: 'dismiss' },
-            ngContentSelectors: ti,
+            ngContentSelectors: Xr,
             decls: 4,
             vars: 2,
             consts: [
@@ -9993,9 +9868,9 @@ function _createClass(e, t, n) {
             ],
             encapsulation: 2
           })),
-          Zi),
-        da =
-          (((qi = (function() {
+          zi),
+        ha =
+          (((Bi = (function() {
             function e(t, n, r, i, a, o) {
               var s = this;
               _classCallCheck(this, e),
@@ -10026,24 +9901,24 @@ function _createClass(e, t, n) {
                       var r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
                       s._ngZone.runOutsideAngular(function() {
                         var e = cn(t, 'focusin').pipe(
-                          Qr(n),
+                          Wr(n),
                           Object(u.a)(function(e) {
                             return e.target;
                           })
                         );
                         cn(t, 'keydown')
                           .pipe(
-                            Qr(n),
+                            Wr(n),
                             dt(function(e) {
-                              return e.which === pi.Tab;
+                              return e.which === fi.Tab;
                             }),
-                            Yr(e)
+                            Jr(e)
                           )
                           .subscribe(function(e) {
                             var n = _slicedToArray(e, 2),
                               r = n[0],
                               i = n[1],
-                              a = _slicedToArray(_i(t), 2),
+                              a = _slicedToArray(yi(t), 2),
                               o = a[0],
                               s = a[1];
                             (i !== o && i !== t) || !r.shiftKey || (s.focus(), r.preventDefault()),
@@ -10052,8 +9927,8 @@ function _createClass(e, t, n) {
                           r &&
                             cn(t, 'click')
                               .pipe(
-                                Qr(n),
-                                Yr(e),
+                                Wr(n),
+                                Jr(e),
                                 Object(u.a)(function(e) {
                                   return e[1];
                                 })
@@ -10074,7 +9949,7 @@ function _createClass(e, t, n) {
                   key: 'open',
                   value: function(e, t, n, r) {
                     var i = this,
-                      a = ri(r.container) ? this._document.querySelector(r.container) : this._document.body,
+                      a = ti(r.container) ? this._document.querySelector(r.container) : this._document.body,
                       o = this._rendererFactory.createRenderer(null, null),
                       s = this._scrollBar.compensate(),
                       u = function() {
@@ -10084,11 +9959,11 @@ function _createClass(e, t, n) {
                       throw new Error(
                         'The specified modal container "'.concat(r.container || 'body', '" was not found in the DOM.')
                       );
-                    var l = new la(),
+                    var l = new sa(),
                       c = this._getContentRef(e, r.injector || t, n, l, r),
                       h = !1 !== r.backdrop ? this._attachBackdrop(e, a) : null,
                       f = this._attachWindowComponent(e, a, c),
-                      d = new ca(f, c, h, r.beforeDismiss);
+                      d = new ua(f, c, h, r.beforeDismiss);
                     return (
                       this._registerModalRef(d),
                       this._registerWindowCmpt(f),
@@ -10124,14 +9999,14 @@ function _createClass(e, t, n) {
                 {
                   key: '_attachBackdrop',
                   value: function(e, t) {
-                    var n = e.resolveComponentFactory(ua).create(this._injector);
+                    var n = e.resolveComponentFactory(oa).create(this._injector);
                     return this._applicationRef.attachView(n.hostView), t.appendChild(n.location.nativeElement), n;
                   }
                 },
                 {
                   key: '_attachWindowComponent',
                   value: function(e, t, n) {
-                    var r = e.resolveComponentFactory(fa).create(this._injector, n.nodes);
+                    var r = e.resolveComponentFactory(ca).create(this._injector, n.nodes);
                     return this._applicationRef.attachView(r.hostView), t.appendChild(r.location.nativeElement), r;
                   }
                 },
@@ -10139,7 +10014,7 @@ function _createClass(e, t, n) {
                   key: '_applyWindowOptions',
                   value: function(e, t) {
                     this._windowAttributes.forEach(function(n) {
-                      ri(t[n]) && (e[n] = t[n]);
+                      ti(t[n]) && (e[n] = t[n]);
                     });
                   }
                 },
@@ -10147,7 +10022,7 @@ function _createClass(e, t, n) {
                   key: '_applyBackdropOptions',
                   value: function(e, t) {
                     this._backdropAttributes.forEach(function(n) {
-                      ri(t[n]) && (e[n] = t[n]);
+                      ti(t[n]) && (e[n] = t[n]);
                     });
                   }
                 },
@@ -10160,7 +10035,7 @@ function _createClass(e, t, n) {
                         : 'string' == typeof n
                         ? this._createFromString(n)
                         : this._createFromComponent(e, t, n, r, a)
-                      : new aa([]);
+                      : new ra([]);
                   }
                 },
                 {
@@ -10175,27 +10050,27 @@ function _createClass(e, t, n) {
                         t.dismiss(e);
                       }
                     });
-                    return this._applicationRef.attachView(n), new aa([n.rootNodes], n);
+                    return this._applicationRef.attachView(n), new ra([n.rootNodes], n);
                   }
                 },
                 {
                   key: '_createFromString',
                   value: function(e) {
                     var t = this._document.createTextNode(''.concat(e));
-                    return new aa([[t]]);
+                    return new ra([[t]]);
                   }
                 },
                 {
                   key: '_createFromComponent',
                   value: function(e, t, n, r, a) {
                     var o = e.resolveComponentFactory(n),
-                      s = i.r.create({ providers: [{ provide: la, useValue: r }], parent: t }),
+                      s = i.r.create({ providers: [{ provide: sa, useValue: r }], parent: t }),
                       u = o.create(s),
                       l = u.location.nativeElement;
                     return (
                       a.scrollable && l.classList.add('component-host-scrollable'),
                       this._applicationRef.attachView(u.hostView),
-                      new aa([[l]], u.hostView, u)
+                      new ra([[l]], u.hostView, u)
                     );
                   }
                 },
@@ -10251,26 +10126,26 @@ function _createClass(e, t, n) {
               e
             );
           })()).ɵfac = function(e) {
-            return new (e || qi)(i.Zb(i.g), i.Zb(i.r), i.Zb(a.c), i.Zb(sa), i.Zb(i.E), i.Zb(i.z));
+            return new (e || Bi)(i.Zb(i.g), i.Zb(i.r), i.Zb(a.c), i.Zb(aa), i.Zb(i.E), i.Zb(i.z));
           }),
-          (qi.ɵprov = i.Ib({ token: qi, factory: qi.ɵfac, providedIn: 'root' })),
-          (qi.ngInjectableDef = Object(i.Ib)({
+          (Bi.ɵprov = i.Ib({ token: Bi, factory: Bi.ɵfac, providedIn: 'root' })),
+          (Bi.ngInjectableDef = Object(i.Ib)({
             factory: function() {
-              return new qi(
+              return new Bi(
                 Object(i.Zb)(i.g),
                 Object(i.Zb)(i.o),
                 Object(i.Zb)(a.c),
-                Object(i.Zb)(sa),
+                Object(i.Zb)(aa),
                 Object(i.Zb)(i.E),
                 Object(i.Zb)(i.z)
               );
             },
-            token: qi,
+            token: Bi,
             providedIn: 'root'
           })),
-          qi),
-        pa =
-          (((zi = (function() {
+          Bi),
+        fa =
+          (((Ui = (function() {
             function e(t, n, r, i) {
               _classCallCheck(this, e),
                 (this._moduleCFR = t),
@@ -10304,40 +10179,18 @@ function _createClass(e, t, n) {
               e
             );
           })()).ɵfac = function(e) {
-            return new (e || zi)(i.Zb(i.j), i.Zb(i.r), i.Zb(da), i.Zb(ia));
+            return new (e || Ui)(i.Zb(i.j), i.Zb(i.r), i.Zb(ha), i.Zb(na));
           }),
-          (zi.ɵprov = i.Ib({ token: zi, factory: zi.ɵfac, providedIn: 'root' })),
-          (zi.ngInjectableDef = Object(i.Ib)({
+          (Ui.ɵprov = i.Ib({ token: Ui, factory: Ui.ɵfac, providedIn: 'root' })),
+          (Ui.ngInjectableDef = Object(i.Ib)({
             factory: function() {
-              return new zi(Object(i.Zb)(i.j), Object(i.Zb)(i.o), Object(i.Zb)(da), Object(i.Zb)(ia));
+              return new Ui(Object(i.Zb)(i.j), Object(i.Zb)(i.o), Object(i.Zb)(ha), Object(i.Zb)(na));
             },
-            token: zi,
+            token: Ui,
             providedIn: 'root'
           })),
-          zi),
-        va =
-          (((Bi = function e() {
-            _classCallCheck(this, e);
-          }).ɵmod = i.Kb({ type: Bi })),
-          (Bi.ɵinj = i.Jb({
-            factory: function(e) {
-              return new (e || Bi)();
-            },
-            providers: [pa]
-          })),
-          Bi),
-        ga =
-          (((Ui = function e() {
-            _classCallCheck(this, e);
-          }).ɵmod = i.Kb({ type: Ui })),
-          (Ui.ɵinj = i.Jb({
-            factory: function(e) {
-              return new (e || Ui)();
-            },
-            imports: [[a.b]]
-          })),
           Ui),
-        ya =
+        da =
           (((Hi = function e() {
             _classCallCheck(this, e);
           }).ɵmod = i.Kb({ type: Hi })),
@@ -10345,10 +10198,10 @@ function _createClass(e, t, n) {
             factory: function(e) {
               return new (e || Hi)();
             },
-            imports: [[a.b]]
+            providers: [fa]
           })),
           Hi),
-        ma =
+        pa =
           (((Fi = function e() {
             _classCallCheck(this, e);
           }).ɵmod = i.Kb({ type: Fi })),
@@ -10359,7 +10212,7 @@ function _createClass(e, t, n) {
             imports: [[a.b]]
           })),
           Fi),
-        _a =
+        va =
           (((Li = function e() {
             _classCallCheck(this, e);
           }).ɵmod = i.Kb({ type: Li })),
@@ -10370,7 +10223,7 @@ function _createClass(e, t, n) {
             imports: [[a.b]]
           })),
           Li),
-        ba =
+        ga =
           (((Vi = function e() {
             _classCallCheck(this, e);
           }).ɵmod = i.Kb({ type: Vi })),
@@ -10381,7 +10234,7 @@ function _createClass(e, t, n) {
             imports: [[a.b]]
           })),
           Vi),
-        ka =
+        ya =
           (((Di = function e() {
             _classCallCheck(this, e);
           }).ɵmod = i.Kb({ type: Di })),
@@ -10389,10 +10242,10 @@ function _createClass(e, t, n) {
             factory: function(e) {
               return new (e || Di)();
             },
-            imports: [[a.b, ga]]
+            imports: [[a.b]]
           })),
           Di),
-        Ca =
+        ma =
           (((Ni = function e() {
             _classCallCheck(this, e);
           }).ɵmod = i.Kb({ type: Ni })),
@@ -10403,7 +10256,7 @@ function _createClass(e, t, n) {
             imports: [[a.b]]
           })),
           Ni),
-        wa =
+        _a =
           (((Mi = function e() {
             _classCallCheck(this, e);
           }).ɵmod = i.Kb({ type: Mi })),
@@ -10411,20 +10264,21 @@ function _createClass(e, t, n) {
             factory: function(e) {
               return new (e || Mi)();
             },
-            imports: [[a.b]]
+            imports: [[a.b, pa]]
           })),
           Mi),
-        Sa =
+        ba =
           (((Ii = function e() {
             _classCallCheck(this, e);
           }).ɵmod = i.Kb({ type: Ii })),
           (Ii.ɵinj = i.Jb({
             factory: function(e) {
               return new (e || Ii)();
-            }
+            },
+            imports: [[a.b]]
           })),
           Ii),
-        Oa =
+        ka =
           (((Ri = function e() {
             _classCallCheck(this, e);
           }).ɵmod = i.Kb({ type: Ri })),
@@ -10435,32 +10289,53 @@ function _createClass(e, t, n) {
             imports: [[a.b]]
           })),
           Ri),
-        xa = [li, ci, hi, fi, di, Qi, ra, va, ga, ya, ma, _a, ba, ka, Ca, wa, Sa, Oa],
-        Ea =
-          (((Gi = function e() {
+        Ca =
+          (((ji = function e() {
             _classCallCheck(this, e);
-          }).ɵmod = i.Kb({ type: Gi })),
-          (Gi.ɵinj = i.Jb({
+          }).ɵmod = i.Kb({ type: ji })),
+          (ji.ɵinj = i.Jb({
             factory: function(e) {
-              return new (e || Gi)();
-            },
-            imports: [xa, li, ci, hi, fi, di, Qi, ra, va, ga, ya, ma, _a, ba, ka, Ca, wa, Sa, Oa]
+              return new (e || ji)();
+            }
           })),
-          Gi),
-        Ta = n('AytR'),
-        Aa = (function() {
+          ji),
+        wa =
+          (((Pi = function e() {
+            _classCallCheck(this, e);
+          }).ɵmod = i.Kb({ type: Pi })),
+          (Pi.ɵinj = i.Jb({
+            factory: function(e) {
+              return new (e || Pi)();
+            },
+            imports: [[a.b]]
+          })),
+          Pi),
+        Sa = [si, ui, li, ci, hi, Wi, ta, da, pa, va, ga, ya, ma, _a, ba, ka, Ca, wa],
+        Oa =
+          (((qi = function e() {
+            _classCallCheck(this, e);
+          }).ɵmod = i.Kb({ type: qi })),
+          (qi.ɵinj = i.Jb({
+            factory: function(e) {
+              return new (e || qi)();
+            },
+            imports: [Sa, si, ui, li, ci, hi, Wi, ta, da, pa, va, ga, ya, ma, _a, ba, ka, Ca, wa]
+          })),
+          qi),
+        xa = n('AytR'),
+        Ea = (function() {
           function e() {
             return Error.call(this), (this.message = 'no elements in sequence'), (this.name = 'EmptyError'), this;
           }
           return (e.prototype = Object.create(Error.prototype)), e;
         })();
-      function Pa() {
-        var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Ia;
+      function Aa() {
+        var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ja;
         return function(t) {
-          return t.lift(new ja(e));
+          return t.lift(new Ta(e));
         };
       }
-      var ja = (function() {
+      var Ta = (function() {
           function e(t) {
             _classCallCheck(this, e), (this.errorFactory = t);
           }
@@ -10469,14 +10344,14 @@ function _createClass(e, t, n) {
               {
                 key: 'call',
                 value: function(e, t) {
-                  return t.subscribe(new Ra(e, this.errorFactory));
+                  return t.subscribe(new Pa(e, this.errorFactory));
                 }
               }
             ]),
             e
           );
         })(),
-        Ra = (function(e) {
+        Pa = (function(e) {
           function t(e, n) {
             var r;
             return (
@@ -10512,11 +10387,11 @@ function _createClass(e, t, n) {
             t
           );
         })(ft.a);
-      function Ia() {
-        return new Aa();
+      function ja() {
+        return new Ea();
       }
-      var Ma = n('SpAZ');
-      function Na(e, t) {
+      var Ra = n('SpAZ');
+      function Ia(e, t) {
         var n = arguments.length >= 2;
         return function(r) {
           return r.pipe(
@@ -10524,24 +10399,24 @@ function _createClass(e, t, n) {
               ? dt(function(t, n) {
                   return e(t, n, r);
                 })
-              : Ma.a,
+              : Ra.a,
             ir(1),
             n
               ? sr(t)
-              : Pa(function() {
-                  return new Aa();
+              : Aa(function() {
+                  return new Ea();
                 })
           );
         };
       }
-      function Da(e) {
+      function Ma(e) {
         return function(t) {
-          var n = new Va(e),
+          var n = new Na(e),
             r = t.lift(n);
           return (n.caught = r);
         };
       }
-      var Va = (function() {
+      var Na = (function() {
           function e(t) {
             _classCallCheck(this, e), (this.selector = t);
           }
@@ -10550,14 +10425,14 @@ function _createClass(e, t, n) {
               {
                 key: 'call',
                 value: function(e, t) {
-                  return t.subscribe(new La(e, this.selector, this.caught));
+                  return t.subscribe(new Da(e, this.selector, this.caught));
                 }
               }
             ]),
             e
           );
         })(),
-        La = (function(e) {
+        Da = (function(e) {
           function t(e, n, r) {
             var i;
             return (
@@ -10592,7 +10467,7 @@ function _createClass(e, t, n) {
             t
           );
         })(mn.a);
-      function Fa(e, t) {
+      function Va(e, t) {
         var n = arguments.length >= 2;
         return function(r) {
           return r.pipe(
@@ -10600,18 +10475,18 @@ function _createClass(e, t, n) {
               ? dt(function(t, n) {
                   return e(t, n, r);
                 })
-              : Ma.a,
+              : Ra.a,
             xn(1),
             n
               ? sr(t)
-              : Pa(function() {
-                  return new Aa();
+              : Aa(function() {
+                  return new Ea();
                 })
           );
         };
       }
-      var Ha,
-        Ua = (function() {
+      var La,
+        Fa = (function() {
           function e(t, n, r) {
             _classCallCheck(this, e), (this.predicate = t), (this.thisArg = n), (this.source = r);
           }
@@ -10620,14 +10495,14 @@ function _createClass(e, t, n) {
               {
                 key: 'call',
                 value: function(e, t) {
-                  return t.subscribe(new Ba(e, this.predicate, this.thisArg, this.source));
+                  return t.subscribe(new Ha(e, this.predicate, this.thisArg, this.source));
                 }
               }
             ]),
             e
           );
         })(),
-        Ba = (function(e) {
+        Ha = (function(e) {
           function t(e, n, r, i) {
             var a;
             return (
@@ -10671,7 +10546,7 @@ function _createClass(e, t, n) {
             t
           );
         })(ft.a),
-        za = (function() {
+        Ua = (function() {
           function e(t) {
             _classCallCheck(this, e), (this.callback = t);
           }
@@ -10680,14 +10555,14 @@ function _createClass(e, t, n) {
               {
                 key: 'call',
                 value: function(e, t) {
-                  return t.subscribe(new qa(e, this.callback));
+                  return t.subscribe(new Ba(e, this.callback));
                 }
               }
             ]),
             e
           );
         })(),
-        qa = (function(e) {
+        Ba = (function(e) {
           function t(e, n) {
             var r;
             return (
@@ -10698,10 +10573,10 @@ function _createClass(e, t, n) {
           }
           return _inherits(t, e), t;
         })(ft.a),
-        Za = function e(t, n) {
+        za = function e(t, n) {
           _classCallCheck(this, e), (this.id = t), (this.url = n);
         },
-        Ga = (function(e) {
+        qa = (function(e) {
           function t(e, n) {
             var r,
               i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'imperative',
@@ -10725,8 +10600,8 @@ function _createClass(e, t, n) {
             ]),
             t
           );
-        })(Za),
-        Wa = (function(e) {
+        })(za),
+        Za = (function(e) {
           function t(e, n, r) {
             var i;
             return (
@@ -10750,8 +10625,8 @@ function _createClass(e, t, n) {
             ]),
             t
           );
-        })(Za),
-        Ka = (function(e) {
+        })(za),
+        Ga = (function(e) {
           function t(e, n, r) {
             var i;
             return (
@@ -10772,8 +10647,8 @@ function _createClass(e, t, n) {
             ]),
             t
           );
-        })(Za),
-        Qa = (function(e) {
+        })(za),
+        Wa = (function(e) {
           function t(e, n, r) {
             var i;
             return (
@@ -10797,8 +10672,8 @@ function _createClass(e, t, n) {
             ]),
             t
           );
-        })(Za),
-        Ja = (function(e) {
+        })(za),
+        Ka = (function(e) {
           function t(e, n, r, i) {
             var a;
             return (
@@ -10824,8 +10699,8 @@ function _createClass(e, t, n) {
             ]),
             t
           );
-        })(Za),
-        $a = (function(e) {
+        })(za),
+        Qa = (function(e) {
           function t(e, n, r, i) {
             var a;
             return (
@@ -10851,8 +10726,8 @@ function _createClass(e, t, n) {
             ]),
             t
           );
-        })(Za),
-        Ya = (function(e) {
+        })(za),
+        Ja = (function(e) {
           function t(e, n, r, i, a) {
             var o;
             return (
@@ -10880,8 +10755,8 @@ function _createClass(e, t, n) {
             ]),
             t
           );
-        })(Za),
-        Xa = (function(e) {
+        })(za),
+        $a = (function(e) {
           function t(e, n, r, i) {
             var a;
             return (
@@ -10907,8 +10782,8 @@ function _createClass(e, t, n) {
             ]),
             t
           );
-        })(Za),
-        eo = (function(e) {
+        })(za),
+        Ya = (function(e) {
           function t(e, n, r, i) {
             var a;
             return (
@@ -10934,8 +10809,8 @@ function _createClass(e, t, n) {
             ]),
             t
           );
-        })(Za),
-        to = (function() {
+        })(za),
+        Xa = (function() {
           function e(t) {
             _classCallCheck(this, e), (this.route = t);
           }
@@ -10951,7 +10826,7 @@ function _createClass(e, t, n) {
             e
           );
         })(),
-        no = (function() {
+        eo = (function() {
           function e(t) {
             _classCallCheck(this, e), (this.route = t);
           }
@@ -10967,7 +10842,7 @@ function _createClass(e, t, n) {
             e
           );
         })(),
-        ro = (function() {
+        to = (function() {
           function e(t) {
             _classCallCheck(this, e), (this.snapshot = t);
           }
@@ -10986,7 +10861,7 @@ function _createClass(e, t, n) {
             e
           );
         })(),
-        io = (function() {
+        no = (function() {
           function e(t) {
             _classCallCheck(this, e), (this.snapshot = t);
           }
@@ -11005,7 +10880,7 @@ function _createClass(e, t, n) {
             e
           );
         })(),
-        ao = (function() {
+        ro = (function() {
           function e(t) {
             _classCallCheck(this, e), (this.snapshot = t);
           }
@@ -11024,7 +10899,7 @@ function _createClass(e, t, n) {
             e
           );
         })(),
-        oo = (function() {
+        io = (function() {
           function e(t) {
             _classCallCheck(this, e), (this.snapshot = t);
           }
@@ -11043,7 +10918,7 @@ function _createClass(e, t, n) {
             e
           );
         })(),
-        so = (function() {
+        ao = (function() {
           function e(t, n, r) {
             _classCallCheck(this, e), (this.routerEvent = t), (this.position = n), (this.anchor = r);
           }
@@ -11061,14 +10936,14 @@ function _createClass(e, t, n) {
             e
           );
         })(),
-        uo =
-          (((Ha = function e() {
+        oo =
+          (((La = function e() {
             _classCallCheck(this, e);
           }).ɵfac = function(e) {
-            return new (e || Ha)();
+            return new (e || La)();
           }),
-          (Ha.ɵcmp = i.Gb({
-            type: Ha,
+          (La.ɵcmp = i.Gb({
+            type: La,
             selectors: [['ng-component']],
             decls: 1,
             vars: 0,
@@ -11076,12 +10951,12 @@ function _createClass(e, t, n) {
               1 & e && i.Nb(0, 'router-outlet');
             },
             directives: function() {
-              return [ku];
+              return [_u];
             },
             encapsulation: 2
           })),
-          Ha),
-        lo = (function() {
+          La),
+        so = (function() {
           function e(t) {
             _classCallCheck(this, e), (this.params = t || {});
           }
@@ -11123,14 +10998,14 @@ function _createClass(e, t, n) {
             e
           );
         })();
-      function co(e) {
-        return new lo(e);
+      function uo(e) {
+        return new so(e);
       }
-      function ho(e) {
+      function lo(e) {
         var t = Error('NavigationCancelingError: ' + e);
         return (t.ngNavigationCancelingError = !0), t;
       }
-      function fo(e, t, n) {
+      function co(e, t, n) {
         var r = n.path.split('/');
         if (r.length > e.length) return null;
         if ('full' === n.pathMatch && (t.hasChildren() || r.length < e.length)) return null;
@@ -11142,16 +11017,16 @@ function _createClass(e, t, n) {
         }
         return { consumed: e.slice(0, r.length), posParams: i };
       }
-      var po = function e(t, n) {
+      var ho = function e(t, n) {
         _classCallCheck(this, e), (this.routes = t), (this.module = n);
       };
-      function vo(e) {
+      function fo(e) {
         for (var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : '', n = 0; n < e.length; n++) {
           var r = e[n];
-          go(r, yo(t, r));
+          po(r, vo(t, r));
         }
       }
-      function go(e, t) {
+      function po(e, t) {
         if (!e)
           throw new Error(
             "\n      Invalid configuration of route '".concat(
@@ -11212,9 +11087,9 @@ function _createClass(e, t, n) {
           throw new Error(
             "Invalid configuration of route '".concat(t, "': pathMatch can only be set to 'prefix' or 'full'")
           );
-        e.children && vo(e.children, t);
+        e.children && fo(e.children, t);
       }
-      function yo(e, t) {
+      function vo(e, t) {
         return t
           ? e || t.path
             ? e && !t.path
@@ -11225,20 +11100,20 @@ function _createClass(e, t, n) {
             : ''
           : e;
       }
-      function mo(e) {
-        var t = e.children && e.children.map(mo),
+      function go(e) {
+        var t = e.children && e.children.map(go),
           n = t ? Object.assign(Object.assign({}, e), { children: t }) : Object.assign({}, e);
-        return !n.component && (t || n.loadChildren) && n.outlet && 'primary' !== n.outlet && (n.component = uo), n;
+        return !n.component && (t || n.loadChildren) && n.outlet && 'primary' !== n.outlet && (n.component = oo), n;
       }
-      function _o(e, t) {
+      function yo(e, t) {
         var n,
           r = Object.keys(e),
           i = Object.keys(t);
         if (!r || !i || r.length != i.length) return !1;
-        for (var a = 0; a < r.length; a++) if (!bo(e[(n = r[a])], t[n])) return !1;
+        for (var a = 0; a < r.length; a++) if (!mo(e[(n = r[a])], t[n])) return !1;
         return !0;
       }
-      function bo(e, t) {
+      function mo(e, t) {
         return Array.isArray(e) && Array.isArray(t)
           ? e.length == t.length &&
               e.every(function(e) {
@@ -11246,25 +11121,25 @@ function _createClass(e, t, n) {
               })
           : e === t;
       }
-      function ko(e) {
+      function _o(e) {
         return Array.prototype.concat.apply([], e);
       }
-      function Co(e) {
+      function bo(e) {
         return e.length > 0 ? e[e.length - 1] : null;
       }
-      function wo(e, t) {
+      function ko(e, t) {
         for (var n in e) e.hasOwnProperty(n) && t(e[n], n);
       }
-      function So(e) {
+      function Co(e) {
         return Object(i.pb)(e) ? e : Object(i.qb)(e) ? Object(c.a)(Promise.resolve(e)) : lt(e);
       }
-      function Oo(e, t, n) {
+      function wo(e, t, n) {
         return n
           ? (function(e, t) {
-              return _o(e, t);
+              return yo(e, t);
             })(e.queryParams, t.queryParams) &&
               (function e(t, n) {
-                if (!Ao(t.segments, n.segments)) return !1;
+                if (!Eo(t.segments, n.segments)) return !1;
                 if (t.numberOfChildren !== n.numberOfChildren) return !1;
                 for (var r in n.children) {
                   if (!t.children[r]) return !1;
@@ -11276,15 +11151,15 @@ function _createClass(e, t, n) {
               return (
                 Object.keys(t).length <= Object.keys(e).length &&
                 Object.keys(t).every(function(n) {
-                  return bo(e[n], t[n]);
+                  return mo(e[n], t[n]);
                 })
               );
             })(e.queryParams, t.queryParams) &&
               (function e(t, n) {
                 return (function t(n, r, i) {
-                  if (n.segments.length > i.length) return !!Ao(n.segments.slice(0, i.length), i) && !r.hasChildren();
+                  if (n.segments.length > i.length) return !!Eo(n.segments.slice(0, i.length), i) && !r.hasChildren();
                   if (n.segments.length === i.length) {
-                    if (!Ao(n.segments, i)) return !1;
+                    if (!Eo(n.segments, i)) return !1;
                     for (var a in r.children) {
                       if (!n.children[a]) return !1;
                       if (!e(n.children[a], r.children[a])) return !1;
@@ -11293,11 +11168,11 @@ function _createClass(e, t, n) {
                   }
                   var o = i.slice(0, n.segments.length),
                     s = i.slice(n.segments.length);
-                  return !!Ao(n.segments, o) && !!n.children.primary && t(n.children.primary, r, s);
+                  return !!Eo(n.segments, o) && !!n.children.primary && t(n.children.primary, r, s);
                 })(t, n, n.segments);
               })(e.root, t.root);
       }
-      var xo = (function() {
+      var So = (function() {
           function e(t, n, r) {
             _classCallCheck(this, e), (this.root = t), (this.queryParams = n), (this.fragment = r);
           }
@@ -11306,27 +11181,27 @@ function _createClass(e, t, n) {
               {
                 key: 'toString',
                 value: function() {
-                  return Io.serialize(this);
+                  return jo.serialize(this);
                 }
               },
               {
                 key: 'queryParamMap',
                 get: function() {
-                  return this._queryParamMap || (this._queryParamMap = co(this.queryParams)), this._queryParamMap;
+                  return this._queryParamMap || (this._queryParamMap = uo(this.queryParams)), this._queryParamMap;
                 }
               }
             ]),
             e
           );
         })(),
-        Eo = (function() {
+        Oo = (function() {
           function e(t, n) {
             var r = this;
             _classCallCheck(this, e),
               (this.segments = t),
               (this.children = n),
               (this.parent = null),
-              wo(n, function(e, t) {
+              ko(n, function(e, t) {
                 return (e.parent = r);
               });
           }
@@ -11341,7 +11216,7 @@ function _createClass(e, t, n) {
               {
                 key: 'toString',
                 value: function() {
-                  return Mo(this);
+                  return Ro(this);
                 }
               },
               {
@@ -11354,7 +11229,7 @@ function _createClass(e, t, n) {
             e
           );
         })(),
-        To = (function() {
+        xo = (function() {
           function e(t, n) {
             _classCallCheck(this, e), (this.path = t), (this.parameters = n);
           }
@@ -11363,20 +11238,20 @@ function _createClass(e, t, n) {
               {
                 key: 'toString',
                 value: function() {
-                  return Ho(this);
+                  return Lo(this);
                 }
               },
               {
                 key: 'parameterMap',
                 get: function() {
-                  return this._parameterMap || (this._parameterMap = co(this.parameters)), this._parameterMap;
+                  return this._parameterMap || (this._parameterMap = uo(this.parameters)), this._parameterMap;
                 }
               }
             ]),
             e
           );
         })();
-      function Ao(e, t) {
+      function Eo(e, t) {
         return (
           e.length === t.length &&
           e.every(function(e, n) {
@@ -11384,22 +11259,22 @@ function _createClass(e, t, n) {
           })
         );
       }
-      function Po(e, t) {
+      function Ao(e, t) {
         var n = [];
         return (
-          wo(e.children, function(e, r) {
+          ko(e.children, function(e, r) {
             'primary' === r && (n = n.concat(t(e, r)));
           }),
-          wo(e.children, function(e, r) {
+          ko(e.children, function(e, r) {
             'primary' !== r && (n = n.concat(t(e, r)));
           }),
           n
         );
       }
-      var jo = function e() {
+      var To = function e() {
           _classCallCheck(this, e);
         },
-        Ro = (function() {
+        Po = (function() {
           function e() {
             _classCallCheck(this, e);
           }
@@ -11408,8 +11283,8 @@ function _createClass(e, t, n) {
               {
                 key: 'parse',
                 value: function(e) {
-                  var t = new Zo(e);
-                  return new xo(t.parseRootSegment(), t.parseQueryParams(), t.parseFragment());
+                  var t = new zo(e);
+                  return new So(t.parseRootSegment(), t.parseQueryParams(), t.parseFragment());
                 }
               },
               {
@@ -11420,21 +11295,21 @@ function _createClass(e, t, n) {
                     .concat(
                       '/'.concat(
                         (function e(t, n) {
-                          if (!t.hasChildren()) return Mo(t);
+                          if (!t.hasChildren()) return Ro(t);
                           if (n) {
                             var r = t.children.primary ? e(t.children.primary, !1) : '',
                               i = [];
                             return (
-                              wo(t.children, function(t, n) {
+                              ko(t.children, function(t, n) {
                                 'primary' !== n && i.push(''.concat(n, ':').concat(e(t, !1)));
                               }),
                               i.length > 0 ? ''.concat(r, '(').concat(i.join('//'), ')') : r
                             );
                           }
-                          var a = Po(t, function(n, r) {
+                          var a = Ao(t, function(n, r) {
                             return 'primary' === r ? [e(t.children.primary, !1)] : [''.concat(r, ':').concat(e(n, !1))];
                           });
-                          return ''.concat(Mo(t), '/(').concat(a.join('//'), ')');
+                          return ''.concat(Ro(t), '/(').concat(a.join('//'), ')');
                         })(e.root, !0)
                       ),
                       ((n = e.queryParams),
@@ -11443,10 +11318,10 @@ function _createClass(e, t, n) {
                         return Array.isArray(t)
                           ? t
                               .map(function(t) {
-                                return ''.concat(Do(e), '=').concat(Do(t));
+                                return ''.concat(Mo(e), '=').concat(Mo(t));
                               })
                               .join('&')
-                          : ''.concat(Do(e), '=').concat(Do(t));
+                          : ''.concat(Mo(e), '=').concat(Mo(t));
                       })),
                       r.length ? '?'.concat(r.join('&')) : '')
                     )
@@ -11457,55 +11332,55 @@ function _createClass(e, t, n) {
             e
           );
         })(),
-        Io = new Ro();
-      function Mo(e) {
+        jo = new Po();
+      function Ro(e) {
         return e.segments
           .map(function(e) {
-            return Ho(e);
+            return Lo(e);
           })
           .join('/');
       }
-      function No(e) {
+      function Io(e) {
         return encodeURIComponent(e)
           .replace(/%40/g, '@')
           .replace(/%3A/gi, ':')
           .replace(/%24/g, '$')
           .replace(/%2C/gi, ',');
       }
-      function Do(e) {
-        return No(e).replace(/%3B/gi, ';');
+      function Mo(e) {
+        return Io(e).replace(/%3B/gi, ';');
       }
-      function Vo(e) {
-        return No(e)
+      function No(e) {
+        return Io(e)
           .replace(/\(/g, '%28')
           .replace(/\)/g, '%29')
           .replace(/%26/gi, '&');
       }
-      function Lo(e) {
+      function Do(e) {
         return decodeURIComponent(e);
       }
-      function Fo(e) {
-        return Lo(e.replace(/\+/g, '%20'));
+      function Vo(e) {
+        return Do(e.replace(/\+/g, '%20'));
       }
-      function Ho(e) {
-        return ''.concat(Vo(e.path)).concat(
+      function Lo(e) {
+        return ''.concat(No(e.path)).concat(
           ((t = e.parameters),
           Object.keys(t)
             .map(function(e) {
-              return ';'.concat(Vo(e), '=').concat(Vo(t[e]));
+              return ';'.concat(No(e), '=').concat(No(t[e]));
             })
             .join(''))
         );
         var t;
       }
-      var Uo = /^[^\/()?;=#]+/;
-      function Bo(e) {
-        var t = e.match(Uo);
+      var Fo = /^[^\/()?;=#]+/;
+      function Ho(e) {
+        var t = e.match(Fo);
         return t ? t[0] : '';
       }
-      var zo = /^[^=?&#]+/,
-        qo = /^[^?&#]+/,
-        Zo = (function() {
+      var Uo = /^[^=?&#]+/,
+        Bo = /^[^?&#]+/,
+        zo = (function() {
           function e(t) {
             _classCallCheck(this, e), (this.url = t), (this.remaining = t);
           }
@@ -11517,8 +11392,8 @@ function _createClass(e, t, n) {
                   return (
                     this.consumeOptional('/'),
                     '' === this.remaining || this.peekStartsWith('?') || this.peekStartsWith('#')
-                      ? new Eo([], {})
-                      : new Eo([], this.parseChildren())
+                      ? new Oo([], {})
+                      : new Oo([], this.parseChildren())
                   );
                 }
               },
@@ -11556,7 +11431,7 @@ function _createClass(e, t, n) {
                   var n = {};
                   return (
                     this.peekStartsWith('(') && (n = this.parseParens(!1)),
-                    (e.length > 0 || Object.keys(t).length > 0) && (n.primary = new Eo(e, t)),
+                    (e.length > 0 || Object.keys(t).length > 0) && (n.primary = new Oo(e, t)),
                     n
                   );
                 }
@@ -11564,10 +11439,10 @@ function _createClass(e, t, n) {
               {
                 key: 'parseSegment',
                 value: function() {
-                  var e = Bo(this.remaining);
+                  var e = Ho(this.remaining);
                   if ('' === e && this.peekStartsWith(';'))
                     throw new Error("Empty path url segment cannot have parameters: '".concat(this.remaining, "'."));
-                  return this.capture(e), new To(Lo(e), this.parseMatrixParams());
+                  return this.capture(e), new xo(Do(e), this.parseMatrixParams());
                 }
               },
               {
@@ -11580,15 +11455,15 @@ function _createClass(e, t, n) {
               {
                 key: 'parseParam',
                 value: function(e) {
-                  var t = Bo(this.remaining);
+                  var t = Ho(this.remaining);
                   if (t) {
                     this.capture(t);
                     var n = '';
                     if (this.consumeOptional('=')) {
-                      var r = Bo(this.remaining);
+                      var r = Ho(this.remaining);
                       r && ((n = r), this.capture(n));
                     }
-                    e[Lo(t)] = Lo(n);
+                    e[Do(t)] = Do(n);
                   }
                 }
               },
@@ -11596,7 +11471,7 @@ function _createClass(e, t, n) {
                 key: 'parseQueryParam',
                 value: function(e) {
                   var t = (function(e) {
-                    var t = e.match(zo);
+                    var t = e.match(Uo);
                     return t ? t[0] : '';
                   })(this.remaining);
                   if (t) {
@@ -11604,13 +11479,13 @@ function _createClass(e, t, n) {
                     var n = '';
                     if (this.consumeOptional('=')) {
                       var r = (function(e) {
-                        var t = e.match(qo);
+                        var t = e.match(Bo);
                         return t ? t[0] : '';
                       })(this.remaining);
                       r && ((n = r), this.capture(n));
                     }
-                    var i = Fo(t),
-                      a = Fo(n);
+                    var i = Vo(t),
+                      a = Vo(n);
                     if (e.hasOwnProperty(i)) {
                       var o = e[i];
                       Array.isArray(o) || ((o = [o]), (e[i] = o)), o.push(a);
@@ -11623,7 +11498,7 @@ function _createClass(e, t, n) {
                 value: function(e) {
                   var t = {};
                   for (this.capture('('); !this.consumeOptional(')') && this.remaining.length > 0; ) {
-                    var n = Bo(this.remaining),
+                    var n = Ho(this.remaining),
                       r = this.remaining[n.length];
                     if ('/' !== r && ')' !== r && ';' !== r)
                       throw new Error("Cannot parse url '".concat(this.url, "'"));
@@ -11632,7 +11507,7 @@ function _createClass(e, t, n) {
                       ? ((i = n.substr(0, n.indexOf(':'))), this.capture(i), this.capture(':'))
                       : e && (i = 'primary');
                     var a = this.parseChildren();
-                    (t[i] = 1 === Object.keys(a).length ? a.primary : new Eo([], a)), this.consumeOptional('//');
+                    (t[i] = 1 === Object.keys(a).length ? a.primary : new Oo([], a)), this.consumeOptional('//');
                   }
                   return t;
                 }
@@ -11659,7 +11534,7 @@ function _createClass(e, t, n) {
             e
           );
         })(),
-        Go = (function() {
+        qo = (function() {
           function e(t) {
             _classCallCheck(this, e), (this._root = t);
           }
@@ -11675,7 +11550,7 @@ function _createClass(e, t, n) {
               {
                 key: 'children',
                 value: function(e) {
-                  var t = Wo(e, this._root);
+                  var t = Zo(e, this._root);
                   return t
                     ? t.children.map(function(e) {
                         return e.value;
@@ -11686,14 +11561,14 @@ function _createClass(e, t, n) {
               {
                 key: 'firstChild',
                 value: function(e) {
-                  var t = Wo(e, this._root);
+                  var t = Zo(e, this._root);
                   return t && t.children.length > 0 ? t.children[0].value : null;
                 }
               },
               {
                 key: 'siblings',
                 value: function(e) {
-                  var t = Ko(e, this._root);
+                  var t = Go(e, this._root);
                   return t.length < 2
                     ? []
                     : t[t.length - 2].children
@@ -11708,7 +11583,7 @@ function _createClass(e, t, n) {
               {
                 key: 'pathFromRoot',
                 value: function(e) {
-                  return Ko(e, this._root).map(function(e) {
+                  return Go(e, this._root).map(function(e) {
                     return e.value;
                   });
                 }
@@ -11723,14 +11598,14 @@ function _createClass(e, t, n) {
             e
           );
         })();
-      function Wo(e, t) {
+      function Zo(e, t) {
         if (e === t.value) return t;
         var n = !0,
           r = !1,
           i = void 0;
         try {
           for (var a, o = t.children[Symbol.iterator](); !(n = (a = o.next()).done); n = !0) {
-            var s = Wo(e, a.value);
+            var s = Zo(e, a.value);
             if (s) return s;
           }
         } catch (u) {
@@ -11744,14 +11619,14 @@ function _createClass(e, t, n) {
         }
         return null;
       }
-      function Ko(e, t) {
+      function Go(e, t) {
         if (e === t.value) return [t];
         var n = !0,
           r = !1,
           i = void 0;
         try {
           for (var a, o = t.children[Symbol.iterator](); !(n = (a = o.next()).done); n = !0) {
-            var s = Ko(e, a.value);
+            var s = Go(e, a.value);
             if (s.length) return s.unshift(t), s;
           }
         } catch (u) {
@@ -11765,7 +11640,7 @@ function _createClass(e, t, n) {
         }
         return [];
       }
-      var Qo = (function() {
+      var Wo = (function() {
         function e(t, n) {
           _classCallCheck(this, e), (this.value = t), (this.children = n);
         }
@@ -11781,7 +11656,7 @@ function _createClass(e, t, n) {
           e
         );
       })();
-      function Jo(e) {
+      function Ko(e) {
         var t = {};
         return (
           e &&
@@ -11791,13 +11666,13 @@ function _createClass(e, t, n) {
           t
         );
       }
-      var $o = (function(e) {
+      var Qo = (function(e) {
         function t(e, n) {
           var r;
           return (
             _classCallCheck(this, t),
             ((r = _possibleConstructorReturn(this, _getPrototypeOf(t).call(this, e))).snapshot = n),
-            rs(_assertThisInitialized(r), e),
+            ts(_assertThisInitialized(r), e),
             r
           );
         }
@@ -11813,21 +11688,21 @@ function _createClass(e, t, n) {
           ]),
           t
         );
-      })(Go);
-      function Yo(e, t) {
+      })(qo);
+      function Jo(e, t) {
         var n = (function(e, t) {
-            var n = new ts([], {}, {}, '', {}, 'primary', t, null, e.root, -1, {});
-            return new ns('', new Qo(n, []));
+            var n = new Xo([], {}, {}, '', {}, 'primary', t, null, e.root, -1, {});
+            return new es('', new Wo(n, []));
           })(e, t),
-          r = new zr([new To('', {})]),
-          i = new zr({}),
-          a = new zr({}),
-          o = new zr({}),
-          s = new zr(''),
-          u = new Xo(r, i, o, s, a, 'primary', t, n.root);
-        return (u.snapshot = n.root), new $o(new Qo(u, []), n);
+          r = new Ur([new xo('', {})]),
+          i = new Ur({}),
+          a = new Ur({}),
+          o = new Ur({}),
+          s = new Ur(''),
+          u = new $o(r, i, o, s, a, 'primary', t, n.root);
+        return (u.snapshot = n.root), new Qo(new Wo(u, []), n);
       }
-      var Xo = (function() {
+      var $o = (function() {
         function e(t, n, r, i, a, o, s, u) {
           _classCallCheck(this, e),
             (this.url = t),
@@ -11890,7 +11765,7 @@ function _createClass(e, t, n) {
                   this._paramMap ||
                     (this._paramMap = this.params.pipe(
                       Object(u.a)(function(e) {
-                        return co(e);
+                        return uo(e);
                       })
                     )),
                   this._paramMap
@@ -11904,7 +11779,7 @@ function _createClass(e, t, n) {
                   this._queryParamMap ||
                     (this._queryParamMap = this.queryParams.pipe(
                       Object(u.a)(function(e) {
-                        return co(e);
+                        return uo(e);
                       })
                     )),
                   this._queryParamMap
@@ -11915,7 +11790,7 @@ function _createClass(e, t, n) {
           e
         );
       })();
-      function es(e) {
+      function Yo(e) {
         var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'emptyOnly',
           n = e.pathFromRoot,
           r = 0;
@@ -11942,7 +11817,7 @@ function _createClass(e, t, n) {
           );
         })(n.slice(r));
       }
-      var ts = (function() {
+      var Xo = (function() {
           function e(t, n, r, i, a, o, s, u, l, c, h) {
             _classCallCheck(this, e),
               (this.url = t),
@@ -12007,26 +11882,26 @@ function _createClass(e, t, n) {
               {
                 key: 'paramMap',
                 get: function() {
-                  return this._paramMap || (this._paramMap = co(this.params)), this._paramMap;
+                  return this._paramMap || (this._paramMap = uo(this.params)), this._paramMap;
                 }
               },
               {
                 key: 'queryParamMap',
                 get: function() {
-                  return this._queryParamMap || (this._queryParamMap = co(this.queryParams)), this._queryParamMap;
+                  return this._queryParamMap || (this._queryParamMap = uo(this.queryParams)), this._queryParamMap;
                 }
               }
             ]),
             e
           );
         })(),
-        ns = (function(e) {
+        es = (function(e) {
           function t(e, n) {
             var r;
             return (
               _classCallCheck(this, t),
               ((r = _possibleConstructorReturn(this, _getPrototypeOf(t).call(this, n))).url = e),
-              rs(_assertThisInitialized(r), n),
+              ts(_assertThisInitialized(r), n),
               r
             );
           }
@@ -12036,75 +11911,75 @@ function _createClass(e, t, n) {
               {
                 key: 'toString',
                 value: function() {
-                  return is(this._root);
+                  return ns(this._root);
                 }
               }
             ]),
             t
           );
-        })(Go);
-      function rs(e, t) {
+        })(qo);
+      function ts(e, t) {
         (t.value._routerState = e),
           t.children.forEach(function(t) {
-            return rs(e, t);
+            return ts(e, t);
           });
       }
-      function is(e) {
-        var t = e.children.length > 0 ? ' { '.concat(e.children.map(is).join(', '), ' } ') : '';
+      function ns(e) {
+        var t = e.children.length > 0 ? ' { '.concat(e.children.map(ns).join(', '), ' } ') : '';
         return ''.concat(e.value).concat(t);
       }
-      function as(e) {
+      function rs(e) {
         if (e.snapshot) {
           var t = e.snapshot,
             n = e._futureSnapshot;
           (e.snapshot = n),
-            _o(t.queryParams, n.queryParams) || e.queryParams.next(n.queryParams),
+            yo(t.queryParams, n.queryParams) || e.queryParams.next(n.queryParams),
             t.fragment !== n.fragment && e.fragment.next(n.fragment),
-            _o(t.params, n.params) || e.params.next(n.params),
+            yo(t.params, n.params) || e.params.next(n.params),
             (function(e, t) {
               if (e.length !== t.length) return !1;
-              for (var n = 0; n < e.length; ++n) if (!_o(e[n], t[n])) return !1;
+              for (var n = 0; n < e.length; ++n) if (!yo(e[n], t[n])) return !1;
               return !0;
             })(t.url, n.url) || e.url.next(n.url),
-            _o(t.data, n.data) || e.data.next(n.data);
+            yo(t.data, n.data) || e.data.next(n.data);
         } else (e.snapshot = e._futureSnapshot), e.data.next(e._futureSnapshot.data);
       }
-      function os(e, t) {
+      function is(e, t) {
         var n, r;
         return (
-          _o(e.params, t.params) &&
-          Ao((n = e.url), (r = t.url)) &&
+          yo(e.params, t.params) &&
+          Eo((n = e.url), (r = t.url)) &&
           n.every(function(e, t) {
-            return _o(e.parameters, r[t].parameters);
+            return yo(e.parameters, r[t].parameters);
           }) &&
           !(!e.parent != !t.parent) &&
-          (!e.parent || os(e.parent, t.parent))
+          (!e.parent || is(e.parent, t.parent))
         );
       }
-      function ss(e) {
+      function as(e) {
         return 'object' == typeof e && null != e && !e.outlets && !e.segmentPath;
       }
-      function us(e, t, n, r, i) {
+      function os(e, t, n, r, i) {
         var a = {};
         return (
           r &&
-            wo(r, function(e, t) {
+            ko(r, function(e, t) {
               a[t] = Array.isArray(e)
                 ? e.map(function(e) {
                     return ''.concat(e);
                   })
                 : ''.concat(e);
             }),
-          new xo(
+          new So(
             n.root === e
               ? t
               : (function e(t, n, r) {
                   var i = {};
                   return (
-                    wo(t.children, function(t, a) {
+                    ko(t.children, function(t, a) {
                       i[a] = t === n ? r : e(t, n, r);
                     }),
-                    new Eo(t.segments, i)
+                    new Oo(t.segments, i)
                   );
                 })(n.root, e, t),
             a,
@@ -12112,20 +11987,20 @@ function _createClass(e, t, n) {
           )
         );
       }
-      var ls = (function() {
+      var ss = (function() {
           function e(t, n, r) {
             if (
               (_classCallCheck(this, e),
               (this.isAbsolute = t),
               (this.numberOfDoubleDots = n),
               (this.commands = r),
-              t && r.length > 0 && ss(r[0]))
+              t && r.length > 0 && as(r[0]))
             )
               throw new Error('Root segment cannot have matrix parameters');
             var i = r.find(function(e) {
               return 'object' == typeof e && null != e && e.outlets;
             });
-            if (i && i !== Co(r)) throw new Error('{outlets:{}} has to be the last command');
+            if (i && i !== bo(r)) throw new Error('{outlets:{}} has to be the last command');
           }
           return (
             _createClass(e, [
@@ -12139,26 +12014,26 @@ function _createClass(e, t, n) {
             e
           );
         })(),
-        cs = function e(t, n, r) {
+        us = function e(t, n, r) {
           _classCallCheck(this, e), (this.segmentGroup = t), (this.processChildren = n), (this.index = r);
         };
-      function hs(e) {
+      function ls(e) {
         return 'object' == typeof e && null != e && e.outlets ? e.outlets.primary : ''.concat(e);
       }
-      function fs(e, t, n) {
-        if ((e || (e = new Eo([], {})), 0 === e.segments.length && e.hasChildren())) return ds(e, t, n);
+      function cs(e, t, n) {
+        if ((e || (e = new Oo([], {})), 0 === e.segments.length && e.hasChildren())) return hs(e, t, n);
         var r = (function(e, t, n) {
             for (var r = 0, i = t, a = { match: !1, pathIndex: 0, commandIndex: 0 }; i < e.segments.length; ) {
               if (r >= n.length) return a;
               var o = e.segments[i],
-                s = hs(n[r]),
+                s = ls(n[r]),
                 u = r < n.length - 1 ? n[r + 1] : null;
               if (i > 0 && void 0 === s) break;
               if (s && u && 'object' == typeof u && void 0 === u.outlets) {
-                if (!ys(s, u, o)) return a;
+                if (!vs(s, u, o)) return a;
                 r += 2;
               } else {
-                if (!ys(s, {}, o)) return a;
+                if (!vs(s, {}, o)) return a;
                 r++;
               }
               i++;
@@ -12167,70 +12042,70 @@ function _createClass(e, t, n) {
           })(e, t, n),
           i = n.slice(r.commandIndex);
         if (r.match && r.pathIndex < e.segments.length) {
-          var a = new Eo(e.segments.slice(0, r.pathIndex), {});
-          return (a.children.primary = new Eo(e.segments.slice(r.pathIndex), e.children)), ds(a, 0, i);
+          var a = new Oo(e.segments.slice(0, r.pathIndex), {});
+          return (a.children.primary = new Oo(e.segments.slice(r.pathIndex), e.children)), hs(a, 0, i);
         }
         return r.match && 0 === i.length
-          ? new Eo(e.segments, {})
+          ? new Oo(e.segments, {})
           : r.match && !e.hasChildren()
-          ? ps(e, t, n)
+          ? fs(e, t, n)
           : r.match
-          ? ds(e, 0, i)
-          : ps(e, t, n);
+          ? hs(e, 0, i)
+          : fs(e, t, n);
       }
-      function ds(e, t, n) {
-        if (0 === n.length) return new Eo(e.segments, {});
+      function hs(e, t, n) {
+        if (0 === n.length) return new Oo(e.segments, {});
         var r = (function(e) {
             return 'object' != typeof e[0] ? { primary: e } : void 0 === e[0].outlets ? { primary: e } : e[0].outlets;
           })(n),
           i = {};
         return (
-          wo(r, function(n, r) {
-            null !== n && (i[r] = fs(e.children[r], t, n));
+          ko(r, function(n, r) {
+            null !== n && (i[r] = cs(e.children[r], t, n));
           }),
-          wo(e.children, function(e, t) {
+          ko(e.children, function(e, t) {
             void 0 === r[t] && (i[t] = e);
           }),
-          new Eo(e.segments, i)
+          new Oo(e.segments, i)
         );
       }
-      function ps(e, t, n) {
+      function fs(e, t, n) {
         for (var r = e.segments.slice(0, t), i = 0; i < n.length; ) {
           if ('object' == typeof n[i] && void 0 !== n[i].outlets) {
-            var a = vs(n[i].outlets);
-            return new Eo(r, a);
+            var a = ds(n[i].outlets);
+            return new Oo(r, a);
           }
-          if (0 === i && ss(n[0])) r.push(new To(e.segments[t].path, n[0])), i++;
+          if (0 === i && as(n[0])) r.push(new xo(e.segments[t].path, n[0])), i++;
           else {
-            var o = hs(n[i]),
+            var o = ls(n[i]),
               s = i < n.length - 1 ? n[i + 1] : null;
-            o && s && ss(s) ? (r.push(new To(o, gs(s))), (i += 2)) : (r.push(new To(o, {})), i++);
+            o && s && as(s) ? (r.push(new xo(o, ps(s))), (i += 2)) : (r.push(new xo(o, {})), i++);
           }
         }
-        return new Eo(r, {});
+        return new Oo(r, {});
       }
-      function vs(e) {
+      function ds(e) {
         var t = {};
         return (
-          wo(e, function(e, n) {
-            null !== e && (t[n] = ps(new Eo([], {}), 0, e));
+          ko(e, function(e, n) {
+            null !== e && (t[n] = fs(new Oo([], {}), 0, e));
           }),
           t
         );
       }
-      function gs(e) {
+      function ps(e) {
         var t = {};
         return (
-          wo(e, function(e, n) {
+          ko(e, function(e, n) {
             return (t[n] = ''.concat(e));
           }),
           t
         );
       }
-      function ys(e, t, n) {
-        return e == n.path && _o(t, n.parameters);
+      function vs(e, t, n) {
+        return e == n.path && yo(t, n.parameters);
       }
-      var ms = (function() {
+      var gs = (function() {
         function e(t, n, r, i) {
           _classCallCheck(this, e),
             (this.routeReuseStrategy = t),
@@ -12245,19 +12120,19 @@ function _createClass(e, t, n) {
               value: function(e) {
                 var t = this.futureState._root,
                   n = this.currState ? this.currState._root : null;
-                this.deactivateChildRoutes(t, n, e), as(this.futureState.root), this.activateChildRoutes(t, n, e);
+                this.deactivateChildRoutes(t, n, e), rs(this.futureState.root), this.activateChildRoutes(t, n, e);
               }
             },
             {
               key: 'deactivateChildRoutes',
               value: function(e, t, n) {
                 var r = this,
-                  i = Jo(t);
+                  i = Ko(t);
                 e.children.forEach(function(e) {
                   var t = e.value.outlet;
                   r.deactivateRoutes(e, i[t], n), delete i[t];
                 }),
-                  wo(i, function(e, t) {
+                  ko(i, function(e, t) {
                     r.deactivateRouteAndItsChildren(e, n);
                   });
               }
@@ -12300,9 +12175,9 @@ function _createClass(e, t, n) {
                 var n = this,
                   r = t.getContext(e.value.outlet);
                 if (r) {
-                  var i = Jo(e),
+                  var i = Ko(e),
                     a = e.value.component ? r.children : t;
-                  wo(i, function(e, t) {
+                  ko(i, function(e, t) {
                     return n.deactivateRouteAndItsChildren(e, a);
                   }),
                     r.outlet && (r.outlet.deactivate(), r.children.onOutletDeactivated());
@@ -12313,11 +12188,11 @@ function _createClass(e, t, n) {
               key: 'activateChildRoutes',
               value: function(e, t, n) {
                 var r = this,
-                  i = Jo(t);
+                  i = Ko(t);
                 e.children.forEach(function(e) {
-                  r.activateRoutes(e, i[e.value.outlet], n), r.forwardEvent(new oo(e.value.snapshot));
+                  r.activateRoutes(e, i[e.value.outlet], n), r.forwardEvent(new io(e.value.snapshot));
                 }),
-                  e.children.length && this.forwardEvent(new io(e.value.snapshot));
+                  e.children.length && this.forwardEvent(new no(e.value.snapshot));
               }
             },
             {
@@ -12325,7 +12200,7 @@ function _createClass(e, t, n) {
               value: function(e, t, n) {
                 var r = e.value,
                   i = t ? t.value : null;
-                if ((as(r), r === i))
+                if ((rs(r), r === i))
                   if (r.component) {
                     var a = n.getOrCreateContext(r.outlet);
                     this.activateChildRoutes(e, t, a.children);
@@ -12339,7 +12214,7 @@ function _createClass(e, t, n) {
                       (o.attachRef = s.componentRef),
                       (o.route = s.route.value),
                       o.outlet && o.outlet.attach(s.componentRef, s.route.value),
-                      _s(s.route);
+                      ys(s.route);
                   } else {
                     var u = (function(e) {
                         for (var t = e.parent; t; t = t.parent) {
@@ -12363,37 +12238,37 @@ function _createClass(e, t, n) {
           e
         );
       })();
-      function _s(e) {
-        as(e.value), e.children.forEach(_s);
+      function ys(e) {
+        rs(e.value), e.children.forEach(ys);
       }
-      function bs(e) {
+      function ms(e) {
         return 'function' == typeof e;
       }
-      function ks(e) {
-        return e instanceof xo;
+      function _s(e) {
+        return e instanceof So;
       }
-      var Cs = function e(t) {
+      var bs = function e(t) {
           _classCallCheck(this, e), (this.segmentGroup = t || null);
         },
-        ws = function e(t) {
+        ks = function e(t) {
           _classCallCheck(this, e), (this.urlTree = t);
         };
+      function Cs(e) {
+        return new o.a(function(t) {
+          return t.error(new bs(e));
+        });
+      }
+      function ws(e) {
+        return new o.a(function(t) {
+          return t.error(new ks(e));
+        });
+      }
       function Ss(e) {
-        return new o.a(function(t) {
-          return t.error(new Cs(e));
-        });
-      }
-      function Os(e) {
-        return new o.a(function(t) {
-          return t.error(new ws(e));
-        });
-      }
-      function xs(e) {
         return new o.a(function(t) {
           return t.error(new Error("Only absolute redirects can have named outlets. redirectTo: '".concat(e, "'")));
         });
       }
-      var Es = (function() {
+      var Os = (function() {
         function e(t, n, r, a, o) {
           _classCallCheck(this, e),
             (this.configLoader = n),
@@ -12416,9 +12291,9 @@ function _createClass(e, t, n) {
                     })
                   )
                   .pipe(
-                    Da(function(t) {
-                      if (t instanceof ws) return (e.allowRedirects = !1), e.match(t.urlTree);
-                      if (t instanceof Cs) throw e.noMatchError(t);
+                    Ma(function(t) {
+                      if (t instanceof ks) return (e.allowRedirects = !1), e.match(t.urlTree);
+                      if (t instanceof bs) throw e.noMatchError(t);
                       throw t;
                     })
                   );
@@ -12435,8 +12310,8 @@ function _createClass(e, t, n) {
                     })
                   )
                   .pipe(
-                    Da(function(e) {
-                      if (e instanceof Cs) throw t.noMatchError(e);
+                    Ma(function(e) {
+                      if (e instanceof bs) throw t.noMatchError(e);
                       throw e;
                     })
                   );
@@ -12451,8 +12326,8 @@ function _createClass(e, t, n) {
             {
               key: 'createUrlTree',
               value: function(e, t, n) {
-                var r = e.segments.length > 0 ? new Eo([], { primary: e }) : e;
-                return new xo(r, t, n);
+                var r = e.segments.length > 0 ? new Oo([], { primary: e }) : e;
+                return new So(r, t, n);
               }
             },
             {
@@ -12461,7 +12336,7 @@ function _createClass(e, t, n) {
                 return 0 === n.segments.length && n.hasChildren()
                   ? this.expandChildren(e, t, n).pipe(
                       Object(u.a)(function(e) {
-                        return new Eo([], e);
+                        return new Oo([], e);
                       })
                     )
                   : this.expandSegment(e, n, t, n.segments, r, !0);
@@ -12477,7 +12352,7 @@ function _createClass(e, t, n) {
                     o = [],
                     s = {};
                   return (
-                    wo(n, function(n, i) {
+                    ko(n, function(n, i) {
                       var l,
                         c,
                         h = ((l = i), (c = n), r.expandSegmentGroup(e, t, c, l)).pipe(
@@ -12489,7 +12364,7 @@ function _createClass(e, t, n) {
                     }),
                     lt.apply(null, a.concat(o)).pipe(
                       fn(),
-                      Na(),
+                      Ia(),
                       Object(u.a)(function() {
                         return s;
                       })
@@ -12505,20 +12380,20 @@ function _createClass(e, t, n) {
                 return lt.apply(void 0, _toConsumableArray(n)).pipe(
                   Object(u.a)(function(s) {
                     return o.expandSegmentAgainstRoute(e, t, n, s, r, i, a).pipe(
-                      Da(function(e) {
-                        if (e instanceof Cs) return lt(null);
+                      Ma(function(e) {
+                        if (e instanceof bs) return lt(null);
                         throw e;
                       })
                     );
                   }),
                   fn(),
-                  Fa(function(e) {
+                  Va(function(e) {
                     return !!e;
                   }),
-                  Da(function(e, n) {
-                    if (e instanceof Aa || 'EmptyError' === e.name) {
-                      if (o.noLeftoversInUrl(t, r, i)) return lt(new Eo([], {}));
-                      throw new Cs(t);
+                  Ma(function(e, n) {
+                    if (e instanceof Ea || 'EmptyError' === e.name) {
+                      if (o.noLeftoversInUrl(t, r, i)) return lt(new Oo([], {}));
+                      throw new bs(t);
                     }
                     throw e;
                   })
@@ -12534,13 +12409,13 @@ function _createClass(e, t, n) {
             {
               key: 'expandSegmentAgainstRoute',
               value: function(e, t, n, r, i, a, o) {
-                return js(r) !== a
-                  ? Ss(t)
+                return Ts(r) !== a
+                  ? Cs(t)
                   : void 0 === r.redirectTo
                   ? this.matchSegmentAgainstRoute(e, t, r, i)
                   : o && this.allowRedirects
                   ? this.expandSegmentAgainstRouteUsingRedirect(e, t, n, r, i, a)
-                  : Ss(t);
+                  : Cs(t);
               }
             },
             {
@@ -12557,10 +12432,10 @@ function _createClass(e, t, n) {
                 var i = this,
                   a = this.applyRedirectCommands([], n.redirectTo, {});
                 return n.redirectTo.startsWith('/')
-                  ? Os(a)
+                  ? ws(a)
                   : this.lineralizeSegments(n, a).pipe(
                       Object(ct.a)(function(n) {
-                        var a = new Eo(n, {});
+                        var a = new Oo(n, {});
                         return i.expandSegment(e, a, t, n, r, !1);
                       })
                     );
@@ -12570,15 +12445,15 @@ function _createClass(e, t, n) {
               key: 'expandRegularSegmentAgainstRouteUsingRedirect',
               value: function(e, t, n, r, i, a) {
                 var o = this,
-                  s = Ts(t, r, i),
+                  s = xs(t, r, i),
                   u = s.matched,
                   l = s.consumedSegments,
                   c = s.lastChild,
                   h = s.positionalParamSegments;
-                if (!u) return Ss(t);
+                if (!u) return Cs(t);
                 var f = this.applyRedirectCommands(l, r.redirectTo, h);
                 return r.redirectTo.startsWith('/')
-                  ? Os(f)
+                  ? ws(f)
                   : this.lineralizeSegments(r, f).pipe(
                       Object(ct.a)(function(r) {
                         return o.expandSegment(e, t, n, r.concat(i.slice(c)), a, !1);
@@ -12594,15 +12469,15 @@ function _createClass(e, t, n) {
                   return n.loadChildren
                     ? this.configLoader.load(e.injector, n).pipe(
                         Object(u.a)(function(e) {
-                          return (n._loadedConfig = e), new Eo(r, {});
+                          return (n._loadedConfig = e), new Oo(r, {});
                         })
                       )
-                    : lt(new Eo(r, {}));
-                var a = Ts(t, n, r),
+                    : lt(new Oo(r, {}));
+                var a = xs(t, n, r),
                   o = a.matched,
                   s = a.consumedSegments,
                   l = a.lastChild;
-                if (!o) return Ss(t);
+                if (!o) return Cs(t);
                 var c = r.slice(l);
                 return this.getChildConfig(e, n, r).pipe(
                   Object(ct.a)(function(e) {
@@ -12612,12 +12487,12 @@ function _createClass(e, t, n) {
                         return n.length > 0 &&
                           (function(e, t, n) {
                             return n.some(function(n) {
-                              return Ps(e, t, n) && 'primary' !== js(n);
+                              return As(e, t, n) && 'primary' !== Ts(n);
                             });
                           })(e, n, r)
                           ? {
-                              segmentGroup: As(
-                                new Eo(
+                              segmentGroup: Es(
+                                new Oo(
                                   t,
                                   (function(e, t) {
                                     var n = {};
@@ -12628,7 +12503,7 @@ function _createClass(e, t, n) {
                                     try {
                                       for (var o, s = e[Symbol.iterator](); !(r = (o = s.next()).done); r = !0) {
                                         var u = o.value;
-                                        '' === u.path && 'primary' !== js(u) && (n[js(u)] = new Eo([], {}));
+                                        '' === u.path && 'primary' !== Ts(u) && (n[Ts(u)] = new Oo([], {}));
                                       }
                                     } catch (l) {
                                       (i = !0), (a = l);
@@ -12640,7 +12515,7 @@ function _createClass(e, t, n) {
                                       }
                                     }
                                     return n;
-                                  })(r, new Eo(n, e.children))
+                                  })(r, new Oo(n, e.children))
                                 )
                               ),
                               slicedSegments: []
@@ -12648,12 +12523,12 @@ function _createClass(e, t, n) {
                           : 0 === n.length &&
                             (function(e, t, n) {
                               return n.some(function(n) {
-                                return Ps(e, t, n);
+                                return As(e, t, n);
                               });
                             })(e, n, r)
                           ? {
-                              segmentGroup: As(
-                                new Eo(
+                              segmentGroup: Es(
+                                new Oo(
                                   e.segments,
                                   (function(e, t, n, r) {
                                     var i = {},
@@ -12663,7 +12538,7 @@ function _createClass(e, t, n) {
                                     try {
                                       for (var u, l = n[Symbol.iterator](); !(a = (u = l.next()).done); a = !0) {
                                         var c = u.value;
-                                        Ps(e, t, c) && !r[js(c)] && (i[js(c)] = new Eo([], {}));
+                                        As(e, t, c) && !r[Ts(c)] && (i[Ts(c)] = new Oo([], {}));
                                       }
                                     } catch (h) {
                                       (o = !0), (s = h);
@@ -12687,14 +12562,14 @@ function _createClass(e, t, n) {
                     return 0 === l.length && o.hasChildren()
                       ? i.expandChildren(n, r, o).pipe(
                           Object(u.a)(function(e) {
-                            return new Eo(s, e);
+                            return new Oo(s, e);
                           })
                         )
                       : 0 === r.length && 0 === l.length
-                      ? lt(new Eo(s, {}))
+                      ? lt(new Oo(s, {}))
                       : i.expandSegment(n, o, r, l, 'primary', !0).pipe(
                           Object(u.a)(function(e) {
-                            return new Eo(s.concat(e.segments), e.children);
+                            return new Oo(s.concat(e.segments), e.children);
                           })
                         );
                   })
@@ -12706,7 +12581,7 @@ function _createClass(e, t, n) {
               value: function(e, t, n) {
                 var r = this;
                 return t.children
-                  ? lt(new po(t.children, e))
+                  ? lt(new ho(t.children, e))
                   : t.loadChildren
                   ? void 0 !== t._loadedConfig
                     ? lt(t._loadedConfig)
@@ -12721,15 +12596,15 @@ function _createClass(e, t, n) {
                                     a = e.get(r);
                                   if (
                                     (function(e) {
-                                      return e && bs(e.canLoad);
+                                      return e && ms(e.canLoad);
                                     })(a)
                                   )
                                     i = a.canLoad(t, n);
                                   else {
-                                    if (!bs(a)) throw new Error('Invalid CanLoad guard');
+                                    if (!ms(a)) throw new Error('Invalid CanLoad guard');
                                     i = a(t, n);
                                   }
-                                  return So(i);
+                                  return Co(i);
                                 })
                               )
                               .pipe(
@@ -12738,7 +12613,7 @@ function _createClass(e, t, n) {
                                   return !0 === e;
                                 }),
                                 function(e) {
-                                  return e.lift(new Ua(r, void 0, e));
+                                  return e.lift(new Fa(r, void 0, e));
                                 })
                               )
                           : lt(!0);
@@ -12753,7 +12628,7 @@ function _createClass(e, t, n) {
                             : (function(e) {
                                 return new o.a(function(t) {
                                   return t.error(
-                                    ho(
+                                    lo(
                                       'Cannot load children because the guard of the route "path: \''.concat(
                                         e.path,
                                         '\'" returned false'
@@ -12764,7 +12639,7 @@ function _createClass(e, t, n) {
                               })(t);
                         })
                       )
-                  : lt(new po([], e));
+                  : lt(new ho([], e));
               }
             },
             {
@@ -12772,7 +12647,7 @@ function _createClass(e, t, n) {
               value: function(e, t) {
                 for (var n = [], r = t.root; ; ) {
                   if (((n = n.concat(r.segments)), 0 === r.numberOfChildren)) return lt(n);
-                  if (r.numberOfChildren > 1 || !r.children.primary) return xs(e.redirectTo);
+                  if (r.numberOfChildren > 1 || !r.children.primary) return Ss(e.redirectTo);
                   r = r.children.primary;
                 }
               }
@@ -12787,7 +12662,7 @@ function _createClass(e, t, n) {
               key: 'applyRedirectCreatreUrlTree',
               value: function(e, t, n, r) {
                 var i = this.createSegmentGroup(e, t.root, n, r);
-                return new xo(i, this.createQueryParams(t.queryParams, this.urlTree.queryParams), t.fragment);
+                return new So(i, this.createQueryParams(t.queryParams, this.urlTree.queryParams), t.fragment);
               }
             },
             {
@@ -12795,7 +12670,7 @@ function _createClass(e, t, n) {
               value: function(e, t) {
                 var n = {};
                 return (
-                  wo(e, function(e, r) {
+                  ko(e, function(e, r) {
                     if ('string' == typeof e && e.startsWith(':')) {
                       var i = e.substring(1);
                       n[r] = t[i];
@@ -12812,10 +12687,10 @@ function _createClass(e, t, n) {
                   a = this.createSegments(e, t.segments, n, r),
                   o = {};
                 return (
-                  wo(t.children, function(t, a) {
+                  ko(t.children, function(t, a) {
                     o[a] = i.createSegmentGroup(e, t, n, r);
                   }),
-                  new Eo(a, o)
+                  new Oo(a, o)
                 );
               }
             },
@@ -12865,12 +12740,12 @@ function _createClass(e, t, n) {
           e
         );
       })();
-      function Ts(e, t, n) {
+      function xs(e, t, n) {
         if ('' === t.path)
           return 'full' === t.pathMatch && (e.hasChildren() || n.length > 0)
             ? { matched: !1, consumedSegments: [], lastChild: 0, positionalParamSegments: {} }
             : { matched: !0, consumedSegments: [], lastChild: 0, positionalParamSegments: {} };
-        var r = (t.matcher || fo)(n, e, t);
+        var r = (t.matcher || co)(n, e, t);
         return r
           ? {
               matched: !0,
@@ -12880,28 +12755,28 @@ function _createClass(e, t, n) {
             }
           : { matched: !1, consumedSegments: [], lastChild: 0, positionalParamSegments: {} };
       }
-      function As(e) {
+      function Es(e) {
         if (1 === e.numberOfChildren && e.children.primary) {
           var t = e.children.primary;
-          return new Eo(e.segments.concat(t.segments), t.children);
+          return new Oo(e.segments.concat(t.segments), t.children);
         }
         return e;
       }
-      function Ps(e, t, n) {
+      function As(e, t, n) {
         return (
           (!(e.hasChildren() || t.length > 0) || 'full' !== n.pathMatch) && '' === n.path && void 0 !== n.redirectTo
         );
       }
-      function js(e) {
+      function Ts(e) {
         return e.outlet || 'primary';
       }
-      var Rs = function e(t) {
+      var Ps = function e(t) {
           _classCallCheck(this, e), (this.path = t), (this.route = this.path[this.path.length - 1]);
         },
-        Is = function e(t, n) {
+        js = function e(t, n) {
           _classCallCheck(this, e), (this.component = t), (this.route = n);
         };
-      function Ms(e, t, n) {
+      function Rs(e, t, n) {
         var r = (function(e) {
           if (!e) return null;
           for (var t = e.parent; t; t = t.parent) {
@@ -12912,18 +12787,18 @@ function _createClass(e, t, n) {
         })(t);
         return (r ? r.module.injector : n).get(e);
       }
-      function Ns(e, t, n) {
-        var r = Jo(e),
+      function Is(e, t, n) {
+        var r = Ko(e),
           i = e.value;
-        wo(r, function(e, r) {
-          Ns(e, i.component ? (t ? t.children.getContext(r) : null) : t, n);
+        ko(r, function(e, r) {
+          Is(e, i.component ? (t ? t.children.getContext(r) : null) : t, n);
         }),
           n.canDeactivateChecks.push(
-            new Is(i.component && t && t.outlet && t.outlet.isActivated ? t.outlet.component : null, i)
+            new js(i.component && t && t.outlet && t.outlet.isActivated ? t.outlet.component : null, i)
           );
       }
-      var Ds = Symbol('INITIAL_VALUE');
-      function Vs() {
+      var Ms = Symbol('INITIAL_VALUE');
+      function Ns() {
         return kn(function(e) {
           return function() {
             for (var e = arguments.length, t = new Array(e), n = 0; n < e; n++) t[n] = arguments[n];
@@ -12933,7 +12808,7 @@ function _createClass(e, t, n) {
               Object(ot.a)(t[t.length - 1]) && (i = t.pop()),
               'function' == typeof t[t.length - 1] && (r = t.pop()),
               1 === t.length && Object(s.a)(t[0]) && (t = t[0]),
-              Object(st.a)(t, i).lift(new Zr(r))
+              Object(st.a)(t, i).lift(new zr(r))
             );
           }
             .apply(
@@ -12953,7 +12828,7 @@ function _createClass(e, t, n) {
                         : function(e) {
                             return dn(t, e);
                           };
-                    })(Ds)
+                    })(Ms)
                   );
                 })
               )
@@ -12962,55 +12837,55 @@ function _createClass(e, t, n) {
               tr(function(e, t) {
                 var n = !1;
                 return t.reduce(function(e, r, i) {
-                  if (e !== Ds) return e;
-                  if ((r === Ds && (n = !0), !n)) {
+                  if (e !== Ms) return e;
+                  if ((r === Ms && (n = !0), !n)) {
                     if (!1 === r) return r;
-                    if (i === t.length - 1 || ks(r)) return r;
+                    if (i === t.length - 1 || _s(r)) return r;
                   }
                   return e;
                 }, e);
-              }, Ds),
+              }, Ms),
               dt(function(e) {
-                return e !== Ds;
+                return e !== Ms;
               }),
               Object(u.a)(function(e) {
-                return ks(e) ? e : !0 === e;
+                return _s(e) ? e : !0 === e;
               }),
               xn(1)
             );
         });
       }
-      function Ls(e, t) {
-        return null !== e && t && t(new ao(e)), lt(!0);
-      }
-      function Fs(e, t) {
+      function Ds(e, t) {
         return null !== e && t && t(new ro(e)), lt(!0);
       }
-      function Hs(e, t, n) {
+      function Vs(e, t) {
+        return null !== e && t && t(new to(e)), lt(!0);
+      }
+      function Ls(e, t, n) {
         var r = t.routeConfig ? t.routeConfig.canActivate : null;
         return r && 0 !== r.length
           ? lt(
               r.map(function(r) {
                 return on(function() {
                   var i,
-                    a = Ms(r, t, n);
+                    a = Rs(r, t, n);
                   if (
                     (function(e) {
-                      return e && bs(e.canActivate);
+                      return e && ms(e.canActivate);
                     })(a)
                   )
-                    i = So(a.canActivate(t, e));
+                    i = Co(a.canActivate(t, e));
                   else {
-                    if (!bs(a)) throw new Error('Invalid CanActivate guard');
-                    i = So(a(t, e));
+                    if (!ms(a)) throw new Error('Invalid CanActivate guard');
+                    i = Co(a(t, e));
                   }
-                  return i.pipe(Fa());
+                  return i.pipe(Va());
                 });
               })
-            ).pipe(Vs())
+            ).pipe(Ns())
           : lt(!0);
       }
-      function Us(e, t, n) {
+      function Fs(e, t, n) {
         var r = t[t.length - 1],
           i = t
             .slice(0, t.length - 1)
@@ -13029,28 +12904,28 @@ function _createClass(e, t, n) {
                 return lt(
                   t.guards.map(function(i) {
                     var a,
-                      o = Ms(i, t.node, n);
+                      o = Rs(i, t.node, n);
                     if (
                       (function(e) {
-                        return e && bs(e.canActivateChild);
+                        return e && ms(e.canActivateChild);
                       })(o)
                     )
-                      a = So(o.canActivateChild(r, e));
+                      a = Co(o.canActivateChild(r, e));
                     else {
-                      if (!bs(o)) throw new Error('Invalid CanActivateChild guard');
-                      a = So(o(r, e));
+                      if (!ms(o)) throw new Error('Invalid CanActivateChild guard');
+                      a = Co(o(r, e));
                     }
-                    return a.pipe(Fa());
+                    return a.pipe(Va());
                   })
-                ).pipe(Vs());
+                ).pipe(Ns());
               });
             });
-        return lt(i).pipe(Vs());
+        return lt(i).pipe(Ns());
       }
-      var Bs = function e() {
+      var Hs = function e() {
           _classCallCheck(this, e);
         },
-        zs = (function() {
+        Us = (function() {
           function e(t, n, r, i, a, o) {
             _classCallCheck(this, e),
               (this.rootComponentType = t),
@@ -13066,9 +12941,9 @@ function _createClass(e, t, n) {
                 key: 'recognize',
                 value: function() {
                   try {
-                    var e = Gs(this.urlTree.root, [], [], this.config, this.relativeLinkResolution).segmentGroup,
+                    var e = qs(this.urlTree.root, [], [], this.config, this.relativeLinkResolution).segmentGroup,
                       t = this.processSegmentGroup(this.config, e, 'primary'),
-                      n = new ts(
+                      n = new Xo(
                         [],
                         Object.freeze({}),
                         Object.freeze(Object.assign({}, this.urlTree.queryParams)),
@@ -13081,8 +12956,8 @@ function _createClass(e, t, n) {
                         -1,
                         {}
                       ),
-                      r = new Qo(n, t),
-                      i = new ns(this.url, r);
+                      r = new Wo(n, t),
+                      i = new es(this.url, r);
                     return this.inheritParamsAndData(i._root), lt(i);
                   } catch (a) {
                     return new o.a(function(e) {
@@ -13096,7 +12971,7 @@ function _createClass(e, t, n) {
                 value: function(e) {
                   var t = this,
                     n = e.value,
-                    r = es(n, this.paramsInheritanceStrategy);
+                    r = Yo(n, this.paramsInheritanceStrategy);
                   (n.params = Object.freeze(r.params)),
                     (n.data = Object.freeze(r.data)),
                     e.children.forEach(function(e) {
@@ -13117,7 +12992,7 @@ function _createClass(e, t, n) {
                 value: function(e, t) {
                   var n,
                     r = this,
-                    i = Po(t, function(t, n) {
+                    i = Ao(t, function(t, n) {
                       return r.processSegmentGroup(e, t, n);
                     });
                   return (
@@ -13164,7 +13039,7 @@ function _createClass(e, t, n) {
                       try {
                         return this.processSegmentAgainstRoute(l, t, n, r);
                       } catch (c) {
-                        if (!(c instanceof Bs)) throw c;
+                        if (!(c instanceof Hs)) throw c;
                       }
                     }
                   } catch (h) {
@@ -13177,7 +13052,7 @@ function _createClass(e, t, n) {
                     }
                   }
                   if (this.noLeftoversInUrl(t, n, r)) return [];
-                  throw new Bs();
+                  throw new Hs();
                 }
               },
               {
@@ -13189,36 +13064,36 @@ function _createClass(e, t, n) {
               {
                 key: 'processSegmentAgainstRoute',
                 value: function(e, t, n, r) {
-                  if (e.redirectTo) throw new Bs();
-                  if ((e.outlet || 'primary') !== r) throw new Bs();
+                  if (e.redirectTo) throw new Hs();
+                  if ((e.outlet || 'primary') !== r) throw new Hs();
                   var i,
                     a = [],
                     o = [];
                   if ('**' === e.path) {
-                    var s = n.length > 0 ? Co(n).parameters : {};
-                    i = new ts(
+                    var s = n.length > 0 ? bo(n).parameters : {};
+                    i = new Xo(
                       n,
                       s,
                       Object.freeze(Object.assign({}, this.urlTree.queryParams)),
                       this.urlTree.fragment,
-                      Qs(e),
+                      Ws(e),
                       r,
                       e.component,
                       e,
-                      qs(t),
-                      Zs(t) + n.length,
-                      Js(e)
+                      Bs(t),
+                      zs(t) + n.length,
+                      Ks(e)
                     );
                   } else {
                     var u = (function(e, t, n) {
                       if ('' === t.path) {
-                        if ('full' === t.pathMatch && (e.hasChildren() || n.length > 0)) throw new Bs();
+                        if ('full' === t.pathMatch && (e.hasChildren() || n.length > 0)) throw new Hs();
                         return { consumedSegments: [], lastChild: 0, parameters: {} };
                       }
-                      var r = (t.matcher || fo)(n, e, t);
-                      if (!r) throw new Bs();
+                      var r = (t.matcher || co)(n, e, t);
+                      if (!r) throw new Hs();
                       var i = {};
-                      wo(r.posParams, function(e, t) {
+                      ko(r.posParams, function(e, t) {
                         i[t] = e.path;
                       });
                       var a =
@@ -13229,58 +13104,58 @@ function _createClass(e, t, n) {
                     })(t, e, n);
                     (a = u.consumedSegments),
                       (o = n.slice(u.lastChild)),
-                      (i = new ts(
+                      (i = new Xo(
                         a,
                         u.parameters,
                         Object.freeze(Object.assign({}, this.urlTree.queryParams)),
                         this.urlTree.fragment,
-                        Qs(e),
+                        Ws(e),
                         r,
                         e.component,
                         e,
-                        qs(t),
-                        Zs(t) + a.length,
-                        Js(e)
+                        Bs(t),
+                        zs(t) + a.length,
+                        Ks(e)
                       ));
                   }
                   var l = (function(e) {
                       return e.children ? e.children : e.loadChildren ? e._loadedConfig.routes : [];
                     })(e),
-                    c = Gs(t, a, o, l, this.relativeLinkResolution),
+                    c = qs(t, a, o, l, this.relativeLinkResolution),
                     h = c.segmentGroup,
                     f = c.slicedSegments;
                   if (0 === f.length && h.hasChildren()) {
                     var d = this.processChildren(l, h);
-                    return [new Qo(i, d)];
+                    return [new Wo(i, d)];
                   }
-                  if (0 === l.length && 0 === f.length) return [new Qo(i, [])];
+                  if (0 === l.length && 0 === f.length) return [new Wo(i, [])];
                   var p = this.processSegment(l, h, f, 'primary');
-                  return [new Qo(i, p)];
+                  return [new Wo(i, p)];
                 }
               }
             ]),
             e
           );
         })();
-      function qs(e) {
+      function Bs(e) {
         for (var t = e; t._sourceSegment; ) t = t._sourceSegment;
         return t;
       }
-      function Zs(e) {
+      function zs(e) {
         for (var t = e, n = t._segmentIndexShift ? t._segmentIndexShift : 0; t._sourceSegment; )
           n += (t = t._sourceSegment)._segmentIndexShift ? t._segmentIndexShift : 0;
         return n - 1;
       }
-      function Gs(e, t, n, r, i) {
+      function qs(e, t, n, r, i) {
         if (
           n.length > 0 &&
           (function(e, t, n) {
             return n.some(function(n) {
-              return Ws(e, t, n) && 'primary' !== Ks(n);
+              return Zs(e, t, n) && 'primary' !== Gs(n);
             });
           })(e, n, r)
         ) {
-          var a = new Eo(
+          var a = new Oo(
             t,
             (function(e, t, n, r) {
               var i = {};
@@ -13291,9 +13166,9 @@ function _createClass(e, t, n) {
               try {
                 for (var u, l = n[Symbol.iterator](); !(a = (u = l.next()).done); a = !0) {
                   var c = u.value;
-                  if ('' === c.path && 'primary' !== Ks(c)) {
-                    var h = new Eo([], {});
-                    (h._sourceSegment = e), (h._segmentIndexShift = t.length), (i[Ks(c)] = h);
+                  if ('' === c.path && 'primary' !== Gs(c)) {
+                    var h = new Oo([], {});
+                    (h._sourceSegment = e), (h._segmentIndexShift = t.length), (i[Gs(c)] = h);
                   }
                 }
               } catch (f) {
@@ -13306,7 +13181,7 @@ function _createClass(e, t, n) {
                 }
               }
               return i;
-            })(e, t, r, new Eo(n, e.children))
+            })(e, t, r, new Oo(n, e.children))
           );
           return (a._sourceSegment = e), (a._segmentIndexShift = t.length), { segmentGroup: a, slicedSegments: [] };
         }
@@ -13314,11 +13189,11 @@ function _createClass(e, t, n) {
           0 === n.length &&
           (function(e, t, n) {
             return n.some(function(n) {
-              return Ws(e, t, n);
+              return Zs(e, t, n);
             });
           })(e, n, r)
         ) {
-          var o = new Eo(
+          var o = new Oo(
             e.segments,
             (function(e, t, n, r, i, a) {
               var o = {},
@@ -13328,11 +13203,11 @@ function _createClass(e, t, n) {
               try {
                 for (var c, h = r[Symbol.iterator](); !(s = (c = h.next()).done); s = !0) {
                   var f = c.value;
-                  if (Ws(e, n, f) && !i[Ks(f)]) {
-                    var d = new Eo([], {});
+                  if (Zs(e, n, f) && !i[Gs(f)]) {
+                    var d = new Oo([], {});
                     (d._sourceSegment = e),
                       (d._segmentIndexShift = 'legacy' === a ? e.segments.length : t.length),
-                      (o[Ks(f)] = d);
+                      (o[Gs(f)] = d);
                   }
                 }
               } catch (p) {
@@ -13349,28 +13224,28 @@ function _createClass(e, t, n) {
           );
           return (o._sourceSegment = e), (o._segmentIndexShift = t.length), { segmentGroup: o, slicedSegments: n };
         }
-        var s = new Eo(e.segments, e.children);
+        var s = new Oo(e.segments, e.children);
         return (s._sourceSegment = e), (s._segmentIndexShift = t.length), { segmentGroup: s, slicedSegments: n };
       }
-      function Ws(e, t, n) {
+      function Zs(e, t, n) {
         return (
           (!(e.hasChildren() || t.length > 0) || 'full' !== n.pathMatch) && '' === n.path && void 0 === n.redirectTo
         );
       }
-      function Ks(e) {
+      function Gs(e) {
         return e.outlet || 'primary';
       }
-      function Qs(e) {
+      function Ws(e) {
         return e.data || {};
       }
-      function Js(e) {
+      function Ks(e) {
         return e.resolve || {};
       }
-      function $s(e, t, n, r) {
-        var i = Ms(e, t, r);
-        return So(i.resolve ? i.resolve(t, n) : i(t, n));
+      function Qs(e, t, n, r) {
+        var i = Rs(e, t, r);
+        return Co(i.resolve ? i.resolve(t, n) : i(t, n));
       }
-      function Ys(e) {
+      function Js(e) {
         return function(t) {
           return t.pipe(
             kn(function(t) {
@@ -13386,10 +13261,10 @@ function _createClass(e, t, n) {
           );
         };
       }
-      var Xs = function e() {
+      var $s = function e() {
           _classCallCheck(this, e);
         },
-        eu = (function() {
+        Ys = (function() {
           function e() {
             _classCallCheck(this, e);
           }
@@ -13424,8 +13299,8 @@ function _createClass(e, t, n) {
             e
           );
         })(),
-        tu = new i.q('ROUTES'),
-        nu = (function() {
+        Xs = new i.q('ROUTES'),
+        eu = (function() {
           function e(t, n, r, i) {
             _classCallCheck(this, e),
               (this.loader = t),
@@ -13445,7 +13320,7 @@ function _createClass(e, t, n) {
                       Object(u.a)(function(r) {
                         n.onLoadEndListener && n.onLoadEndListener(t);
                         var i = r.create(e);
-                        return new po(ko(i.injector.get(tu)).map(mo), i);
+                        return new ho(_o(i.injector.get(Xs)).map(go), i);
                       })
                     )
                   );
@@ -13457,7 +13332,7 @@ function _createClass(e, t, n) {
                   var t = this;
                   return 'string' == typeof e
                     ? Object(c.a)(this.loader.load(e))
-                    : So(e()).pipe(
+                    : Co(e()).pipe(
                         Object(ct.a)(function(e) {
                           return e instanceof i.v ? lt(e) : Object(c.a)(t.compiler.compileModuleAsync(e));
                         })
@@ -13468,7 +13343,7 @@ function _createClass(e, t, n) {
             e
           );
         })(),
-        ru = (function() {
+        tu = (function() {
           function e() {
             _classCallCheck(this, e);
           }
@@ -13496,20 +13371,20 @@ function _createClass(e, t, n) {
             e
           );
         })();
-      function iu(e) {
+      function nu(e) {
         throw e;
       }
-      function au(e, t, n) {
+      function ru(e, t, n) {
         return t.parse('/');
       }
-      function ou(e, t) {
+      function iu(e, t) {
         return lt(null);
       }
-      var su,
-        uu,
-        lu,
-        cu =
-          (((lu = (function() {
+      var au,
+        ou,
+        su,
+        uu =
+          (((su = (function() {
             function e(t, n, r, a, o, s, u, l) {
               var c = this;
               _classCallCheck(this, e),
@@ -13523,13 +13398,13 @@ function _createClass(e, t, n) {
                 (this.navigationId = 0),
                 (this.isNgZoneEnabled = !1),
                 (this.events = new pn.a()),
-                (this.errorHandler = iu),
-                (this.malformedUriErrorHandler = au),
+                (this.errorHandler = nu),
+                (this.malformedUriErrorHandler = ru),
                 (this.navigated = !1),
                 (this.lastSuccessfulId = -1),
-                (this.hooks = { beforePreactivation: ou, afterPreactivation: ou }),
-                (this.urlHandlingStrategy = new ru()),
-                (this.routeReuseStrategy = new eu()),
+                (this.hooks = { beforePreactivation: iu, afterPreactivation: iu }),
+                (this.urlHandlingStrategy = new tu()),
+                (this.routeReuseStrategy = new Ys()),
                 (this.onSameUrlNavigation = 'ignore'),
                 (this.paramsInheritanceStrategy = 'emptyOnly'),
                 (this.urlUpdateStrategy = 'deferred'),
@@ -13539,21 +13414,21 @@ function _createClass(e, t, n) {
               var h = o.get(i.z);
               (this.isNgZoneEnabled = h instanceof i.z),
                 this.resetConfig(l),
-                (this.currentUrlTree = new xo(new Eo([], {}), {}, null)),
+                (this.currentUrlTree = new So(new Oo([], {}), {}, null)),
                 (this.rawUrlTree = this.currentUrlTree),
                 (this.browserUrlTree = this.currentUrlTree),
-                (this.configLoader = new nu(
+                (this.configLoader = new eu(
                   s,
                   u,
                   function(e) {
-                    return c.triggerEvent(new to(e));
+                    return c.triggerEvent(new Xa(e));
                   },
                   function(e) {
-                    return c.triggerEvent(new no(e));
+                    return c.triggerEvent(new eo(e));
                   }
                 )),
-                (this.routerState = Yo(this.currentUrlTree, this.rootComponentType)),
-                (this.transitions = new zr({
+                (this.routerState = Jo(this.currentUrlTree, this.rootComponentType)),
+                (this.transitions = new Ur({
                   id: 0,
                   currentUrlTree: this.currentUrlTree,
                   currentRawUrl: this.currentUrlTree,
@@ -13600,7 +13475,7 @@ function _createClass(e, t, n) {
                           s = !1,
                           l = !1;
                         return lt(e).pipe(
-                          An(function(e) {
+                          Tn(function(e) {
                             t.currentNavigation = {
                               id: e.id,
                               initialUrl: e.currentRawUrl,
@@ -13628,7 +13503,7 @@ function _createClass(e, t, n) {
                                 kn(function(e) {
                                   var r = t.transitions.getValue();
                                   return (
-                                    n.next(new Ga(e.id, t.serializeUrl(e.extractedUrl), e.source, e.restoredState)),
+                                    n.next(new qa(e.id, t.serializeUrl(e.extractedUrl), e.source, e.restoredState)),
                                     r !== t.transitions.getValue() ? rn : [e]
                                   );
                                 }),
@@ -13643,7 +13518,7 @@ function _createClass(e, t, n) {
                                   return e.pipe(
                                     kn(function(e) {
                                       return (function(e, t, n, r, i) {
-                                        return new Es(e, t, n, r, i).apply();
+                                        return new Os(e, t, n, r, i).apply();
                                       })(r, i, a, e.extractedUrl, o).pipe(
                                         Object(u.a)(function(t) {
                                           return Object.assign(Object.assign({}, e), { urlAfterRedirects: t });
@@ -13652,7 +13527,7 @@ function _createClass(e, t, n) {
                                     })
                                   );
                                 }),
-                                An(function(e) {
+                                Tn(function(e) {
                                   t.currentNavigation = Object.assign(Object.assign({}, t.currentNavigation), {
                                     finalUrl: e.urlAfterRedirects
                                   });
@@ -13668,7 +13543,7 @@ function _createClass(e, t, n) {
                                                 : 'emptyOnly',
                                             a =
                                               arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 'legacy';
-                                          return new zs(e, t, n, r, i, a).recognize();
+                                          return new Us(e, t, n, r, i, a).recognize();
                                         })(
                                           e,
                                           n,
@@ -13692,14 +13567,14 @@ function _createClass(e, t, n) {
                                   t.paramsInheritanceStrategy,
                                   t.relativeLinkResolution
                                 ),
-                                An(function(e) {
+                                Tn(function(e) {
                                   'eager' === t.urlUpdateStrategy &&
                                     (e.extras.skipLocationChange ||
                                       t.setBrowserUrl(e.urlAfterRedirects, !!e.extras.replaceUrl, e.id, e.extras.state),
                                     (t.browserUrlTree = e.urlAfterRedirects));
                                 }),
-                                An(function(e) {
-                                  var r = new Ja(
+                                Tn(function(e) {
+                                  var r = new Ka(
                                     e.id,
                                     t.serializeUrl(e.extractedUrl),
                                     t.serializeUrl(e.urlAfterRedirects),
@@ -13714,9 +13589,9 @@ function _createClass(e, t, n) {
                                 h = e.source,
                                 f = e.restoredState,
                                 d = e.extras,
-                                p = new Ga(l, t.serializeUrl(c), h, f);
+                                p = new qa(l, t.serializeUrl(c), h, f);
                               n.next(p);
-                              var v = Yo(c, t.rootComponentType).snapshot;
+                              var v = Jo(c, t.rootComponentType).snapshot;
                               return lt(
                                 Object.assign(Object.assign({}, e), {
                                   targetSnapshot: v,
@@ -13732,7 +13607,7 @@ function _createClass(e, t, n) {
                               (t.rawUrlTree = e.rawUrl), (t.browserUrlTree = e.urlAfterRedirects), e.resolve(null), rn
                             );
                           }),
-                          Ys(function(e) {
+                          Js(function(e) {
                             var n = e.targetSnapshot,
                               r = e.id,
                               i = e.extractedUrl,
@@ -13748,8 +13623,8 @@ function _createClass(e, t, n) {
                               replaceUrl: !!u
                             });
                           }),
-                          An(function(e) {
-                            var n = new $a(
+                          Tn(function(e) {
+                            var n = new Qa(
                               e.id,
                               t.serializeUrl(e.extractedUrl),
                               t.serializeUrl(e.urlAfterRedirects),
@@ -13769,7 +13644,7 @@ function _createClass(e, t, n) {
                                       arguments.length > 4 && void 0 !== arguments[4]
                                         ? arguments[4]
                                         : { canDeactivateChecks: [], canActivateChecks: [] },
-                                    o = Jo(n);
+                                    o = Ko(n);
                                   return (
                                     t.children.forEach(function(t) {
                                       !(function(t, n, r, i) {
@@ -13785,35 +13660,35 @@ function _createClass(e, t, n) {
                                             if ('function' == typeof n) return n(e, t);
                                             switch (n) {
                                               case 'pathParamsChange':
-                                                return !Ao(e.url, t.url);
+                                                return !Eo(e.url, t.url);
                                               case 'pathParamsOrQueryParamsChange':
-                                                return !Ao(e.url, t.url) || !_o(e.queryParams, t.queryParams);
+                                                return !Eo(e.url, t.url) || !yo(e.queryParams, t.queryParams);
                                               case 'always':
                                                 return !0;
                                               case 'paramsOrQueryParamsChange':
-                                                return !os(e, t) || !_o(e.queryParams, t.queryParams);
+                                                return !is(e, t) || !yo(e.queryParams, t.queryParams);
                                               case 'paramsChange':
                                               default:
-                                                return !os(e, t);
+                                                return !is(e, t);
                                             }
                                           })(s, o, o.routeConfig.runGuardsAndResolvers);
                                           l
-                                            ? a.canActivateChecks.push(new Rs(i))
+                                            ? a.canActivateChecks.push(new Ps(i))
                                             : ((o.data = s.data), (o._resolvedData = s._resolvedData)),
                                             e(t, n, o.component ? (u ? u.children : null) : r, i, a),
                                             l &&
                                               a.canDeactivateChecks.push(
-                                                new Is((u && u.outlet && u.outlet.component) || null, s)
+                                                new js((u && u.outlet && u.outlet.component) || null, s)
                                               );
                                         } else
-                                          s && Ns(n, u, a),
-                                            a.canActivateChecks.push(new Rs(i)),
+                                          s && Is(n, u, a),
+                                            a.canActivateChecks.push(new Ps(i)),
                                             e(t, null, o.component ? (u ? u.children : null) : r, i, a);
                                       })(t, o[t.value.outlet], r, i.concat([t.value]), a),
                                         delete o[t.value.outlet];
                                     }),
-                                    wo(o, function(e, t) {
-                                      return Ns(e, r.getContext(t), a);
+                                    ko(o, function(e, t) {
+                                      return Is(e, r.getContext(t), a);
                                     }),
                                     a
                                   );
@@ -13841,24 +13716,24 @@ function _createClass(e, t, n) {
                                                 ? lt(
                                                     a.map(function(a) {
                                                       var o,
-                                                        s = Ms(a, t, i);
+                                                        s = Rs(a, t, i);
                                                       if (
                                                         (function(e) {
-                                                          return e && bs(e.canDeactivate);
+                                                          return e && ms(e.canDeactivate);
                                                         })(s)
                                                       )
-                                                        o = So(s.canDeactivate(e, t, n, r));
+                                                        o = Co(s.canDeactivate(e, t, n, r));
                                                       else {
-                                                        if (!bs(s)) throw new Error('Invalid CanDeactivate guard');
-                                                        o = So(s(e, t, n, r));
+                                                        if (!ms(s)) throw new Error('Invalid CanDeactivate guard');
+                                                        o = Co(s(e, t, n, r));
                                                       }
-                                                      return o.pipe(Fa());
+                                                      return o.pipe(Va());
                                                     })
-                                                  ).pipe(Vs())
+                                                  ).pipe(Ns())
                                                 : lt(!0);
                                             })(e.component, e.route, n, t, r);
                                           }),
-                                          Fa(function(e) {
+                                          Va(function(e) {
                                             return !0 !== e;
                                           }, !0)
                                         );
@@ -13869,18 +13744,18 @@ function _createClass(e, t, n) {
                                                 return Object(c.a)(t).pipe(
                                                   ht(function(t) {
                                                     return Object(c.a)([
-                                                      Fs(t.route.parent, r),
-                                                      Ls(t.route, r),
-                                                      Us(e, t.path, n),
-                                                      Hs(e, t.route, n)
+                                                      Vs(t.route.parent, r),
+                                                      Ds(t.route, r),
+                                                      Fs(e, t.path, n),
+                                                      Ls(e, t.route, n)
                                                     ]).pipe(
                                                       fn(),
-                                                      Fa(function(e) {
+                                                      Va(function(e) {
                                                         return !0 !== e;
                                                       }, !0)
                                                     );
                                                   }),
-                                                  Fa(function(e) {
+                                                  Va(function(e) {
                                                     return !0 !== e;
                                                   }, !0)
                                                 );
@@ -13897,14 +13772,14 @@ function _createClass(e, t, n) {
                           })(t.ngModule.injector, function(e) {
                             return t.triggerEvent(e);
                           }),
-                          An(function(e) {
-                            if (ks(e.guardsResult)) {
-                              var n = ho('Redirecting to "'.concat(t.serializeUrl(e.guardsResult), '"'));
+                          Tn(function(e) {
+                            if (_s(e.guardsResult)) {
+                              var n = lo('Redirecting to "'.concat(t.serializeUrl(e.guardsResult), '"'));
                               throw ((n.url = e.guardsResult), n);
                             }
                           }),
-                          An(function(e) {
-                            var n = new Ya(
+                          Tn(function(e) {
+                            var n = new Ja(
                               e.id,
                               t.serializeUrl(e.extractedUrl),
                               t.serializeUrl(e.urlAfterRedirects),
@@ -13916,16 +13791,16 @@ function _createClass(e, t, n) {
                           dt(function(e) {
                             if (!e.guardsResult) {
                               t.resetUrlToCurrentUrlTree();
-                              var r = new Ka(e.id, t.serializeUrl(e.extractedUrl), '');
+                              var r = new Ga(e.id, t.serializeUrl(e.extractedUrl), '');
                               return n.next(r), e.resolve(!1), !1;
                             }
                             return !0;
                           }),
-                          Ys(function(e) {
+                          Js(function(e) {
                             if (e.guards.canActivateChecks.length)
                               return lt(e).pipe(
-                                An(function(e) {
-                                  var n = new Xa(
+                                Tn(function(e) {
+                                  var n = new $a(
                                     e.id,
                                     t.serializeUrl(e.extractedUrl),
                                     t.serializeUrl(e.urlAfterRedirects),
@@ -13949,7 +13824,7 @@ function _createClass(e, t, n) {
                                                   if (0 === i.length) return lt({});
                                                   if (1 === i.length) {
                                                     var a = i[0];
-                                                    return $s(e[a], t, n, r).pipe(
+                                                    return Qs(e[a], t, n, r).pipe(
                                                       Object(u.a)(function(e) {
                                                         return _defineProperty({}, a, e);
                                                       })
@@ -13959,7 +13834,7 @@ function _createClass(e, t, n) {
                                                   return Object(c.a)(i)
                                                     .pipe(
                                                       Object(ct.a)(function(i) {
-                                                        return $s(e[i], t, n, r).pipe(
+                                                        return Qs(e[i], t, n, r).pipe(
                                                           Object(u.a)(function(e) {
                                                             return (o[i] = e), e;
                                                           })
@@ -13967,7 +13842,7 @@ function _createClass(e, t, n) {
                                                       })
                                                     )
                                                     .pipe(
-                                                      Na(),
+                                                      Ia(),
                                                       Object(u.a)(function() {
                                                         return o;
                                                       })
@@ -13978,7 +13853,7 @@ function _createClass(e, t, n) {
                                                       (e._resolvedData = t),
                                                       (e.data = Object.assign(
                                                         Object.assign({}, e.data),
-                                                        es(e, n).resolve
+                                                        Yo(e, n).resolve
                                                       )),
                                                       null
                                                     );
@@ -13997,8 +13872,8 @@ function _createClass(e, t, n) {
                                     })
                                   );
                                 }),
-                                An(function(e) {
-                                  var n = new eo(
+                                Tn(function(e) {
+                                  var n = new Ya(
                                     e.id,
                                     t.serializeUrl(e.extractedUrl),
                                     t.serializeUrl(e.urlAfterRedirects),
@@ -14009,7 +13884,7 @@ function _createClass(e, t, n) {
                               );
                             var n, r;
                           }),
-                          Ys(function(e) {
+                          Js(function(e) {
                             var n = e.targetSnapshot,
                               r = e.id,
                               i = e.extractedUrl,
@@ -14057,7 +13932,7 @@ function _createClass(e, t, n) {
                                       return e(t, n);
                                     });
                                   })(t, n, r);
-                                  return new Qo(i, a);
+                                  return new Wo(i, a);
                                 }
                                 var o = t.retrieve(n.value);
                                 if (o) {
@@ -14079,12 +13954,12 @@ function _createClass(e, t, n) {
                                   );
                                 }
                                 var u,
-                                  l = new Xo(
-                                    new zr((u = n.value).url),
-                                    new zr(u.params),
-                                    new zr(u.queryParams),
-                                    new zr(u.fragment),
-                                    new zr(u.data),
+                                  l = new $o(
+                                    new Ur((u = n.value).url),
+                                    new Ur(u.params),
+                                    new Ur(u.queryParams),
+                                    new Ur(u.fragment),
+                                    new Ur(u.data),
                                     u.outlet,
                                     u.component,
                                     u
@@ -14092,13 +13967,13 @@ function _createClass(e, t, n) {
                                   c = n.children.map(function(n) {
                                     return e(t, n);
                                   });
-                                return new Qo(l, c);
+                                return new Wo(l, c);
                               })(e, t._root, n ? n._root : void 0);
-                              return new $o(r, t);
+                              return new Qo(r, t);
                             })(t.routeReuseStrategy, e.targetSnapshot, e.currentRouterState);
                             return Object.assign(Object.assign({}, e), { targetRouterState: n });
                           }),
-                          An(function(e) {
+                          Tn(function(e) {
                             (t.currentUrlTree = e.urlAfterRedirects),
                               (t.rawUrlTree = t.urlHandlingStrategy.merge(t.currentUrlTree, e.rawUrl)),
                               (t.routerState = e.targetRouterState),
@@ -14113,9 +13988,9 @@ function _createClass(e, t, n) {
                             return t.triggerEvent(e);
                           }),
                           Object(u.a)(function(e) {
-                            return new ms(a, e.targetRouterState, e.currentRouterState, o).activate(i), e;
+                            return new gs(a, e.targetRouterState, e.currentRouterState, o).activate(i), e;
                           })),
-                          An({
+                          Tn({
                             next: function() {
                               s = !0;
                             },
@@ -14126,7 +14001,7 @@ function _createClass(e, t, n) {
                           ((r = function() {
                             if (!s && !l) {
                               t.resetUrlToCurrentUrlTree();
-                              var r = new Ka(
+                              var r = new Ga(
                                 e.id,
                                 t.serializeUrl(e.extractedUrl),
                                 'Navigation ID '
@@ -14138,15 +14013,15 @@ function _createClass(e, t, n) {
                             t.currentNavigation = null;
                           }),
                           function(e) {
-                            return e.lift(new za(r));
+                            return e.lift(new Ua(r));
                           }),
-                          Da(function(r) {
+                          Ma(function(r) {
                             if (((l = !0), (s = r) && s.ngNavigationCancelingError)) {
-                              var i = ks(r.url);
+                              var i = _s(r.url);
                               i ||
                                 ((t.navigated = !0),
                                 t.resetStateAndUrl(e.currentRouterState, e.currentUrlTree, e.rawUrl));
-                              var a = new Ka(e.id, t.serializeUrl(e.extractedUrl), r.message);
+                              var a = new Ga(e.id, t.serializeUrl(e.extractedUrl), r.message);
                               n.next(a),
                                 i
                                   ? setTimeout(function() {
@@ -14165,7 +14040,7 @@ function _createClass(e, t, n) {
                                   : e.resolve(!1);
                             } else {
                               t.resetStateAndUrl(e.currentRouterState, e.currentUrlTree, e.rawUrl);
-                              var o = new Qa(e.id, t.serializeUrl(e.extractedUrl), r);
+                              var o = new Wa(e.id, t.serializeUrl(e.extractedUrl), r);
                               n.next(o);
                               try {
                                 e.resolve(t.errorHandler(r));
@@ -14237,7 +14112,7 @@ function _createClass(e, t, n) {
                 {
                   key: 'resetConfig',
                   value: function(e) {
-                    vo(e), (this.config = e.map(mo)), (this.navigated = !1), (this.lastSuccessfulId = -1);
+                    fo(e), (this.config = e.map(go)), (this.navigated = !1), (this.lastSuccessfulId = -1);
                   }
                 },
                 {
@@ -14286,9 +14161,9 @@ function _createClass(e, t, n) {
                     return (
                       null !== h && (h = this.removeEmptyProps(h)),
                       (function(e, t, n, r, i) {
-                        if (0 === n.length) return us(t.root, t.root, t, r, i);
+                        if (0 === n.length) return os(t.root, t.root, t, r, i);
                         var a = (function(e) {
-                          if ('string' == typeof e[0] && 1 === e.length && '/' === e[0]) return new ls(!0, 0, e);
+                          if ('string' == typeof e[0] && 1 === e.length && '/' === e[0]) return new ss(!0, 0, e);
                           var t = 0,
                             n = !1,
                             r = e.reduce(function(e, r, i) {
@@ -14296,7 +14171,7 @@ function _createClass(e, t, n) {
                                 if (r.outlets) {
                                   var a = {};
                                   return (
-                                    wo(r.outlets, function(e, t) {
+                                    ko(r.outlets, function(e, t) {
                                       a[t] = 'string' == typeof e ? e.split('/') : e;
                                     }),
                                     [].concat(_toConsumableArray(e), [{ outlets: a }])
@@ -14314,25 +14189,25 @@ function _createClass(e, t, n) {
                                   e)
                                 : [].concat(_toConsumableArray(e), [r]);
                             }, []);
-                          return new ls(n, t, r);
+                          return new ss(n, t, r);
                         })(n);
-                        if (a.toRoot()) return us(t.root, new Eo([], {}), t, r, i);
+                        if (a.toRoot()) return os(t.root, new Oo([], {}), t, r, i);
                         var o = (function(e, t, n) {
-                            if (e.isAbsolute) return new cs(t.root, !0, 0);
-                            if (-1 === n.snapshot._lastPathIndex) return new cs(n.snapshot._urlSegment, !0, 0);
-                            var r = ss(e.commands[0]) ? 0 : 1;
+                            if (e.isAbsolute) return new us(t.root, !0, 0);
+                            if (-1 === n.snapshot._lastPathIndex) return new us(n.snapshot._urlSegment, !0, 0);
+                            var r = as(e.commands[0]) ? 0 : 1;
                             return (function(e, t, n) {
                               for (var r = e, i = t, a = n; a > i; ) {
                                 if (((a -= i), !(r = r.parent))) throw new Error("Invalid number of '../'");
                                 i = r.segments.length;
                               }
-                              return new cs(r, !1, i - a);
+                              return new us(r, !1, i - a);
                             })(n.snapshot._urlSegment, n.snapshot._lastPathIndex + r, e.numberOfDoubleDots);
                           })(a, t, e),
                           s = o.processChildren
-                            ? ds(o.segmentGroup, o.index, a.commands)
-                            : fs(o.segmentGroup, o.index, a.commands);
-                        return us(o.segmentGroup, s, t, r, i);
+                            ? hs(o.segmentGroup, o.index, a.commands)
+                            : cs(o.segmentGroup, o.index, a.commands);
+                        return os(o.segmentGroup, s, t, r, i);
                       })(l, this.currentUrlTree, e, h, c)
                     );
                   }
@@ -14347,7 +14222,7 @@ function _createClass(e, t, n) {
                       this.console.warn(
                         "Navigation triggered outside Angular zone, did you forget to call 'ngZone.run()'?"
                       );
-                    var n = ks(e) ? e : this.parseUrl(e),
+                    var n = _s(e) ? e : this.parseUrl(e),
                       r = this.urlHandlingStrategy.merge(n, this.rawUrlTree);
                     return this.scheduleNavigation(r, 'imperative', null, t);
                   }
@@ -14389,9 +14264,9 @@ function _createClass(e, t, n) {
                 {
                   key: 'isActive',
                   value: function(e, t) {
-                    if (ks(e)) return Oo(this.currentUrlTree, e, t);
+                    if (_s(e)) return wo(this.currentUrlTree, e, t);
                     var n = this.parseUrl(e);
-                    return Oo(this.currentUrlTree, n, t);
+                    return wo(this.currentUrlTree, n, t);
                   }
                 },
                 {
@@ -14411,7 +14286,7 @@ function _createClass(e, t, n) {
                       function(t) {
                         (e.navigated = !0),
                           (e.lastSuccessfulId = t.id),
-                          e.events.next(new Wa(t.id, e.serializeUrl(t.extractedUrl), e.serializeUrl(e.currentUrlTree))),
+                          e.events.next(new Za(t.id, e.serializeUrl(t.extractedUrl), e.serializeUrl(e.currentUrlTree))),
                           (e.lastSuccessfulNavigation = e.currentNavigation),
                           (e.currentNavigation = null),
                           t.resolve(!0);
@@ -14501,10 +14376,10 @@ function _createClass(e, t, n) {
           })()).ɵfac = function(e) {
             i.cc();
           }),
-          (lu.ɵdir = i.Hb({ type: lu })),
-          lu),
-        hu =
-          (((uu = (function() {
+          (su.ɵdir = i.Hb({ type: su })),
+          su),
+        lu =
+          (((ou = (function() {
             function e(t, n, r, i, a) {
               _classCallCheck(this, e),
                 (this.router = t),
@@ -14517,7 +14392,7 @@ function _createClass(e, t, n) {
                 {
                   key: 'onClick',
                   value: function() {
-                    var e = { skipLocationChange: du(this.skipLocationChange), replaceUrl: du(this.replaceUrl) };
+                    var e = { skipLocationChange: hu(this.skipLocationChange), replaceUrl: hu(this.replaceUrl) };
                     return this.router.navigateByUrl(this.urlTree, e), !0;
                   }
                 },
@@ -14544,9 +14419,9 @@ function _createClass(e, t, n) {
                       relativeTo: this.route,
                       queryParams: this.queryParams,
                       fragment: this.fragment,
-                      preserveQueryParams: du(this.preserve),
+                      preserveQueryParams: hu(this.preserve),
                       queryParamsHandling: this.queryParamsHandling,
-                      preserveFragment: du(this.preserveFragment)
+                      preserveFragment: hu(this.preserveFragment)
                     });
                   }
                 }
@@ -14554,10 +14429,10 @@ function _createClass(e, t, n) {
               e
             );
           })()).ɵfac = function(e) {
-            return new (e || uu)(i.Mb(cu), i.Mb(Xo), i.ac('tabindex'), i.Mb(i.D), i.Mb(i.l));
+            return new (e || ou)(i.Mb(uu), i.Mb($o), i.ac('tabindex'), i.Mb(i.D), i.Mb(i.l));
           }),
-          (uu.ɵdir = i.Hb({
-            type: uu,
+          (ou.ɵdir = i.Hb({
+            type: ou,
             selectors: [['', 'routerLink', '', 5, 'a', 5, 'area']],
             hostBindings: function(e, t) {
               1 & e &&
@@ -14577,9 +14452,9 @@ function _createClass(e, t, n) {
               state: 'state'
             }
           })),
-          uu),
-        fu =
-          (((su = (function() {
+          ou),
+        cu =
+          (((au = (function() {
             function e(t, n, r) {
               var i = this;
               _classCallCheck(this, e),
@@ -14588,7 +14463,7 @@ function _createClass(e, t, n) {
                 (this.locationStrategy = r),
                 (this.commands = []),
                 (this.subscription = t.events.subscribe(function(e) {
-                  e instanceof Wa && i.updateTargetUrlAndHref();
+                  e instanceof Za && i.updateTargetUrlAndHref();
                 }));
             }
             return (
@@ -14611,8 +14486,8 @@ function _createClass(e, t, n) {
                     if (0 !== e || t || n || r) return !0;
                     if ('string' == typeof this.target && '_self' != this.target) return !0;
                     var i = {
-                      skipLocationChange: du(this.skipLocationChange),
-                      replaceUrl: du(this.replaceUrl),
+                      skipLocationChange: hu(this.skipLocationChange),
+                      replaceUrl: hu(this.replaceUrl),
                       state: this.state
                     };
                     return this.router.navigateByUrl(this.urlTree, i), !1;
@@ -14647,9 +14522,9 @@ function _createClass(e, t, n) {
                       relativeTo: this.route,
                       queryParams: this.queryParams,
                       fragment: this.fragment,
-                      preserveQueryParams: du(this.preserve),
+                      preserveQueryParams: hu(this.preserve),
                       queryParamsHandling: this.queryParamsHandling,
-                      preserveFragment: du(this.preserveFragment)
+                      preserveFragment: hu(this.preserveFragment)
                     });
                   }
                 }
@@ -14657,10 +14532,10 @@ function _createClass(e, t, n) {
               e
             );
           })()).ɵfac = function(e) {
-            return new (e || su)(i.Mb(cu), i.Mb(Xo), i.Mb(a.h));
+            return new (e || au)(i.Mb(uu), i.Mb($o), i.Mb(a.h));
           }),
-          (su.ɵdir = i.Hb({
-            type: su,
+          (au.ɵdir = i.Hb({
+            type: au,
             selectors: [
               ['a', 'routerLink', ''],
               ['area', 'routerLink', '']
@@ -14687,16 +14562,16 @@ function _createClass(e, t, n) {
             },
             features: [i.xb()]
           })),
-          su);
-      function du(e) {
+          au);
+      function hu(e) {
         return '' === e || !!e;
       }
-      var pu,
+      var fu,
+        du,
+        pu,
         vu,
-        gu,
-        yu,
-        mu =
-          (((pu = (function() {
+        gu =
+          (((fu = (function() {
             function e(t, n, r, i, a) {
               var o = this;
               _classCallCheck(this, e),
@@ -14709,7 +14584,7 @@ function _createClass(e, t, n) {
                 (this.isActive = !1),
                 (this.routerLinkActiveOptions = { exact: !1 }),
                 (this.subscription = t.events.subscribe(function(e) {
-                  e instanceof Wa && o.update();
+                  e instanceof Za && o.update();
                 }));
             }
             return (
@@ -14792,30 +14667,30 @@ function _createClass(e, t, n) {
               e
             );
           })()).ɵfac = function(e) {
-            return new (e || pu)(i.Mb(cu), i.Mb(i.l), i.Mb(i.D), i.Mb(hu, 8), i.Mb(fu, 8));
+            return new (e || fu)(i.Mb(uu), i.Mb(i.l), i.Mb(i.D), i.Mb(lu, 8), i.Mb(cu, 8));
           }),
-          (pu.ɵdir = i.Hb({
-            type: pu,
+          (fu.ɵdir = i.Hb({
+            type: fu,
             selectors: [['', 'routerLinkActive', '']],
             contentQueries: function(e, t, n) {
               var r;
-              1 & e && (i.Fb(n, hu, !0), i.Fb(n, fu, !0)),
+              1 & e && (i.Fb(n, lu, !0), i.Fb(n, cu, !0)),
                 2 & e && (i.rc((r = i.ec())) && (t.links = r), i.rc((r = i.ec())) && (t.linksWithHrefs = r));
             },
             inputs: { routerLinkActiveOptions: 'routerLinkActiveOptions', routerLinkActive: 'routerLinkActive' },
             exportAs: ['routerLinkActive'],
             features: [i.xb()]
           })),
-          pu),
-        _u = function e() {
+          fu),
+        yu = function e() {
           _classCallCheck(this, e),
             (this.outlet = null),
             (this.route = null),
             (this.resolver = null),
-            (this.children = new bu()),
+            (this.children = new mu()),
             (this.attachRef = null);
         },
-        bu = (function() {
+        mu = (function() {
           function e() {
             _classCallCheck(this, e), (this.contexts = new Map());
           }
@@ -14852,7 +14727,7 @@ function _createClass(e, t, n) {
                 key: 'getOrCreateContext',
                 value: function(e) {
                   var t = this.getContext(e);
-                  return t || ((t = new _u()), this.contexts.set(e, t)), t;
+                  return t || ((t = new yu()), this.contexts.set(e, t)), t;
                 }
               },
               {
@@ -14865,8 +14740,8 @@ function _createClass(e, t, n) {
             e
           );
         })(),
-        ku =
-          (((vu = (function() {
+        _u =
+          (((du = (function() {
             function e(t, n, r, a, o) {
               _classCallCheck(this, e),
                 (this.parentContexts = t),
@@ -14935,7 +14810,7 @@ function _createClass(e, t, n) {
                     this._activatedRoute = e;
                     var n = (t = t || this.resolver).resolveComponentFactory(e._futureSnapshot.routeConfig.component),
                       r = this.parentContexts.getOrCreateContext(this.name).children,
-                      i = new Cu(e, r, this.location.injector);
+                      i = new bu(e, r, this.location.injector);
                     (this.activated = this.location.createComponent(n, this.location.length, i)),
                       this.changeDetector.markForCheck(),
                       this.activateEvents.emit(this.activated.instance);
@@ -14971,16 +14846,16 @@ function _createClass(e, t, n) {
               e
             );
           })()).ɵfac = function(e) {
-            return new (e || vu)(i.Mb(bu), i.Mb(i.N), i.Mb(i.j), i.ac('name'), i.Mb(i.h));
+            return new (e || du)(i.Mb(mu), i.Mb(i.N), i.Mb(i.j), i.ac('name'), i.Mb(i.h));
           }),
-          (vu.ɵdir = i.Hb({
-            type: vu,
+          (du.ɵdir = i.Hb({
+            type: du,
             selectors: [['router-outlet']],
             outputs: { activateEvents: 'activate', deactivateEvents: 'deactivate' },
             exportAs: ['outlet']
           })),
-          vu),
-        Cu = (function() {
+          du),
+        bu = (function() {
           function e(t, n, r) {
             _classCallCheck(this, e), (this.route = t), (this.childContexts = n), (this.parent = r);
           }
@@ -14989,17 +14864,17 @@ function _createClass(e, t, n) {
               {
                 key: 'get',
                 value: function(e, t) {
-                  return e === Xo ? this.route : e === bu ? this.childContexts : this.parent.get(e, t);
+                  return e === $o ? this.route : e === mu ? this.childContexts : this.parent.get(e, t);
                 }
               }
             ]),
             e
           );
         })(),
-        wu = function e() {
+        ku = function e() {
           _classCallCheck(this, e);
         },
-        Su = (function() {
+        Cu = (function() {
           function e() {
             _classCallCheck(this, e);
           }
@@ -15015,21 +14890,21 @@ function _createClass(e, t, n) {
             e
           );
         })(),
-        Ou =
-          (((yu = (function() {
+        wu =
+          (((vu = (function() {
             function e(t, n, r, i, a) {
               _classCallCheck(this, e),
                 (this.router = t),
                 (this.injector = i),
                 (this.preloadingStrategy = a),
-                (this.loader = new nu(
+                (this.loader = new eu(
                   n,
                   r,
                   function(e) {
-                    return t.triggerEvent(new to(e));
+                    return t.triggerEvent(new Xa(e));
                   },
                   function(e) {
-                    return t.triggerEvent(new no(e));
+                    return t.triggerEvent(new eo(e));
                   }
                 ));
             }
@@ -15042,7 +14917,7 @@ function _createClass(e, t, n) {
                     this.subscription = this.router.events
                       .pipe(
                         dt(function(e) {
-                          return e instanceof Wa;
+                          return e instanceof Za;
                         }),
                         ht(function() {
                           return e.preload();
@@ -15114,12 +14989,12 @@ function _createClass(e, t, n) {
               e
             );
           })()).ɵfac = function(e) {
-            return new (e || yu)(i.Zb(cu), i.Zb(i.w), i.Zb(i.i), i.Zb(i.r), i.Zb(wu));
+            return new (e || vu)(i.Zb(uu), i.Zb(i.w), i.Zb(i.i), i.Zb(i.r), i.Zb(ku));
           }),
-          (yu.ɵprov = i.Ib({ token: yu, factory: yu.ɵfac })),
-          yu),
-        xu =
-          (((gu = (function() {
+          (vu.ɵprov = i.Ib({ token: vu, factory: vu.ɵfac })),
+          vu),
+        Su =
+          (((pu = (function() {
             function e(t, n) {
               var r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
               _classCallCheck(this, e),
@@ -15149,11 +15024,11 @@ function _createClass(e, t, n) {
                   value: function() {
                     var e = this;
                     return this.router.events.subscribe(function(t) {
-                      t instanceof Ga
+                      t instanceof qa
                         ? ((e.store[e.lastId] = e.viewportScroller.getScrollPosition()),
                           (e.lastSource = t.navigationTrigger),
                           (e.restoredId = t.restoredState ? t.restoredState.navigationId : 0))
-                        : t instanceof Wa &&
+                        : t instanceof Za &&
                           ((e.lastId = t.id),
                           e.scheduleScrollEvent(t, e.router.parseUrl(t.urlAfterRedirects).fragment));
                     });
@@ -15164,7 +15039,7 @@ function _createClass(e, t, n) {
                   value: function() {
                     var e = this;
                     return this.router.events.subscribe(function(t) {
-                      t instanceof so &&
+                      t instanceof ao &&
                         (t.position
                           ? 'top' === e.options.scrollPositionRestoration
                             ? e.viewportScroller.scrollToPosition([0, 0])
@@ -15181,7 +15056,7 @@ function _createClass(e, t, n) {
                   key: 'scheduleScrollEvent',
                   value: function(e, t) {
                     this.router.triggerEvent(
-                      new so(e, 'popstate' === this.lastSource ? this.store[this.restoredId] : null, t)
+                      new ao(e, 'popstate' === this.lastSource ? this.store[this.restoredId] : null, t)
                     );
                   }
                 },
@@ -15198,20 +15073,20 @@ function _createClass(e, t, n) {
           })()).ɵfac = function(e) {
             i.cc();
           }),
-          (gu.ɵdir = i.Hb({ type: gu })),
-          gu),
-        Eu = new i.q('ROUTER_CONFIGURATION'),
-        Tu = new i.q('ROUTER_FORROOT_GUARD'),
-        Au = [
+          (pu.ɵdir = i.Hb({ type: pu })),
+          pu),
+        Ou = new i.q('ROUTER_CONFIGURATION'),
+        xu = new i.q('ROUTER_FORROOT_GUARD'),
+        Eu = [
           a.g,
-          { provide: jo, useClass: Ro },
+          { provide: To, useClass: Po },
           {
-            provide: cu,
+            provide: uu,
             useFactory: function(e, t, n, r, i, o, s, u) {
               var l = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : {},
                 c = arguments.length > 9 ? arguments[9] : void 0,
                 h = arguments.length > 10 ? arguments[10] : void 0,
-                f = new cu(null, t, n, r, i, o, s, ko(u));
+                f = new uu(null, t, n, r, i, o, s, _o(u));
               if (
                 (c && (f.urlHandlingStrategy = c),
                 h && (f.routeReuseStrategy = h),
@@ -15237,14 +15112,14 @@ function _createClass(e, t, n) {
             },
             deps: [
               i.g,
-              jo,
-              bu,
+              To,
+              mu,
               a.g,
               i.r,
               i.w,
               i.i,
-              tu,
-              Eu,
+              Xs,
+              Ou,
               [
                 (function() {
                   return function e() {
@@ -15253,20 +15128,20 @@ function _createClass(e, t, n) {
                 })(),
                 new i.A()
               ],
-              [Xs, new i.A()]
+              [$s, new i.A()]
             ]
           },
-          bu,
+          mu,
           {
-            provide: Xo,
+            provide: $o,
             useFactory: function(e) {
               return e.routerState.root;
             },
-            deps: [cu]
+            deps: [uu]
           },
           { provide: i.w, useClass: i.J },
-          Ou,
-          Su,
+          wu,
+          Cu,
           (function() {
             function e() {
               _classCallCheck(this, e);
@@ -15277,7 +15152,7 @@ function _createClass(e, t, n) {
                   key: 'preload',
                   value: function(e, t) {
                     return t().pipe(
-                      Da(function() {
+                      Ma(function() {
                         return lt(null);
                       })
                     );
@@ -15287,14 +15162,14 @@ function _createClass(e, t, n) {
               e
             );
           })(),
-          { provide: Eu, useValue: { enableTracing: !1 } }
+          { provide: Ou, useValue: { enableTracing: !1 } }
         ];
-      function Pu() {
-        return new i.y('Router', cu);
+      function Au() {
+        return new i.y('Router', uu);
       }
-      var ju,
-        Ru =
-          (((ju = (function() {
+      var Tu,
+        Pu =
+          (((Tu = (function() {
             function e(t, n) {
               _classCallCheck(this, e);
             }
@@ -15306,19 +15181,19 @@ function _createClass(e, t, n) {
                     return {
                       ngModule: e,
                       providers: [
-                        Au,
-                        Du(t),
-                        { provide: Tu, useFactory: Nu, deps: [[cu, new i.A(), new i.I()]] },
-                        { provide: Eu, useValue: n || {} },
-                        { provide: a.h, useFactory: Mu, deps: [a.m, [new i.p(a.a), new i.A()], Eu] },
-                        { provide: xu, useFactory: Iu, deps: [cu, a.o, Eu] },
-                        { provide: wu, useExisting: n && n.preloadingStrategy ? n.preloadingStrategy : Su },
-                        { provide: i.y, multi: !0, useFactory: Pu },
+                        Eu,
+                        Mu(t),
+                        { provide: xu, useFactory: Iu, deps: [[uu, new i.A(), new i.I()]] },
+                        { provide: Ou, useValue: n || {} },
+                        { provide: a.h, useFactory: Ru, deps: [a.m, [new i.p(a.a), new i.A()], Ou] },
+                        { provide: Su, useFactory: ju, deps: [uu, a.o, Ou] },
+                        { provide: ku, useExisting: n && n.preloadingStrategy ? n.preloadingStrategy : Cu },
+                        { provide: i.y, multi: !0, useFactory: Au },
                         [
-                          Lu,
-                          { provide: i.d, multi: !0, useFactory: Fu, deps: [Lu] },
-                          { provide: Yu, useFactory: Hu, deps: [Lu] },
-                          { provide: i.b, multi: !0, useExisting: Yu }
+                          Du,
+                          { provide: i.d, multi: !0, useFactory: Vu, deps: [Du] },
+                          { provide: Qu, useFactory: Lu, deps: [Du] },
+                          { provide: i.b, multi: !0, useExisting: Qu }
                         ]
                       ]
                     };
@@ -15327,42 +15202,42 @@ function _createClass(e, t, n) {
                 {
                   key: 'forChild',
                   value: function(t) {
-                    return { ngModule: e, providers: [Du(t)] };
+                    return { ngModule: e, providers: [Mu(t)] };
                   }
                 }
               ]),
               e
             );
-          })()).ɵmod = i.Kb({ type: ju })),
-          (ju.ɵinj = i.Jb({
+          })()).ɵmod = i.Kb({ type: Tu })),
+          (Tu.ɵinj = i.Jb({
             factory: function(e) {
-              return new (e || ju)(i.Zb(Tu, 8), i.Zb(cu, 8));
+              return new (e || Tu)(i.Zb(xu, 8), i.Zb(uu, 8));
             }
           })),
-          ju);
-      function Iu(e, t, n) {
-        return n.scrollOffset && t.setOffset(n.scrollOffset), new xu(e, t, n);
+          Tu);
+      function ju(e, t, n) {
+        return n.scrollOffset && t.setOffset(n.scrollOffset), new Su(e, t, n);
       }
-      function Mu(e, t) {
+      function Ru(e, t) {
         var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         return n.useHash ? new a.e(e, t) : new a.l(e, t);
       }
-      function Nu(e) {
+      function Iu(e) {
         if (e)
           throw new Error(
             'RouterModule.forRoot() called twice. Lazy loaded modules should use RouterModule.forChild() instead.'
           );
         return 'guarded';
       }
-      function Du(e) {
+      function Mu(e) {
         return [
           { provide: i.a, multi: !0, useValue: e },
-          { provide: tu, multi: !0, useValue: e }
+          { provide: Xs, multi: !0, useValue: e }
         ];
       }
-      var Vu,
-        Lu =
-          (((Vu = (function() {
+      var Nu,
+        Du =
+          (((Nu = (function() {
             function e(t) {
               _classCallCheck(this, e),
                 (this.injector = t),
@@ -15380,8 +15255,8 @@ function _createClass(e, t, n) {
                         n = new Promise(function(e) {
                           return (t = e);
                         }),
-                        r = e.injector.get(cu),
-                        i = e.injector.get(Eu);
+                        r = e.injector.get(uu),
+                        i = e.injector.get(Ou);
                       if (e.isLegacyDisabled(i) || e.isLegacyEnabled(i)) t(!0);
                       else if ('disabled' === i.initialNavigation) r.setUpLocationChangeListener(), t(!0);
                       else {
@@ -15401,10 +15276,10 @@ function _createClass(e, t, n) {
                 {
                   key: 'bootstrapListener',
                   value: function(e) {
-                    var t = this.injector.get(Eu),
-                      n = this.injector.get(Ou),
-                      r = this.injector.get(xu),
-                      a = this.injector.get(cu),
+                    var t = this.injector.get(Ou),
+                      n = this.injector.get(wu),
+                      r = this.injector.get(Su),
+                      a = this.injector.get(uu),
                       o = this.injector.get(i.g);
                     e === o.components[0] &&
                       (this.isLegacyEnabled(t)
@@ -15437,17 +15312,19 @@ function _createClass(e, t, n) {
               e
             );
           })()).ɵfac = function(e) {
-            return new (e || Vu)(i.Zb(i.r));
+            return new (e || Nu)(i.Zb(i.r));
           }),
-          (Vu.ɵprov = i.Ib({ token: Vu, factory: Vu.ɵfac })),
-          Vu);
-      function Fu(e) {
+          (Nu.ɵprov = i.Ib({ token: Nu, factory: Nu.ɵfac })),
+          Nu);
+      function Vu(e) {
         return e.appInitializer.bind(e);
       }
-      function Hu(e) {
+      function Lu(e) {
         return e.bootstrapListener.bind(e);
       }
-      var Uu,
+      var Fu,
+        Hu,
+        Uu,
         Bu,
         zu,
         qu,
@@ -15455,12 +15332,9 @@ function _createClass(e, t, n) {
         Gu,
         Wu,
         Ku,
-        Qu,
-        Ju,
-        $u,
-        Yu = new i.q('Router Initializer'),
-        Xu =
-          (((Uu = (function(e) {
+        Qu = new i.q('Router Initializer'),
+        Ju =
+          (((Fu = (function(e) {
             function t() {
               return (
                 _classCallCheck(this, t), _possibleConstructorReturn(this, _getPrototypeOf(t).apply(this, arguments))
@@ -15497,14 +15371,14 @@ function _createClass(e, t, n) {
               ]),
               t
             );
-          })(Xs)).ɵfac = function(e) {
-            return el(e || Uu);
+          })($s)).ɵfac = function(e) {
+            return $u(e || Fu);
           }),
-          (Uu.ɵprov = i.Ib({ token: Uu, factory: Uu.ɵfac })),
-          Uu),
-        el = i.Tb(Xu),
-        tl =
-          (((zu = (function() {
+          (Fu.ɵprov = i.Ib({ token: Fu, factory: Fu.ɵfac })),
+          Fu),
+        $u = i.Tb(Ju),
+        Yu =
+          (((Uu = (function() {
             function e() {
               _classCallCheck(this, e);
             }
@@ -15514,7 +15388,7 @@ function _createClass(e, t, n) {
                   key: 'sendPayment',
                   value: function(e) {
                     return this.isRequestSuccess
-                      ? lt(new At({ status: 200, body: e }))
+                      ? lt(new Tt({ status: 200, body: e }))
                       : sn(new Pt({ status: 502, statusText: 'Bad Gateway' }));
                   }
                 },
@@ -15528,24 +15402,24 @@ function _createClass(e, t, n) {
               e
             );
           })()).ɵfac = function(e) {
-            return new (e || zu)();
+            return new (e || Uu)();
           }),
-          (zu.ɵprov = i.Ib({ token: zu, factory: zu.ɵfac })),
-          zu),
-        nl =
-          (((Bu = function e(t) {
+          (Uu.ɵprov = i.Ib({ token: Uu, factory: Uu.ɵfac })),
+          Uu),
+        Xu =
+          (((Hu = function e(t) {
             if ((_classCallCheck(this, e), t))
               throw new Error(''.concat(t, ' has already been loaded. Import Core module in the AppModule only.'));
-          }).ɵmod = i.Kb({ type: Bu })),
-          (Bu.ɵinj = i.Jb({
+          }).ɵmod = i.Kb({ type: Hu })),
+          (Hu.ɵinj = i.Jb({
             factory: function(e) {
-              return new (e || Bu)(i.Zb(Bu, 12));
+              return new (e || Hu)(i.Zb(Hu, 12));
             },
-            providers: [tl, { provide: Xs, useClass: Xu }],
-            imports: [[a.b, Ur, Ru]]
+            providers: [Yu, { provide: $s, useClass: Ju }],
+            imports: [[a.b, Fr, Pu]]
           })),
-          Bu),
-        rl = (function(e) {
+          Hu),
+        el = (function(e) {
           return (
             (e[(e.Off = 0)] = 'Off'),
             (e[(e.Error = 1)] = 'Error'),
@@ -15555,7 +15429,7 @@ function _createClass(e, t, n) {
             e
           );
         })({}),
-        il = (function() {
+        tl = (function() {
           var e = (function() {
             function e(t) {
               _classCallCheck(this, e), (this.source = t);
@@ -15568,28 +15442,28 @@ function _createClass(e, t, n) {
                     key: 'debug',
                     value: function() {
                       for (var e = arguments.length, t = new Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                      this.log(console.log, rl.Debug, t);
+                      this.log(console.log, el.Debug, t);
                     }
                   },
                   {
                     key: 'info',
                     value: function() {
                       for (var e = arguments.length, t = new Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                      this.log(console.info, rl.Info, t);
+                      this.log(console.info, el.Info, t);
                     }
                   },
                   {
                     key: 'warn',
                     value: function() {
                       for (var e = arguments.length, t = new Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                      this.log(console.warn, rl.Warning, t);
+                      this.log(console.warn, el.Warning, t);
                     }
                   },
                   {
                     key: 'error',
                     value: function() {
                       for (var e = arguments.length, t = new Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                      this.log(console.error, rl.Error, t);
+                      this.log(console.error, el.Error, t);
                     }
                   },
                   {
@@ -15610,7 +15484,7 @@ function _createClass(e, t, n) {
                   {
                     key: 'enableProductionMode',
                     value: function() {
-                      e.level = rl.Warning;
+                      e.level = el.Warning;
                     }
                   }
                 ]
@@ -15618,18 +15492,18 @@ function _createClass(e, t, n) {
               e
             );
           })();
-          return (e.level = rl.Debug), (e.outputs = []), e;
+          return (e.level = el.Debug), (e.outputs = []), e;
         })(),
-        al = n('A/Ql'),
-        ol = n('wywo'),
-        sl = new il('I18nService'),
-        ul =
-          (((qu = (function() {
+        nl = n('A/Ql'),
+        rl = n('wywo'),
+        il = new tl('I18nService'),
+        al =
+          (((Bu = (function() {
             function e(t) {
               _classCallCheck(this, e),
                 (this.translateService = t),
-                t.setTranslation('en-US', al),
-                t.setTranslation('ru-RU', ol);
+                t.setTranslation('en-US', nl),
+                t.setTranslation('ru-RU', rl);
             }
             return (
               _createClass(e, [
@@ -15664,7 +15538,7 @@ function _createClass(e, t, n) {
                         }) || ''),
                       (t = Boolean(e))),
                       t || (e = this.defaultLanguage),
-                      sl.debug('Language set to '.concat(e)),
+                      il.debug('Language set to '.concat(e)),
                       this.translateService.use(e);
                   },
                   get: function() {
@@ -15675,58 +15549,37 @@ function _createClass(e, t, n) {
               e
             );
           })()).ɵfac = function(e) {
-            return new (e || qu)(i.Zb(Lr));
+            return new (e || Bu)(i.Zb(Vr));
           }),
-          (qu.ɵprov = i.Ib({ token: qu, factory: qu.ɵfac, providedIn: 'root' })),
-          qu),
-        ll = Symbol('untilDestroyed'),
-        cl =
-          (((Wu = function e() {
+          (Bu.ɵprov = i.Ib({ token: Bu, factory: Bu.ɵfac, providedIn: 'root' })),
+          Bu),
+        ol = Symbol('untilDestroyed'),
+        sl =
+          (((qu = function e() {
             _classCallCheck(this, e);
-          }).ɵmod = i.Kb({ type: Wu })),
-          (Wu.ɵinj = i.Jb({
+          }).ɵmod = i.Kb({ type: qu })),
+          (qu.ɵinj = i.Jb({
             factory: function(e) {
-              return new (e || Wu)();
+              return new (e || qu)();
             },
             imports: [[a.b]]
           })),
-          Wu),
-        hl =
-          (((Gu = function e() {
+          qu),
+        ul =
+          (((zu = function e() {
             _classCallCheck(this, e);
-          }).ɵfac = function(e) {
-            return new (e || Gu)();
-          }),
-          (Gu.ɵcmp = i.Gb({
-            type: Gu,
-            selectors: [['app-loader']],
-            decls: 2,
-            vars: 0,
-            consts: [[1, 'fas', 'fa-cog', 'fa-spin', 'fa-3x', 'text-light']],
-            template: function(e, t) {
-              1 & e && (i.Nb(0, 'i', 0), i.Bc(1, '\n'));
-            },
-            styles: [
-              '[_nghost-%COMP%]{position:fixed;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.fa[_ngcontent-%COMP%]{vertical-align:middle}'
-            ],
-            changeDetection: 0
-          })),
-          Gu),
-        fl =
-          (((Zu = function e() {
-            _classCallCheck(this, e);
-          }).ɵmod = i.Kb({ type: Zu })),
-          (Zu.ɵinj = i.Jb({
+          }).ɵmod = i.Kb({ type: zu })),
+          (zu.ɵinj = i.Jb({
             factory: function(e) {
-              return new (e || Zu)();
+              return new (e || zu)();
             },
-            imports: [[a.b, Ur, Ea, Ru, cl]]
+            imports: [[a.b, Fr, Oa, Pu, sl]]
           })),
-          Zu),
-        dl = new i.q('config'),
-        pl = new i.q('NEW_CONFIG'),
-        vl = new i.q('INITIAL_CONFIG'),
-        gl = {
+          zu),
+        ll = new i.q('config'),
+        cl = new i.q('NEW_CONFIG'),
+        hl = new i.q('INITIAL_CONFIG'),
+        fl = {
           suffix: '',
           prefix: '',
           thousandSeparator: ' ',
@@ -15755,10 +15608,10 @@ function _createClass(e, t, n) {
             s: { pattern: new RegExp('\\d') }
           }
         },
-        yl = ['Hh:m0:s0', 'Hh:m0', 'm0:s0'],
-        ml = ['percent', 'Hh', 's0', 'm0', 'separator', 'd0/M0/0000', 'd0/M0', 'd0', 'M0'],
-        _l =
-          ((($u = (function() {
+        dl = ['Hh:m0:s0', 'Hh:m0', 'm0:s0'],
+        pl = ['percent', 'Hh', 's0', 'm0', 'separator', 'd0/M0/0000', 'd0/M0', 'd0', 'M0'],
+        vl =
+          (((Ku = (function() {
             function e(t) {
               var n = this;
               _classCallCheck(this, e),
@@ -15924,34 +15777,34 @@ function _createClass(e, t, n) {
                           var E = 31;
                           if ('d' === t[i] && (Number(e.slice(i, i + 2)) > E || '/' === e[i + 1])) {
                             i += 1;
-                            var T = /[*?]/g.test(t.slice(0, i)) ? c.length : i;
-                            this._shift.add(T + this.prefix.length || 0), C--;
+                            var A = /[*?]/g.test(t.slice(0, i)) ? c.length : i;
+                            this._shift.add(A + this.prefix.length || 0), C--;
                             continue;
                           }
                           if ('M' === t[i]) {
-                            var A = 12,
-                              P = 0 === i && (Number(w) > 2 || Number(e.slice(i, i + 2)) > A || '/' === e[i + 1]),
+                            var T = 12,
+                              P = 0 === i && (Number(w) > 2 || Number(e.slice(i, i + 2)) > T || '/' === e[i + 1]),
                               j =
                                 e.slice(i - 3, i - 1).includes('/') &&
-                                (('/' === e[i - 2] && Number(e.slice(i - 1, i + 1)) > A && '/' !== e[i]) ||
+                                (('/' === e[i - 2] && Number(e.slice(i - 1, i + 1)) > T && '/' !== e[i]) ||
                                   '/' === e[i] ||
-                                  ('/' === e[i - 3] && Number(e.slice(i - 2, i)) > A && '/' !== e[i - 1]) ||
+                                  ('/' === e[i - 3] && Number(e.slice(i - 2, i)) > T && '/' !== e[i - 1]) ||
                                   '/' === e[i - 1]),
                               R =
                                 Number(e.slice(i - 3, i - 1)) <= E &&
                                 !e.slice(i - 3, i - 1).includes('/') &&
                                 '/' === e[i - 1] &&
-                                (Number(e.slice(i, i + 2)) > A || '/' === e[i + 1]),
+                                (Number(e.slice(i, i + 2)) > T || '/' === e[i + 1]),
                               I =
                                 Number(e.slice(i - 3, i - 1)) > E &&
                                 !e.slice(i - 3, i - 1).includes('/') &&
                                 !e.slice(i - 2, i).includes('/') &&
-                                Number(e.slice(i - 2, i)) > A,
+                                Number(e.slice(i - 2, i)) > T,
                               M =
                                 Number(e.slice(i - 3, i - 1)) <= E &&
                                 !e.slice(i - 3, i - 1).includes('/') &&
                                 '/' !== e[i - 1] &&
-                                Number(e.slice(i - 1, i + 1)) > A;
+                                Number(e.slice(i - 1, i + 1)) > T;
                             if (P || j || R || I || M) {
                               i += 1;
                               var N = /[*?]/g.test(t.slice(0, i)) ? c.length : i;
@@ -16038,12 +15891,12 @@ function _createClass(e, t, n) {
               e
             );
           })()).ɵfac = function(e) {
-            return new (e || $u)(i.Zb(dl));
+            return new (e || Ku)(i.Zb(ll));
           }),
-          ($u.ɵprov = i.Ib({ token: $u, factory: $u.ɵfac })),
-          $u),
-        bl =
-          (((Ju = (function(e) {
+          (Ku.ɵprov = i.Ib({ token: Ku, factory: Ku.ɵfac })),
+          Ku),
+        gl =
+          (((Wu = (function(e) {
             function t(e, n, r, i) {
               var a;
               return (
@@ -16322,13 +16175,13 @@ function _createClass(e, t, n) {
               ]),
               t
             );
-          })(_l)).ɵfac = function(e) {
-            return new (e || Ju)(i.Zb(a.c), i.Zb(dl), i.Zb(i.l), i.Zb(i.D));
+          })(vl)).ɵfac = function(e) {
+            return new (e || Wu)(i.Zb(a.c), i.Zb(ll), i.Zb(i.l), i.Zb(i.D));
           }),
-          (Ju.ɵprov = i.Ib({ token: Ju, factory: Ju.ɵfac })),
-          Ju),
-        kl =
-          (((Qu = (function() {
+          (Wu.ɵprov = i.Ib({ token: Wu, factory: Wu.ɵfac })),
+          Wu),
+        yl =
+          (((Gu = (function() {
             function e(t, n, r) {
               _classCallCheck(this, e),
                 (this.document = t),
@@ -16405,9 +16258,9 @@ function _createClass(e, t, n) {
                     if (!this._maskService.validation) return null;
                     if (this._maskService.ipError) return { 'Mask error': !0 };
                     if (this._maskValue.startsWith('separator')) return null;
-                    if (ml.includes(this._maskValue)) return null;
+                    if (pl.includes(this._maskValue)) return null;
                     if (this._maskService.clearIfNotMatch) return null;
-                    if (yl.includes(this._maskValue)) return this._validateTime(n);
+                    if (dl.includes(this._maskValue)) return this._validateTime(n);
                     if (n && n.toString().length >= 1) {
                       var r = 0,
                         i = function(e) {
@@ -16721,10 +16574,10 @@ function _createClass(e, t, n) {
               e
             );
           })()).ɵfac = function(e) {
-            return new (e || Qu)(i.Mb(a.c), i.Mb(bl), i.Mb(dl));
+            return new (e || Gu)(i.Mb(a.c), i.Mb(gl), i.Mb(ll));
           }),
-          (Qu.ɵdir = i.Hb({
-            type: Qu,
+          (Gu.ɵdir = i.Hb({
+            type: Gu,
             selectors: [['', 'mask', '']],
             hostBindings: function(e, t) {
               1 & e &&
@@ -16763,25 +16616,25 @@ function _createClass(e, t, n) {
                 {
                   provide: g,
                   useExisting: Object(i.S)(function() {
-                    return Qu;
+                    return Gu;
                   }),
                   multi: !0
                 },
                 {
                   provide: I,
                   useExisting: Object(i.S)(function() {
-                    return Qu;
+                    return Gu;
                   }),
                   multi: !0
                 },
-                bl
+                gl
               ]),
               i.xb()
             ]
           })),
-          Qu),
-        Cl =
-          (((Ku = (function() {
+          Gu),
+        ml =
+          (((Zu = (function() {
             function e() {
               _classCallCheck(this, e);
             }
@@ -16793,10 +16646,10 @@ function _createClass(e, t, n) {
                     return {
                       ngModule: e,
                       providers: [
-                        { provide: pl, useValue: t },
-                        { provide: vl, useValue: gl },
-                        { provide: dl, useFactory: wl, deps: [vl, pl] },
-                        _l
+                        { provide: cl, useValue: t },
+                        { provide: hl, useValue: fl },
+                        { provide: ll, useFactory: _l, deps: [hl, cl] },
+                        vl
                       ]
                     };
                   }
@@ -16810,17 +16663,17 @@ function _createClass(e, t, n) {
               ]),
               e
             );
-          })()).ɵmod = i.Kb({ type: Ku })),
-          (Ku.ɵinj = i.Jb({
+          })()).ɵmod = i.Kb({ type: Zu })),
+          (Zu.ɵinj = i.Jb({
             factory: function(e) {
-              return new (e || Ku)();
+              return new (e || Zu)();
             }
           })),
-          Ku);
-      function wl(e, t) {
+          Zu);
+      function _l(e, t) {
         return Object.assign({}, e, t instanceof Function ? t() : t);
       }
-      function Sl(e, t) {
+      function bl(e, t) {
         if (1 & e) {
           var n = i.Sb();
           i.Rb(0, 'button', 6),
@@ -16844,15 +16697,16 @@ function _createClass(e, t, n) {
         : 'undefined' != typeof global
         ? global
         : 'undefined' != typeof self && self;
-      var Ol,
+      var kl,
+        Cl,
+        wl,
+        Sl,
+        Ol,
         xl,
         El,
-        Tl,
         Al,
-        Pl,
-        jl,
-        Rl =
-          (((El = (function() {
+        Tl =
+          (((wl = (function() {
             function e(t, n) {
               _classCallCheck(this, e), (this.router = t), (this.i18nService = n);
             }
@@ -16880,10 +16734,10 @@ function _createClass(e, t, n) {
               e
             );
           })()).ɵfac = function(e) {
-            return new (e || El)(i.Mb(cu), i.Mb(ul));
+            return new (e || wl)(i.Mb(uu), i.Mb(al));
           }),
-          (El.ɵcmp = i.Gb({
-            type: El,
+          (wl.ɵcmp = i.Gb({
+            type: wl,
             selectors: [['app-header']],
             decls: 16,
             vars: 2,
@@ -16912,7 +16766,7 @@ function _createClass(e, t, n) {
                 i.Bc(9, '\n\n  '),
                 i.Rb(10, 'div', 4),
                 i.Bc(11, '\n    '),
-                i.zc(12, Sl, 2, 1, 'button', 5),
+                i.zc(12, bl, 2, 1, 'button', 5),
                 i.Bc(13, '\n  '),
                 i.Qb(),
                 i.Bc(14, '\n'),
@@ -16920,36 +16774,36 @@ function _createClass(e, t, n) {
                 i.Bc(15, '\n')),
                 2 & e && (i.zb(8), i.Dc('\n    ', t.currentLanguage, '\n  '), i.zb(4), i.kc('ngForOf', t.languages));
             },
-            directives: [na, ta, Xi, a.i],
+            directives: [ea, Xi, $i, a.i],
             styles: [
-              '[_nghost-%COMP%]{-webkit-box-pack:justify;justify-content:space-between;margin-bottom:30px}.logo[_ngcontent-%COMP%], [_nghost-%COMP%]{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center}.logo__icon[_ngcontent-%COMP%]{font-size:35px;-webkit-transform:rotate(185deg);transform:rotate(185deg);margin-left:10px}.navbar[_ngcontent-%COMP%]{margin-bottom:1rem}.nav-link.dropdown-toggle[_ngcontent-%COMP%]{cursor:pointer}'
+              '[_nghost-%COMP%]{-webkit-box-pack:justify;justify-content:space-between;margin-bottom:40px}.logo[_ngcontent-%COMP%], [_nghost-%COMP%]{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center}.logo__icon[_ngcontent-%COMP%]{font-size:35px;-webkit-transform:rotate(185deg);transform:rotate(185deg);margin-left:10px}.navbar[_ngcontent-%COMP%]{margin-bottom:1rem}.nav-link.dropdown-toggle[_ngcontent-%COMP%]{cursor:pointer}'
             ],
             changeDetection: 0
           })),
-          El),
-        Il =
-          (((xl = function e() {
+          wl),
+        Pl =
+          (((Cl = function e() {
             _classCallCheck(this, e);
           }).ɵfac = function(e) {
-            return new (e || xl)();
+            return new (e || Cl)();
           }),
-          (xl.ɵcmp = i.Gb({
-            type: xl,
+          (Cl.ɵcmp = i.Gb({
+            type: Cl,
             selectors: [['app-shell']],
             decls: 4,
             vars: 0,
             template: function(e, t) {
               1 & e && (i.Nb(0, 'app-header'), i.Bc(1, '\n'), i.Nb(2, 'router-outlet'), i.Bc(3, '\n'));
             },
-            directives: [Rl, ku],
+            directives: [Tl, _u],
             styles: [
-              '[_nghost-%COMP%]{display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;padding:40px;background-color:#fff;border-radius:16px;box-shadow:10px 10px 5px -8px rgba(0,0,0,.75);max-width:1000px}'
+              '[_nghost-%COMP%]{display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;padding:30px;background-color:#fff;border-radius:16px;box-shadow:15px 15px 15px -10px rgba(0,0,0,.65);max-width:1000px;margin:auto}'
             ],
             changeDetection: 0
           })),
-          xl),
-        Ml =
-          (((Ol = (function() {
+          Cl),
+        jl =
+          (((kl = (function() {
             function e(t, n, r) {
               var i = this;
               _classCallCheck(this, e),
@@ -16974,7 +16828,7 @@ function _createClass(e, t, n) {
                       t = Object.assign(Object.assign({}, this.operatorParams), this.paymentForm.value);
                     this.paymentsApiService.sendPayment(t).subscribe(
                       function(t) {
-                        (e.isSuccessMessageHidden = !1), (e.isErrorHidden = !0), console.info(t);
+                        (e.isSuccessMessageHidden = !1), (e.isErrorHidden = !0), e.paymentForm.reset(), console.info(t);
                       },
                       function(t) {
                         throw ((e.isSuccessMessageHidden = !0), (e.isErrorHidden = !1), t);
@@ -17078,13 +16932,13 @@ function _createClass(e, t, n) {
               e
             );
           })()).ɵfac = function(e) {
-            return new (e || Ol)(i.Mb(rt), i.Mb(Xo), i.Mb(tl));
+            return new (e || kl)(i.Mb(rt), i.Mb($o), i.Mb(Yu));
           }),
-          (Ol.ɵcmp = i.Gb({
-            type: Ol,
+          (kl.ɵcmp = i.Gb({
+            type: kl,
             selectors: [['app-payment-form']],
-            decls: 69,
-            vars: 31,
+            decls: 81,
+            vars: 46,
             consts: [
               ['novalidate', '', 3, 'formGroup', 'ngSubmit'],
               [1, 'form-group', 'text-center'],
@@ -17114,7 +16968,8 @@ function _createClass(e, t, n) {
               [1, 'input-group-append'],
               [1, 'input-group-text'],
               [1, 'fas', 'fa-mobile-alt'],
-              ['translate', '', 1, 'text-danger', 3, 'hidden'],
+              [1, 'error-spacer'],
+              [1, 'text-danger', 3, 'hidden'],
               [
                 'type',
                 'text',
@@ -17135,9 +16990,11 @@ function _createClass(e, t, n) {
               ],
               [1, 'fas', 'fa-ruble-sign'],
               [1, 'button-container'],
-              ['translate', '', 1, 'text-success', 3, 'hidden'],
-              ['type', 'submit', 1, 'btn', 'btn-dark', 'btn-lg', 3, 'disabled'],
-              ['translate', '']
+              ['role', 'alert', 1, 'alert', 'alert-danger', 3, 'hidden'],
+              [1, 'fas', 'fa-exclamation-circle', 'text-danger'],
+              ['role', 'alert', 1, 'alert', 'alert-success', 3, 'hidden'],
+              [1, 'fas', 'fa-check-circle', 'text-success'],
+              ['type', 'submit', 1, 'btn', 'btn-dark', 'btn-lg', 3, 'disabled']
             ],
             template: function(e, t) {
               1 & e &&
@@ -17167,128 +17024,151 @@ function _createClass(e, t, n) {
                 i.Bc(18, '\n      '),
                 i.Qb(),
                 i.Bc(19, '\n\n      '),
-                i.Rb(20, 'small', 8),
-                i.Bc(21, '\n        Phone number is required\n      '),
+                i.Rb(20, 'div', 8),
+                i.Bc(21, '\n        '),
+                i.Rb(22, 'small', 9),
+                i.Bc(23),
+                i.gc(24, 'translate'),
                 i.Qb(),
-                i.Bc(22, '\n    '),
-                i.Qb(),
-                i.Bc(23, '\n\n    '),
-                i.Rb(24, 'label', 2),
                 i.Bc(25, '\n      '),
-                i.Rb(26, 'div', 3),
-                i.Bc(27, '\n        '),
-                i.Nb(28, 'input', 9),
-                i.gc(29, 'translate'),
-                i.Bc(30, '\n\n        '),
-                i.Rb(31, 'div', 5),
-                i.Bc(32, '\n          '),
-                i.Rb(33, 'span', 6),
-                i.Bc(34, '\n            '),
-                i.Nb(35, 'i', 10),
+                i.Qb(),
+                i.Bc(26, '\n    '),
+                i.Qb(),
+                i.Bc(27, '\n\n    '),
+                i.Rb(28, 'label', 2),
+                i.Bc(29, '\n      '),
+                i.Rb(30, 'div', 3),
+                i.Bc(31, '\n        '),
+                i.Nb(32, 'input', 10),
+                i.gc(33, 'translate'),
+                i.Bc(34, '\n\n        '),
+                i.Rb(35, 'div', 5),
                 i.Bc(36, '\n          '),
+                i.Rb(37, 'span', 6),
+                i.Bc(38, '\n            '),
+                i.Nb(39, 'i', 11),
+                i.Bc(40, '\n          '),
                 i.Qb(),
-                i.Bc(37, '\n        '),
+                i.Bc(41, '\n        '),
                 i.Qb(),
-                i.Bc(38, '\n      '),
+                i.Bc(42, '\n      '),
                 i.Qb(),
-                i.Bc(39, '\n\n      '),
-                i.Rb(40, 'small', 8),
-                i.Bc(41, '\n        Payment amount is required\n      '),
+                i.Bc(43, '\n\n      '),
+                i.Rb(44, 'div', 8),
+                i.Bc(45, '\n        '),
+                i.Rb(46, 'small', 9),
+                i.Bc(47),
+                i.gc(48, 'translate'),
                 i.Qb(),
-                i.Bc(42, '\n\n      '),
-                i.Rb(43, 'small', 8),
-                i.Bc(44),
-                i.gc(45, 'translate'),
+                i.Bc(49, '\n\n        '),
+                i.Rb(50, 'small', 9),
+                i.Bc(51),
+                i.gc(52, 'translate'),
                 i.Qb(),
-                i.Bc(46, '\n\n      '),
-                i.Rb(47, 'small', 8),
-                i.Bc(48),
-                i.gc(49, 'translate'),
+                i.Bc(53, '\n\n        '),
+                i.Rb(54, 'small', 9),
+                i.Bc(55),
+                i.gc(56, 'translate'),
                 i.Qb(),
-                i.Bc(50, '\n    '),
+                i.Bc(57, '\n      '),
                 i.Qb(),
-                i.Bc(51, '\n  '),
+                i.Bc(58, '\n    '),
                 i.Qb(),
-                i.Bc(52, '\n\n  '),
-                i.Rb(53, 'div', 11),
-                i.Bc(54, '\n    '),
-                i.Rb(55, 'div', 8),
-                i.Bc(56, '\n      Error. Try again\n    '),
+                i.Bc(59, '\n  '),
                 i.Qb(),
-                i.Bc(57, '\n\n    '),
-                i.Rb(58, 'div', 12),
-                i.Bc(59, '\n      Payment was successfully sent\n    '),
+                i.Bc(60, '\n\n  '),
+                i.Rb(61, 'div', 12),
+                i.Bc(62, '\n    '),
+                i.Rb(63, 'div', 13),
+                i.Bc(64, '\n      '),
+                i.Nb(65, 'i', 14),
+                i.Bc(66),
+                i.gc(67, 'translate'),
                 i.Qb(),
-                i.Bc(60, '\n\n    '),
-                i.Rb(61, 'button', 13),
-                i.Bc(62, '\n      '),
-                i.Rb(63, 'span', 14),
-                i.Bc(64, 'Pay'),
+                i.Bc(68, '\n\n    '),
+                i.Rb(69, 'div', 15),
+                i.Bc(70, '\n      '),
+                i.Nb(71, 'i', 16),
+                i.Bc(72),
+                i.gc(73, 'translate'),
                 i.Qb(),
-                i.Bc(65, '\n    '),
+                i.Bc(74, '\n\n    '),
+                i.Rb(75, 'button', 17),
+                i.Bc(76),
+                i.gc(77, 'translate'),
                 i.Qb(),
-                i.Bc(66, '\n  '),
+                i.Bc(78, '\n  '),
                 i.Qb(),
-                i.Bc(67, '\n'),
+                i.Bc(79, '\n'),
                 i.Qb(),
-                i.Bc(68, '\n')),
+                i.Bc(80, '\n')),
                 2 & e &&
                   (i.kc('formGroup', t.paymentForm),
                   i.zb(8),
                   i.Eb('is-valid', t.isPhoneNumberValid)('is-invalid', t.isPhoneNumberInvalid),
-                  i.kc('placeholder', i.hc(9, 23, 'Phone number'))('showMaskTyped', !0),
-                  i.zb(12),
+                  i.kc('placeholder', i.hc(9, 28, 'Phone number'))('showMaskTyped', !0),
+                  i.zb(14),
                   i.kc('hidden', !t.isPhoneNumberRequiredErrorVisible),
-                  i.zb(8),
+                  i.zb(1),
+                  i.Dc('\n          ', i.hc(24, 30, 'Phone number is required'), '\n        '),
+                  i.zb(9),
                   i.Eb('is-invalid', t.isPaymentAmountInvalid)('is-valid', t.isPaymentAmountValid),
-                  i.kc('placeholder', i.hc(29, 25, 'Payment amount')),
-                  i.zb(12),
+                  i.kc('placeholder', i.hc(33, 32, 'Payment amount')),
+                  i.zb(14),
                   i.kc('hidden', !t.isPaymentAmountRequiredErrorVisible),
+                  i.zb(1),
+                  i.Dc('\n          ', i.hc(48, 34, 'Payment amount is required'), '\n        '),
                   i.zb(3),
                   i.kc('hidden', !t.isPaymentAmountMaxValueErrorVisible),
                   i.zb(1),
                   i.Ec(
-                    '\n        ',
-                    i.hc(45, 27, 'Payment amount must be less than'),
+                    '\n          ',
+                    i.hc(52, 36, 'Payment amount must be less than'),
                     ' ',
                     t.maxValueOfPaymentAmount + 1,
-                    '\n      '
+                    '\n        '
                   ),
                   i.zb(3),
                   i.kc('hidden', !t.isPaymentAmountMinValueErrorVisible),
                   i.zb(1),
                   i.Ec(
-                    '\n        ',
-                    i.hc(49, 29, 'Payment amount must be more than'),
+                    '\n          ',
+                    i.hc(56, 38, 'Payment amount must be more than'),
                     ' ',
                     t.minValueOfPaymentAmount - 1,
-                    '\n      '
+                    '\n        '
                   ),
-                  i.zb(7),
+                  i.zb(8),
                   i.kc('hidden', t.isErrorHidden),
+                  i.zb(3),
+                  i.Dc('\n      ', i.hc(67, 40, 'Error. Try again'), '\n    '),
                   i.zb(3),
                   i.kc('hidden', t.isSuccessMessageHidden),
                   i.zb(3),
-                  i.kc('disabled', !t.isPaymentFormValid));
+                  i.Dc('\n      ', i.hc(73, 42, 'Payment was successfully sent'), '\n    '),
+                  i.zb(3),
+                  i.kc('disabled', !t.isPaymentFormValid),
+                  i.zb(1),
+                  i.Dc('\n      ', i.hc(77, 44, 'Pay'), '\n    '));
             },
-            directives: [je, j, Me, k, P, Qe, kl, $e, Fr, Xe, tt],
-            pipes: [Hr],
+            directives: [je, j, Me, k, P, Qe, yl, $e, Xe, tt],
+            pipes: [Lr],
             styles: [
-              '.button-container[_ngcontent-%COMP%]{display:-webkit-box;display:flex;-webkit-box-pack:end;justify-content:flex-end;-webkit-box-align:center;align-items:center}.btn[_ngcontent-%COMP%]{margin-left:20px}'
+              '.button-container[_ngcontent-%COMP%]{display:-webkit-box;display:flex;-webkit-box-pack:end;justify-content:flex-end;-webkit-box-align:center;align-items:center;height:50px}.btn[_ngcontent-%COMP%]{margin-left:20px}.error-spacer[_ngcontent-%COMP%]{height:20px}.alert[_ngcontent-%COMP%]{-webkit-box-flex:1;flex:1}.alert[_ngcontent-%COMP%], .form-group[_ngcontent-%COMP%]{margin-bottom:0}'
             ],
             changeDetection: 0
           })),
-          Ol),
-        Nl = function() {
+          kl),
+        Rl = function() {
           return { operator: 'beeline' };
         },
-        Dl = function() {
+        Il = function() {
           return { operator: 'megafon' };
         },
-        Vl = function() {
+        Ml = function() {
           return { operator: 'mts' };
         },
-        Ll = [
+        Nl = [
           (function() {
             function e() {
               _classCallCheck(this, e);
@@ -17298,7 +17178,7 @@ function _createClass(e, t, n) {
                 {
                   key: 'childRoutes',
                   value: function(e) {
-                    return { path: '', component: Il, children: e, data: { reuse: !0 } };
+                    return { path: '', component: Pl, children: e, data: { reuse: !0 } };
                   }
                 }
               ]),
@@ -17308,19 +17188,19 @@ function _createClass(e, t, n) {
             {
               path: '',
               component:
-                ((Tl = function e() {
+                ((Sl = function e() {
                   _classCallCheck(this, e);
                 }),
-                (Tl.ɵfac = function(e) {
-                  return new (e || Tl)();
+                (Sl.ɵfac = function(e) {
+                  return new (e || Sl)();
                 }),
-                (Tl.ɵcmp = i.Gb({
-                  type: Tl,
+                (Sl.ɵcmp = i.Gb({
+                  type: Sl,
                   selectors: [['app-operators']],
-                  decls: 23,
-                  vars: 6,
+                  decls: 24,
+                  vars: 9,
                   consts: [
-                    ['translate', '', 1, 'text-center', 'text-dark'],
+                    [1, 'text-center', 'text-dark'],
                     [1, 'operators-list'],
                     [
                       'routerLink',
@@ -17339,76 +17219,57 @@ function _createClass(e, t, n) {
                   template: function(e, t) {
                     1 & e &&
                       (i.Rb(0, 'h1', 0),
-                      i.Bc(1, '\n  Choose operator\n'),
+                      i.Bc(1),
+                      i.gc(2, 'translate'),
                       i.Qb(),
-                      i.Bc(2, '\n\n'),
-                      i.Rb(3, 'div', 1),
-                      i.Bc(4, '\n  '),
-                      i.Rb(5, 'a', 2),
-                      i.Bc(6, '\n    '),
-                      i.Nb(7, 'img', 3),
-                      i.Bc(8, '\n  '),
+                      i.Bc(3, '\n\n'),
+                      i.Rb(4, 'div', 1),
+                      i.Bc(5, '\n  '),
+                      i.Rb(6, 'a', 2),
+                      i.Bc(7, '\n    '),
+                      i.Nb(8, 'img', 3),
+                      i.Bc(9, '\n  '),
                       i.Qb(),
-                      i.Bc(9, '\n\n  '),
-                      i.Rb(10, 'a', 2),
-                      i.Bc(11, '\n    '),
-                      i.Nb(12, 'img', 4),
-                      i.Bc(13, '\n  '),
+                      i.Bc(10, '\n\n  '),
+                      i.Rb(11, 'a', 2),
+                      i.Bc(12, '\n    '),
+                      i.Nb(13, 'img', 4),
+                      i.Bc(14, '\n  '),
                       i.Qb(),
-                      i.Bc(14, '\n\n  '),
-                      i.Rb(15, 'a', 2),
-                      i.Bc(16, '\n    '),
-                      i.Nb(17, 'img', 5),
-                      i.Bc(18, '\n  '),
+                      i.Bc(15, '\n\n  '),
+                      i.Rb(16, 'a', 2),
+                      i.Bc(17, '\n    '),
+                      i.Nb(18, 'img', 5),
+                      i.Bc(19, '\n  '),
                       i.Qb(),
-                      i.Bc(19, '\n'),
+                      i.Bc(20, '\n'),
                       i.Qb(),
-                      i.Bc(20, '\n\n'),
-                      i.Nb(21, 'router-outlet'),
-                      i.Bc(22, '\n')),
+                      i.Bc(21, '\n\n'),
+                      i.Nb(22, 'router-outlet'),
+                      i.Bc(23, '\n')),
                       2 & e &&
-                        (i.zb(5),
-                        i.kc('queryParams', i.nc(3, Nl)),
+                        (i.zb(1),
+                        i.Dc('\n  ', i.hc(2, 4, 'Choose operator'), '\n'),
                         i.zb(5),
-                        i.kc('queryParams', i.nc(4, Dl)),
+                        i.kc('queryParams', i.nc(6, Rl)),
                         i.zb(5),
-                        i.kc('queryParams', i.nc(5, Vl)));
+                        i.kc('queryParams', i.nc(7, Il)),
+                        i.zb(5),
+                        i.kc('queryParams', i.nc(8, Ml)));
                   },
-                  directives: [Fr, fu, mu, ku],
+                  directives: [cu, gu, _u],
+                  pipes: [Lr],
                   styles: [
-                    '.operators-list[_ngcontent-%COMP%]{flex-wrap:wrap;margin:60px auto}.operators-list[_ngcontent-%COMP%], .operators-list__link[_ngcontent-%COMP%]{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center}.operators-list__link[_ngcontent-%COMP%]{margin:0 20px;border:2px solid transparent;border-radius:10px;width:170px;height:100px;overflow:hidden;-webkit-transition:border-color .3s linear;transition:border-color .3s linear;background-color:#fff}.operators-list__link[_ngcontent-%COMP%]:hover{border-color:#ccc}.operators-list__link--active[_ngcontent-%COMP%], .operators-list__link--active[_ngcontent-%COMP%]:hover{border-color:#28a745;cursor:default}.operators-list__logo[_ngcontent-%COMP%]{display:block;width:150px;height:auto}'
+                    '.operators-list[_ngcontent-%COMP%]{flex-wrap:wrap;margin:40px auto}.operators-list[_ngcontent-%COMP%], .operators-list__link[_ngcontent-%COMP%]{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center}.operators-list__link[_ngcontent-%COMP%]{margin:0 20px;border:2px solid transparent;border-radius:10px;width:170px;height:100px;overflow:hidden;-webkit-transition:border-color .3s linear;transition:border-color .3s linear;background-color:#fff}.operators-list__link[_ngcontent-%COMP%]:hover{border-color:#ccc}.operators-list__link--active[_ngcontent-%COMP%], .operators-list__link--active[_ngcontent-%COMP%]:hover{border-color:#28a745;cursor:default}.operators-list__logo[_ngcontent-%COMP%]{display:block;width:150px;height:auto}'
                   ],
                   changeDetection: 0
                 })),
-                Tl),
-              children: [{ path: 'pay', component: Ml }]
+                Sl),
+              children: [{ path: 'pay', component: jl }]
             }
           ])
         ],
-        Fl =
-          (((jl = function e() {
-            _classCallCheck(this, e);
-          }).ɵmod = i.Kb({ type: jl })),
-          (jl.ɵinj = i.Jb({
-            factory: function(e) {
-              return new (e || jl)();
-            },
-            providers: [],
-            imports: [[Ru.forChild(Ll)], Ru]
-          })),
-          jl),
-        Hl =
-          (((Pl = function e() {
-            _classCallCheck(this, e);
-          }).ɵmod = i.Kb({ type: Pl })),
-          (Pl.ɵinj = i.Jb({
-            factory: function(e) {
-              return new (e || Pl)();
-            },
-            imports: [[at, Ur, Cl.forRoot(), Fl]]
-          })),
-          Pl),
-        Ul =
+        Dl =
           (((Al = function e() {
             _classCallCheck(this, e);
           }).ɵmod = i.Kb({ type: Al })),
@@ -17416,20 +17277,64 @@ function _createClass(e, t, n) {
             factory: function(e) {
               return new (e || Al)();
             },
-            imports: [[Hl]]
+            providers: [],
+            imports: [[Pu.forChild(Nl)], Pu]
           })),
-          Al);
-      function Bl(e, t) {
+          Al),
+        Vl =
+          (((El = function e() {
+            _classCallCheck(this, e);
+          }).ɵmod = i.Kb({ type: El })),
+          (El.ɵinj = i.Jb({
+            factory: function(e) {
+              return new (e || El)();
+            },
+            imports: [[at, Fr, ml.forRoot(), Dl]]
+          })),
+          El),
+        Ll =
+          (((xl = function e() {
+            _classCallCheck(this, e);
+          }).ɵmod = i.Kb({ type: xl })),
+          (xl.ɵinj = i.Jb({
+            factory: function(e) {
+              return new (e || xl)();
+            },
+            imports: [[Vl]]
+          })),
+          xl),
+        Fl =
+          (((Ol = function e() {
+            _classCallCheck(this, e);
+          }).ɵfac = function(e) {
+            return new (e || Ol)();
+          }),
+          (Ol.ɵcmp = i.Gb({
+            type: Ol,
+            selectors: [['app-loader']],
+            decls: 2,
+            vars: 0,
+            consts: [[1, 'fas', 'fa-cog', 'fa-spin', 'fa-3x', 'text-light']],
+            template: function(e, t) {
+              1 & e && (i.Nb(0, 'i', 0), i.Bc(1, '\n'));
+            },
+            styles: [
+              '[_nghost-%COMP%]{position:fixed;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.fa[_ngcontent-%COMP%]{vertical-align:middle}'
+            ],
+            changeDetection: 0
+          })),
+          Ol);
+      function Hl(e, t) {
         1 & e && i.Nb(0, 'app-loader');
       }
-      function zl(e, t) {
+      function Ul(e, t) {
         1 & e && i.Nb(0, 'router-outlet');
       }
-      var ql,
-        Zl,
-        Gl = new il('App'),
-        Wl =
-          (((ql = (function() {
+      var Bl,
+        zl,
+        ql = new tl('App'),
+        Zl =
+          (((Bl = (function() {
             function e(t, n, r, i, a, o) {
               _classCallCheck(this, e),
                 (this.router = t),
@@ -17446,12 +17351,12 @@ function _createClass(e, t, n) {
                   key: 'ngOnInit',
                   value: function() {
                     var e = this;
-                    Ta.a.production && il.enableProductionMode(),
-                      Gl.debug('init'),
-                      this.i18nService.init(Ta.a.defaultLanguage, Ta.a.supportedLanguages);
+                    xa.a.production && tl.enableProductionMode(),
+                      ql.debug('init'),
+                      this.i18nService.init(xa.a.defaultLanguage, xa.a.supportedLanguages);
                     var t = this.router.events.pipe(
                       dt(function(e) {
-                        return e instanceof Wa;
+                        return e instanceof Za;
                       })
                     );
                     Object(yn.a)(this.translateService.onLangChange, t)
@@ -17478,12 +17383,12 @@ function _createClass(e, t, n) {
                                   .concat(t)
                               );
                             return (
-                              e[ll] ||
-                                ((e[ll] = new pn.a()),
+                              e[ol] ||
+                                ((e[ol] = new pn.a()),
                                 (e[t] = function() {
-                                  i && r.apply(this, arguments), e[ll].next(), e[ll].complete();
+                                  i && r.apply(this, arguments), e[ol].next(), e[ol].complete();
                                 })),
-                              n.pipe(Qr(e[ll]))
+                              n.pipe(Wr(e[ol]))
                             );
                           };
                         })(this)
@@ -17507,72 +17412,72 @@ function _createClass(e, t, n) {
               e
             );
           })()).ɵfac = function(e) {
-            return new (e || ql)(i.Mb(cu), i.Mb(Xo), i.Mb(r.b), i.Mb(Lr), i.Mb(ul), i.Mb(i.h));
+            return new (e || Bl)(i.Mb(uu), i.Mb($o), i.Mb(r.b), i.Mb(Vr), i.Mb(al), i.Mb(i.h));
           }),
-          (ql.ɵcmp = i.Gb({
-            type: ql,
+          (Bl.ɵcmp = i.Gb({
+            type: Bl,
             selectors: [['app-root']],
             decls: 4,
             vars: 2,
             consts: [[4, 'ngIf']],
             template: function(e, t) {
               1 & e &&
-                (i.zc(0, Bl, 1, 0, 'app-loader', 0),
+                (i.zc(0, Hl, 1, 0, 'app-loader', 0),
                 i.Bc(1, '\n'),
-                i.zc(2, zl, 1, 0, 'router-outlet', 0),
+                i.zc(2, Ul, 1, 0, 'router-outlet', 0),
                 i.Bc(3, '\n')),
                 2 & e && (i.kc('ngIf', t.isLoading), i.zb(2), i.kc('ngIf', !t.isLoading));
             },
-            directives: [a.j, hl, ku],
+            directives: [a.j, Fl, _u],
             styles: [
-              '[_nghost-%COMP%]{height:100%;width:100%;display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;background:url(main-background.3e1c8cdbf966ab00c444.jpg)}'
+              '[_nghost-%COMP%]{height:100%;width:100%;display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;background:url(main-background.3e1c8cdbf966ab00c444.jpg);overflow:scroll;padding:30px}'
             ],
             changeDetection: 0
           })),
-          ql),
-        Kl = [{ path: '**', redirectTo: '', pathMatch: 'full' }],
-        Ql =
-          (((Zl = function e() {
+          Bl),
+        Gl = [{ path: '**', redirectTo: '', pathMatch: 'full' }],
+        Wl =
+          (((zl = function e() {
             _classCallCheck(this, e);
-          }).ɵmod = i.Kb({ type: Zl })),
-          (Zl.ɵinj = i.Jb({
+          }).ɵmod = i.Kb({ type: zl })),
+          (zl.ɵinj = i.Jb({
             factory: function(e) {
-              return new (e || Zl)();
+              return new (e || zl)();
             },
             providers: [],
-            imports: [[Ru.forRoot(Kl)], Ru]
+            imports: [[Pu.forRoot(Gl)], Pu]
           })),
-          Zl);
+          zl);
       n.d(t, 'a', function() {
-        return $l;
+        return Ql;
       });
-      var Jl,
-        $l =
-          (((Jl = function e() {
+      var Kl,
+        Ql =
+          (((Kl = function e() {
             _classCallCheck(this, e);
-          }).ɵmod = i.Kb({ type: Jl, bootstrap: [Wl] })),
-          (Jl.ɵinj = i.Jb({
+          }).ɵmod = i.Kb({ type: Kl, bootstrap: [Zl] })),
+          (Kl.ɵinj = i.Jb({
             factory: function(e) {
-              return new (e || Jl)();
+              return new (e || Kl)();
             },
             providers: [],
             imports: [
               [
                 r.a,
-                Xn.register('./ngsw-worker.js', { enabled: Ta.a.production }),
+                Xn.register('./ngsw-worker.js', { enabled: xa.a.production }),
                 it,
                 nn,
-                Ur.forRoot(),
-                Ea,
-                nl,
-                cl,
-                fl,
-                Ul,
-                Ql
+                Fr.forRoot(),
+                Oa,
+                Xu,
+                sl,
+                ul,
+                Ll,
+                Wl
               ]
             ]
           })),
-          Jl);
+          Kl);
     },
     ZUHj: function(e, t, n) {
       'use strict';
@@ -17719,7 +17624,7 @@ function _createClass(e, t, n) {
           return Jl;
         }),
         n.d(t, 'K', function() {
-          return Ts;
+          return As;
         }),
         n.d(t, 'L', function() {
           return Il;
@@ -17743,7 +17648,7 @@ function _createClass(e, t, n) {
           return kn;
         }),
         n.d(t, 'S', function() {
-          return A;
+          return T;
         }),
         n.d(t, 'T', function() {
           return bn;
@@ -17809,7 +17714,7 @@ function _createClass(e, t, n) {
           return V;
         }),
         n.d(t, 'ob', function() {
-          return Ta;
+          return Aa;
         }),
         n.d(t, 'pb', function() {
           return Ja;
@@ -17878,7 +17783,7 @@ function _createClass(e, t, n) {
           return Se;
         }),
         n.d(t, 'Lb', function() {
-          return Te;
+          return Ae;
         }),
         n.d(t, 'Mb', function() {
           return La;
@@ -17962,10 +17867,10 @@ function _createClass(e, t, n) {
           return so;
         }),
         n.d(t, 'nc', function() {
-          return Tu;
+          return Au;
         }),
         n.d(t, 'oc', function() {
-          return Au;
+          return Tu;
         }),
         n.d(t, 'pc', function() {
           return Pu;
@@ -18107,10 +18012,10 @@ function _createClass(e, t, n) {
       function E(e, t) {
         return null == e || '' === e ? (null === t ? '' : t) : null == t || '' === t ? e : e + ' ' + t;
       }
-      var T = p({ __forward_ref__: p });
-      function A(e) {
+      var A = p({ __forward_ref__: p });
+      function T(e) {
         return (
-          (e.__forward_ref__ = A),
+          (e.__forward_ref__ = T),
           (e.toString = function() {
             return x(this());
           }),
@@ -18121,7 +18026,7 @@ function _createClass(e, t, n) {
         return j(e) ? e() : e;
       }
       function j(e) {
-        return 'function' == typeof e && e.hasOwnProperty(T) && e.__forward_ref__ === A;
+        return 'function' == typeof e && e.hasOwnProperty(A) && e.__forward_ref__ === T;
       }
       var R,
         I = 'undefined' != typeof globalThis && globalThis,
@@ -18381,7 +18286,7 @@ function _createClass(e, t, n) {
       }
       function ke(e) {
         return (
-          Ae(e) ||
+          Te(e) ||
           (function(e) {
             return e[F] || null;
           })(e)
@@ -18430,7 +18335,7 @@ function _createClass(e, t, n) {
         return n;
       }
       var Ee = be;
-      function Te(e) {
+      function Ae(e) {
         return {
           type: e.type,
           name: e.name,
@@ -18439,7 +18344,7 @@ function _createClass(e, t, n) {
           onDestroy: e.type.prototype.ngOnDestroy || null
         };
       }
-      function Ae(e) {
+      function Te(e) {
         return e[L] || null;
       }
       function Pe(e, t) {
@@ -18712,10 +18617,10 @@ function _createClass(e, t, n) {
           null !== r && e.splice(a++, 0, r),
           null !== i && e.splice(a++, 0, i);
       }
-      function Tt(e) {
+      function At(e) {
         return -1 !== e;
       }
-      function At(e) {
+      function Tt(e) {
         return 32767 & e;
       }
       function Pt(e) {
@@ -18752,7 +18657,7 @@ function _createClass(e, t, n) {
         r.firstCreatePass && ((e.injectorIndex = t.length), Ht(r.data, e), Ht(t, null), Ht(r.blueprint, null));
         var i = Bt(e, t),
           a = e.injectorIndex;
-        if (Tt(i)) for (var o = At(i), s = jt(i, t), u = s[1].data, l = 0; l < 8; l++) t[a + l] = s[o + l] | u[o + l];
+        if (At(i)) for (var o = Tt(i), s = jt(i, t), u = s[1].data, l = 0; l < 8; l++) t[a + l] = s[o + l] | u[o + l];
         return (t[a + 8] = i), a;
       }
       function Ht(e, t) {
@@ -18822,7 +18727,7 @@ function _createClass(e, t, n) {
               c = r & d.Host ? t[16][6] : null;
             for (
               (-1 === u || r & d.SkipSelf) &&
-              ((l = -1 === u ? Bt(e, t) : t[u + 8]), Jt(r, !1) ? ((s = t[1]), (u = At(l)), (t = jt(l, t))) : (u = -1));
+              ((l = -1 === u ? Bt(e, t) : t[u + 8]), Jt(r, !1) ? ((s = t[1]), (u = Tt(l)), (t = jt(l, t))) : (u = -1));
               -1 !== u;
 
             ) {
@@ -18832,7 +18737,7 @@ function _createClass(e, t, n) {
                 var f = Gt(u, t, n, s, r, c);
                 if (f !== Zt) return f;
               }
-              Jt(r, t[1].data[u + 8] === c) && Qt(a, u, t) ? ((s = h), (u = At(l)), (t = jt(l, t))) : (u = -1);
+              Jt(r, t[1].data[u + 8] === c) && Qt(a, u, t) ? ((s = h), (u = Tt(l)), (t = jt(l, t))) : (u = -1);
             }
           }
         }
@@ -19287,7 +19192,7 @@ function _createClass(e, t, n) {
         }
         return t;
       }
-      function Tn() {
+      function An() {
         for (var e = {}, t = arguments.length, n = new Array(t), r = 0; r < t; r++) n[r] = arguments[r];
         for (var i = 0, a = n; i < a.length; i++) {
           var o = a[i];
@@ -19295,20 +19200,20 @@ function _createClass(e, t, n) {
         }
         return e;
       }
-      var An,
+      var Tn,
         Pn = En('area,br,col,hr,img,wbr'),
         jn = En('colgroup,dd,dt,li,p,tbody,td,tfoot,th,thead,tr'),
         Rn = En('rp,rt'),
-        In = Tn(Rn, jn),
-        Mn = Tn(
+        In = An(Rn, jn),
+        Mn = An(
           Pn,
-          Tn(
+          An(
             jn,
             En(
               'address,article,aside,blockquote,caption,center,del,details,dialog,dir,div,dl,figure,figcaption,footer,h1,h2,h3,h4,h5,h6,header,hgroup,hr,ins,main,map,menu,nav,ol,pre,section,summary,table,ul'
             )
           ),
-          Tn(
+          An(
             Rn,
             En(
               'a,abbr,acronym,audio,b,bdi,bdo,big,br,cite,code,del,dfn,em,font,i,img,ins,kbd,label,map,mark,picture,q,ruby,rp,rt,s,samp,small,source,span,strike,strong,sub,sup,time,track,tt,u,var,video'
@@ -19318,7 +19223,7 @@ function _createClass(e, t, n) {
         ),
         Nn = En('background,cite,href,itemtype,longdesc,poster,src,xlink:href'),
         Dn = En('srcset'),
-        Vn = Tn(
+        Vn = An(
           Nn,
           Dn,
           En(
@@ -19427,14 +19332,14 @@ function _createClass(e, t, n) {
       function zn(e, t) {
         var n = null;
         try {
-          An = An || new Cn(e);
+          Tn = Tn || new Cn(e);
           var r = t ? String(t) : '';
-          n = An.getInertBodyElement(r);
+          n = Tn.getInertBodyElement(r);
           var i = 5,
             a = r;
           do {
             if (0 === i) throw new Error('Failed to sanitize html because the input is unstable');
-            i--, (r = a), (a = n.innerHTML), (n = An.getInertBodyElement(r));
+            i--, (r = a), (a = n.innerHTML), (n = Tn.getInertBodyElement(r));
           } while (r !== a);
           var o = new Fn(),
             s = o.sanitizeChildren(qn(n) || n);
@@ -19716,10 +19621,10 @@ function _createClass(e, t, n) {
       function Er(e) {
         return (e >> 17) & 32767;
       }
-      function Tr(e) {
+      function Ar(e) {
         return 2 | e;
       }
-      function Ar(e) {
+      function Tr(e) {
         return (131068 & e) >> 2;
       }
       function Pr(e, t) {
@@ -20351,7 +20256,7 @@ function _createClass(e, t, n) {
           r = n.indexOf(t);
         n.splice(r, 1);
       }
-      function Ti(e, t) {
+      function Ai(e, t) {
         if (!(e.length <= 9)) {
           var n = 9 + t,
             r = e[n];
@@ -20366,7 +20271,7 @@ function _createClass(e, t, n) {
           return r;
         }
       }
-      function Ai(e, t) {
+      function Ti(e, t) {
         if (!(256 & t[2])) {
           var n = t[11];
           kt(n) && n.destroyNode && Bi(e, t, n, 3, null, null),
@@ -20561,7 +20466,7 @@ function _createClass(e, t, n) {
                     var e = this._viewContainerRef.indexOf(this);
                     e > -1 && this._viewContainerRef.detach(e), (this._viewContainerRef = null);
                   }
-                  Ai(this._lView[1], this._lView);
+                  Ti(this._lView[1], this._lView);
                 }
               },
               {
@@ -20878,8 +20783,8 @@ function _createClass(e, t, n) {
                     this.allocateContainerIfNeeded();
                     var t = this._adjustIndex(e, -1);
                     (function(e, t) {
-                      var n = Ti(e, t);
-                      n && Ai(n[1], n);
+                      var n = Ai(e, t);
+                      n && Ti(n[1], n);
                     })(this._lContainer, t),
                       le(this._lContainer[8], t);
                   }
@@ -20889,7 +20794,7 @@ function _createClass(e, t, n) {
                   value: function(e) {
                     this.allocateContainerIfNeeded();
                     var t = this._adjustIndex(e, -1),
-                      n = Ti(this._lContainer, t);
+                      n = Ai(this._lContainer, t);
                     return n && null != le(this._lContainer[8], t) ? new Ji(n) : null;
                   }
                 },
@@ -20936,7 +20841,7 @@ function _createClass(e, t, n) {
                         for (var a = Pt(e), o = t, s = t[6]; a > 1; ) (s = (o = o[15])[6]), a--;
                         return s;
                       })(e, this._hostView, this._hostTNode);
-                    return Tt(e) && null != n ? new $t(n, t) : new $t(null, this._hostView);
+                    return At(e) && null != n ? new $t(n, t) : new $t(null, this._hostView);
                   }
                 },
                 {
@@ -21427,10 +21332,10 @@ function _createClass(e, t, n) {
           e
         );
       })();
-      function Ta(e) {
-        return !!Aa(e) && (Array.isArray(e) || (!(e instanceof Map) && Oa() in e));
-      }
       function Aa(e) {
+        return !!Ta(e) && (Array.isArray(e) || (!(e instanceof Map) && Oa() in e));
+      }
+      function Ta(e) {
         return null !== e && ('function' == typeof e || 'object' == typeof e);
       }
       function Pa(e, t, n) {
@@ -21754,11 +21659,11 @@ function _createClass(e, t, n) {
       }
       var uo = [];
       function lo(e, t, n, r, i) {
-        for (var a = e[n + 1], o = null === t, s = r ? Er(a) : Ar(a), u = !1; 0 !== s && (!1 === u || o); ) {
+        for (var a = e[n + 1], o = null === t, s = r ? Er(a) : Tr(a), u = !1; 0 !== s && (!1 === u || o); ) {
           var l = e[s + 1];
-          co(e[s], t) && ((u = !0), (e[s + 1] = r ? jr(l) : Tr(l))), (s = r ? Er(l) : Ar(l));
+          co(e[s], t) && ((u = !0), (e[s + 1] = r ? jr(l) : Ar(l))), (s = r ? Er(l) : Tr(l));
         }
-        u && (e[n + 1] = r ? Tr(a) : jr(a));
+        u && (e[n + 1] = r ? Ar(a) : jr(a));
       }
       function co(e, t) {
         return (
@@ -21846,7 +21751,7 @@ function _createClass(e, t, n) {
         var o = Ue();
         if (n !== br && Ra(o, a, n)) {
           var s = i.data[lt() + 19];
-          if (Ao(s, r) && !Co(i, a)) {
+          if (To(s, r) && !Co(i, a)) {
             var u = r ? s.classes : s.styles;
             'string' == typeof n && (n = E(u, n)), Ba(i, s, o, n, r);
           } else
@@ -21906,7 +21811,7 @@ function _createClass(e, t, n) {
         if (null === i[n + 1]) {
           var a = i[lt() + 19],
             o = Co(e, n);
-          Ao(a, r) && null === t && !o && (t = !1),
+          To(a, r) && null === t && !o && (t = !1),
             (t = (function(e, t, n, r) {
               var i = (function(e) {
                   var t = Fe.lFrame.currentDirectiveIndex;
@@ -21922,7 +21827,7 @@ function _createClass(e, t, n) {
                   if (((n = So(i, e, t, n, r)), null === a)) {
                     var s = (function(e, t, n) {
                       var r = n ? t.classBindings : t.styleBindings;
-                      if (0 !== Ar(r)) return e[Er(r)];
+                      if (0 !== Tr(r)) return e[Er(r)];
                     })(e, t, r);
                     void 0 !== s &&
                       Array.isArray(s) &&
@@ -21941,7 +21846,7 @@ function _createClass(e, t, n) {
             (function(e, t, n, r, i, a) {
               var o = a ? t.classBindings : t.styleBindings,
                 s = Er(o),
-                u = Ar(o);
+                u = Tr(o);
               e[r] = n;
               var l,
                 c = !1;
@@ -21957,7 +21862,7 @@ function _createClass(e, t, n) {
                     (e[s + 1] = (131071 & e[s + 1]) | (r << 17));
                 } else (e[r + 1] = xr(s, 0)), 0 !== s && (e[s + 1] = Pr(e[s + 1], r)), (s = r);
               else (e[r + 1] = xr(u, 0)), 0 === s ? (s = r) : (e[u + 1] = Pr(e[u + 1], r)), (u = r);
-              c && (e[r + 1] = Tr(e[r + 1])),
+              c && (e[r + 1] = Ar(e[r + 1])),
                 lo(e, l, r, !0),
                 lo(e, l, r, !1),
                 (function(e, t, n, r, i) {
@@ -21992,8 +21897,8 @@ function _createClass(e, t, n) {
         if (3 === t.type) {
           var u = e.data,
             l = u[s + 1];
-          To(1 == (1 & l) ? Eo(u, t, n, i, Ar(l), o) : void 0) ||
-            (To(a) || (2 == (2 & l) && (a = Eo(u, null, n, i, s, o))),
+          Ao(1 == (1 & l) ? Eo(u, t, n, i, Tr(l), o) : void 0) ||
+            (Ao(a) || (2 == (2 & l) && (a = Eo(u, null, n, i, s, o))),
             (function(e, t, n, r, i) {
               var a = kt(e);
               if (t) i ? (a ? e.addClass(n, r) : n.classList.add(r)) : a ? e.removeClass(n, r) : n.classList.remove(r);
@@ -22019,9 +21924,9 @@ function _createClass(e, t, n) {
             f = n[i + 1];
           f === br && (f = h ? uo : void 0);
           var d = h ? fe(f, r) : c === r ? f : void 0;
-          if ((l && !To(d) && (d = fe(u, r)), To(d) && ((s = d), o))) return s;
+          if ((l && !Ao(d) && (d = fe(u, r)), Ao(d) && ((s = d), o))) return s;
           var p = e[i + 1];
-          i = o ? Er(p) : Ar(p);
+          i = o ? Er(p) : Tr(p);
         }
         if (null !== t) {
           var v = a ? t.residualClasses : t.residualStyles;
@@ -22029,10 +21934,10 @@ function _createClass(e, t, n) {
         }
         return s;
       }
-      function To(e) {
+      function Ao(e) {
         return void 0 !== e;
       }
-      function Ao(e, t) {
+      function To(e, t) {
         return 0 != (e.flags & (t ? 16 : 32));
       }
       function Po(e) {
@@ -22406,7 +22311,7 @@ function _createClass(e, t, n) {
               {
                 key: 'supports',
                 value: function(e) {
-                  return Ta(e);
+                  return Aa(e);
                 }
               },
               {
@@ -22514,7 +22419,7 @@ function _createClass(e, t, n) {
               {
                 key: 'diff',
                 value: function(e) {
-                  if ((null == e && (e = []), !Ta(e)))
+                  if ((null == e && (e = []), !Aa(e)))
                     throw new Error("Error trying to diff '".concat(x(e), "'. Only arrays and iterables are allowed"));
                   return this.check(e) ? this : null;
                 }
@@ -22848,7 +22753,7 @@ function _createClass(e, t, n) {
               {
                 key: 'supports',
                 value: function(e) {
-                  return e instanceof Map || Aa(e);
+                  return e instanceof Map || Ta(e);
                 }
               },
               {
@@ -22916,7 +22821,7 @@ function _createClass(e, t, n) {
                 key: 'diff',
                 value: function(e) {
                   if (e) {
-                    if (!(e instanceof Map || Aa(e)))
+                    if (!(e instanceof Map || Ta(e)))
                       throw new Error("Error trying to diff '".concat(x(e), "'. Only maps and objects are allowed"));
                   } else e = new Map();
                   return this.check(e) ? this : null;
@@ -23193,18 +23098,18 @@ function _createClass(e, t, n) {
         Os = [new bs()],
         xs = new ws([new ds()]),
         Es = new Ss(Os),
-        Ts = (function() {
+        As = (function() {
           var e = function e() {
             _classCallCheck(this, e);
           };
           return (
             (e.__NG_ELEMENT_ID__ = function() {
-              return As(e, is);
+              return Ts(e, is);
             }),
             e
           );
         })(),
-        As = function(e, t) {
+        Ts = function(e, t) {
           return Xi(e, t, qe(), Ue());
         },
         Ps = (function() {
@@ -24030,7 +23935,7 @@ function _createClass(e, t, n) {
                 {
                   key: 'resolveComponentFactory',
                   value: function(e) {
-                    var t = Ae(e);
+                    var t = Te(e);
                     return new Ns(t, this.ngModule);
                   }
                 }
@@ -24140,12 +24045,12 @@ function _createClass(e, t, n) {
             t
           );
         })(ae);
-      function Tu(e, t, n) {
+      function Au(e, t, n) {
         var r = Je() + e,
           i = Ue();
         return i[r] === br ? Pa(i, r, n ? t.call(n) : t()) : ja(i, r);
       }
-      function Au(e, t, n, r) {
+      function Tu(e, t, n, r) {
         return Ru(Ue(), Je(), e, t, n, r);
       }
       function Pu(e, t, n, r, i) {
@@ -24593,7 +24498,7 @@ function _createClass(e, t, n) {
                       this.matchTNodeWithReadOption(e, t, zu(t, n[r]));
                   else {
                     var i = this.metadata.predicate;
-                    i === Ts
+                    i === As
                       ? 0 === t.type && this.matchTNodeWithReadOption(e, t, -1)
                       : this.matchTNodeWithReadOption(e, t, Wt(t, e, i, !1, !1));
                   }
@@ -24605,7 +24510,7 @@ function _createClass(e, t, n) {
                   if (null !== n) {
                     var r = this.metadata.read;
                     if (null !== r)
-                      if (r === is || r === Ps || (r === Ts && 0 === t.type)) this.addMatch(t.index, -2);
+                      if (r === is || r === Ps || (r === As && 0 === t.type)) this.addMatch(t.index, -2);
                       else {
                         var i = Wt(t, e, r, !1, !1);
                         null !== i && this.addMatch(t.index, i);
@@ -24632,11 +24537,11 @@ function _createClass(e, t, n) {
       function qu(e, t, n, r) {
         return -1 === n
           ? (function(e, t) {
-              return 3 === e.type || 4 === e.type ? Yi(is, e, t) : 0 === e.type ? Xi(Ts, is, e, t) : null;
+              return 3 === e.type || 4 === e.type ? Yi(is, e, t) : 0 === e.type ? Xi(As, is, e, t) : null;
             })(t, e)
           : -2 === n
           ? (function(e, t, n) {
-              return n === is ? Yi(is, t, e) : n === Ts ? Xi(Ts, is, t, e) : n === Ps ? ea(Ps, is, t, e) : void 0;
+              return n === is ? Yi(is, t, e) : n === As ? Xi(As, is, t, e) : n === Ps ? ea(Ps, is, t, e) : void 0;
             })(e, t, r)
           : Kt(e, e[1], n, t);
       }
@@ -24730,7 +24635,7 @@ function _createClass(e, t, n) {
         return e.queries.getByIndex(t);
       }
       function tl(e, t) {
-        return Xi(Ts, is, e, t);
+        return Xi(As, is, e, t);
       }
       function nl() {
         var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d.Default,
@@ -24854,7 +24759,7 @@ function _createClass(e, t, n) {
         ml = function(e) {
           var t = vl(e),
             n = Nt(je(e).declarations).reduce(function(e, t) {
-              var n = Ae(t);
+              var n = Te(t);
               return n && e.push(new Ns(n)), e;
             }, []);
           return new pl(t, n);
@@ -24944,9 +24849,9 @@ function _createClass(e, t, n) {
                 !(function(e) {
                   -1 === e.lastRequestAnimationFrameId &&
                     ((e.lastRequestAnimationFrameId = e.nativeRequestAnimationFrame.call(V, function() {
-                      (e.lastRequestAnimationFrameId = -1), Al(e), Tl(e);
+                      (e.lastRequestAnimationFrameId = -1), Tl(e), Al(e);
                     })),
-                    Al(e));
+                    Tl(e));
                 })(n);
               }),
             (n._inner = n._inner.fork({
@@ -24970,7 +24875,7 @@ function _createClass(e, t, n) {
                 e.hasTask(r, i),
                   t === r &&
                     ('microTask' == i.change
-                      ? ((n._hasPendingMicrotasks = i.microTask), Al(n), Tl(n))
+                      ? ((n._hasPendingMicrotasks = i.microTask), Tl(n), Al(n))
                       : 'macroTask' == i.change && (n.hasPendingMacrotasks = i.macroTask));
               },
               onHandleError: function(e, t, r, i) {
@@ -25045,7 +24950,7 @@ function _createClass(e, t, n) {
       })();
       function xl() {}
       var El = {};
-      function Tl(e) {
+      function Al(e) {
         if (0 == e._nesting && !e.hasPendingMicrotasks && !e.isStable)
           try {
             e._nesting++, e.onMicrotaskEmpty.emit(null);
@@ -25060,7 +24965,7 @@ function _createClass(e, t, n) {
               }
           }
       }
-      function Al(e) {
+      function Tl(e) {
         e.hasPendingMicrotasks = !!(
           e._hasPendingMicrotasks ||
           (e.shouldCoalesceEventChangeDetection && -1 !== e.lastRequestAnimationFrameId)
@@ -25070,7 +24975,7 @@ function _createClass(e, t, n) {
         e._nesting++, e.isStable && ((e.isStable = !1), e.onUnstable.emit(null));
       }
       function jl(e) {
-        e._nesting--, Tl(e);
+        e._nesting--, Al(e);
       }
       var Rl = (function() {
           function e() {
@@ -26842,7 +26747,7 @@ function _createClass(e, t, n) {
           '`': '0',
           '\x90': 'NumLock'
         },
-        T = {
+        A = {
           alt: function(e) {
             return e.altKey;
           },
@@ -26856,7 +26761,7 @@ function _createClass(e, t, n) {
             return e.shiftKey;
           }
         },
-        A = (function() {
+        T = (function() {
           var e = (function(e) {
             function t(e) {
               return _classCallCheck(this, t), _possibleConstructorReturn(this, _getPrototypeOf(t).call(this, e));
@@ -26922,7 +26827,7 @@ function _createClass(e, t, n) {
                       return (
                         ' ' === (n = n.toLowerCase()) ? (n = 'space') : '.' === n && (n = 'dot'),
                         O.forEach(function(r) {
-                          r != n && (0, T[r])(e) && (t += r + '.');
+                          r != n && (0, A[r])(e) && (t += r + '.');
                         }),
                         (t += n)
                       );
@@ -26992,7 +26897,7 @@ function _createClass(e, t, n) {
             deps: []
           },
           { provide: h, useClass: S, multi: !0, deps: [i.c, a.z, a.B] },
-          { provide: h, useClass: A, multi: !0, deps: [i.c] },
+          { provide: h, useClass: T, multi: !0, deps: [i.c] },
           [],
           { provide: b, useClass: b, deps: [f, v, a.c] },
           { provide: a.E, useExisting: b },
@@ -27412,7 +27317,7 @@ function _createClass(e, t, n) {
           return l;
         }),
         n.d(t, 'n', function() {
-          return T;
+          return A;
         }),
         n.d(t, 'o', function() {
           return ye;
@@ -27953,7 +27858,7 @@ function _createClass(e, t, n) {
           var e = { Format: 0, Standalone: 1 };
           return (e[e.Format] = 'Format'), (e[e.Standalone] = 'Standalone'), e;
         })(),
-        T = (function() {
+        A = (function() {
           var e = { Narrow: 0, Abbreviated: 1, Wide: 2, Short: 3 };
           return (
             (e[e.Narrow] = 'Narrow'),
@@ -27963,7 +27868,7 @@ function _createClass(e, t, n) {
             e
           );
         })(),
-        A = (function() {
+        T = (function() {
           var e = { Short: 0, Medium: 1, Long: 2, Full: 3 };
           return (e[e.Short] = 'Short'), (e[e.Medium] = 'Medium'), (e[e.Long] = 'Long'), (e[e.Full] = 'Full'), e;
         })(),
@@ -28132,48 +28037,48 @@ function _createClass(e, t, n) {
             var a = '';
             switch (n) {
               case 'shortDate':
-                a = M(t, A.Short);
+                a = M(t, T.Short);
                 break;
               case 'mediumDate':
-                a = M(t, A.Medium);
+                a = M(t, T.Medium);
                 break;
               case 'longDate':
-                a = M(t, A.Long);
+                a = M(t, T.Long);
                 break;
               case 'fullDate':
-                a = M(t, A.Full);
+                a = M(t, T.Full);
                 break;
               case 'shortTime':
-                a = N(t, A.Short);
+                a = N(t, T.Short);
                 break;
               case 'mediumTime':
-                a = N(t, A.Medium);
+                a = N(t, T.Medium);
                 break;
               case 'longTime':
-                a = N(t, A.Long);
+                a = N(t, T.Long);
                 break;
               case 'fullTime':
-                a = N(t, A.Full);
+                a = N(t, T.Full);
                 break;
               case 'short':
                 var o = e(t, 'shortTime'),
                   s = e(t, 'shortDate');
-                a = Q(D(t, A.Short), [o, s]);
+                a = Q(D(t, T.Short), [o, s]);
                 break;
               case 'medium':
                 var u = e(t, 'mediumTime'),
                   l = e(t, 'mediumDate');
-                a = Q(D(t, A.Medium), [u, l]);
+                a = Q(D(t, T.Medium), [u, l]);
                 break;
               case 'long':
                 var c = e(t, 'longTime'),
                   h = e(t, 'longDate');
-                a = Q(D(t, A.Long), [c, h]);
+                a = Q(D(t, T.Long), [c, h]);
                 break;
               case 'full':
                 var f = e(t, 'fullTime'),
                   d = e(t, 'fullDate');
-                a = Q(D(t, A.Full), [f, d]);
+                a = Q(D(t, T.Full), [f, d]);
             }
             return a && (z[i][n] = a), a;
           })(n, t) || t;
@@ -28205,13 +28110,13 @@ function _createClass(e, t, n) {
                 case 'G':
                 case 'GG':
                 case 'GGG':
-                  t = Y(W.Eras, T.Abbreviated);
+                  t = Y(W.Eras, A.Abbreviated);
                   break;
                 case 'GGGG':
-                  t = Y(W.Eras, T.Wide);
+                  t = Y(W.Eras, A.Wide);
                   break;
                 case 'GGGGG':
-                  t = Y(W.Eras, T.Narrow);
+                  t = Y(W.Eras, A.Narrow);
                   break;
                 case 'y':
                   t = $(G.FullYear, 1, 0, !1, !0);
@@ -28234,22 +28139,22 @@ function _createClass(e, t, n) {
                   t = $(G.Month, 2, 1);
                   break;
                 case 'MMM':
-                  t = Y(W.Months, T.Abbreviated);
+                  t = Y(W.Months, A.Abbreviated);
                   break;
                 case 'MMMM':
-                  t = Y(W.Months, T.Wide);
+                  t = Y(W.Months, A.Wide);
                   break;
                 case 'MMMMM':
-                  t = Y(W.Months, T.Narrow);
+                  t = Y(W.Months, A.Narrow);
                   break;
                 case 'LLL':
-                  t = Y(W.Months, T.Abbreviated, E.Standalone);
+                  t = Y(W.Months, A.Abbreviated, E.Standalone);
                   break;
                 case 'LLLL':
-                  t = Y(W.Months, T.Wide, E.Standalone);
+                  t = Y(W.Months, A.Wide, E.Standalone);
                   break;
                 case 'LLLLL':
-                  t = Y(W.Months, T.Narrow, E.Standalone);
+                  t = Y(W.Months, A.Narrow, E.Standalone);
                   break;
                 case 'w':
                   t = ee(1);
@@ -28269,49 +28174,49 @@ function _createClass(e, t, n) {
                 case 'E':
                 case 'EE':
                 case 'EEE':
-                  t = Y(W.Days, T.Abbreviated);
+                  t = Y(W.Days, A.Abbreviated);
                   break;
                 case 'EEEE':
-                  t = Y(W.Days, T.Wide);
+                  t = Y(W.Days, A.Wide);
                   break;
                 case 'EEEEE':
-                  t = Y(W.Days, T.Narrow);
+                  t = Y(W.Days, A.Narrow);
                   break;
                 case 'EEEEEE':
-                  t = Y(W.Days, T.Short);
+                  t = Y(W.Days, A.Short);
                   break;
                 case 'a':
                 case 'aa':
                 case 'aaa':
-                  t = Y(W.DayPeriods, T.Abbreviated);
+                  t = Y(W.DayPeriods, A.Abbreviated);
                   break;
                 case 'aaaa':
-                  t = Y(W.DayPeriods, T.Wide);
+                  t = Y(W.DayPeriods, A.Wide);
                   break;
                 case 'aaaaa':
-                  t = Y(W.DayPeriods, T.Narrow);
+                  t = Y(W.DayPeriods, A.Narrow);
                   break;
                 case 'b':
                 case 'bb':
                 case 'bbb':
-                  t = Y(W.DayPeriods, T.Abbreviated, E.Standalone, !0);
+                  t = Y(W.DayPeriods, A.Abbreviated, E.Standalone, !0);
                   break;
                 case 'bbbb':
-                  t = Y(W.DayPeriods, T.Wide, E.Standalone, !0);
+                  t = Y(W.DayPeriods, A.Wide, E.Standalone, !0);
                   break;
                 case 'bbbbb':
-                  t = Y(W.DayPeriods, T.Narrow, E.Standalone, !0);
+                  t = Y(W.DayPeriods, A.Narrow, E.Standalone, !0);
                   break;
                 case 'B':
                 case 'BB':
                 case 'BBB':
-                  t = Y(W.DayPeriods, T.Abbreviated, E.Format, !0);
+                  t = Y(W.DayPeriods, A.Abbreviated, E.Format, !0);
                   break;
                 case 'BBBB':
-                  t = Y(W.DayPeriods, T.Wide, E.Format, !0);
+                  t = Y(W.DayPeriods, A.Wide, E.Format, !0);
                   break;
                 case 'BBBBB':
-                  t = Y(W.DayPeriods, T.Narrow, E.Format, !0);
+                  t = Y(W.DayPeriods, A.Narrow, E.Format, !0);
                   break;
                 case 'h':
                   t = $(G.Hours, 1, -12);

@@ -5000,99 +5000,6 @@
         })(),
         Kn = (() => {
           class t {
-            constructor(t, e, n) {
-              (this.translateService = t),
-                (this.element = e),
-                (this._ref = n),
-                this.onTranslationChangeSub ||
-                  (this.onTranslationChangeSub = this.translateService.onTranslationChange.subscribe(t => {
-                    t.lang === this.translateService.currentLang && this.checkNodes(!0, t.translations);
-                  })),
-                this.onLangChangeSub ||
-                  (this.onLangChangeSub = this.translateService.onLangChange.subscribe(t => {
-                    this.checkNodes(!0, t.translations);
-                  })),
-                this.onDefaultLangChangeSub ||
-                  (this.onDefaultLangChangeSub = this.translateService.onDefaultLangChange.subscribe(t => {
-                    this.checkNodes(!0);
-                  }));
-            }
-            set translate(t) {
-              t && ((this.key = t), this.checkNodes());
-            }
-            set translateParams(t) {
-              Fn(this.currentParams, t) || ((this.currentParams = t), this.checkNodes(!0));
-            }
-            ngAfterViewChecked() {
-              this.checkNodes();
-            }
-            checkNodes(t = !1, e) {
-              let n = this.element.nativeElement.childNodes;
-              n.length ||
-                (this.setContent(this.element.nativeElement, this.key), (n = this.element.nativeElement.childNodes));
-              for (let r = 0; r < n.length; ++r) {
-                let s = n[r];
-                if (3 === s.nodeType) {
-                  let n;
-                  if (this.key) (n = this.key), t && (s.lastKey = null);
-                  else {
-                    let e = this.getContent(s),
-                      r = e.trim();
-                    r.length &&
-                      (e !== s.currentValue
-                        ? ((n = r), (s.originalContent = this.getContent(s)))
-                        : s.originalContent && t && ((s.lastKey = null), (n = s.originalContent.trim())));
-                  }
-                  this.updateValue(n, s, e);
-                }
-              }
-            }
-            updateValue(t, e, n) {
-              if (t) {
-                if (e.lastKey === t && this.lastParams === this.currentParams) return;
-                this.lastParams = this.currentParams;
-                let r = n => {
-                  n !== t && (e.lastKey = t),
-                    e.originalContent || (e.originalContent = this.getContent(e)),
-                    (e.currentValue = Hn(n) ? n : e.originalContent || t),
-                    this.setContent(e, this.key ? e.currentValue : e.originalContent.replace(t, e.currentValue)),
-                    this._ref.markForCheck();
-                };
-                if (Hn(n)) {
-                  let e = this.translateService.getParsedResult(n, t, this.currentParams);
-                  'function' == typeof e.subscribe ? e.subscribe(r) : r(e);
-                } else this.translateService.get(t, this.currentParams).subscribe(r);
-              }
-            }
-            getContent(t) {
-              return Hn(t.textContent) ? t.textContent : t.data;
-            }
-            setContent(t, e) {
-              Hn(t.textContent) ? (t.textContent = e) : (t.data = e);
-            }
-            ngOnDestroy() {
-              this.onLangChangeSub && this.onLangChangeSub.unsubscribe(),
-                this.onDefaultLangChangeSub && this.onDefaultLangChangeSub.unsubscribe(),
-                this.onTranslationChangeSub && this.onTranslationChangeSub.unsubscribe();
-            }
-          }
-          return (
-            (t.ɵfac = function(e) {
-              return new (e || t)(s.Mb(Wn), s.Mb(s.l), s.Mb(s.h));
-            }),
-            (t.ɵdir = s.Hb({
-              type: t,
-              selectors: [
-                ['', 'translate', ''],
-                ['', 'ngx-translate', '']
-              ],
-              inputs: { translate: 'translate', translateParams: 'translateParams' }
-            })),
-            t
-          );
-        })(),
-        Qn = (() => {
-          class t {
             constructor(t, e) {
               (this.translate = t), (this._ref = e), (this.value = '');
             }
@@ -5165,7 +5072,7 @@
             t
           );
         })(),
-        Jn = (() => {
+        Qn = (() => {
           class t {
             static forRoot(e = {}) {
               return {
@@ -5207,8 +5114,8 @@
             t
           );
         })();
-      var Yn = n('9ppp');
-      class Xn extends Re.a {
+      var Jn = n('9ppp');
+      class Yn extends Re.a {
         constructor(t) {
           super(), (this._value = t);
         }
@@ -5221,28 +5128,28 @@
         }
         getValue() {
           if (this.hasError) throw this.thrownError;
-          if (this.closed) throw new Yn.a();
+          if (this.closed) throw new Jn.a();
           return this._value;
         }
         next(t) {
           super.next((this._value = t));
         }
       }
-      const tr = {};
-      class er {
+      const Xn = {};
+      class tr {
         constructor(t) {
           this.resultSelector = t;
         }
         call(t, e) {
-          return e.subscribe(new nr(t, this.resultSelector));
+          return e.subscribe(new er(t, this.resultSelector));
         }
       }
-      class nr extends Ve.a {
+      class er extends Ve.a {
         constructor(t, e) {
           super(t), (this.resultSelector = e), (this.active = 0), (this.values = []), (this.observables = []);
         }
         _next(t) {
-          this.values.push(tr), this.observables.push(t);
+          this.values.push(Xn), this.observables.push(t);
         }
         _complete() {
           const t = this.observables,
@@ -5261,7 +5168,7 @@
         }
         notifyNext(t, e, n, r, s) {
           const i = this.values,
-            o = this.toRespond ? (i[n] === tr ? --this.toRespond : this.toRespond) : 0;
+            o = this.toRespond ? (i[n] === Xn ? --this.toRespond : this.toRespond) : 0;
           (i[n] = e), 0 === o && (this.resultSelector ? this._tryResultSelector(i) : this.destination.next(i.slice()));
         }
         _tryResultSelector(t) {
@@ -5274,12 +5181,12 @@
           this.destination.next(e);
         }
       }
-      class rr {
+      class nr {
         call(t, e) {
-          return e.subscribe(new sr(t));
+          return e.subscribe(new rr(t));
         }
       }
-      class sr extends Ve.a {
+      class rr extends Ve.a {
         constructor(t) {
           super(t), (this.hasFirst = !1), (this.observables = []), (this.subscriptions = []);
         }
@@ -5312,20 +5219,20 @@
           this.destination.next(e);
         }
       }
-      function ir(t) {
-        return e => e.lift(new or(t));
+      function sr(t) {
+        return e => e.lift(new ir(t));
       }
-      class or {
+      class ir {
         constructor(t) {
           this.notifier = t;
         }
         call(t, e) {
-          const n = new ar(t),
+          const n = new or(t),
             r = Object(Fe.a)(n, this.notifier);
           return r && !n.seenValue ? (n.add(r), e.subscribe(n)) : n;
         }
       }
-      class ar extends Ve.a {
+      class or extends Ve.a {
         constructor(t) {
           super(t), (this.seenValue = !1);
         }
@@ -5334,21 +5241,21 @@
         }
         notifyComplete() {}
       }
-      function lr(...t) {
+      function ar(...t) {
         return e => {
           let n;
-          return 'function' == typeof t[t.length - 1] && (n = t.pop()), e.lift(new cr(t, n));
+          return 'function' == typeof t[t.length - 1] && (n = t.pop()), e.lift(new lr(t, n));
         };
       }
-      class cr {
+      class lr {
         constructor(t, e) {
           (this.observables = t), (this.project = e);
         }
         call(t, e) {
-          return e.subscribe(new ur(t, this.observables, this.project));
+          return e.subscribe(new cr(t, this.observables, this.project));
         }
       }
-      class ur extends Ve.a {
+      class cr extends Ve.a {
         constructor(t, e, n) {
           super(t), (this.observables = e), (this.project = n), (this.toRespond = []);
           const r = e.length;
@@ -5385,7 +5292,7 @@
         }
       }
       $localize`:@@ngb.alert.close␟f4e529ae5ffd73001d1ff4bbdeeb0a72e342e5c8␟7819314041543176992:Close`;
-      const hr = ['*'];
+      const ur = ['*'];
       $localize`:@@ngb.carousel.previous␟680d5c75b7fd8d37961083608b9fcdc4167b4c43␟4452427314943113135:Previous`,
         $localize`:@@ngb.carousel.next␟f732c304c7433e5a83ffcd862c3dce709a0f4982␟3885497195825665706:Next`,
         $localize`:@@ngb.datepicker.previous-month␟c3b08b07b5ab98e7cdcf18df39355690ab7d3884␟8586908745456864217:Previous month`,
@@ -5396,8 +5303,8 @@
         $localize`:@@ngb.datepicker.select-month␟1dbc84807f35518112f62e5775d1daebd3d8462b␟2253869508135064750:Select month`,
         $localize`:@@ngb.datepicker.select-year␟8ceb09d002bf0c5d1cac171dfbffe1805d2b3962␟8852264961585484321:Select year`,
         $localize`:@@ngb.datepicker.select-year␟8ceb09d002bf0c5d1cac171dfbffe1805d2b3962␟8852264961585484321:Select year`;
-      const dr = ['dialog'];
-      function pr(t) {
+      const hr = ['dialog'];
+      function dr(t) {
         return null != t;
       }
       $localize`:@@ngb.pagination.first␟656506dfd46380956a655f919f1498d018f75ca0␟6867721956102594380:««`,
@@ -5438,7 +5345,20 @@
             } while (null !== e && 1 === e.nodeType);
             return null;
           }));
-      let fr = (() => {
+      let pr = (() => {
+          class t {}
+          return (
+            (t.ɵmod = s.Kb({ type: t })),
+            (t.ɵinj = s.Jb({
+              factory: function(e) {
+                return new (e || t)();
+              },
+              imports: [[i.b]]
+            })),
+            t
+          );
+        })(),
+        fr = (() => {
           class t {}
           return (
             (t.ɵmod = s.Kb({ type: t })),
@@ -5458,8 +5378,7 @@
             (t.ɵinj = s.Jb({
               factory: function(e) {
                 return new (e || t)();
-              },
-              imports: [[i.b]]
+              }
             })),
             t
           );
@@ -5471,7 +5390,8 @@
             (t.ɵinj = s.Jb({
               factory: function(e) {
                 return new (e || t)();
-              }
+              },
+              imports: [[i.b]]
             })),
             t
           );
@@ -5483,25 +5403,12 @@
             (t.ɵinj = s.Jb({
               factory: function(e) {
                 return new (e || t)();
-              },
-              imports: [[i.b]]
-            })),
-            t
-          );
-        })(),
-        yr = (() => {
-          class t {}
-          return (
-            (t.ɵmod = s.Kb({ type: t })),
-            (t.ɵinj = s.Jb({
-              factory: function(e) {
-                return new (e || t)();
               }
             })),
             t
           );
         })();
-      const vr = (function() {
+      const yr = (function() {
           var t = {
             Tab: 9,
             Enter: 13,
@@ -5532,16 +5439,16 @@
             t
           );
         })(),
-        _r = (t, e) => !!e && e.some(e => e.contains(t)),
-        wr = (t, e) =>
+        vr = (t, e) => !!e && e.some(e => e.contains(t)),
+        _r = (t, e) =>
           !e ||
           null !=
             (function(t, e) {
               return e ? t.closest(e) : null;
             })(t, e);
-      let Cr = !1;
-      'undefined' != typeof navigator && (Cr = !!navigator.userAgent && /iPad|iPhone|iPod/.test(navigator.userAgent));
-      const Sr = [
+      let wr = !1;
+      'undefined' != typeof navigator && (wr = !!navigator.userAgent && /iPad|iPhone|iPod/.test(navigator.userAgent));
+      const Cr = [
         'a[href]',
         'button:not([disabled])',
         'input:not([disabled]):not([type="hidden"])',
@@ -5550,11 +5457,11 @@
         '[contenteditable]',
         '[tabindex]:not([tabindex="-1"])'
       ].join(', ');
-      function xr(t) {
-        const e = Array.from(t.querySelectorAll(Sr)).filter(t => -1 !== t.tabIndex);
+      function Sr(t) {
+        const e = Array.from(t.querySelectorAll(Cr)).filter(t => -1 !== t.tabIndex);
         return [e[0], e[e.length - 1]];
       }
-      class kr {
+      class xr {
         getAllStyles(t) {
           return window.getComputedStyle(t);
         }
@@ -5667,9 +5574,9 @@
           return f.left >= 0 && f.top >= 0 && f.right <= b && f.bottom <= m;
         }
       }
-      const Er = /\s+/,
-        Or = new kr();
-      let Ar = (() => {
+      const kr = /\s+/,
+        Er = new xr();
+      let Or = (() => {
           class t {}
           return (
             (t.ɵmod = s.Kb({ type: t })),
@@ -5682,7 +5589,7 @@
             t
           );
         })(),
-        Tr = (() => {
+        Ar = (() => {
           class t {
             constructor() {
               (this.autoClose = !0), (this.placement = ['bottom-left', 'bottom-right', 'top-left', 'top-right']);
@@ -5703,7 +5610,7 @@
             t
           );
         })(),
-        Ir = (() => {
+        Tr = (() => {
           class t {}
           return (
             (t.ɵfac = function(e) {
@@ -5713,7 +5620,7 @@
             t
           );
         })(),
-        Pr = (() => {
+        Ir = (() => {
           class t {
             constructor(t) {
               (this.elementRef = t), (this._disabled = !1);
@@ -5742,7 +5649,7 @@
             t
           );
         })(),
-        Mr = (() => {
+        Pr = (() => {
           class t {
             constructor(t) {
               (this.dropdown = t), (this.placement = 'bottom'), (this.isOpen = !1);
@@ -5750,14 +5657,14 @@
           }
           return (
             (t.ɵfac = function(e) {
-              return new (e || t)(s.Mb(Object(s.S)(() => Nr)));
+              return new (e || t)(s.Mb(Object(s.S)(() => jr)));
             }),
             (t.ɵdir = s.Hb({
               type: t,
               selectors: [['', 'ngbDropdownMenu', '']],
               contentQueries: function(t, e, n) {
                 var r;
-                1 & t && s.Fb(n, Pr, !1), 2 & t && s.rc((r = s.ec())) && (e.menuItems = r);
+                1 & t && s.Fb(n, Ir, !1), 2 & t && s.rc((r = s.ec())) && (e.menuItems = r);
               },
               hostVars: 5,
               hostBindings: function(t, e) {
@@ -5781,7 +5688,7 @@
             t
           );
         })(),
-        Rr = (() => {
+        Mr = (() => {
           class t {
             constructor(t, e) {
               (this.dropdown = t), (this._elementRef = e), (this.anchorEl = e.nativeElement);
@@ -5792,7 +5699,7 @@
           }
           return (
             (t.ɵfac = function(e) {
-              return new (e || t)(s.Mb(Object(s.S)(() => Nr)), s.Mb(s.l));
+              return new (e || t)(s.Mb(Object(s.S)(() => jr)), s.Mb(s.l));
             }),
             (t.ɵdir = s.Hb({
               type: t,
@@ -5806,15 +5713,15 @@
             t
           );
         })(),
-        jr = (() => {
-          class t extends Rr {
+        Rr = (() => {
+          class t extends Mr {
             constructor(t, e) {
               super(t, e);
             }
           }
           return (
             (t.ɵfac = function(e) {
-              return new (e || t)(s.Mb(Object(s.S)(() => Nr)), s.Mb(s.l));
+              return new (e || t)(s.Mb(Object(s.S)(() => jr)), s.Mb(s.l));
             }),
             (t.ɵdir = s.Hb({
               type: t,
@@ -5836,12 +5743,12 @@
                   }),
                   2 & t && s.Ab('aria-expanded', e.dropdown.isOpen());
               },
-              features: [s.yb([{ provide: Rr, useExisting: Object(s.S)(() => t) }]), s.wb]
+              features: [s.yb([{ provide: Mr, useExisting: Object(s.S)(() => t) }]), s.wb]
             })),
             t
           );
         })(),
-        Nr = (() => {
+        jr = (() => {
           class t {
             constructor(t, e, n, r, i, o, a) {
               (this._changeDetector = t),
@@ -5887,8 +5794,8 @@
                   t.runOutsideAngular(
                     ((u = () => {
                       const c = Te(e, 'keydown').pipe(
-                          ir(s),
-                          $t(t => t.which === vr.Escape),
+                          sr(s),
+                          $t(t => t.which === yr.Escape),
                           We(t => t.preventDefault())
                         ),
                         u = Te(e, 'mousedown').pipe(
@@ -5896,33 +5803,33 @@
                             const e = t.target;
                             return (
                               2 !== t.button &&
-                              !_r(e, o) &&
+                              !vr(e, o) &&
                               ('inside' === n
-                                ? _r(e, i) && wr(e, '.dropdown-item,.dropdown-divider')
+                                ? vr(e, i) && _r(e, '.dropdown-item,.dropdown-divider')
                                 : 'outside' === n
-                                ? !_r(e, i)
-                                : wr(e, '.dropdown-item,.dropdown-divider') || !_r(e, i))
+                                ? !vr(e, i)
+                                : _r(e, '.dropdown-item,.dropdown-divider') || !vr(e, i))
                             );
                           }),
-                          ir(s)
+                          sr(s)
                         );
                       (function(...t) {
                         if (1 === t.length) {
                           if (!Object(a.a)(t[0])) return t[0];
                           t = t[0];
                         }
-                        return Object(Dt.a)(t, void 0).lift(new rr());
+                        return Object(Dt.a)(t, void 0).lift(new nr());
                       })([
                         c,
                         Te(e, 'mouseup').pipe(
-                          lr(u),
+                          ar(u),
                           $t(([t, e]) => e),
                           sn(0),
-                          ir(s)
+                          sr(s)
                         )
                       ]).subscribe(() => t.run(r));
                     }),
-                    Cr ? () => setTimeout(() => u(), 100) : u)
+                    wr ? () => setTimeout(() => u(), 100) : u)
                   );
               })(
                 this._ngZone,
@@ -5960,25 +5867,25 @@
                   n.forEach((e, n) => {
                     e.contains(t.target) && (s = !0), e === this._document.activeElement && (r = n);
                   }),
-                e !== vr.Space && e !== vr.Enter)
+                e !== yr.Space && e !== yr.Enter)
               ) {
                 if (i || s) {
                   if ((this.open(), n.length)) {
                     switch (e) {
-                      case vr.ArrowDown:
+                      case yr.ArrowDown:
                         r = Math.min(r + 1, n.length - 1);
                         break;
-                      case vr.ArrowUp:
+                      case yr.ArrowUp:
                         if (this._isDropup() && -1 === r) {
                           r = n.length - 1;
                           break;
                         }
                         r = Math.max(r - 1, 0);
                         break;
-                      case vr.Home:
+                      case yr.Home:
                         r = 0;
                         break;
-                      case vr.End:
+                      case yr.End:
                         r = n.length - 1;
                     }
                     n[r].focus();
@@ -6004,7 +5911,7 @@
                 this._applyPlacementClasses(
                   'dynamic' === this.display
                     ? (function(t, e, n, r, s) {
-                        let i = Array.isArray(n) ? n : n.split(Er);
+                        let i = Array.isArray(n) ? n : n.split(kr);
                         const o = [
                             'top',
                             'bottom',
@@ -6035,12 +5942,12 @@
                         let h = !1;
                         for (u of i) {
                           a(u);
-                          if (Or.positionElements(t, e, u, r)) {
+                          if (Er.positionElements(t, e, u, r)) {
                             h = !0;
                             break;
                           }
                         }
-                        return h || ((u = i[0]), a(u), Or.positionElements(t, e, u, r)), u;
+                        return h || ((u = i[0]), a(u), Er.positionElements(t, e, u, r)), u;
                       })(
                         this._anchor.anchorEl,
                         this._bodyContainer || this._menuElement.nativeElement,
@@ -6095,14 +6002,14 @@
           }
           return (
             (t.ɵfac = function(e) {
-              return new (e || t)(s.Mb(s.h), s.Mb(Tr), s.Mb(i.c), s.Mb(s.z), s.Mb(s.l), s.Mb(s.D), s.Mb(Ir, 8));
+              return new (e || t)(s.Mb(s.h), s.Mb(Ar), s.Mb(i.c), s.Mb(s.z), s.Mb(s.l), s.Mb(s.D), s.Mb(Tr, 8));
             }),
             (t.ɵdir = s.Hb({
               type: t,
               selectors: [['', 'ngbDropdown', '']],
               contentQueries: function(t, e, n) {
                 var r;
-                1 & t && (s.Fb(n, Mr, !0), s.Fb(n, Mr, !0, s.l), s.Fb(n, Rr, !0)),
+                1 & t && (s.Fb(n, Pr, !0), s.Fb(n, Pr, !0, s.l), s.Fb(n, Mr, !0)),
                   2 & t &&
                     (s.rc((r = s.ec())) && (e._menu = r.first),
                     s.rc((r = s.ec())) && (e._menuElement = r.first),
@@ -6126,7 +6033,7 @@
             t
           );
         })(),
-        Dr = (() => {
+        Nr = (() => {
           class t {}
           return (
             (t.ɵmod = s.Kb({ type: t })),
@@ -6138,7 +6045,7 @@
             t
           );
         })(),
-        Vr = (() => {
+        Dr = (() => {
           class t {
             constructor() {
               (this.backdrop = !0), (this.keyboard = !0);
@@ -6159,20 +6066,20 @@
             t
           );
         })();
-      class Lr {
+      class Vr {
         constructor(t, e, n) {
           (this.nodes = t), (this.viewRef = e), (this.componentRef = n);
         }
       }
-      const Fr = () => {};
-      let Hr = (() => {
+      const Lr = () => {};
+      let Fr = (() => {
           class t {
             constructor(t) {
               this._document = t;
             }
             compensate() {
               const t = this._getWidth();
-              return this._isPresent(t) ? this._adjustBody(t) : Fr;
+              return this._isPresent(t) ? this._adjustBody(t) : Lr;
             }
             _adjustBody(t) {
               const e = this._document.body,
@@ -6208,7 +6115,7 @@
             t
           );
         })(),
-        Ur = (() => {
+        Hr = (() => {
           class t {}
           return (
             (t.ɵfac = function(e) {
@@ -6231,11 +6138,11 @@
             t
           );
         })();
-      class $r {
+      class Ur {
         close(t) {}
         dismiss(t) {}
       }
-      class Br {
+      class $r {
         constructor(t, e, n, r) {
           (this._windowCmptRef = t),
             (this._contentRef = e),
@@ -6284,11 +6191,11 @@
             (this._contentRef = null);
         }
       }
-      const zr = (function() {
+      const Br = (function() {
         var t = { BACKDROP_CLICK: 0, ESC: 1 };
         return (t[t.BACKDROP_CLICK] = 'BACKDROP_CLICK'), (t[t.ESC] = 'ESC'), t;
       })();
-      let qr = (() => {
+      let zr = (() => {
           class t {
             constructor(t, e, n) {
               (this._document = t),
@@ -6311,36 +6218,36 @@
                 (this._zone.runOutsideAngular(() => {
                   Te(t, 'keydown')
                     .pipe(
-                      ir(this._closed$),
-                      $t(t => t.which === vr.Escape && this.keyboard)
+                      sr(this._closed$),
+                      $t(t => t.which === yr.Escape && this.keyboard)
                     )
                     .subscribe(t =>
                       requestAnimationFrame(() => {
-                        t.defaultPrevented || this._zone.run(() => this.dismiss(zr.ESC));
+                        t.defaultPrevented || this._zone.run(() => this.dismiss(Br.ESC));
                       })
                     );
                   let e = !1;
                   Te(this._dialogEl.nativeElement, 'mousedown')
                     .pipe(
-                      ir(this._closed$),
+                      sr(this._closed$),
                       We(() => (e = !1)),
-                      He(() => Te(t, 'mouseup').pipe(ir(this._closed$), qe(1))),
+                      He(() => Te(t, 'mouseup').pipe(sr(this._closed$), qe(1))),
                       $t(({ target: e }) => t === e)
                     )
                     .subscribe(() => {
                       e = !0;
                     }),
                     Te(t, 'click')
-                      .pipe(ir(this._closed$))
+                      .pipe(sr(this._closed$))
                       .subscribe(({ target: n }) => {
-                        !0 !== this.backdrop || t !== n || e || this._zone.run(() => this.dismiss(zr.BACKDROP_CLICK)),
+                        !0 !== this.backdrop || t !== n || e || this._zone.run(() => this.dismiss(Br.BACKDROP_CLICK)),
                           (e = !1);
                       });
                 }),
                 !t.contains(document.activeElement))
               ) {
                 const e = t.querySelector('[ngbAutofocus]'),
-                  n = xr(t)[0];
+                  n = Sr(t)[0];
                 (e || n || t).focus();
               }
             }
@@ -6364,7 +6271,7 @@
               selectors: [['ngb-modal-window']],
               viewQuery: function(t, e) {
                 var n;
-                1 & t && s.xc(dr, !0), 2 & t && s.rc((n = s.ec())) && (e._dialogEl = n.first);
+                1 & t && s.xc(hr, !0), 2 & t && s.rc((n = s.ec())) && (e._dialogEl = n.first);
               },
               hostAttrs: ['role', 'dialog', 'tabindex', '-1'],
               hostVars: 4,
@@ -6383,7 +6290,7 @@
                 windowClass: 'windowClass'
               },
               outputs: { dismissEvent: 'dismiss' },
-              ngContentSelectors: hr,
+              ngContentSelectors: ur,
               decls: 4,
               vars: 2,
               consts: [
@@ -6409,7 +6316,7 @@
             t
           );
         })(),
-        Zr = (() => {
+        qr = (() => {
           class t {
             constructor(t, e, n, r, s, i) {
               (this._applicationRef = t),
@@ -6438,25 +6345,25 @@
                     ((t, e, n, r = !1) => {
                       this._ngZone.runOutsideAngular(() => {
                         const t = Te(e, 'focusin').pipe(
-                          ir(n),
+                          sr(n),
                           Object(l.a)(t => t.target)
                         );
                         Te(e, 'keydown')
                           .pipe(
-                            ir(n),
-                            $t(t => t.which === vr.Tab),
-                            lr(t)
+                            sr(n),
+                            $t(t => t.which === yr.Tab),
+                            ar(t)
                           )
                           .subscribe(([t, n]) => {
-                            const [r, s] = xr(e);
+                            const [r, s] = Sr(e);
                             (n !== r && n !== e) || !t.shiftKey || (s.focus(), t.preventDefault()),
                               n !== s || t.shiftKey || (r.focus(), t.preventDefault());
                           }),
                           r &&
                             Te(e, 'click')
                               .pipe(
-                                ir(n),
-                                lr(t),
+                                sr(n),
+                                ar(t),
                                 Object(l.a)(t => t[1])
                               )
                               .subscribe(t => t.focus());
@@ -6468,7 +6375,7 @@
                 });
             }
             open(t, e, n, r) {
-              const s = pr(r.container) ? this._document.querySelector(r.container) : this._document.body,
+              const s = dr(r.container) ? this._document.querySelector(r.container) : this._document.body,
                 i = this._rendererFactory.createRenderer(null, null),
                 o = this._scrollBar.compensate(),
                 a = () => {
@@ -6477,11 +6384,11 @@
                 };
               if (!s)
                 throw new Error(`The specified modal container "${r.container || 'body'}" was not found in the DOM.`);
-              const l = new $r(),
+              const l = new Ur(),
                 c = this._getContentRef(t, r.injector || e, n, l, r);
               let u = !1 !== r.backdrop ? this._attachBackdrop(t, s) : null,
                 h = this._attachWindowComponent(t, s, c),
-                d = new Br(h, c, u, r.beforeDismiss);
+                d = new $r(h, c, u, r.beforeDismiss);
               return (
                 this._registerModalRef(d),
                 this._registerWindowCmpt(h),
@@ -6506,21 +6413,21 @@
               return this._modalRefs.length > 0;
             }
             _attachBackdrop(t, e) {
-              let n = t.resolveComponentFactory(Ur).create(this._injector);
+              let n = t.resolveComponentFactory(Hr).create(this._injector);
               return this._applicationRef.attachView(n.hostView), e.appendChild(n.location.nativeElement), n;
             }
             _attachWindowComponent(t, e, n) {
-              let r = t.resolveComponentFactory(qr).create(this._injector, n.nodes);
+              let r = t.resolveComponentFactory(zr).create(this._injector, n.nodes);
               return this._applicationRef.attachView(r.hostView), e.appendChild(r.location.nativeElement), r;
             }
             _applyWindowOptions(t, e) {
               this._windowAttributes.forEach(n => {
-                pr(e[n]) && (t[n] = e[n]);
+                dr(e[n]) && (t[n] = e[n]);
               });
             }
             _applyBackdropOptions(t, e) {
               this._backdropAttributes.forEach(n => {
-                pr(e[n]) && (t[n] = e[n]);
+                dr(e[n]) && (t[n] = e[n]);
               });
             }
             _getContentRef(t, e, n, r, i) {
@@ -6530,7 +6437,7 @@
                   : 'string' == typeof n
                   ? this._createFromString(n)
                   : this._createFromComponent(t, e, n, r, i)
-                : new Lr([]);
+                : new Vr([]);
             }
             _createFromTemplateRef(t, e) {
               const n = t.createEmbeddedView({
@@ -6542,21 +6449,21 @@
                   e.dismiss(t);
                 }
               });
-              return this._applicationRef.attachView(n), new Lr([n.rootNodes], n);
+              return this._applicationRef.attachView(n), new Vr([n.rootNodes], n);
             }
             _createFromString(t) {
               const e = this._document.createTextNode(`${t}`);
-              return new Lr([[e]]);
+              return new Vr([[e]]);
             }
             _createFromComponent(t, e, n, r, i) {
               const o = t.resolveComponentFactory(n),
-                a = s.r.create({ providers: [{ provide: $r, useValue: r }], parent: e }),
+                a = s.r.create({ providers: [{ provide: Ur, useValue: r }], parent: e }),
                 l = o.create(a),
                 c = l.location.nativeElement;
               return (
                 i.scrollable && c.classList.add('component-host-scrollable'),
                 this._applicationRef.attachView(l.hostView),
-                new Lr([[c]], l.hostView, l)
+                new Vr([[c]], l.hostView, l)
               );
             }
             _setAriaHidden(t) {
@@ -6595,7 +6502,7 @@
           }
           return (
             (t.ɵfac = function(e) {
-              return new (e || t)(s.Zb(s.g), s.Zb(s.r), s.Zb(i.c), s.Zb(Hr), s.Zb(s.E), s.Zb(s.z));
+              return new (e || t)(s.Zb(s.g), s.Zb(s.r), s.Zb(i.c), s.Zb(Fr), s.Zb(s.E), s.Zb(s.z));
             }),
             (t.ɵprov = s.Ib({ token: t, factory: t.ɵfac, providedIn: 'root' })),
             (t.ngInjectableDef = Object(s.Ib)({
@@ -6604,7 +6511,7 @@
                   Object(s.Zb)(s.g),
                   Object(s.Zb)(s.o),
                   Object(s.Zb)(i.c),
-                  Object(s.Zb)(Hr),
+                  Object(s.Zb)(Fr),
                   Object(s.Zb)(s.E),
                   Object(s.Zb)(s.z)
                 );
@@ -6615,7 +6522,7 @@
             t
           );
         })(),
-        Gr = (() => {
+        Zr = (() => {
           class t {
             constructor(t, e, n, r) {
               (this._moduleCFR = t), (this._injector = e), (this._modalStack = n), (this._config = r);
@@ -6633,15 +6540,28 @@
           }
           return (
             (t.ɵfac = function(e) {
-              return new (e || t)(s.Zb(s.j), s.Zb(s.r), s.Zb(Zr), s.Zb(Vr));
+              return new (e || t)(s.Zb(s.j), s.Zb(s.r), s.Zb(qr), s.Zb(Dr));
             }),
             (t.ɵprov = s.Ib({ token: t, factory: t.ɵfac, providedIn: 'root' })),
             (t.ngInjectableDef = Object(s.Ib)({
               factory: function() {
-                return new t(Object(s.Zb)(s.j), Object(s.Zb)(s.o), Object(s.Zb)(Zr), Object(s.Zb)(Vr));
+                return new t(Object(s.Zb)(s.j), Object(s.Zb)(s.o), Object(s.Zb)(qr), Object(s.Zb)(Dr));
               },
               token: t,
               providedIn: 'root'
+            })),
+            t
+          );
+        })(),
+        Gr = (() => {
+          class t {}
+          return (
+            (t.ɵmod = s.Kb({ type: t })),
+            (t.ɵinj = s.Jb({
+              factory: function(e) {
+                return new (e || t)();
+              },
+              providers: [Zr]
             })),
             t
           );
@@ -6654,7 +6574,7 @@
               factory: function(e) {
                 return new (e || t)();
               },
-              providers: [Gr]
+              imports: [[i.b]]
             })),
             t
           );
@@ -6719,7 +6639,7 @@
               factory: function(e) {
                 return new (e || t)();
               },
-              imports: [[i.b]]
+              imports: [[i.b, Wr]]
             })),
             t
           );
@@ -6732,7 +6652,7 @@
               factory: function(e) {
                 return new (e || t)();
               },
-              imports: [[i.b, Kr]]
+              imports: [[i.b]]
             })),
             t
           );
@@ -6757,25 +6677,12 @@
             (t.ɵinj = s.Jb({
               factory: function(e) {
                 return new (e || t)();
-              },
-              imports: [[i.b]]
-            })),
-            t
-          );
-        })(),
-        rs = (() => {
-          class t {}
-          return (
-            (t.ɵmod = s.Kb({ type: t })),
-            (t.ɵinj = s.Jb({
-              factory: function(e) {
-                return new (e || t)();
               }
             })),
             t
           );
         })(),
-        ss = (() => {
+        rs = (() => {
           class t {}
           return (
             (t.ɵmod = s.Kb({ type: t })),
@@ -6788,8 +6695,8 @@
             t
           );
         })();
-      const is = [fr, gr, mr, br, yr, Ar, Dr, Wr, Kr, Qr, Jr, Yr, Xr, ts, es, ns, rs, ss];
-      let os = (() => {
+      const ss = [pr, fr, gr, mr, br, Or, Nr, Gr, Wr, Kr, Qr, Jr, Yr, Xr, ts, es, ns, rs];
+      let is = (() => {
         class t {}
         return (
           (t.ɵmod = s.Kb({ type: t })),
@@ -6797,30 +6704,30 @@
             factory: function(e) {
               return new (e || t)();
             },
-            imports: [is, fr, gr, mr, br, yr, Ar, Dr, Wr, Kr, Qr, Jr, Yr, Xr, ts, es, ns, rs, ss]
+            imports: [ss, pr, fr, gr, mr, br, Or, Nr, Gr, Wr, Kr, Qr, Jr, Yr, Xr, ts, es, ns, rs]
           })),
           t
         );
       })();
-      var as = n('AytR');
-      const ls = (() => {
+      var os = n('AytR');
+      const as = (() => {
         function t() {
           return Error.call(this), (this.message = 'no elements in sequence'), (this.name = 'EmptyError'), this;
         }
         return (t.prototype = Object.create(Error.prototype)), t;
       })();
-      function cs(t = ds) {
-        return e => e.lift(new us(t));
+      function ls(t = hs) {
+        return e => e.lift(new cs(t));
       }
-      class us {
+      class cs {
         constructor(t) {
           this.errorFactory = t;
         }
         call(t, e) {
-          return e.subscribe(new hs(t, this.errorFactory));
+          return e.subscribe(new us(t, this.errorFactory));
         }
       }
-      class hs extends Ut.a {
+      class us extends Ut.a {
         constructor(t, e) {
           super(t), (this.errorFactory = e), (this.hasValue = !1);
         }
@@ -6840,30 +6747,30 @@
           }
         }
       }
-      function ds() {
-        return new ls();
+      function hs() {
+        return new as();
       }
-      var ps = n('SpAZ');
-      function fs(t, e) {
+      var ds = n('SpAZ');
+      function ps(t, e) {
         const n = arguments.length >= 2;
-        return r => r.pipe(t ? $t((e, n) => t(e, n, r)) : ps.a, Cn(1), n ? kn(e) : cs(() => new ls()));
+        return r => r.pipe(t ? $t((e, n) => t(e, n, r)) : ds.a, Cn(1), n ? kn(e) : ls(() => new as()));
       }
-      function gs(t) {
+      function fs(t) {
         return function(e) {
-          const n = new ms(t),
+          const n = new gs(t),
             r = e.lift(n);
           return (n.caught = r);
         };
       }
-      class ms {
+      class gs {
         constructor(t) {
           this.selector = t;
         }
         call(t, e) {
-          return e.subscribe(new bs(t, this.selector, this.caught));
+          return e.subscribe(new ms(t, this.selector, this.caught));
         }
       }
-      class bs extends Ve.a {
+      class ms extends Ve.a {
         constructor(t, e, n) {
           super(t), (this.selector = e), (this.caught = n);
         }
@@ -6883,19 +6790,19 @@
           }
         }
       }
-      function ys(t, e) {
+      function bs(t, e) {
         const n = arguments.length >= 2;
-        return r => r.pipe(t ? $t((e, n) => t(e, n, r)) : ps.a, qe(1), n ? kn(e) : cs(() => new ls()));
+        return r => r.pipe(t ? $t((e, n) => t(e, n, r)) : ds.a, qe(1), n ? kn(e) : ls(() => new as()));
       }
-      class vs {
+      class ys {
         constructor(t, e, n) {
           (this.predicate = t), (this.thisArg = e), (this.source = n);
         }
         call(t, e) {
-          return e.subscribe(new _s(t, this.predicate, this.thisArg, this.source));
+          return e.subscribe(new vs(t, this.predicate, this.thisArg, this.source));
         }
       }
-      class _s extends Ut.a {
+      class vs extends Ut.a {
         constructor(t, e, n, r) {
           super(t),
             (this.predicate = e),
@@ -6920,25 +6827,25 @@
           this.notifyComplete(!0);
         }
       }
-      class ws {
+      class _s {
         constructor(t) {
           this.callback = t;
         }
         call(t, e) {
-          return e.subscribe(new Cs(t, this.callback));
+          return e.subscribe(new ws(t, this.callback));
         }
       }
-      class Cs extends Ut.a {
+      class ws extends Ut.a {
         constructor(t, e) {
           super(t), this.add(new Je.a(e));
         }
       }
-      class Ss {
+      class Cs {
         constructor(t, e) {
           (this.id = t), (this.url = e);
         }
       }
-      class xs extends Ss {
+      class Ss extends Cs {
         constructor(t, e, n = 'imperative', r = null) {
           super(t, e), (this.navigationTrigger = n), (this.restoredState = r);
         }
@@ -6946,7 +6853,7 @@
           return `NavigationStart(id: ${this.id}, url: '${this.url}')`;
         }
       }
-      class ks extends Ss {
+      class xs extends Cs {
         constructor(t, e, n) {
           super(t, e), (this.urlAfterRedirects = n);
         }
@@ -6954,7 +6861,7 @@
           return `NavigationEnd(id: ${this.id}, url: '${this.url}', urlAfterRedirects: '${this.urlAfterRedirects}')`;
         }
       }
-      class Es extends Ss {
+      class ks extends Cs {
         constructor(t, e, n) {
           super(t, e), (this.reason = n);
         }
@@ -6962,7 +6869,7 @@
           return `NavigationCancel(id: ${this.id}, url: '${this.url}')`;
         }
       }
-      class Os extends Ss {
+      class Es extends Cs {
         constructor(t, e, n) {
           super(t, e), (this.error = n);
         }
@@ -6970,7 +6877,7 @@
           return `NavigationError(id: ${this.id}, url: '${this.url}', error: ${this.error})`;
         }
       }
-      class As extends Ss {
+      class Os extends Cs {
         constructor(t, e, n, r) {
           super(t, e), (this.urlAfterRedirects = n), (this.state = r);
         }
@@ -6978,7 +6885,7 @@
           return `RoutesRecognized(id: ${this.id}, url: '${this.url}', urlAfterRedirects: '${this.urlAfterRedirects}', state: ${this.state})`;
         }
       }
-      class Ts extends Ss {
+      class As extends Cs {
         constructor(t, e, n, r) {
           super(t, e), (this.urlAfterRedirects = n), (this.state = r);
         }
@@ -6986,7 +6893,7 @@
           return `GuardsCheckStart(id: ${this.id}, url: '${this.url}', urlAfterRedirects: '${this.urlAfterRedirects}', state: ${this.state})`;
         }
       }
-      class Is extends Ss {
+      class Ts extends Cs {
         constructor(t, e, n, r, s) {
           super(t, e), (this.urlAfterRedirects = n), (this.state = r), (this.shouldActivate = s);
         }
@@ -6994,7 +6901,7 @@
           return `GuardsCheckEnd(id: ${this.id}, url: '${this.url}', urlAfterRedirects: '${this.urlAfterRedirects}', state: ${this.state}, shouldActivate: ${this.shouldActivate})`;
         }
       }
-      class Ps extends Ss {
+      class Is extends Cs {
         constructor(t, e, n, r) {
           super(t, e), (this.urlAfterRedirects = n), (this.state = r);
         }
@@ -7002,7 +6909,7 @@
           return `ResolveStart(id: ${this.id}, url: '${this.url}', urlAfterRedirects: '${this.urlAfterRedirects}', state: ${this.state})`;
         }
       }
-      class Ms extends Ss {
+      class Ps extends Cs {
         constructor(t, e, n, r) {
           super(t, e), (this.urlAfterRedirects = n), (this.state = r);
         }
@@ -7010,7 +6917,7 @@
           return `ResolveEnd(id: ${this.id}, url: '${this.url}', urlAfterRedirects: '${this.urlAfterRedirects}', state: ${this.state})`;
         }
       }
-      class Rs {
+      class Ms {
         constructor(t) {
           this.route = t;
         }
@@ -7018,7 +6925,7 @@
           return `RouteConfigLoadStart(path: ${this.route.path})`;
         }
       }
-      class js {
+      class Rs {
         constructor(t) {
           this.route = t;
         }
@@ -7026,7 +6933,7 @@
           return `RouteConfigLoadEnd(path: ${this.route.path})`;
         }
       }
-      class Ns {
+      class js {
         constructor(t) {
           this.snapshot = t;
         }
@@ -7034,7 +6941,7 @@
           return `ChildActivationStart(path: '${(this.snapshot.routeConfig && this.snapshot.routeConfig.path) || ''}')`;
         }
       }
-      class Ds {
+      class Ns {
         constructor(t) {
           this.snapshot = t;
         }
@@ -7042,7 +6949,7 @@
           return `ChildActivationEnd(path: '${(this.snapshot.routeConfig && this.snapshot.routeConfig.path) || ''}')`;
         }
       }
-      class Vs {
+      class Ds {
         constructor(t) {
           this.snapshot = t;
         }
@@ -7050,7 +6957,7 @@
           return `ActivationStart(path: '${(this.snapshot.routeConfig && this.snapshot.routeConfig.path) || ''}')`;
         }
       }
-      class Ls {
+      class Vs {
         constructor(t) {
           this.snapshot = t;
         }
@@ -7058,7 +6965,7 @@
           return `ActivationEnd(path: '${(this.snapshot.routeConfig && this.snapshot.routeConfig.path) || ''}')`;
         }
       }
-      class Fs {
+      class Ls {
         constructor(t, e, n) {
           (this.routerEvent = t), (this.position = e), (this.anchor = n);
         }
@@ -7068,7 +6975,7 @@
           }')`;
         }
       }
-      let Hs = (() => {
+      let Fs = (() => {
         class t {}
         return (
           (t.ɵfac = function(e) {
@@ -7083,14 +6990,14 @@
               1 & t && s.Nb(0, 'router-outlet');
             },
             directives: function() {
-              return [Go];
+              return [Zo];
             },
             encapsulation: 2
           })),
           t
         );
       })();
-      class Us {
+      class Hs {
         constructor(t) {
           this.params = t || {};
         }
@@ -7115,14 +7022,14 @@
           return Object.keys(this.params);
         }
       }
-      function $s(t) {
-        return new Us(t);
+      function Us(t) {
+        return new Hs(t);
       }
-      function Bs(t) {
+      function $s(t) {
         const e = Error('NavigationCancelingError: ' + t);
         return (e.ngNavigationCancelingError = !0), e;
       }
-      function zs(t, e, n) {
+      function Bs(t, e, n) {
         const r = n.path.split('/');
         if (r.length > t.length) return null;
         if ('full' === n.pathMatch && (e.hasChildren() || r.length < t.length)) return null;
@@ -7135,18 +7042,18 @@
         }
         return { consumed: t.slice(0, r.length), posParams: s };
       }
-      class qs {
+      class zs {
         constructor(t, e) {
           (this.routes = t), (this.module = e);
         }
       }
-      function Zs(t, e = '') {
+      function qs(t, e = '') {
         for (let n = 0; n < t.length; n++) {
           const r = t[n];
-          Gs(r, Ws(e, r));
+          Zs(r, Gs(e, r));
         }
       }
-      function Gs(t, e) {
+      function Zs(t, e) {
         if (!t)
           throw new Error(
             `\n      Invalid configuration of route '${e}': Encountered undefined route.\n      The reason might be an extra comma.\n\n      Example:\n      const routes: Routes = [\n        { path: '', redirectTo: '/dashboard', pathMatch: 'full' },\n        { path: 'dashboard',  component: DashboardComponent },, << two commas\n        { path: 'detail/:id', component: HeroDetailComponent }\n      ];\n    `
@@ -7182,46 +7089,46 @@
           );
         if (void 0 !== t.pathMatch && 'full' !== t.pathMatch && 'prefix' !== t.pathMatch)
           throw new Error(`Invalid configuration of route '${e}': pathMatch can only be set to 'prefix' or 'full'`);
-        t.children && Zs(t.children, e);
+        t.children && qs(t.children, e);
       }
-      function Ws(t, e) {
+      function Gs(t, e) {
         return e ? (t || e.path ? (t && !e.path ? `${t}/` : !t && e.path ? e.path : `${t}/${e.path}`) : '') : t;
       }
-      function Ks(t) {
-        const e = t.children && t.children.map(Ks),
+      function Ws(t) {
+        const e = t.children && t.children.map(Ws),
           n = e ? Object.assign(Object.assign({}, t), { children: e }) : Object.assign({}, t);
-        return !n.component && (e || n.loadChildren) && n.outlet && 'primary' !== n.outlet && (n.component = Hs), n;
+        return !n.component && (e || n.loadChildren) && n.outlet && 'primary' !== n.outlet && (n.component = Fs), n;
       }
-      function Qs(t, e) {
+      function Ks(t, e) {
         const n = Object.keys(t),
           r = Object.keys(e);
         if (!n || !r || n.length != r.length) return !1;
         let s;
-        for (let i = 0; i < n.length; i++) if (((s = n[i]), !Js(t[s], e[s]))) return !1;
+        for (let i = 0; i < n.length; i++) if (((s = n[i]), !Qs(t[s], e[s]))) return !1;
         return !0;
       }
-      function Js(t, e) {
+      function Qs(t, e) {
         return Array.isArray(t) && Array.isArray(e) ? t.length == e.length && t.every(t => e.indexOf(t) > -1) : t === e;
       }
-      function Ys(t) {
+      function Js(t) {
         return Array.prototype.concat.apply([], t);
       }
-      function Xs(t) {
+      function Ys(t) {
         return t.length > 0 ? t[t.length - 1] : null;
       }
-      function ti(t, e) {
+      function Xs(t, e) {
         for (const n in t) t.hasOwnProperty(n) && e(t[n], n);
       }
-      function ei(t) {
+      function ti(t) {
         return Object(s.pb)(t) ? t : Object(s.qb)(t) ? Object(u.a)(Promise.resolve(t)) : Lt(t);
       }
-      function ni(t, e, n) {
+      function ei(t, e, n) {
         return n
           ? (function(t, e) {
-              return Qs(t, e);
+              return Ks(t, e);
             })(t.queryParams, e.queryParams) &&
               (function t(e, n) {
-                if (!oi(e.segments, n.segments)) return !1;
+                if (!ii(e.segments, n.segments)) return !1;
                 if (e.numberOfChildren !== n.numberOfChildren) return !1;
                 for (const r in n.children) {
                   if (!e.children[r]) return !1;
@@ -7230,13 +7137,13 @@
                 return !0;
               })(t.root, e.root)
           : (function(t, e) {
-              return Object.keys(e).length <= Object.keys(t).length && Object.keys(e).every(n => Js(t[n], e[n]));
+              return Object.keys(e).length <= Object.keys(t).length && Object.keys(e).every(n => Qs(t[n], e[n]));
             })(t.queryParams, e.queryParams) &&
               (function t(e, n) {
                 return (function e(n, r, s) {
-                  if (n.segments.length > s.length) return !!oi(n.segments.slice(0, s.length), s) && !r.hasChildren();
+                  if (n.segments.length > s.length) return !!ii(n.segments.slice(0, s.length), s) && !r.hasChildren();
                   if (n.segments.length === s.length) {
-                    if (!oi(n.segments, s)) return !1;
+                    if (!ii(n.segments, s)) return !1;
                     for (const e in r.children) {
                       if (!n.children[e]) return !1;
                       if (!t(n.children[e], r.children[e])) return !1;
@@ -7246,25 +7153,25 @@
                   {
                     const t = s.slice(0, n.segments.length),
                       i = s.slice(n.segments.length);
-                    return !!oi(n.segments, t) && !!n.children.primary && e(n.children.primary, r, i);
+                    return !!ii(n.segments, t) && !!n.children.primary && e(n.children.primary, r, i);
                   }
                 })(e, n, n.segments);
               })(t.root, e.root);
       }
-      class ri {
+      class ni {
         constructor(t, e, n) {
           (this.root = t), (this.queryParams = e), (this.fragment = n);
         }
         get queryParamMap() {
-          return this._queryParamMap || (this._queryParamMap = $s(this.queryParams)), this._queryParamMap;
+          return this._queryParamMap || (this._queryParamMap = Us(this.queryParams)), this._queryParamMap;
         }
         toString() {
-          return ui.serialize(this);
+          return ci.serialize(this);
         }
       }
-      class si {
+      class ri {
         constructor(t, e) {
-          (this.segments = t), (this.children = e), (this.parent = null), ti(e, (t, e) => (t.parent = this));
+          (this.segments = t), (this.children = e), (this.parent = null), Xs(e, (t, e) => (t.parent = this));
         }
         hasChildren() {
           return this.numberOfChildren > 0;
@@ -7273,109 +7180,109 @@
           return Object.keys(this.children).length;
         }
         toString() {
-          return hi(this);
+          return ui(this);
         }
       }
-      class ii {
+      class si {
         constructor(t, e) {
           (this.path = t), (this.parameters = e);
         }
         get parameterMap() {
-          return this._parameterMap || (this._parameterMap = $s(this.parameters)), this._parameterMap;
+          return this._parameterMap || (this._parameterMap = Us(this.parameters)), this._parameterMap;
         }
         toString() {
-          return bi(this);
+          return mi(this);
         }
       }
-      function oi(t, e) {
+      function ii(t, e) {
         return t.length === e.length && t.every((t, n) => t.path === e[n].path);
       }
-      function ai(t, e) {
+      function oi(t, e) {
         let n = [];
         return (
-          ti(t.children, (t, r) => {
+          Xs(t.children, (t, r) => {
             'primary' === r && (n = n.concat(e(t, r)));
           }),
-          ti(t.children, (t, r) => {
+          Xs(t.children, (t, r) => {
             'primary' !== r && (n = n.concat(e(t, r)));
           }),
           n
         );
       }
-      class li {}
-      class ci {
+      class ai {}
+      class li {
         parse(t) {
-          const e = new Ci(t);
-          return new ri(e.parseRootSegment(), e.parseQueryParams(), e.parseFragment());
+          const e = new wi(t);
+          return new ni(e.parseRootSegment(), e.parseQueryParams(), e.parseFragment());
         }
         serialize(t) {
           var e;
           return `${`/${(function t(e, n) {
-            if (!e.hasChildren()) return hi(e);
+            if (!e.hasChildren()) return ui(e);
             if (n) {
               const n = e.children.primary ? t(e.children.primary, !1) : '',
                 r = [];
               return (
-                ti(e.children, (e, n) => {
+                Xs(e.children, (e, n) => {
                   'primary' !== n && r.push(`${n}:${t(e, !1)}`);
                 }),
                 r.length > 0 ? `${n}(${r.join('//')})` : n
               );
             }
             {
-              const n = ai(e, (n, r) => ('primary' === r ? [t(e.children.primary, !1)] : [`${r}:${t(n, !1)}`]));
-              return `${hi(e)}/(${n.join('//')})`;
+              const n = oi(e, (n, r) => ('primary' === r ? [t(e.children.primary, !1)] : [`${r}:${t(n, !1)}`]));
+              return `${ui(e)}/(${n.join('//')})`;
             }
           })(t.root, !0)}`}${(function(t) {
             const e = Object.keys(t).map(e => {
               const n = t[e];
-              return Array.isArray(n) ? n.map(t => `${pi(e)}=${pi(t)}`).join('&') : `${pi(e)}=${pi(n)}`;
+              return Array.isArray(n) ? n.map(t => `${di(e)}=${di(t)}`).join('&') : `${di(e)}=${di(n)}`;
             });
             return e.length ? `?${e.join('&')}` : '';
           })(t.queryParams)}${'string' == typeof t.fragment ? `#${((e = t.fragment), encodeURI(e))}` : ''}`;
         }
       }
-      const ui = new ci();
-      function hi(t) {
-        return t.segments.map(t => bi(t)).join('/');
+      const ci = new li();
+      function ui(t) {
+        return t.segments.map(t => mi(t)).join('/');
       }
-      function di(t) {
+      function hi(t) {
         return encodeURIComponent(t)
           .replace(/%40/g, '@')
           .replace(/%3A/gi, ':')
           .replace(/%24/g, '$')
           .replace(/%2C/gi, ',');
       }
-      function pi(t) {
-        return di(t).replace(/%3B/gi, ';');
+      function di(t) {
+        return hi(t).replace(/%3B/gi, ';');
       }
-      function fi(t) {
-        return di(t)
+      function pi(t) {
+        return hi(t)
           .replace(/\(/g, '%28')
           .replace(/\)/g, '%29')
           .replace(/%26/gi, '&');
       }
-      function gi(t) {
+      function fi(t) {
         return decodeURIComponent(t);
       }
-      function mi(t) {
-        return gi(t.replace(/\+/g, '%20'));
+      function gi(t) {
+        return fi(t.replace(/\+/g, '%20'));
       }
-      function bi(t) {
-        return `${fi(t.path)}${((e = t.parameters),
+      function mi(t) {
+        return `${pi(t.path)}${((e = t.parameters),
         Object.keys(e)
-          .map(t => `;${fi(t)}=${fi(e[t])}`)
+          .map(t => `;${pi(t)}=${pi(e[t])}`)
           .join(''))}`;
         var e;
       }
-      const yi = /^[^\/()?;=#]+/;
-      function vi(t) {
-        const e = t.match(yi);
+      const bi = /^[^\/()?;=#]+/;
+      function yi(t) {
+        const e = t.match(bi);
         return e ? e[0] : '';
       }
-      const _i = /^[^=?&#]+/,
-        wi = /^[^?&#]+/;
-      class Ci {
+      const vi = /^[^=?&#]+/,
+        _i = /^[^?&#]+/;
+      class wi {
         constructor(t) {
           (this.url = t), (this.remaining = t);
         }
@@ -7383,8 +7290,8 @@
           return (
             this.consumeOptional('/'),
             '' === this.remaining || this.peekStartsWith('?') || this.peekStartsWith('#')
-              ? new si([], {})
-              : new si([], this.parseChildren())
+              ? new ri([], {})
+              : new ri([], this.parseChildren())
           );
         }
         parseQueryParams() {
@@ -7413,15 +7320,15 @@
           let n = {};
           return (
             this.peekStartsWith('(') && (n = this.parseParens(!1)),
-            (t.length > 0 || Object.keys(e).length > 0) && (n.primary = new si(t, e)),
+            (t.length > 0 || Object.keys(e).length > 0) && (n.primary = new ri(t, e)),
             n
           );
         }
         parseSegment() {
-          const t = vi(this.remaining);
+          const t = yi(this.remaining);
           if ('' === t && this.peekStartsWith(';'))
             throw new Error(`Empty path url segment cannot have parameters: '${this.remaining}'.`);
-          return this.capture(t), new ii(gi(t), this.parseMatrixParams());
+          return this.capture(t), new si(fi(t), this.parseMatrixParams());
         }
         parseMatrixParams() {
           const t = {};
@@ -7429,19 +7336,19 @@
           return t;
         }
         parseParam(t) {
-          const e = vi(this.remaining);
+          const e = yi(this.remaining);
           if (!e) return;
           this.capture(e);
           let n = '';
           if (this.consumeOptional('=')) {
-            const t = vi(this.remaining);
+            const t = yi(this.remaining);
             t && ((n = t), this.capture(n));
           }
-          t[gi(e)] = gi(n);
+          t[fi(e)] = fi(n);
         }
         parseQueryParam(t) {
           const e = (function(t) {
-            const e = t.match(_i);
+            const e = t.match(vi);
             return e ? e[0] : '';
           })(this.remaining);
           if (!e) return;
@@ -7449,13 +7356,13 @@
           let n = '';
           if (this.consumeOptional('=')) {
             const t = (function(t) {
-              const e = t.match(wi);
+              const e = t.match(_i);
               return e ? e[0] : '';
             })(this.remaining);
             t && ((n = t), this.capture(n));
           }
-          const r = mi(e),
-            s = mi(n);
+          const r = gi(e),
+            s = gi(n);
           if (t.hasOwnProperty(r)) {
             let e = t[r];
             Array.isArray(e) || ((e = [e]), (t[r] = e)), e.push(s);
@@ -7464,7 +7371,7 @@
         parseParens(t) {
           const e = {};
           for (this.capture('('); !this.consumeOptional(')') && this.remaining.length > 0; ) {
-            const n = vi(this.remaining),
+            const n = yi(this.remaining),
               r = this.remaining[n.length];
             if ('/' !== r && ')' !== r && ';' !== r) throw new Error(`Cannot parse url '${this.url}'`);
             let s = void 0;
@@ -7472,7 +7379,7 @@
               ? ((s = n.substr(0, n.indexOf(':'))), this.capture(s), this.capture(':'))
               : t && (s = 'primary');
             const i = this.parseChildren();
-            (e[s] = 1 === Object.keys(i).length ? i.primary : new si([], i)), this.consumeOptional('//');
+            (e[s] = 1 === Object.keys(i).length ? i.primary : new ri([], i)), this.consumeOptional('//');
           }
           return e;
         }
@@ -7486,7 +7393,7 @@
           if (!this.consumeOptional(t)) throw new Error(`Expected "${t}".`);
         }
       }
-      class Si {
+      class Ci {
         constructor(t) {
           this._root = t;
         }
@@ -7498,38 +7405,38 @@
           return e.length > 1 ? e[e.length - 2] : null;
         }
         children(t) {
-          const e = xi(t, this._root);
+          const e = Si(t, this._root);
           return e ? e.children.map(t => t.value) : [];
         }
         firstChild(t) {
-          const e = xi(t, this._root);
+          const e = Si(t, this._root);
           return e && e.children.length > 0 ? e.children[0].value : null;
         }
         siblings(t) {
-          const e = ki(t, this._root);
+          const e = xi(t, this._root);
           return e.length < 2 ? [] : e[e.length - 2].children.map(t => t.value).filter(e => e !== t);
         }
         pathFromRoot(t) {
-          return ki(t, this._root).map(t => t.value);
+          return xi(t, this._root).map(t => t.value);
         }
       }
-      function xi(t, e) {
+      function Si(t, e) {
         if (t === e.value) return e;
         for (const n of e.children) {
-          const e = xi(t, n);
+          const e = Si(t, n);
           if (e) return e;
         }
         return null;
       }
-      function ki(t, e) {
+      function xi(t, e) {
         if (t === e.value) return [e];
         for (const n of e.children) {
-          const r = ki(t, n);
+          const r = xi(t, n);
           if (r.length) return r.unshift(e), r;
         }
         return [];
       }
-      class Ei {
+      class ki {
         constructor(t, e) {
           (this.value = t), (this.children = e);
         }
@@ -7537,32 +7444,32 @@
           return `TreeNode(${this.value})`;
         }
       }
-      function Oi(t) {
+      function Ei(t) {
         const e = {};
         return t && t.children.forEach(t => (e[t.value.outlet] = t)), e;
       }
-      class Ai extends Si {
+      class Oi extends Ci {
         constructor(t, e) {
-          super(t), (this.snapshot = e), ji(this, t);
+          super(t), (this.snapshot = e), Ri(this, t);
         }
         toString() {
           return this.snapshot.toString();
         }
       }
-      function Ti(t, e) {
+      function Ai(t, e) {
         const n = (function(t, e) {
-            const n = new Mi([], {}, {}, '', {}, 'primary', e, null, t.root, -1, {});
-            return new Ri('', new Ei(n, []));
+            const n = new Pi([], {}, {}, '', {}, 'primary', e, null, t.root, -1, {});
+            return new Mi('', new ki(n, []));
           })(t, e),
-          r = new Xn([new ii('', {})]),
-          s = new Xn({}),
-          i = new Xn({}),
-          o = new Xn({}),
-          a = new Xn(''),
-          l = new Ii(r, s, o, a, i, 'primary', e, n.root);
-        return (l.snapshot = n.root), new Ai(new Ei(l, []), n);
+          r = new Yn([new si('', {})]),
+          s = new Yn({}),
+          i = new Yn({}),
+          o = new Yn({}),
+          a = new Yn(''),
+          l = new Ti(r, s, o, a, i, 'primary', e, n.root);
+        return (l.snapshot = n.root), new Oi(new ki(l, []), n);
       }
-      class Ii {
+      class Ti {
         constructor(t, e, n, r, s, i, o, a) {
           (this.url = t),
             (this.params = e),
@@ -7592,11 +7499,11 @@
           return this._routerState.pathFromRoot(this);
         }
         get paramMap() {
-          return this._paramMap || (this._paramMap = this.params.pipe(Object(l.a)(t => $s(t)))), this._paramMap;
+          return this._paramMap || (this._paramMap = this.params.pipe(Object(l.a)(t => Us(t)))), this._paramMap;
         }
         get queryParamMap() {
           return (
-            this._queryParamMap || (this._queryParamMap = this.queryParams.pipe(Object(l.a)(t => $s(t)))),
+            this._queryParamMap || (this._queryParamMap = this.queryParams.pipe(Object(l.a)(t => Us(t)))),
             this._queryParamMap
           );
         }
@@ -7604,7 +7511,7 @@
           return this.snapshot ? this.snapshot.toString() : `Future(${this._futureSnapshot})`;
         }
       }
-      function Pi(t, e = 'emptyOnly') {
+      function Ii(t, e = 'emptyOnly') {
         const n = t.pathFromRoot;
         let r = 0;
         if ('always' !== e)
@@ -7628,7 +7535,7 @@
           );
         })(n.slice(r));
       }
-      class Mi {
+      class Pi {
         constructor(t, e, n, r, s, i, o, a, l, c, u) {
           (this.url = t),
             (this.params = e),
@@ -7658,10 +7565,10 @@
           return this._routerState.pathFromRoot(this);
         }
         get paramMap() {
-          return this._paramMap || (this._paramMap = $s(this.params)), this._paramMap;
+          return this._paramMap || (this._paramMap = Us(this.params)), this._paramMap;
         }
         get queryParamMap() {
-          return this._queryParamMap || (this._queryParamMap = $s(this.queryParams)), this._queryParamMap;
+          return this._queryParamMap || (this._queryParamMap = Us(this.queryParams)), this._queryParamMap;
         }
         toString() {
           return `Route(url:'${this.url.map(t => t.toString()).join('/')}', path:'${
@@ -7669,67 +7576,67 @@
           }')`;
         }
       }
-      class Ri extends Si {
+      class Mi extends Ci {
         constructor(t, e) {
-          super(e), (this.url = t), ji(this, e);
+          super(e), (this.url = t), Ri(this, e);
         }
         toString() {
-          return Ni(this._root);
+          return ji(this._root);
         }
       }
-      function ji(t, e) {
-        (e.value._routerState = t), e.children.forEach(e => ji(t, e));
+      function Ri(t, e) {
+        (e.value._routerState = t), e.children.forEach(e => Ri(t, e));
       }
-      function Ni(t) {
-        const e = t.children.length > 0 ? ` { ${t.children.map(Ni).join(', ')} } ` : '';
+      function ji(t) {
+        const e = t.children.length > 0 ? ` { ${t.children.map(ji).join(', ')} } ` : '';
         return `${t.value}${e}`;
       }
-      function Di(t) {
+      function Ni(t) {
         if (t.snapshot) {
           const e = t.snapshot,
             n = t._futureSnapshot;
           (t.snapshot = n),
-            Qs(e.queryParams, n.queryParams) || t.queryParams.next(n.queryParams),
+            Ks(e.queryParams, n.queryParams) || t.queryParams.next(n.queryParams),
             e.fragment !== n.fragment && t.fragment.next(n.fragment),
-            Qs(e.params, n.params) || t.params.next(n.params),
+            Ks(e.params, n.params) || t.params.next(n.params),
             (function(t, e) {
               if (t.length !== e.length) return !1;
-              for (let n = 0; n < t.length; ++n) if (!Qs(t[n], e[n])) return !1;
+              for (let n = 0; n < t.length; ++n) if (!Ks(t[n], e[n])) return !1;
               return !0;
             })(e.url, n.url) || t.url.next(n.url),
-            Qs(e.data, n.data) || t.data.next(n.data);
+            Ks(e.data, n.data) || t.data.next(n.data);
         } else (t.snapshot = t._futureSnapshot), t.data.next(t._futureSnapshot.data);
       }
-      function Vi(t, e) {
+      function Di(t, e) {
         var n, r;
         return (
-          Qs(t.params, e.params) &&
-          oi((n = t.url), (r = e.url)) &&
-          n.every((t, e) => Qs(t.parameters, r[e].parameters)) &&
+          Ks(t.params, e.params) &&
+          ii((n = t.url), (r = e.url)) &&
+          n.every((t, e) => Ks(t.parameters, r[e].parameters)) &&
           !(!t.parent != !e.parent) &&
-          (!t.parent || Vi(t.parent, e.parent))
+          (!t.parent || Di(t.parent, e.parent))
         );
       }
-      function Li(t) {
+      function Vi(t) {
         return 'object' == typeof t && null != t && !t.outlets && !t.segmentPath;
       }
-      function Fi(t, e, n, r, s) {
+      function Li(t, e, n, r, s) {
         let i = {};
         return (
           r &&
-            ti(r, (t, e) => {
+            Xs(r, (t, e) => {
               i[e] = Array.isArray(t) ? t.map(t => `${t}`) : `${t}`;
             }),
-          new ri(
+          new ni(
             n.root === t
               ? e
               : (function t(e, n, r) {
                   const s = {};
                   return (
-                    ti(e.children, (e, i) => {
+                    Xs(e.children, (e, i) => {
                       s[i] = e === n ? r : t(e, n, r);
                     }),
-                    new si(e.segments, s)
+                    new ri(e.segments, s)
                   );
                 })(n.root, t, e),
             i,
@@ -7737,29 +7644,29 @@
           )
         );
       }
-      class Hi {
+      class Fi {
         constructor(t, e, n) {
           if (
-            ((this.isAbsolute = t), (this.numberOfDoubleDots = e), (this.commands = n), t && n.length > 0 && Li(n[0]))
+            ((this.isAbsolute = t), (this.numberOfDoubleDots = e), (this.commands = n), t && n.length > 0 && Vi(n[0]))
           )
             throw new Error('Root segment cannot have matrix parameters');
           const r = n.find(t => 'object' == typeof t && null != t && t.outlets);
-          if (r && r !== Xs(n)) throw new Error('{outlets:{}} has to be the last command');
+          if (r && r !== Ys(n)) throw new Error('{outlets:{}} has to be the last command');
         }
         toRoot() {
           return this.isAbsolute && 1 === this.commands.length && '/' == this.commands[0];
         }
       }
-      class Ui {
+      class Hi {
         constructor(t, e, n) {
           (this.segmentGroup = t), (this.processChildren = e), (this.index = n);
         }
       }
-      function $i(t) {
+      function Ui(t) {
         return 'object' == typeof t && null != t && t.outlets ? t.outlets.primary : `${t}`;
       }
-      function Bi(t, e, n) {
-        if ((t || (t = new si([], {})), 0 === t.segments.length && t.hasChildren())) return zi(t, e, n);
+      function $i(t, e, n) {
+        if ((t || (t = new ri([], {})), 0 === t.segments.length && t.hasChildren())) return Bi(t, e, n);
         const r = (function(t, e, n) {
             let r = 0,
               s = e;
@@ -7767,14 +7674,14 @@
             for (; s < t.segments.length; ) {
               if (r >= n.length) return i;
               const e = t.segments[s],
-                o = $i(n[r]),
+                o = Ui(n[r]),
                 a = r < n.length - 1 ? n[r + 1] : null;
               if (s > 0 && void 0 === o) break;
               if (o && a && 'object' == typeof a && void 0 === a.outlets) {
-                if (!Wi(o, a, e)) return i;
+                if (!Gi(o, a, e)) return i;
                 r += 2;
               } else {
-                if (!Wi(o, {}, e)) return i;
+                if (!Gi(o, {}, e)) return i;
                 r++;
               }
               s++;
@@ -7783,85 +7690,85 @@
           })(t, e, n),
           s = n.slice(r.commandIndex);
         if (r.match && r.pathIndex < t.segments.length) {
-          const e = new si(t.segments.slice(0, r.pathIndex), {});
-          return (e.children.primary = new si(t.segments.slice(r.pathIndex), t.children)), zi(e, 0, s);
+          const e = new ri(t.segments.slice(0, r.pathIndex), {});
+          return (e.children.primary = new ri(t.segments.slice(r.pathIndex), t.children)), Bi(e, 0, s);
         }
         return r.match && 0 === s.length
-          ? new si(t.segments, {})
+          ? new ri(t.segments, {})
           : r.match && !t.hasChildren()
-          ? qi(t, e, n)
+          ? zi(t, e, n)
           : r.match
-          ? zi(t, 0, s)
-          : qi(t, e, n);
+          ? Bi(t, 0, s)
+          : zi(t, e, n);
       }
-      function zi(t, e, n) {
-        if (0 === n.length) return new si(t.segments, {});
+      function Bi(t, e, n) {
+        if (0 === n.length) return new ri(t.segments, {});
         {
           const r = (function(t) {
               return 'object' != typeof t[0] ? { primary: t } : void 0 === t[0].outlets ? { primary: t } : t[0].outlets;
             })(n),
             s = {};
           return (
-            ti(r, (n, r) => {
-              null !== n && (s[r] = Bi(t.children[r], e, n));
+            Xs(r, (n, r) => {
+              null !== n && (s[r] = $i(t.children[r], e, n));
             }),
-            ti(t.children, (t, e) => {
+            Xs(t.children, (t, e) => {
               void 0 === r[e] && (s[e] = t);
             }),
-            new si(t.segments, s)
+            new ri(t.segments, s)
           );
         }
       }
-      function qi(t, e, n) {
+      function zi(t, e, n) {
         const r = t.segments.slice(0, e);
         let s = 0;
         for (; s < n.length; ) {
           if ('object' == typeof n[s] && void 0 !== n[s].outlets) {
-            const t = Zi(n[s].outlets);
-            return new si(r, t);
+            const t = qi(n[s].outlets);
+            return new ri(r, t);
           }
-          if (0 === s && Li(n[0])) {
-            r.push(new ii(t.segments[e].path, n[0])), s++;
+          if (0 === s && Vi(n[0])) {
+            r.push(new si(t.segments[e].path, n[0])), s++;
             continue;
           }
-          const i = $i(n[s]),
+          const i = Ui(n[s]),
             o = s < n.length - 1 ? n[s + 1] : null;
-          i && o && Li(o) ? (r.push(new ii(i, Gi(o))), (s += 2)) : (r.push(new ii(i, {})), s++);
+          i && o && Vi(o) ? (r.push(new si(i, Zi(o))), (s += 2)) : (r.push(new si(i, {})), s++);
         }
-        return new si(r, {});
+        return new ri(r, {});
       }
-      function Zi(t) {
+      function qi(t) {
         const e = {};
         return (
-          ti(t, (t, n) => {
-            null !== t && (e[n] = qi(new si([], {}), 0, t));
+          Xs(t, (t, n) => {
+            null !== t && (e[n] = zi(new ri([], {}), 0, t));
           }),
           e
         );
       }
-      function Gi(t) {
+      function Zi(t) {
         const e = {};
-        return ti(t, (t, n) => (e[n] = `${t}`)), e;
+        return Xs(t, (t, n) => (e[n] = `${t}`)), e;
       }
-      function Wi(t, e, n) {
-        return t == n.path && Qs(e, n.parameters);
+      function Gi(t, e, n) {
+        return t == n.path && Ks(e, n.parameters);
       }
-      class Ki {
+      class Wi {
         constructor(t, e, n, r) {
           (this.routeReuseStrategy = t), (this.futureState = e), (this.currState = n), (this.forwardEvent = r);
         }
         activate(t) {
           const e = this.futureState._root,
             n = this.currState ? this.currState._root : null;
-          this.deactivateChildRoutes(e, n, t), Di(this.futureState.root), this.activateChildRoutes(e, n, t);
+          this.deactivateChildRoutes(e, n, t), Ni(this.futureState.root), this.activateChildRoutes(e, n, t);
         }
         deactivateChildRoutes(t, e, n) {
-          const r = Oi(e);
+          const r = Ei(e);
           t.children.forEach(t => {
             const e = t.value.outlet;
             this.deactivateRoutes(t, r[e], n), delete r[e];
           }),
-            ti(r, (t, e) => {
+            Xs(r, (t, e) => {
               this.deactivateRouteAndItsChildren(t, n);
             });
         }
@@ -7891,23 +7798,23 @@
         deactivateRouteAndOutlet(t, e) {
           const n = e.getContext(t.value.outlet);
           if (n) {
-            const r = Oi(t),
+            const r = Ei(t),
               s = t.value.component ? n.children : e;
-            ti(r, (t, e) => this.deactivateRouteAndItsChildren(t, s)),
+            Xs(r, (t, e) => this.deactivateRouteAndItsChildren(t, s)),
               n.outlet && (n.outlet.deactivate(), n.children.onOutletDeactivated());
           }
         }
         activateChildRoutes(t, e, n) {
-          const r = Oi(e);
+          const r = Ei(e);
           t.children.forEach(t => {
-            this.activateRoutes(t, r[t.value.outlet], n), this.forwardEvent(new Ls(t.value.snapshot));
+            this.activateRoutes(t, r[t.value.outlet], n), this.forwardEvent(new Vs(t.value.snapshot));
           }),
-            t.children.length && this.forwardEvent(new Ds(t.value.snapshot));
+            t.children.length && this.forwardEvent(new Ns(t.value.snapshot));
         }
         activateRoutes(t, e, n) {
           const r = t.value,
             s = e ? e.value : null;
-          if ((Di(r), r === s))
+          if ((Ni(r), r === s))
             if (r.component) {
               const s = n.getOrCreateContext(r.outlet);
               this.activateChildRoutes(t, e, s.children);
@@ -7921,7 +7828,7 @@
                 (e.attachRef = t.componentRef),
                 (e.route = t.route.value),
                 e.outlet && e.outlet.attach(t.componentRef, t.route.value),
-                Qi(t.route);
+                Ki(t.route);
             } else {
               const n = (function(t) {
                   for (let e = t.parent; e; e = e.parent) {
@@ -7941,35 +7848,35 @@
           } else this.activateChildRoutes(t, null, n);
         }
       }
-      function Qi(t) {
-        Di(t.value), t.children.forEach(Qi);
+      function Ki(t) {
+        Ni(t.value), t.children.forEach(Ki);
       }
-      function Ji(t) {
+      function Qi(t) {
         return 'function' == typeof t;
       }
-      function Yi(t) {
-        return t instanceof ri;
+      function Ji(t) {
+        return t instanceof ni;
       }
-      class Xi {
+      class Yi {
         constructor(t) {
           this.segmentGroup = t || null;
         }
       }
-      class to {
+      class Xi {
         constructor(t) {
           this.urlTree = t;
         }
+      }
+      function to(t) {
+        return new o.a(e => e.error(new Yi(t)));
       }
       function eo(t) {
         return new o.a(e => e.error(new Xi(t)));
       }
       function no(t) {
-        return new o.a(e => e.error(new to(t)));
-      }
-      function ro(t) {
         return new o.a(e => e.error(new Error(`Only absolute redirects can have named outlets. redirectTo: '${t}'`)));
       }
-      class so {
+      class ro {
         constructor(t, e, n, r, i) {
           (this.configLoader = e),
             (this.urlSerializer = n),
@@ -7982,9 +7889,9 @@
           return this.expandSegmentGroup(this.ngModule, this.config, this.urlTree.root, 'primary')
             .pipe(Object(l.a)(t => this.createUrlTree(t, this.urlTree.queryParams, this.urlTree.fragment)))
             .pipe(
-              gs(t => {
-                if (t instanceof to) return (this.allowRedirects = !1), this.match(t.urlTree);
-                if (t instanceof Xi) throw this.noMatchError(t);
+              fs(t => {
+                if (t instanceof Xi) return (this.allowRedirects = !1), this.match(t.urlTree);
+                if (t instanceof Yi) throw this.noMatchError(t);
                 throw t;
               })
             );
@@ -7993,8 +7900,8 @@
           return this.expandSegmentGroup(this.ngModule, this.config, t.root, 'primary')
             .pipe(Object(l.a)(e => this.createUrlTree(e, t.queryParams, t.fragment)))
             .pipe(
-              gs(t => {
-                if (t instanceof Xi) throw this.noMatchError(t);
+              fs(t => {
+                if (t instanceof Yi) throw this.noMatchError(t);
                 throw t;
               })
             );
@@ -8003,12 +7910,12 @@
           return new Error(`Cannot match any routes. URL Segment: '${t.segmentGroup}'`);
         }
         createUrlTree(t, e, n) {
-          const r = t.segments.length > 0 ? new si([], { primary: t }) : t;
-          return new ri(r, e, n);
+          const r = t.segments.length > 0 ? new ri([], { primary: t }) : t;
+          return new ni(r, e, n);
         }
         expandSegmentGroup(t, e, n, r) {
           return 0 === n.segments.length && n.hasChildren()
-            ? this.expandChildren(t, e, n).pipe(Object(l.a)(t => new si([], t)))
+            ? this.expandChildren(t, e, n).pipe(Object(l.a)(t => new ri([], t)))
             : this.expandSegment(t, n, e, n.segments, r, !0);
         }
         expandChildren(t, e, n) {
@@ -8018,13 +7925,13 @@
               r = [],
               s = {};
             return (
-              ti(t, (t, i) => {
+              Xs(t, (t, i) => {
                 const o = e(i, t).pipe(Object(l.a)(t => (s[i] = t)));
                 'primary' === i ? n.push(o) : r.push(o);
               }),
               Lt.apply(null, n.concat(r)).pipe(
                 Pe(),
-                fs(),
+                ps(),
                 Object(l.a)(() => s)
               )
             );
@@ -8034,18 +7941,18 @@
           return Lt(...n).pipe(
             Object(l.a)(o =>
               this.expandSegmentAgainstRoute(t, e, n, o, r, s, i).pipe(
-                gs(t => {
-                  if (t instanceof Xi) return Lt(null);
+                fs(t => {
+                  if (t instanceof Yi) return Lt(null);
                   throw t;
                 })
               )
             ),
             Pe(),
-            ys(t => !!t),
-            gs((t, n) => {
-              if (t instanceof ls || 'EmptyError' === t.name) {
-                if (this.noLeftoversInUrl(e, r, s)) return Lt(new si([], {}));
-                throw new Xi(e);
+            bs(t => !!t),
+            fs((t, n) => {
+              if (t instanceof as || 'EmptyError' === t.name) {
+                if (this.noLeftoversInUrl(e, r, s)) return Lt(new ri([], {}));
+                throw new Yi(e);
               }
               throw t;
             })
@@ -8055,13 +7962,13 @@
           return 0 === e.length && !t.children[n];
         }
         expandSegmentAgainstRoute(t, e, n, r, s, i, o) {
-          return lo(r) !== i
-            ? eo(e)
+          return ao(r) !== i
+            ? to(e)
             : void 0 === r.redirectTo
             ? this.matchSegmentAgainstRoute(t, e, r, s)
             : o && this.allowRedirects
             ? this.expandSegmentAgainstRouteUsingRedirect(t, e, n, r, s, i)
-            : eo(e);
+            : to(e);
         }
         expandSegmentAgainstRouteUsingRedirect(t, e, n, r, s, i) {
           return '**' === r.path
@@ -8071,20 +7978,20 @@
         expandWildCardWithParamsAgainstRouteUsingRedirect(t, e, n, r) {
           const s = this.applyRedirectCommands([], n.redirectTo, {});
           return n.redirectTo.startsWith('/')
-            ? no(s)
+            ? eo(s)
             : this.lineralizeSegments(n, s).pipe(
                 Object(Ft.a)(n => {
-                  const s = new si(n, {});
+                  const s = new ri(n, {});
                   return this.expandSegment(t, s, e, n, r, !1);
                 })
               );
         }
         expandRegularSegmentAgainstRouteUsingRedirect(t, e, n, r, s, i) {
-          const { matched: o, consumedSegments: a, lastChild: l, positionalParamSegments: c } = io(e, r, s);
-          if (!o) return eo(e);
+          const { matched: o, consumedSegments: a, lastChild: l, positionalParamSegments: c } = so(e, r, s);
+          if (!o) return to(e);
           const u = this.applyRedirectCommands(a, r.redirectTo, c);
           return r.redirectTo.startsWith('/')
-            ? no(u)
+            ? eo(u)
             : this.lineralizeSegments(r, u).pipe(
                 Object(Ft.a)(r => this.expandSegment(t, e, n, r.concat(s.slice(l)), i, !1))
               );
@@ -8092,10 +7999,10 @@
         matchSegmentAgainstRoute(t, e, n, r) {
           if ('**' === n.path)
             return n.loadChildren
-              ? this.configLoader.load(t.injector, n).pipe(Object(l.a)(t => ((n._loadedConfig = t), new si(r, {}))))
-              : Lt(new si(r, {}));
-          const { matched: s, consumedSegments: i, lastChild: o } = io(e, n, r);
-          if (!s) return eo(e);
+              ? this.configLoader.load(t.injector, n).pipe(Object(l.a)(t => ((n._loadedConfig = t), new ri(r, {}))))
+              : Lt(new ri(r, {}));
+          const { matched: s, consumedSegments: i, lastChild: o } = so(e, n, r);
+          if (!s) return to(e);
           const a = r.slice(o);
           return this.getChildConfig(t, n, r).pipe(
             Object(Ft.a)(t => {
@@ -8104,33 +8011,33 @@
                 { segmentGroup: s, slicedSegments: o } = (function(t, e, n, r) {
                   return n.length > 0 &&
                     (function(t, e, n) {
-                      return n.some(n => ao(t, e, n) && 'primary' !== lo(n));
+                      return n.some(n => oo(t, e, n) && 'primary' !== ao(n));
                     })(t, n, r)
                     ? {
-                        segmentGroup: oo(
-                          new si(
+                        segmentGroup: io(
+                          new ri(
                             e,
                             (function(t, e) {
                               const n = {};
                               n.primary = e;
-                              for (const r of t) '' === r.path && 'primary' !== lo(r) && (n[lo(r)] = new si([], {}));
+                              for (const r of t) '' === r.path && 'primary' !== ao(r) && (n[ao(r)] = new ri([], {}));
                               return n;
-                            })(r, new si(n, t.children))
+                            })(r, new ri(n, t.children))
                           )
                         ),
                         slicedSegments: []
                       }
                     : 0 === n.length &&
                       (function(t, e, n) {
-                        return n.some(n => ao(t, e, n));
+                        return n.some(n => oo(t, e, n));
                       })(t, n, r)
                     ? {
-                        segmentGroup: oo(
-                          new si(
+                        segmentGroup: io(
+                          new ri(
                             t.segments,
                             (function(t, e, n, r) {
                               const s = {};
-                              for (const i of n) ao(t, e, i) && !r[lo(i)] && (s[lo(i)] = new si([], {}));
+                              for (const i of n) oo(t, e, i) && !r[ao(i)] && (s[ao(i)] = new ri([], {}));
                               return Object.assign(Object.assign({}, r), s);
                             })(t, n, r, t.children)
                           )
@@ -8140,18 +8047,18 @@
                     : { segmentGroup: t, slicedSegments: n };
                 })(e, i, a, r);
               return 0 === o.length && s.hasChildren()
-                ? this.expandChildren(n, r, s).pipe(Object(l.a)(t => new si(i, t)))
+                ? this.expandChildren(n, r, s).pipe(Object(l.a)(t => new ri(i, t)))
                 : 0 === r.length && 0 === o.length
-                ? Lt(new si(i, {}))
+                ? Lt(new ri(i, {}))
                 : this.expandSegment(n, s, r, o, 'primary', !0).pipe(
-                    Object(l.a)(t => new si(i.concat(t.segments), t.children))
+                    Object(l.a)(t => new ri(i.concat(t.segments), t.children))
                   );
             })
           );
         }
         getChildConfig(t, e, n) {
           return e.children
-            ? Lt(new qs(e.children, t))
+            ? Lt(new zs(e.children, t))
             : e.loadChildren
             ? void 0 !== e._loadedConfig
               ? Lt(e._loadedConfig)
@@ -8165,18 +8072,18 @@
                             let i;
                             if (
                               (function(t) {
-                                return t && Ji(t.canLoad);
+                                return t && Qi(t.canLoad);
                               })(s)
                             )
                               i = s.canLoad(e, n);
                             else {
-                              if (!Ji(s)) throw new Error('Invalid CanLoad guard');
+                              if (!Qi(s)) throw new Error('Invalid CanLoad guard');
                               i = s(e, n);
                             }
-                            return ei(i);
+                            return ti(i);
                           })
                         )
-                        .pipe(Pe(), ((s = t => !0 === t), t => t.lift(new vs(s, void 0, t))))
+                        .pipe(Pe(), ((s = t => !0 === t), t => t.lift(new ys(s, void 0, t))))
                     : Lt(!0);
                   var s;
                 })(t.injector, e, n).pipe(
@@ -8186,7 +8093,7 @@
                       : (function(t) {
                           return new o.a(e =>
                             e.error(
-                              Bs(
+                              $s(
                                 `Cannot load children because the guard of the route "path: '${t.path}'" returned false`
                               )
                             )
@@ -8194,14 +8101,14 @@
                         })(e)
                   )
                 )
-            : Lt(new qs([], t));
+            : Lt(new zs([], t));
         }
         lineralizeSegments(t, e) {
           let n = [],
             r = e.root;
           for (;;) {
             if (((n = n.concat(r.segments)), 0 === r.numberOfChildren)) return Lt(n);
-            if (r.numberOfChildren > 1 || !r.children.primary) return ro(t.redirectTo);
+            if (r.numberOfChildren > 1 || !r.children.primary) return no(t.redirectTo);
             r = r.children.primary;
           }
         }
@@ -8210,12 +8117,12 @@
         }
         applyRedirectCreatreUrlTree(t, e, n, r) {
           const s = this.createSegmentGroup(t, e.root, n, r);
-          return new ri(s, this.createQueryParams(e.queryParams, this.urlTree.queryParams), e.fragment);
+          return new ni(s, this.createQueryParams(e.queryParams, this.urlTree.queryParams), e.fragment);
         }
         createQueryParams(t, e) {
           const n = {};
           return (
-            ti(t, (t, r) => {
+            Xs(t, (t, r) => {
               if ('string' == typeof t && t.startsWith(':')) {
                 const s = t.substring(1);
                 n[r] = e[s];
@@ -8228,10 +8135,10 @@
           const s = this.createSegments(t, e.segments, n, r);
           let i = {};
           return (
-            ti(e.children, (e, s) => {
+            Xs(e.children, (e, s) => {
               i[s] = this.createSegmentGroup(t, e, n, r);
             }),
-            new si(s, i)
+            new ri(s, i)
           );
         }
         createSegments(t, e, n, r) {
@@ -8251,12 +8158,12 @@
           return t;
         }
       }
-      function io(t, e, n) {
+      function so(t, e, n) {
         if ('' === e.path)
           return 'full' === e.pathMatch && (t.hasChildren() || n.length > 0)
             ? { matched: !1, consumedSegments: [], lastChild: 0, positionalParamSegments: {} }
             : { matched: !0, consumedSegments: [], lastChild: 0, positionalParamSegments: {} };
-        const r = (e.matcher || zs)(n, t, e);
+        const r = (e.matcher || Bs)(n, t, e);
         return r
           ? {
               matched: !0,
@@ -8266,35 +8173,35 @@
             }
           : { matched: !1, consumedSegments: [], lastChild: 0, positionalParamSegments: {} };
       }
-      function oo(t) {
+      function io(t) {
         if (1 === t.numberOfChildren && t.children.primary) {
           const e = t.children.primary;
-          return new si(t.segments.concat(e.segments), e.children);
+          return new ri(t.segments.concat(e.segments), e.children);
         }
         return t;
       }
-      function ao(t, e, n) {
+      function oo(t, e, n) {
         return (
           (!(t.hasChildren() || e.length > 0) || 'full' !== n.pathMatch) && '' === n.path && void 0 !== n.redirectTo
         );
       }
-      function lo(t) {
+      function ao(t) {
         return t.outlet || 'primary';
       }
-      class co {
+      class lo {
         constructor(t) {
           (this.path = t), (this.route = this.path[this.path.length - 1]);
         }
       }
-      class uo {
+      class co {
         constructor(t, e) {
           (this.component = t), (this.route = e);
         }
       }
-      function ho(t, e, n) {
+      function uo(t, e, n) {
         const r = t._root;
         return (function t(e, n, r, s, i = { canDeactivateChecks: [], canActivateChecks: [] }) {
-          const o = Oi(n);
+          const o = Ei(n);
           return (
             e.children.forEach(e => {
               !(function(e, n, r, s, i = { canDeactivateChecks: [], canActivateChecks: [] }) {
@@ -8306,34 +8213,34 @@
                     if ('function' == typeof n) return n(t, e);
                     switch (n) {
                       case 'pathParamsChange':
-                        return !oi(t.url, e.url);
+                        return !ii(t.url, e.url);
                       case 'pathParamsOrQueryParamsChange':
-                        return !oi(t.url, e.url) || !Qs(t.queryParams, e.queryParams);
+                        return !ii(t.url, e.url) || !Ks(t.queryParams, e.queryParams);
                       case 'always':
                         return !0;
                       case 'paramsOrQueryParamsChange':
-                        return !Vi(t, e) || !Qs(t.queryParams, e.queryParams);
+                        return !Di(t, e) || !Ks(t.queryParams, e.queryParams);
                       case 'paramsChange':
                       default:
-                        return !Vi(t, e);
+                        return !Di(t, e);
                     }
                   })(a, o, o.routeConfig.runGuardsAndResolvers);
-                  c ? i.canActivateChecks.push(new co(s)) : ((o.data = a.data), (o._resolvedData = a._resolvedData)),
+                  c ? i.canActivateChecks.push(new lo(s)) : ((o.data = a.data), (o._resolvedData = a._resolvedData)),
                     t(e, n, o.component ? (l ? l.children : null) : r, s, i),
-                    c && i.canDeactivateChecks.push(new uo((l && l.outlet && l.outlet.component) || null, a));
+                    c && i.canDeactivateChecks.push(new co((l && l.outlet && l.outlet.component) || null, a));
                 } else
-                  a && fo(n, l, i),
-                    i.canActivateChecks.push(new co(s)),
+                  a && po(n, l, i),
+                    i.canActivateChecks.push(new lo(s)),
                     t(e, null, o.component ? (l ? l.children : null) : r, s, i);
               })(e, o[e.value.outlet], r, s.concat([e.value]), i),
                 delete o[e.value.outlet];
             }),
-            ti(o, (t, e) => fo(t, r.getContext(e), i)),
+            Xs(o, (t, e) => po(t, r.getContext(e), i)),
             i
           );
         })(r, e ? e._root : null, n, [r.value]);
       }
-      function po(t, e, n) {
+      function ho(t, e, n) {
         const r = (function(t) {
           if (!t) return null;
           for (let e = t.parent; e; e = e.parent) {
@@ -8344,18 +8251,18 @@
         })(e);
         return (r ? r.module.injector : n).get(t);
       }
-      function fo(t, e, n) {
-        const r = Oi(t),
+      function po(t, e, n) {
+        const r = Ei(t),
           s = t.value;
-        ti(r, (t, r) => {
-          fo(t, s.component ? (e ? e.children.getContext(r) : null) : e, n);
+        Xs(r, (t, r) => {
+          po(t, s.component ? (e ? e.children.getContext(r) : null) : e, n);
         }),
           n.canDeactivateChecks.push(
-            new uo(s.component && e && e.outlet && e.outlet.isActivated ? e.outlet.component : null, s)
+            new co(s.component && e && e.outlet && e.outlet.isActivated ? e.outlet.component : null, s)
           );
       }
-      const go = Symbol('INITIAL_VALUE');
-      function mo() {
+      const fo = Symbol('INITIAL_VALUE');
+      function go() {
         return He(t =>
           (function(...t) {
             let e = null,
@@ -8364,7 +8271,7 @@
               Object(Nt.a)(t[t.length - 1]) && (n = t.pop()),
               'function' == typeof t[t.length - 1] && (e = t.pop()),
               1 === t.length && Object(a.a)(t[0]) && (t = t[0]),
-              Object(Dt.a)(t, n).lift(new er(e))
+              Object(Dt.a)(t, n).lift(new tr(e))
             );
           })(
             ...t.map(t =>
@@ -8373,58 +8280,58 @@
                 (function(...t) {
                   const e = t[t.length - 1];
                   return Object(Nt.a)(e) ? (t.pop(), n => Me(t, n, e)) : e => Me(t, e);
-                })(go)
+                })(fo)
               )
             )
           ).pipe(
             vn((t, e) => {
               let n = !1;
               return e.reduce((t, r, s) => {
-                if (t !== go) return t;
-                if ((r === go && (n = !0), !n)) {
+                if (t !== fo) return t;
+                if ((r === fo && (n = !0), !n)) {
                   if (!1 === r) return r;
-                  if (s === e.length - 1 || Yi(r)) return r;
+                  if (s === e.length - 1 || Ji(r)) return r;
                 }
                 return t;
               }, t);
-            }, go),
-            $t(t => t !== go),
-            Object(l.a)(t => (Yi(t) ? t : !0 === t)),
+            }, fo),
+            $t(t => t !== fo),
+            Object(l.a)(t => (Ji(t) ? t : !0 === t)),
             qe(1)
           )
         );
       }
+      function mo(t, e) {
+        return null !== t && e && e(new Ds(t)), Lt(!0);
+      }
       function bo(t, e) {
-        return null !== t && e && e(new Vs(t)), Lt(!0);
+        return null !== t && e && e(new js(t)), Lt(!0);
       }
-      function yo(t, e) {
-        return null !== t && e && e(new Ns(t)), Lt(!0);
-      }
-      function vo(t, e, n) {
+      function yo(t, e, n) {
         const r = e.routeConfig ? e.routeConfig.canActivate : null;
         return r && 0 !== r.length
           ? Lt(
               r.map(r =>
                 ke(() => {
-                  const s = po(r, e, n);
+                  const s = ho(r, e, n);
                   let i;
                   if (
                     (function(t) {
-                      return t && Ji(t.canActivate);
+                      return t && Qi(t.canActivate);
                     })(s)
                   )
-                    i = ei(s.canActivate(e, t));
+                    i = ti(s.canActivate(e, t));
                   else {
-                    if (!Ji(s)) throw new Error('Invalid CanActivate guard');
-                    i = ei(s(e, t));
+                    if (!Qi(s)) throw new Error('Invalid CanActivate guard');
+                    i = ti(s(e, t));
                   }
-                  return i.pipe(ys());
+                  return i.pipe(bs());
                 })
               )
-            ).pipe(mo())
+            ).pipe(go())
           : Lt(!0);
       }
-      function _o(t, e, n) {
+      function vo(t, e, n) {
         const r = e[e.length - 1],
           s = e
             .slice(0, e.length - 1)
@@ -8440,27 +8347,27 @@
               ke(() =>
                 Lt(
                   e.guards.map(s => {
-                    const i = po(s, e.node, n);
+                    const i = ho(s, e.node, n);
                     let o;
                     if (
                       (function(t) {
-                        return t && Ji(t.canActivateChild);
+                        return t && Qi(t.canActivateChild);
                       })(i)
                     )
-                      o = ei(i.canActivateChild(r, t));
+                      o = ti(i.canActivateChild(r, t));
                     else {
-                      if (!Ji(i)) throw new Error('Invalid CanActivateChild guard');
-                      o = ei(i(r, t));
+                      if (!Qi(i)) throw new Error('Invalid CanActivateChild guard');
+                      o = ti(i(r, t));
                     }
-                    return o.pipe(ys());
+                    return o.pipe(bs());
                   })
-                ).pipe(mo())
+                ).pipe(go())
               )
             );
-        return Lt(s).pipe(mo());
+        return Lt(s).pipe(go());
       }
-      class wo {}
-      class Co {
+      class _o {}
+      class wo {
         constructor(t, e, n, r, s, i) {
           (this.rootComponentType = t),
             (this.config = e),
@@ -8471,9 +8378,9 @@
         }
         recognize() {
           try {
-            const t = ko(this.urlTree.root, [], [], this.config, this.relativeLinkResolution).segmentGroup,
+            const t = xo(this.urlTree.root, [], [], this.config, this.relativeLinkResolution).segmentGroup,
               e = this.processSegmentGroup(this.config, t, 'primary'),
-              n = new Mi(
+              n = new Pi(
                 [],
                 Object.freeze({}),
                 Object.freeze(Object.assign({}, this.urlTree.queryParams)),
@@ -8486,8 +8393,8 @@
                 -1,
                 {}
               ),
-              r = new Ei(n, e),
-              s = new Ri(this.url, r);
+              r = new ki(n, e),
+              s = new Mi(this.url, r);
             return this.inheritParamsAndData(s._root), Lt(s);
           } catch (t) {
             return new o.a(e => e.error(t));
@@ -8495,7 +8402,7 @@
         }
         inheritParamsAndData(t) {
           const e = t.value,
-            n = Pi(e, this.paramsInheritanceStrategy);
+            n = Ii(e, this.paramsInheritanceStrategy);
           (e.params = Object.freeze(n.params)),
             (e.data = Object.freeze(n.data)),
             t.children.forEach(t => this.inheritParamsAndData(t));
@@ -8506,7 +8413,7 @@
             : this.processSegment(t, e, e.segments, n);
         }
         processChildren(t, e) {
-          const n = ai(e, (e, n) => this.processSegmentGroup(t, e, n));
+          const n = oi(e, (e, n) => this.processSegmentGroup(t, e, n));
           return (
             (function(t) {
               const e = {};
@@ -8535,45 +8442,45 @@
             try {
               return this.processSegmentAgainstRoute(i, e, n, r);
             } catch (s) {
-              if (!(s instanceof wo)) throw s;
+              if (!(s instanceof _o)) throw s;
             }
           if (this.noLeftoversInUrl(e, n, r)) return [];
-          throw new wo();
+          throw new _o();
         }
         noLeftoversInUrl(t, e, n) {
           return 0 === e.length && !t.children[n];
         }
         processSegmentAgainstRoute(t, e, n, r) {
-          if (t.redirectTo) throw new wo();
-          if ((t.outlet || 'primary') !== r) throw new wo();
+          if (t.redirectTo) throw new _o();
+          if ((t.outlet || 'primary') !== r) throw new _o();
           let s,
             i = [],
             o = [];
           if ('**' === t.path) {
-            const i = n.length > 0 ? Xs(n).parameters : {};
-            s = new Mi(
+            const i = n.length > 0 ? Ys(n).parameters : {};
+            s = new Pi(
               n,
               i,
               Object.freeze(Object.assign({}, this.urlTree.queryParams)),
               this.urlTree.fragment,
-              Ao(t),
+              Oo(t),
               r,
               t.component,
               t,
-              So(e),
-              xo(e) + n.length,
-              To(t)
+              Co(e),
+              So(e) + n.length,
+              Ao(t)
             );
           } else {
             const a = (function(t, e, n) {
               if ('' === e.path) {
-                if ('full' === e.pathMatch && (t.hasChildren() || n.length > 0)) throw new wo();
+                if ('full' === e.pathMatch && (t.hasChildren() || n.length > 0)) throw new _o();
                 return { consumedSegments: [], lastChild: 0, parameters: {} };
               }
-              const r = (e.matcher || zs)(n, t, e);
-              if (!r) throw new wo();
+              const r = (e.matcher || Bs)(n, t, e);
+              if (!r) throw new _o();
               const s = {};
-              ti(r.posParams, (t, e) => {
+              Xs(r.posParams, (t, e) => {
                 s[e] = t.path;
               });
               const i =
@@ -8584,110 +8491,110 @@
             })(e, t, n);
             (i = a.consumedSegments),
               (o = n.slice(a.lastChild)),
-              (s = new Mi(
+              (s = new Pi(
                 i,
                 a.parameters,
                 Object.freeze(Object.assign({}, this.urlTree.queryParams)),
                 this.urlTree.fragment,
-                Ao(t),
+                Oo(t),
                 r,
                 t.component,
                 t,
-                So(e),
-                xo(e) + i.length,
-                To(t)
+                Co(e),
+                So(e) + i.length,
+                Ao(t)
               ));
           }
           const a = (function(t) {
               return t.children ? t.children : t.loadChildren ? t._loadedConfig.routes : [];
             })(t),
-            { segmentGroup: l, slicedSegments: c } = ko(e, i, o, a, this.relativeLinkResolution);
+            { segmentGroup: l, slicedSegments: c } = xo(e, i, o, a, this.relativeLinkResolution);
           if (0 === c.length && l.hasChildren()) {
             const t = this.processChildren(a, l);
-            return [new Ei(s, t)];
+            return [new ki(s, t)];
           }
-          if (0 === a.length && 0 === c.length) return [new Ei(s, [])];
+          if (0 === a.length && 0 === c.length) return [new ki(s, [])];
           const u = this.processSegment(a, l, c, 'primary');
-          return [new Ei(s, u)];
+          return [new ki(s, u)];
         }
       }
-      function So(t) {
+      function Co(t) {
         let e = t;
         for (; e._sourceSegment; ) e = e._sourceSegment;
         return e;
       }
-      function xo(t) {
+      function So(t) {
         let e = t,
           n = e._segmentIndexShift ? e._segmentIndexShift : 0;
         for (; e._sourceSegment; ) (e = e._sourceSegment), (n += e._segmentIndexShift ? e._segmentIndexShift : 0);
         return n - 1;
       }
-      function ko(t, e, n, r, s) {
+      function xo(t, e, n, r, s) {
         if (
           n.length > 0 &&
           (function(t, e, n) {
-            return n.some(n => Eo(t, e, n) && 'primary' !== Oo(n));
+            return n.some(n => ko(t, e, n) && 'primary' !== Eo(n));
           })(t, n, r)
         ) {
-          const s = new si(
+          const s = new ri(
             e,
             (function(t, e, n, r) {
               const s = {};
               (s.primary = r), (r._sourceSegment = t), (r._segmentIndexShift = e.length);
               for (const i of n)
-                if ('' === i.path && 'primary' !== Oo(i)) {
-                  const n = new si([], {});
-                  (n._sourceSegment = t), (n._segmentIndexShift = e.length), (s[Oo(i)] = n);
+                if ('' === i.path && 'primary' !== Eo(i)) {
+                  const n = new ri([], {});
+                  (n._sourceSegment = t), (n._segmentIndexShift = e.length), (s[Eo(i)] = n);
                 }
               return s;
-            })(t, e, r, new si(n, t.children))
+            })(t, e, r, new ri(n, t.children))
           );
           return (s._sourceSegment = t), (s._segmentIndexShift = e.length), { segmentGroup: s, slicedSegments: [] };
         }
         if (
           0 === n.length &&
           (function(t, e, n) {
-            return n.some(n => Eo(t, e, n));
+            return n.some(n => ko(t, e, n));
           })(t, n, r)
         ) {
-          const i = new si(
+          const i = new ri(
             t.segments,
             (function(t, e, n, r, s, i) {
               const o = {};
               for (const a of r)
-                if (Eo(t, n, a) && !s[Oo(a)]) {
-                  const n = new si([], {});
+                if (ko(t, n, a) && !s[Eo(a)]) {
+                  const n = new ri([], {});
                   (n._sourceSegment = t),
                     (n._segmentIndexShift = 'legacy' === i ? t.segments.length : e.length),
-                    (o[Oo(a)] = n);
+                    (o[Eo(a)] = n);
                 }
               return Object.assign(Object.assign({}, s), o);
             })(t, e, n, r, t.children, s)
           );
           return (i._sourceSegment = t), (i._segmentIndexShift = e.length), { segmentGroup: i, slicedSegments: n };
         }
-        const i = new si(t.segments, t.children);
+        const i = new ri(t.segments, t.children);
         return (i._sourceSegment = t), (i._segmentIndexShift = e.length), { segmentGroup: i, slicedSegments: n };
       }
-      function Eo(t, e, n) {
+      function ko(t, e, n) {
         return (
           (!(t.hasChildren() || e.length > 0) || 'full' !== n.pathMatch) && '' === n.path && void 0 === n.redirectTo
         );
       }
-      function Oo(t) {
+      function Eo(t) {
         return t.outlet || 'primary';
       }
-      function Ao(t) {
+      function Oo(t) {
         return t.data || {};
       }
-      function To(t) {
+      function Ao(t) {
         return t.resolve || {};
       }
-      function Io(t, e, n, r) {
-        const s = po(t, e, r);
-        return ei(s.resolve ? s.resolve(e, n) : s(e, n));
+      function To(t, e, n, r) {
+        const s = ho(t, e, r);
+        return ti(s.resolve ? s.resolve(e, n) : s(e, n));
       }
-      function Po(t) {
+      function Io(t) {
         return function(e) {
           return e.pipe(
             He(e => {
@@ -8697,8 +8604,8 @@
           );
         };
       }
-      class Mo {}
-      class Ro {
+      class Po {}
+      class Mo {
         shouldDetach(t) {
           return !1;
         }
@@ -8713,8 +8620,8 @@
           return t.routeConfig === e.routeConfig;
         }
       }
-      const jo = new s.q('ROUTES');
-      class No {
+      const Ro = new s.q('ROUTES');
+      class jo {
         constructor(t, e, n, r) {
           (this.loader = t), (this.compiler = e), (this.onLoadStartListener = n), (this.onLoadEndListener = r);
         }
@@ -8725,7 +8632,7 @@
               Object(l.a)(n => {
                 this.onLoadEndListener && this.onLoadEndListener(e);
                 const r = n.create(t);
-                return new qs(Ys(r.injector.get(jo)).map(Ks), r);
+                return new zs(Js(r.injector.get(Ro)).map(Ws), r);
               })
             )
           );
@@ -8733,12 +8640,12 @@
         loadModuleFactory(t) {
           return 'string' == typeof t
             ? Object(u.a)(this.loader.load(t))
-            : ei(t()).pipe(
+            : ti(t()).pipe(
                 Object(Ft.a)(t => (t instanceof s.v ? Lt(t) : Object(u.a)(this.compiler.compileModuleAsync(t))))
               );
         }
       }
-      class Do {
+      class No {
         shouldProcessUrl(t) {
           return !0;
         }
@@ -8749,16 +8656,16 @@
           return t;
         }
       }
-      function Vo(t) {
+      function Do(t) {
         throw t;
       }
-      function Lo(t, e, n) {
+      function Vo(t, e, n) {
         return e.parse('/');
       }
-      function Fo(t, e) {
+      function Lo(t, e) {
         return Lt(null);
       }
-      let Ho = (() => {
+      let Fo = (() => {
           class t {
             constructor(t, e, n, r, i, o, a, l) {
               (this.rootComponentType = t),
@@ -8771,13 +8678,13 @@
                 (this.navigationId = 0),
                 (this.isNgZoneEnabled = !1),
                 (this.events = new Re.a()),
-                (this.errorHandler = Vo),
-                (this.malformedUriErrorHandler = Lo),
+                (this.errorHandler = Do),
+                (this.malformedUriErrorHandler = Vo),
                 (this.navigated = !1),
                 (this.lastSuccessfulId = -1),
-                (this.hooks = { beforePreactivation: Fo, afterPreactivation: Fo }),
-                (this.urlHandlingStrategy = new Do()),
-                (this.routeReuseStrategy = new Ro()),
+                (this.hooks = { beforePreactivation: Lo, afterPreactivation: Lo }),
+                (this.urlHandlingStrategy = new No()),
+                (this.routeReuseStrategy = new Mo()),
                 (this.onSameUrlNavigation = 'ignore'),
                 (this.paramsInheritanceStrategy = 'emptyOnly'),
                 (this.urlUpdateStrategy = 'deferred'),
@@ -8787,17 +8694,17 @@
               const c = i.get(s.z);
               (this.isNgZoneEnabled = c instanceof s.z),
                 this.resetConfig(l),
-                (this.currentUrlTree = new ri(new si([], {}), {}, null)),
+                (this.currentUrlTree = new ni(new ri([], {}), {}, null)),
                 (this.rawUrlTree = this.currentUrlTree),
                 (this.browserUrlTree = this.currentUrlTree),
-                (this.configLoader = new No(
+                (this.configLoader = new jo(
                   o,
                   a,
-                  t => this.triggerEvent(new Rs(t)),
-                  t => this.triggerEvent(new js(t))
+                  t => this.triggerEvent(new Ms(t)),
+                  t => this.triggerEvent(new Rs(t))
                 )),
-                (this.routerState = Ti(this.currentUrlTree, this.rootComponentType)),
-                (this.transitions = new Xn({
+                (this.routerState = Ai(this.currentUrlTree, this.rootComponentType)),
+                (this.transitions = new Yn({
                   id: 0,
                   currentUrlTree: this.currentUrlTree,
                   currentRawUrl: this.currentUrlTree,
@@ -8855,7 +8762,7 @@
                           He(t => {
                             const n = this.transitions.getValue();
                             return (
-                              e.next(new xs(t.id, this.serializeUrl(t.extractedUrl), t.source, t.restoredState)),
+                              e.next(new Ss(t.id, this.serializeUrl(t.extractedUrl), t.source, t.restoredState)),
                               n !== this.transitions.getValue() ? Se : [t]
                             );
                           }),
@@ -8868,7 +8775,7 @@
                             return t.pipe(
                               He(t =>
                                 (function(t, e, n, r, s) {
-                                  return new so(t, e, n, r, s).apply();
+                                  return new ro(t, e, n, r, s).apply();
                                 })(r, s, i, t.extractedUrl, o).pipe(
                                   Object(l.a)(e => Object.assign(Object.assign({}, t), { urlAfterRedirects: e }))
                                 )
@@ -8885,7 +8792,7 @@
                               return i.pipe(
                                 Object(Ft.a)(i =>
                                   (function(t, e, n, r, s = 'emptyOnly', i = 'legacy') {
-                                    return new Co(t, e, n, r, s, i).recognize();
+                                    return new wo(t, e, n, r, s, i).recognize();
                                   })(t, e, i.urlAfterRedirects, n(i.urlAfterRedirects), r, s).pipe(
                                     Object(l.a)(t => Object.assign(Object.assign({}, i), { targetSnapshot: t }))
                                   )
@@ -8906,7 +8813,7 @@
                               (this.browserUrlTree = t.urlAfterRedirects));
                           }),
                           We(t => {
-                            const n = new As(
+                            const n = new Os(
                               t.id,
                               this.serializeUrl(t.extractedUrl),
                               this.serializeUrl(t.urlAfterRedirects),
@@ -8918,9 +8825,9 @@
                       var r, s, i, o;
                       if (n && this.rawUrlTree && this.urlHandlingStrategy.shouldProcessUrl(this.rawUrlTree)) {
                         const { id: n, extractedUrl: r, source: s, restoredState: i, extras: o } = t,
-                          a = new xs(n, this.serializeUrl(r), s, i);
+                          a = new Ss(n, this.serializeUrl(r), s, i);
                         e.next(a);
-                        const l = Ti(r, this.rootComponentType).snapshot;
+                        const l = Ai(r, this.rootComponentType).snapshot;
                         return Lt(
                           Object.assign(Object.assign({}, t), {
                             targetSnapshot: l,
@@ -8933,7 +8840,7 @@
                         (this.rawUrlTree = t.rawUrl), (this.browserUrlTree = t.urlAfterRedirects), t.resolve(null), Se
                       );
                     }),
-                    Po(t => {
+                    Io(t => {
                       const {
                         targetSnapshot: e,
                         id: n,
@@ -8950,7 +8857,7 @@
                       });
                     }),
                     We(t => {
-                      const e = new Ts(
+                      const e = new As(
                         t.id,
                         this.serializeUrl(t.extractedUrl),
                         this.serializeUrl(t.urlAfterRedirects),
@@ -8960,7 +8867,7 @@
                     }),
                     Object(l.a)(t =>
                       Object.assign(Object.assign({}, t), {
-                        guards: ho(t.targetSnapshot, t.currentSnapshot, this.rootContexts)
+                        guards: uo(t.targetSnapshot, t.currentSnapshot, this.rootContexts)
                       })
                     ),
                     (function(t, e) {
@@ -8982,25 +8889,25 @@
                                         return i && 0 !== i.length
                                           ? Lt(
                                               i.map(i => {
-                                                const o = po(i, e, s);
+                                                const o = ho(i, e, s);
                                                 let a;
                                                 if (
                                                   (function(t) {
-                                                    return t && Ji(t.canDeactivate);
+                                                    return t && Qi(t.canDeactivate);
                                                   })(o)
                                                 )
-                                                  a = ei(o.canDeactivate(t, e, n, r));
+                                                  a = ti(o.canDeactivate(t, e, n, r));
                                                 else {
-                                                  if (!Ji(o)) throw new Error('Invalid CanDeactivate guard');
-                                                  a = ei(o(t, e, n, r));
+                                                  if (!Qi(o)) throw new Error('Invalid CanDeactivate guard');
+                                                  a = ti(o(t, e, n, r));
                                                 }
-                                                return a.pipe(ys());
+                                                return a.pipe(bs());
                                               })
-                                            ).pipe(mo())
+                                            ).pipe(go())
                                           : Lt(!0);
                                       })(t.component, t.route, n, e, r)
                                     ),
-                                    ys(t => !0 !== t, !0)
+                                    bs(t => !0 !== t, !0)
                                   );
                                 })(o, r, s, t).pipe(
                                   Object(Ft.a)(n =>
@@ -9009,16 +8916,16 @@
                                           return Object(u.a)(e).pipe(
                                             Ht(e =>
                                               Object(u.a)([
-                                                yo(e.route.parent, r),
-                                                bo(e.route, r),
-                                                _o(t, e.path, n),
-                                                vo(t, e.route, n)
+                                                bo(e.route.parent, r),
+                                                mo(e.route, r),
+                                                vo(t, e.path, n),
+                                                yo(t, e.route, n)
                                               ]).pipe(
                                                 Pe(),
-                                                ys(t => !0 !== t, !0)
+                                                bs(t => !0 !== t, !0)
                                               )
                                             ),
-                                            ys(t => !0 !== t, !0)
+                                            bs(t => !0 !== t, !0)
                                           );
                                         })(r, i, t, e)
                                       : Lt(n)
@@ -9030,13 +8937,13 @@
                       };
                     })(this.ngModule.injector, t => this.triggerEvent(t)),
                     We(t => {
-                      if (Yi(t.guardsResult)) {
-                        const e = Bs(`Redirecting to "${this.serializeUrl(t.guardsResult)}"`);
+                      if (Ji(t.guardsResult)) {
+                        const e = $s(`Redirecting to "${this.serializeUrl(t.guardsResult)}"`);
                         throw ((e.url = t.guardsResult), e);
                       }
                     }),
                     We(t => {
-                      const e = new Is(
+                      const e = new Ts(
                         t.id,
                         this.serializeUrl(t.extractedUrl),
                         this.serializeUrl(t.urlAfterRedirects),
@@ -9048,16 +8955,16 @@
                     $t(t => {
                       if (!t.guardsResult) {
                         this.resetUrlToCurrentUrlTree();
-                        const n = new Es(t.id, this.serializeUrl(t.extractedUrl), '');
+                        const n = new ks(t.id, this.serializeUrl(t.extractedUrl), '');
                         return e.next(n), t.resolve(!1), !1;
                       }
                       return !0;
                     }),
-                    Po(t => {
+                    Io(t => {
                       if (t.guards.canActivateChecks.length)
                         return Lt(t).pipe(
                           We(t => {
-                            const e = new Ps(
+                            const e = new Is(
                               t.id,
                               this.serializeUrl(t.extractedUrl),
                               this.serializeUrl(t.urlAfterRedirects),
@@ -9083,24 +8990,24 @@
                                             if (0 === s.length) return Lt({});
                                             if (1 === s.length) {
                                               const i = s[0];
-                                              return Io(t[i], e, n, r).pipe(Object(l.a)(t => ({ [i]: t })));
+                                              return To(t[i], e, n, r).pipe(Object(l.a)(t => ({ [i]: t })));
                                             }
                                             const i = {};
                                             return Object(u.a)(s)
                                               .pipe(
                                                 Object(Ft.a)(s =>
-                                                  Io(t[s], e, n, r).pipe(Object(l.a)(t => ((i[s] = t), t)))
+                                                  To(t[s], e, n, r).pipe(Object(l.a)(t => ((i[s] = t), t)))
                                                 )
                                               )
                                               .pipe(
-                                                fs(),
+                                                ps(),
                                                 Object(l.a)(() => i)
                                               );
                                           })(t._resolve, t, e, r).pipe(
                                             Object(l.a)(
                                               e => (
                                                 (t._resolvedData = e),
-                                                (t.data = Object.assign(Object.assign({}, t.data), Pi(t, n).resolve)),
+                                                (t.data = Object.assign(Object.assign({}, t.data), Ii(t, n).resolve)),
                                                 null
                                               )
                                             )
@@ -9115,7 +9022,7 @@
                             );
                           }),
                           We(t => {
-                            const e = new Ms(
+                            const e = new Ps(
                               t.id,
                               this.serializeUrl(t.extractedUrl),
                               this.serializeUrl(t.urlAfterRedirects),
@@ -9126,7 +9033,7 @@
                         );
                       var e, n;
                     }),
-                    Po(t => {
+                    Io(t => {
                       const {
                         targetSnapshot: e,
                         id: n,
@@ -9155,7 +9062,7 @@
                                 return t(e, n);
                               });
                             })(e, n, r);
-                            return new Ei(s, i);
+                            return new ki(s, i);
                           }
                           {
                             const r = e.retrieve(n.value);
@@ -9178,23 +9085,23 @@
                               );
                             }
                             {
-                              const r = new Ii(
-                                  new Xn((s = n.value).url),
-                                  new Xn(s.params),
-                                  new Xn(s.queryParams),
-                                  new Xn(s.fragment),
-                                  new Xn(s.data),
+                              const r = new Ti(
+                                  new Yn((s = n.value).url),
+                                  new Yn(s.params),
+                                  new Yn(s.queryParams),
+                                  new Yn(s.fragment),
+                                  new Yn(s.data),
                                   s.outlet,
                                   s.component,
                                   s
                                 ),
                                 i = n.children.map(n => t(e, n));
-                              return new Ei(r, i);
+                              return new ki(r, i);
                             }
                           }
                           var s;
                         })(t, e._root, n ? n._root : void 0);
-                        return new Ai(r, e);
+                        return new Oi(r, e);
                       })(this.routeReuseStrategy, t.targetSnapshot, t.currentRouterState);
                       return Object.assign(Object.assign({}, t), { targetRouterState: e });
                     }),
@@ -9210,7 +9117,7 @@
                     ((i = this.rootContexts),
                     (o = this.routeReuseStrategy),
                     (a = t => this.triggerEvent(t)),
-                    Object(l.a)(t => (new Ki(o, t.targetRouterState, t.currentRouterState, a).activate(i), t))),
+                    Object(l.a)(t => (new Wi(o, t.targetRouterState, t.currentRouterState, a).activate(i), t))),
                     We({
                       next() {
                         n = !0;
@@ -9222,7 +9129,7 @@
                     ((s = () => {
                       if (!n && !r) {
                         this.resetUrlToCurrentUrlTree();
-                        const n = new Es(
+                        const n = new ks(
                           t.id,
                           this.serializeUrl(t.extractedUrl),
                           `Navigation ID ${t.id} is not equal to the current navigation id ${this.navigationId}`
@@ -9231,14 +9138,14 @@
                       }
                       this.currentNavigation = null;
                     }),
-                    t => t.lift(new ws(s))),
-                    gs(n => {
+                    t => t.lift(new _s(s))),
+                    fs(n => {
                       if (((r = !0), (s = n) && s.ngNavigationCancelingError)) {
-                        const r = Yi(n.url);
+                        const r = Ji(n.url);
                         r ||
                           ((this.navigated = !0),
                           this.resetStateAndUrl(t.currentRouterState, t.currentUrlTree, t.rawUrl));
-                        const s = new Es(t.id, this.serializeUrl(t.extractedUrl), n.message);
+                        const s = new ks(t.id, this.serializeUrl(t.extractedUrl), n.message);
                         e.next(s),
                           r
                             ? setTimeout(() => {
@@ -9257,7 +9164,7 @@
                             : t.resolve(!1);
                       } else {
                         this.resetStateAndUrl(t.currentRouterState, t.currentUrlTree, t.rawUrl);
-                        const r = new Os(t.id, this.serializeUrl(t.extractedUrl), n);
+                        const r = new Es(t.id, this.serializeUrl(t.extractedUrl), n);
                         e.next(r);
                         try {
                           t.resolve(this.errorHandler(n));
@@ -9308,7 +9215,7 @@
               this.events.next(t);
             }
             resetConfig(t) {
-              Zs(t), (this.config = t.map(Ks)), (this.navigated = !1), (this.lastSuccessfulId = -1);
+              qs(t), (this.config = t.map(Ws)), (this.navigated = !1), (this.lastSuccessfulId = -1);
             }
             ngOnDestroy() {
               this.dispose();
@@ -9349,9 +9256,9 @@
               return (
                 null !== h && (h = this.removeEmptyProps(h)),
                 (function(t, e, n, r, s) {
-                  if (0 === n.length) return Fi(e.root, e.root, e, r, s);
+                  if (0 === n.length) return Li(e.root, e.root, e, r, s);
                   const i = (function(t) {
-                    if ('string' == typeof t[0] && 1 === t.length && '/' === t[0]) return new Hi(!0, 0, t);
+                    if ('string' == typeof t[0] && 1 === t.length && '/' === t[0]) return new Fi(!0, 0, t);
                     let e = 0,
                       n = !1;
                     const r = t.reduce((t, r, s) => {
@@ -9359,7 +9266,7 @@
                         if (r.outlets) {
                           const e = {};
                           return (
-                            ti(r.outlets, (t, n) => {
+                            Xs(r.outlets, (t, n) => {
                               e[n] = 'string' == typeof t ? t.split('/') : t;
                             }),
                             [...t, { outlets: e }]
@@ -9377,13 +9284,13 @@
                           t)
                         : [...t, r];
                     }, []);
-                    return new Hi(n, e, r);
+                    return new Fi(n, e, r);
                   })(n);
-                  if (i.toRoot()) return Fi(e.root, new si([], {}), e, r, s);
+                  if (i.toRoot()) return Li(e.root, new ri([], {}), e, r, s);
                   const o = (function(t, e, n) {
-                      if (t.isAbsolute) return new Ui(e.root, !0, 0);
-                      if (-1 === n.snapshot._lastPathIndex) return new Ui(n.snapshot._urlSegment, !0, 0);
-                      const r = Li(t.commands[0]) ? 0 : 1;
+                      if (t.isAbsolute) return new Hi(e.root, !0, 0);
+                      if (-1 === n.snapshot._lastPathIndex) return new Hi(n.snapshot._urlSegment, !0, 0);
+                      const r = Vi(t.commands[0]) ? 0 : 1;
                       return (function(t, e, n) {
                         let r = t,
                           s = e,
@@ -9392,13 +9299,13 @@
                           if (((i -= s), (r = r.parent), !r)) throw new Error("Invalid number of '../'");
                           s = r.segments.length;
                         }
-                        return new Ui(r, !1, s - i);
+                        return new Hi(r, !1, s - i);
                       })(n.snapshot._urlSegment, n.snapshot._lastPathIndex + r, t.numberOfDoubleDots);
                     })(i, e, t),
                     a = o.processChildren
-                      ? zi(o.segmentGroup, o.index, i.commands)
-                      : Bi(o.segmentGroup, o.index, i.commands);
-                  return Fi(o.segmentGroup, a, e, r, s);
+                      ? Bi(o.segmentGroup, o.index, i.commands)
+                      : $i(o.segmentGroup, o.index, i.commands);
+                  return Li(o.segmentGroup, a, e, r, s);
                 })(c, this.currentUrlTree, t, h, u)
               );
             }
@@ -9407,7 +9314,7 @@
                 this.isNgZoneEnabled &&
                 !s.z.isInAngularZone() &&
                 this.console.warn("Navigation triggered outside Angular zone, did you forget to call 'ngZone.run()'?");
-              const n = Yi(t) ? t : this.parseUrl(t),
+              const n = Ji(t) ? t : this.parseUrl(t),
                 r = this.urlHandlingStrategy.merge(n, this.rawUrlTree);
               return this.scheduleNavigation(r, 'imperative', null, e);
             }
@@ -9435,9 +9342,9 @@
               return e;
             }
             isActive(t, e) {
-              if (Yi(t)) return ni(this.currentUrlTree, t, e);
+              if (Ji(t)) return ei(this.currentUrlTree, t, e);
               const n = this.parseUrl(t);
-              return ni(this.currentUrlTree, n, e);
+              return ei(this.currentUrlTree, n, e);
             }
             removeEmptyProps(t) {
               return Object.keys(t).reduce((e, n) => {
@@ -9451,7 +9358,7 @@
                   (this.navigated = !0),
                     (this.lastSuccessfulId = t.id),
                     this.events.next(
-                      new ks(t.id, this.serializeUrl(t.extractedUrl), this.serializeUrl(this.currentUrlTree))
+                      new xs(t.id, this.serializeUrl(t.extractedUrl), this.serializeUrl(this.currentUrlTree))
                     ),
                     (this.lastSuccessfulNavigation = this.currentNavigation),
                     (this.currentNavigation = null),
@@ -9522,7 +9429,7 @@
             t
           );
         })(),
-        Uo = (() => {
+        Ho = (() => {
           class t {
             constructor(t, e, n, r, s) {
               (this.router = t),
@@ -9541,7 +9448,7 @@
                 (this.preserve = t);
             }
             onClick() {
-              const t = { skipLocationChange: Bo(this.skipLocationChange), replaceUrl: Bo(this.replaceUrl) };
+              const t = { skipLocationChange: $o(this.skipLocationChange), replaceUrl: $o(this.replaceUrl) };
               return this.router.navigateByUrl(this.urlTree, t), !0;
             }
             get urlTree() {
@@ -9549,15 +9456,15 @@
                 relativeTo: this.route,
                 queryParams: this.queryParams,
                 fragment: this.fragment,
-                preserveQueryParams: Bo(this.preserve),
+                preserveQueryParams: $o(this.preserve),
                 queryParamsHandling: this.queryParamsHandling,
-                preserveFragment: Bo(this.preserveFragment)
+                preserveFragment: $o(this.preserveFragment)
               });
             }
           }
           return (
             (t.ɵfac = function(e) {
-              return new (e || t)(s.Mb(Ho), s.Mb(Ii), s.ac('tabindex'), s.Mb(s.D), s.Mb(s.l));
+              return new (e || t)(s.Mb(Fo), s.Mb(Ti), s.ac('tabindex'), s.Mb(s.D), s.Mb(s.l));
             }),
             (t.ɵdir = s.Hb({
               type: t,
@@ -9583,7 +9490,7 @@
             t
           );
         })(),
-        $o = (() => {
+        Uo = (() => {
           class t {
             constructor(t, e, n) {
               (this.router = t),
@@ -9591,7 +9498,7 @@
                 (this.locationStrategy = n),
                 (this.commands = []),
                 (this.subscription = t.events.subscribe(t => {
-                  t instanceof ks && this.updateTargetUrlAndHref();
+                  t instanceof xs && this.updateTargetUrlAndHref();
                 }));
             }
             set routerLink(t) {
@@ -9614,8 +9521,8 @@
               if (0 !== t || e || n || r) return !0;
               if ('string' == typeof this.target && '_self' != this.target) return !0;
               const s = {
-                skipLocationChange: Bo(this.skipLocationChange),
-                replaceUrl: Bo(this.replaceUrl),
+                skipLocationChange: $o(this.skipLocationChange),
+                replaceUrl: $o(this.replaceUrl),
                 state: this.state
               };
               return this.router.navigateByUrl(this.urlTree, s), !1;
@@ -9628,15 +9535,15 @@
                 relativeTo: this.route,
                 queryParams: this.queryParams,
                 fragment: this.fragment,
-                preserveQueryParams: Bo(this.preserve),
+                preserveQueryParams: $o(this.preserve),
                 queryParamsHandling: this.queryParamsHandling,
-                preserveFragment: Bo(this.preserveFragment)
+                preserveFragment: $o(this.preserveFragment)
               });
             }
           }
           return (
             (t.ɵfac = function(e) {
-              return new (e || t)(s.Mb(Ho), s.Mb(Ii), s.Mb(i.h));
+              return new (e || t)(s.Mb(Fo), s.Mb(Ti), s.Mb(i.h));
             }),
             (t.ɵdir = s.Hb({
               type: t,
@@ -9669,10 +9576,10 @@
             t
           );
         })();
-      function Bo(t) {
+      function $o(t) {
         return '' === t || !!t;
       }
-      let zo = (() => {
+      let Bo = (() => {
         class t {
           constructor(t, e, n, r, s) {
             (this.router = t),
@@ -9684,7 +9591,7 @@
               (this.isActive = !1),
               (this.routerLinkActiveOptions = { exact: !1 }),
               (this.subscription = t.events.subscribe(t => {
-                t instanceof ks && this.update();
+                t instanceof xs && this.update();
               }));
           }
           ngAfterContentInit() {
@@ -9732,14 +9639,14 @@
         }
         return (
           (t.ɵfac = function(e) {
-            return new (e || t)(s.Mb(Ho), s.Mb(s.l), s.Mb(s.D), s.Mb(Uo, 8), s.Mb($o, 8));
+            return new (e || t)(s.Mb(Fo), s.Mb(s.l), s.Mb(s.D), s.Mb(Ho, 8), s.Mb(Uo, 8));
           }),
           (t.ɵdir = s.Hb({
             type: t,
             selectors: [['', 'routerLinkActive', '']],
             contentQueries: function(t, e, n) {
               var r;
-              1 & t && (s.Fb(n, Uo, !0), s.Fb(n, $o, !0)),
+              1 & t && (s.Fb(n, Ho, !0), s.Fb(n, Uo, !0)),
                 2 & t && (s.rc((r = s.ec())) && (e.links = r), s.rc((r = s.ec())) && (e.linksWithHrefs = r));
             },
             inputs: { routerLinkActiveOptions: 'routerLinkActiveOptions', routerLinkActive: 'routerLinkActive' },
@@ -9749,16 +9656,16 @@
           t
         );
       })();
-      class qo {
+      class zo {
         constructor() {
           (this.outlet = null),
             (this.route = null),
             (this.resolver = null),
-            (this.children = new Zo()),
+            (this.children = new qo()),
             (this.attachRef = null);
         }
       }
-      class Zo {
+      class qo {
         constructor() {
           this.contexts = new Map();
         }
@@ -9779,13 +9686,13 @@
         }
         getOrCreateContext(t) {
           let e = this.getContext(t);
-          return e || ((e = new qo()), this.contexts.set(t, e)), e;
+          return e || ((e = new zo()), this.contexts.set(t, e)), e;
         }
         getContext(t) {
           return this.contexts.get(t) || null;
         }
       }
-      let Go = (() => {
+      let Zo = (() => {
         class t {
           constructor(t, e, n, r, i) {
             (this.parentContexts = t),
@@ -9847,7 +9754,7 @@
             this._activatedRoute = t;
             const n = (e = e || this.resolver).resolveComponentFactory(t._futureSnapshot.routeConfig.component),
               r = this.parentContexts.getOrCreateContext(this.name).children,
-              s = new Wo(t, r, this.location.injector);
+              s = new Go(t, r, this.location.injector);
             (this.activated = this.location.createComponent(n, this.location.length, s)),
               this.changeDetector.markForCheck(),
               this.activateEvents.emit(this.activated.instance);
@@ -9855,7 +9762,7 @@
         }
         return (
           (t.ɵfac = function(e) {
-            return new (e || t)(s.Mb(Zo), s.Mb(s.N), s.Mb(s.j), s.ac('name'), s.Mb(s.h));
+            return new (e || t)(s.Mb(qo), s.Mb(s.N), s.Mb(s.j), s.ac('name'), s.Mb(s.h));
           }),
           (t.ɵdir = s.Hb({
             type: t,
@@ -9866,37 +9773,37 @@
           t
         );
       })();
-      class Wo {
+      class Go {
         constructor(t, e, n) {
           (this.route = t), (this.childContexts = e), (this.parent = n);
         }
         get(t, e) {
-          return t === Ii ? this.route : t === Zo ? this.childContexts : this.parent.get(t, e);
+          return t === Ti ? this.route : t === qo ? this.childContexts : this.parent.get(t, e);
         }
       }
-      class Ko {}
-      class Qo {
+      class Wo {}
+      class Ko {
         preload(t, e) {
           return Lt(null);
         }
       }
-      let Jo = (() => {
+      let Qo = (() => {
           class t {
             constructor(t, e, n, r, s) {
               (this.router = t),
                 (this.injector = r),
                 (this.preloadingStrategy = s),
-                (this.loader = new No(
+                (this.loader = new jo(
                   e,
                   n,
-                  e => t.triggerEvent(new Rs(e)),
-                  e => t.triggerEvent(new js(e))
+                  e => t.triggerEvent(new Ms(e)),
+                  e => t.triggerEvent(new Rs(e))
                 ));
             }
             setUpPreloading() {
               this.subscription = this.router.events
                 .pipe(
-                  $t(t => t instanceof ks),
+                  $t(t => t instanceof xs),
                   Ht(() => this.preload())
                 )
                 .subscribe(() => {});
@@ -9933,13 +9840,13 @@
           }
           return (
             (t.ɵfac = function(e) {
-              return new (e || t)(s.Zb(Ho), s.Zb(s.w), s.Zb(s.i), s.Zb(s.r), s.Zb(Ko));
+              return new (e || t)(s.Zb(Fo), s.Zb(s.w), s.Zb(s.i), s.Zb(s.r), s.Zb(Wo));
             }),
             (t.ɵprov = s.Ib({ token: t, factory: t.ɵfac })),
             t
           );
         })(),
-        Yo = (() => {
+        Jo = (() => {
           class t {
             constructor(t, e, n = {}) {
               (this.router = t),
@@ -9960,18 +9867,18 @@
             }
             createScrollEvents() {
               return this.router.events.subscribe(t => {
-                t instanceof xs
+                t instanceof Ss
                   ? ((this.store[this.lastId] = this.viewportScroller.getScrollPosition()),
                     (this.lastSource = t.navigationTrigger),
                     (this.restoredId = t.restoredState ? t.restoredState.navigationId : 0))
-                  : t instanceof ks &&
+                  : t instanceof xs &&
                     ((this.lastId = t.id),
                     this.scheduleScrollEvent(t, this.router.parseUrl(t.urlAfterRedirects).fragment));
               });
             }
             consumeScrollEvents() {
               return this.router.events.subscribe(t => {
-                t instanceof Fs &&
+                t instanceof Ls &&
                   (t.position
                     ? 'top' === this.options.scrollPositionRestoration
                       ? this.viewportScroller.scrollToPosition([0, 0])
@@ -9985,7 +9892,7 @@
             }
             scheduleScrollEvent(t, e) {
               this.router.triggerEvent(
-                new Fs(t, 'popstate' === this.lastSource ? this.store[this.restoredId] : null, e)
+                new Ls(t, 'popstate' === this.lastSource ? this.store[this.restoredId] : null, e)
               );
             }
             ngOnDestroy() {
@@ -10001,15 +9908,15 @@
             t
           );
         })();
-      const Xo = new s.q('ROUTER_CONFIGURATION'),
-        ta = new s.q('ROUTER_FORROOT_GUARD'),
-        ea = [
+      const Yo = new s.q('ROUTER_CONFIGURATION'),
+        Xo = new s.q('ROUTER_FORROOT_GUARD'),
+        ta = [
           i.g,
-          { provide: li, useClass: ci },
+          { provide: ai, useClass: li },
           {
-            provide: Ho,
+            provide: Fo,
             useFactory: function(t, e, n, r, s, o, a, l, c = {}, u, h) {
-              const d = new Ho(null, e, n, r, s, o, a, Ys(l));
+              const d = new Fo(null, e, n, r, s, o, a, Js(l));
               if (
                 (u && (d.urlHandlingStrategy = u),
                 h && (d.routeReuseStrategy = h),
@@ -10030,87 +9937,87 @@
                 d
               );
             },
-            deps: [s.g, li, Zo, i.g, s.r, s.w, s.i, jo, Xo, [class {}, new s.A()], [Mo, new s.A()]]
+            deps: [s.g, ai, qo, i.g, s.r, s.w, s.i, Ro, Yo, [class {}, new s.A()], [Po, new s.A()]]
           },
-          Zo,
+          qo,
           {
-            provide: Ii,
+            provide: Ti,
             useFactory: function(t) {
               return t.routerState.root;
             },
-            deps: [Ho]
+            deps: [Fo]
           },
           { provide: s.w, useClass: s.J },
-          Jo,
           Qo,
+          Ko,
           class {
             preload(t, e) {
-              return e().pipe(gs(() => Lt(null)));
+              return e().pipe(fs(() => Lt(null)));
             }
           },
-          { provide: Xo, useValue: { enableTracing: !1 } }
+          { provide: Yo, useValue: { enableTracing: !1 } }
         ];
-      function na() {
-        return new s.y('Router', Ho);
+      function ea() {
+        return new s.y('Router', Fo);
       }
-      let ra = (() => {
+      let na = (() => {
         class t {
           constructor(t, e) {}
           static forRoot(e, n) {
             return {
               ngModule: t,
               providers: [
-                ea,
-                aa(e),
-                { provide: ta, useFactory: oa, deps: [[Ho, new s.A(), new s.I()]] },
-                { provide: Xo, useValue: n || {} },
-                { provide: i.h, useFactory: ia, deps: [i.m, [new s.p(i.a), new s.A()], Xo] },
-                { provide: Yo, useFactory: sa, deps: [Ho, i.o, Xo] },
-                { provide: Ko, useExisting: n && n.preloadingStrategy ? n.preloadingStrategy : Qo },
-                { provide: s.y, multi: !0, useFactory: na },
+                ta,
+                oa(e),
+                { provide: Xo, useFactory: ia, deps: [[Fo, new s.A(), new s.I()]] },
+                { provide: Yo, useValue: n || {} },
+                { provide: i.h, useFactory: sa, deps: [i.m, [new s.p(i.a), new s.A()], Yo] },
+                { provide: Jo, useFactory: ra, deps: [Fo, i.o, Yo] },
+                { provide: Wo, useExisting: n && n.preloadingStrategy ? n.preloadingStrategy : Ko },
+                { provide: s.y, multi: !0, useFactory: ea },
                 [
-                  la,
-                  { provide: s.d, multi: !0, useFactory: ca, deps: [la] },
-                  { provide: ha, useFactory: ua, deps: [la] },
-                  { provide: s.b, multi: !0, useExisting: ha }
+                  aa,
+                  { provide: s.d, multi: !0, useFactory: la, deps: [aa] },
+                  { provide: ua, useFactory: ca, deps: [aa] },
+                  { provide: s.b, multi: !0, useExisting: ua }
                 ]
               ]
             };
           }
           static forChild(e) {
-            return { ngModule: t, providers: [aa(e)] };
+            return { ngModule: t, providers: [oa(e)] };
           }
         }
         return (
           (t.ɵmod = s.Kb({ type: t })),
           (t.ɵinj = s.Jb({
             factory: function(e) {
-              return new (e || t)(s.Zb(ta, 8), s.Zb(Ho, 8));
+              return new (e || t)(s.Zb(Xo, 8), s.Zb(Fo, 8));
             }
           })),
           t
         );
       })();
-      function sa(t, e, n) {
-        return n.scrollOffset && e.setOffset(n.scrollOffset), new Yo(t, e, n);
+      function ra(t, e, n) {
+        return n.scrollOffset && e.setOffset(n.scrollOffset), new Jo(t, e, n);
       }
-      function ia(t, e, n = {}) {
+      function sa(t, e, n = {}) {
         return n.useHash ? new i.e(t, e) : new i.l(t, e);
       }
-      function oa(t) {
+      function ia(t) {
         if (t)
           throw new Error(
             'RouterModule.forRoot() called twice. Lazy loaded modules should use RouterModule.forChild() instead.'
           );
         return 'guarded';
       }
-      function aa(t) {
+      function oa(t) {
         return [
           { provide: s.a, multi: !0, useValue: t },
-          { provide: jo, multi: !0, useValue: t }
+          { provide: Ro, multi: !0, useValue: t }
         ];
       }
-      let la = (() => {
+      let aa = (() => {
         class t {
           constructor(t) {
             (this.injector = t), (this.initNavigation = !1), (this.resultOfPreactivationDone = new Re.a());
@@ -10119,8 +10026,8 @@
             return this.injector.get(i.f, Promise.resolve(null)).then(() => {
               let t = null;
               const e = new Promise(e => (t = e)),
-                n = this.injector.get(Ho),
-                r = this.injector.get(Xo);
+                n = this.injector.get(Fo),
+                r = this.injector.get(Yo);
               if (this.isLegacyDisabled(r) || this.isLegacyEnabled(r)) t(!0);
               else if ('disabled' === r.initialNavigation) n.setUpLocationChangeListener(), t(!0);
               else {
@@ -10134,10 +10041,10 @@
             });
           }
           bootstrapListener(t) {
-            const e = this.injector.get(Xo),
-              n = this.injector.get(Jo),
-              r = this.injector.get(Yo),
-              i = this.injector.get(Ho),
+            const e = this.injector.get(Yo),
+              n = this.injector.get(Qo),
+              r = this.injector.get(Jo),
+              i = this.injector.get(Fo),
               o = this.injector.get(s.g);
             t === o.components[0] &&
               (this.isLegacyEnabled(e)
@@ -10166,15 +10073,15 @@
           t
         );
       })();
-      function ca(t) {
+      function la(t) {
         return t.appInitializer.bind(t);
       }
-      function ua(t) {
+      function ca(t) {
         return t.bootstrapListener.bind(t);
       }
-      const ha = new s.q('Router Initializer');
-      let da = (() => {
-        class t extends Mo {
+      const ua = new s.q('Router Initializer');
+      let ha = (() => {
+        class t extends Po {
           shouldDetach(t) {
             return !1;
           }
@@ -10191,14 +10098,14 @@
         }
         return (
           (t.ɵfac = function(e) {
-            return pa(e || t);
+            return da(e || t);
           }),
           (t.ɵprov = s.Ib({ token: t, factory: t.ɵfac })),
           t
         );
       })();
-      const pa = s.Tb(da);
-      let fa = (() => {
+      const da = s.Tb(ha);
+      let pa = (() => {
           class t {
             sendPayment(t) {
               return this.isRequestSuccess
@@ -10217,7 +10124,7 @@
             t
           );
         })(),
-        ga = (() => {
+        fa = (() => {
           class t {
             constructor(t) {
               if (t) throw new Error(`${t} has already been loaded. Import Core module in the AppModule only.`);
@@ -10229,13 +10136,13 @@
               factory: function(e) {
                 return new (e || t)(s.Zb(t, 12));
               },
-              providers: [fa, { provide: Mo, useClass: da }],
-              imports: [[i.b, Jn, ra]]
+              providers: [pa, { provide: Po, useClass: ha }],
+              imports: [[i.b, Qn, na]]
             })),
             t
           );
         })();
-      var ma = (function(t) {
+      var ga = (function(t) {
         return (
           (t[(t.Off = 0)] = 'Off'),
           (t[(t.Error = 1)] = 'Error'),
@@ -10245,25 +10152,25 @@
           t
         );
       })({});
-      let ba = (() => {
+      let ma = (() => {
         class t {
           constructor(t) {
             this.source = t;
           }
           static enableProductionMode() {
-            t.level = ma.Warning;
+            t.level = ga.Warning;
           }
           debug(...t) {
-            this.log(console.log, ma.Debug, t);
+            this.log(console.log, ga.Debug, t);
           }
           info(...t) {
-            this.log(console.info, ma.Info, t);
+            this.log(console.info, ga.Info, t);
           }
           warn(...t) {
-            this.log(console.warn, ma.Warning, t);
+            this.log(console.warn, ga.Warning, t);
           }
           error(...t) {
-            this.log(console.error, ma.Error, t);
+            this.log(console.error, ga.Error, t);
           }
           log(e, n, r) {
             if (n <= t.level) {
@@ -10272,15 +10179,15 @@
             }
           }
         }
-        return (t.level = ma.Debug), (t.outputs = []), t;
+        return (t.level = ga.Debug), (t.outputs = []), t;
       })();
-      var ya = n('A/Ql'),
-        va = n('wywo');
-      const _a = new ba('I18nService');
-      let wa = (() => {
+      var ba = n('A/Ql'),
+        ya = n('wywo');
+      const va = new ma('I18nService');
+      let _a = (() => {
         class t {
           constructor(t) {
-            (this.translateService = t), t.setTranslation('en-US', ya), t.setTranslation('ru-RU', va);
+            (this.translateService = t), t.setTranslation('en-US', ba), t.setTranslation('ru-RU', ya);
           }
           init(t, e) {
             (this.defaultLanguage = t),
@@ -10300,7 +10207,7 @@
               !e &&
               ((t = t.split('-')[0]), (t = this.supportedLanguages.find(e => e.startsWith(t)) || ''), (e = Boolean(t))),
               e || (t = this.defaultLanguage),
-              _a.debug(`Language set to ${t}`),
+              va.debug(`Language set to ${t}`),
               this.translateService.use(t);
           }
           get language() {
@@ -10315,8 +10222,8 @@
           t
         );
       })();
-      const Ca = Symbol('untilDestroyed');
-      let Sa = (() => {
+      const wa = Symbol('untilDestroyed');
+      let Ca = (() => {
           class t {}
           return (
             (t.ɵmod = s.Kb({ type: t })),
@@ -10329,30 +10236,7 @@
             t
           );
         })(),
-        xa = (() => {
-          class t {}
-          return (
-            (t.ɵfac = function(e) {
-              return new (e || t)();
-            }),
-            (t.ɵcmp = s.Gb({
-              type: t,
-              selectors: [['app-loader']],
-              decls: 2,
-              vars: 0,
-              consts: [[1, 'fas', 'fa-cog', 'fa-spin', 'fa-3x', 'text-light']],
-              template: function(t, e) {
-                1 & t && (s.Nb(0, 'i', 0), s.Bc(1, '\n'));
-              },
-              styles: [
-                '[_nghost-%COMP%]{position:fixed;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.fa[_ngcontent-%COMP%]{vertical-align:middle}'
-              ],
-              changeDetection: 0
-            })),
-            t
-          );
-        })(),
-        ka = (() => {
+        Sa = (() => {
           class t {}
           return (
             (t.ɵmod = s.Kb({ type: t })),
@@ -10360,15 +10244,15 @@
               factory: function(e) {
                 return new (e || t)();
               },
-              imports: [[i.b, Jn, os, ra, Sa]]
+              imports: [[i.b, Qn, is, na, Ca]]
             })),
             t
           );
         })();
-      const Ea = new s.q('config'),
-        Oa = new s.q('NEW_CONFIG'),
-        Aa = new s.q('INITIAL_CONFIG'),
-        Ta = {
+      const xa = new s.q('config'),
+        ka = new s.q('NEW_CONFIG'),
+        Ea = new s.q('INITIAL_CONFIG'),
+        Oa = {
           suffix: '',
           prefix: '',
           thousandSeparator: ' ',
@@ -10397,9 +10281,9 @@
             s: { pattern: new RegExp('\\d') }
           }
         },
-        Ia = ['Hh:m0:s0', 'Hh:m0', 'm0:s0'],
-        Pa = ['percent', 'Hh', 's0', 'm0', 'separator', 'd0/M0/0000', 'd0/M0', 'd0', 'M0'];
-      let Ma = (() => {
+        Aa = ['Hh:m0:s0', 'Hh:m0', 'm0:s0'],
+        Ta = ['percent', 'Hh', 's0', 'm0', 'separator', 'd0/M0/0000', 'd0/M0', 'd0', 'M0'];
+      let Ia = (() => {
           class t {
             constructor(t) {
               (this._config = t),
@@ -10633,14 +10517,14 @@
           }
           return (
             (t.ɵfac = function(e) {
-              return new (e || t)(s.Zb(Ea));
+              return new (e || t)(s.Zb(xa));
             }),
             (t.ɵprov = s.Ib({ token: t, factory: t.ɵfac })),
             t
           );
         })(),
-        Ra = (() => {
-          class t extends Ma {
+        Pa = (() => {
+          class t extends Ia {
             constructor(t, e, n, r) {
               super(e),
                 (this.document = t),
@@ -10825,13 +10709,13 @@
           }
           return (
             (t.ɵfac = function(e) {
-              return new (e || t)(s.Zb(i.c), s.Zb(Ea), s.Zb(s.l), s.Zb(s.D));
+              return new (e || t)(s.Zb(i.c), s.Zb(xa), s.Zb(s.l), s.Zb(s.D));
             }),
             (t.ɵprov = s.Ib({ token: t, factory: t.ɵfac })),
             t
           );
         })(),
-        ja = (() => {
+        Ma = (() => {
           class t {
             constructor(t, e, n) {
               (this.document = t),
@@ -10901,9 +10785,9 @@
               if (!this._maskService.validation) return null;
               if (this._maskService.ipError) return { 'Mask error': !0 };
               if (this._maskValue.startsWith('separator')) return null;
-              if (Pa.includes(this._maskValue)) return null;
+              if (Ta.includes(this._maskValue)) return null;
               if (this._maskService.clearIfNotMatch) return null;
-              if (Ia.includes(this._maskValue)) return this._validateTime(t);
+              if (Aa.includes(this._maskValue)) return this._validateTime(t);
               if (t && t.toString().length >= 1) {
                 let e = 0;
                 for (const n in this._maskService.maskAvailablePatterns)
@@ -11146,7 +11030,7 @@
           }
           return (
             (t.ɵfac = function(e) {
-              return new (e || t)(s.Mb(i.c), s.Mb(Ra), s.Mb(Ea));
+              return new (e || t)(s.Mb(i.c), s.Mb(Pa), s.Mb(xa));
             }),
             (t.ɵdir = s.Hb({
               type: t,
@@ -11187,7 +11071,7 @@
                 s.yb([
                   { provide: d, useExisting: Object(s.S)(() => t), multi: !0 },
                   { provide: O, useExisting: Object(s.S)(() => t), multi: !0 },
-                  Ra
+                  Pa
                 ]),
                 s.xb()
               ]
@@ -11195,16 +11079,16 @@
             t
           );
         })(),
-        Na = (() => {
+        Ra = (() => {
           class t {
             static forRoot(e) {
               return {
                 ngModule: t,
                 providers: [
-                  { provide: Oa, useValue: e },
-                  { provide: Aa, useValue: Ta },
-                  { provide: Ea, useFactory: Da, deps: [Aa, Oa] },
-                  Ma
+                  { provide: ka, useValue: e },
+                  { provide: Ea, useValue: Oa },
+                  { provide: xa, useFactory: ja, deps: [Ea, ka] },
+                  Ia
                 ]
               };
             }
@@ -11222,10 +11106,10 @@
             t
           );
         })();
-      function Da(t, e) {
+      function ja(t, e) {
         return Object.assign({}, t, e instanceof Function ? e() : e);
       }
-      function Va(t, e) {
+      function Na(t, e) {
         if (1 & t) {
           const t = s.Sb();
           s.Rb(0, 'button', 6),
@@ -11249,7 +11133,7 @@
         : 'undefined' != typeof global
         ? global
         : 'undefined' != typeof self && self;
-      let La = (() => {
+      let Da = (() => {
           class t {
             constructor(t, e) {
               (this.router = t), (this.i18nService = e);
@@ -11266,7 +11150,7 @@
           }
           return (
             (t.ɵfac = function(e) {
-              return new (e || t)(s.Mb(Ho), s.Mb(wa));
+              return new (e || t)(s.Mb(Fo), s.Mb(_a));
             }),
             (t.ɵcmp = s.Gb({
               type: t,
@@ -11298,7 +11182,7 @@
                   s.Bc(9, '\n\n  '),
                   s.Rb(10, 'div', 4),
                   s.Bc(11, '\n    '),
-                  s.zc(12, Va, 2, 1, 'button', 5),
+                  s.zc(12, Na, 2, 1, 'button', 5),
                   s.Bc(13, '\n  '),
                   s.Qb(),
                   s.Bc(14, '\n'),
@@ -11306,16 +11190,16 @@
                   s.Bc(15, '\n')),
                   2 & t && (s.zb(8), s.Dc('\n    ', e.currentLanguage, '\n  '), s.zb(4), s.kc('ngForOf', e.languages));
               },
-              directives: [Nr, jr, Mr, i.i],
+              directives: [jr, Rr, Pr, i.i],
               styles: [
-                '[_nghost-%COMP%]{-webkit-box-pack:justify;justify-content:space-between;margin-bottom:30px}.logo[_ngcontent-%COMP%], [_nghost-%COMP%]{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center}.logo__icon[_ngcontent-%COMP%]{font-size:35px;-webkit-transform:rotate(185deg);transform:rotate(185deg);margin-left:10px}.navbar[_ngcontent-%COMP%]{margin-bottom:1rem}.nav-link.dropdown-toggle[_ngcontent-%COMP%]{cursor:pointer}'
+                '[_nghost-%COMP%]{-webkit-box-pack:justify;justify-content:space-between;margin-bottom:40px}.logo[_ngcontent-%COMP%], [_nghost-%COMP%]{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center}.logo__icon[_ngcontent-%COMP%]{font-size:35px;-webkit-transform:rotate(185deg);transform:rotate(185deg);margin-left:10px}.navbar[_ngcontent-%COMP%]{margin-bottom:1rem}.nav-link.dropdown-toggle[_ngcontent-%COMP%]{cursor:pointer}'
               ],
               changeDetection: 0
             })),
             t
           );
         })(),
-        Fa = (() => {
+        Va = (() => {
           class t {}
           return (
             (t.ɵfac = function(e) {
@@ -11329,16 +11213,16 @@
               template: function(t, e) {
                 1 & t && (s.Nb(0, 'app-header'), s.Bc(1, '\n'), s.Nb(2, 'router-outlet'), s.Bc(3, '\n'));
               },
-              directives: [La, Go],
+              directives: [Da, Zo],
               styles: [
-                '[_nghost-%COMP%]{display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;padding:40px;background-color:#fff;border-radius:16px;box-shadow:10px 10px 5px -8px rgba(0,0,0,.75);max-width:1000px}'
+                '[_nghost-%COMP%]{display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;padding:30px;background-color:#fff;border-radius:16px;box-shadow:15px 15px 15px -10px rgba(0,0,0,.65);max-width:1000px;margin:auto}'
               ],
               changeDetection: 0
             })),
             t
           );
         })(),
-        Ha = (() => {
+        La = (() => {
           class t {
             constructor(t, e, n) {
               (this.formBuilder = t),
@@ -11357,7 +11241,10 @@
               const t = Object.assign(Object.assign({}, this.operatorParams), this.paymentForm.value);
               this.paymentsApiService.sendPayment(t).subscribe(
                 t => {
-                  (this.isSuccessMessageHidden = !1), (this.isErrorHidden = !0), console.info(t);
+                  (this.isSuccessMessageHidden = !1),
+                    (this.isErrorHidden = !0),
+                    this.paymentForm.reset(),
+                    console.info(t);
                 },
                 t => {
                   throw ((this.isSuccessMessageHidden = !0), (this.isErrorHidden = !1), t);
@@ -11419,13 +11306,13 @@
           }
           return (
             (t.ɵfac = function(e) {
-              return new (e || t)(s.Mb(Mt), s.Mb(Ii), s.Mb(fa));
+              return new (e || t)(s.Mb(Mt), s.Mb(Ti), s.Mb(pa));
             }),
             (t.ɵcmp = s.Gb({
               type: t,
               selectors: [['app-payment-form']],
-              decls: 69,
-              vars: 31,
+              decls: 81,
+              vars: 46,
               consts: [
                 ['novalidate', '', 3, 'formGroup', 'ngSubmit'],
                 [1, 'form-group', 'text-center'],
@@ -11455,7 +11342,8 @@
                 [1, 'input-group-append'],
                 [1, 'input-group-text'],
                 [1, 'fas', 'fa-mobile-alt'],
-                ['translate', '', 1, 'text-danger', 3, 'hidden'],
+                [1, 'error-spacer'],
+                [1, 'text-danger', 3, 'hidden'],
                 [
                   'type',
                   'text',
@@ -11476,9 +11364,11 @@
                 ],
                 [1, 'fas', 'fa-ruble-sign'],
                 [1, 'button-container'],
-                ['translate', '', 1, 'text-success', 3, 'hidden'],
-                ['type', 'submit', 1, 'btn', 'btn-dark', 'btn-lg', 3, 'disabled'],
-                ['translate', '']
+                ['role', 'alert', 1, 'alert', 'alert-danger', 3, 'hidden'],
+                [1, 'fas', 'fa-exclamation-circle', 'text-danger'],
+                ['role', 'alert', 1, 'alert', 'alert-success', 3, 'hidden'],
+                [1, 'fas', 'fa-check-circle', 'text-success'],
+                ['type', 'submit', 1, 'btn', 'btn-dark', 'btn-lg', 3, 'disabled']
               ],
               template: function(t, e) {
                 1 & t &&
@@ -11508,133 +11398,156 @@
                   s.Bc(18, '\n      '),
                   s.Qb(),
                   s.Bc(19, '\n\n      '),
-                  s.Rb(20, 'small', 8),
-                  s.Bc(21, '\n        Phone number is required\n      '),
+                  s.Rb(20, 'div', 8),
+                  s.Bc(21, '\n        '),
+                  s.Rb(22, 'small', 9),
+                  s.Bc(23),
+                  s.gc(24, 'translate'),
                   s.Qb(),
-                  s.Bc(22, '\n    '),
-                  s.Qb(),
-                  s.Bc(23, '\n\n    '),
-                  s.Rb(24, 'label', 2),
                   s.Bc(25, '\n      '),
-                  s.Rb(26, 'div', 3),
-                  s.Bc(27, '\n        '),
-                  s.Nb(28, 'input', 9),
-                  s.gc(29, 'translate'),
-                  s.Bc(30, '\n\n        '),
-                  s.Rb(31, 'div', 5),
-                  s.Bc(32, '\n          '),
-                  s.Rb(33, 'span', 6),
-                  s.Bc(34, '\n            '),
-                  s.Nb(35, 'i', 10),
+                  s.Qb(),
+                  s.Bc(26, '\n    '),
+                  s.Qb(),
+                  s.Bc(27, '\n\n    '),
+                  s.Rb(28, 'label', 2),
+                  s.Bc(29, '\n      '),
+                  s.Rb(30, 'div', 3),
+                  s.Bc(31, '\n        '),
+                  s.Nb(32, 'input', 10),
+                  s.gc(33, 'translate'),
+                  s.Bc(34, '\n\n        '),
+                  s.Rb(35, 'div', 5),
                   s.Bc(36, '\n          '),
+                  s.Rb(37, 'span', 6),
+                  s.Bc(38, '\n            '),
+                  s.Nb(39, 'i', 11),
+                  s.Bc(40, '\n          '),
                   s.Qb(),
-                  s.Bc(37, '\n        '),
+                  s.Bc(41, '\n        '),
                   s.Qb(),
-                  s.Bc(38, '\n      '),
+                  s.Bc(42, '\n      '),
                   s.Qb(),
-                  s.Bc(39, '\n\n      '),
-                  s.Rb(40, 'small', 8),
-                  s.Bc(41, '\n        Payment amount is required\n      '),
+                  s.Bc(43, '\n\n      '),
+                  s.Rb(44, 'div', 8),
+                  s.Bc(45, '\n        '),
+                  s.Rb(46, 'small', 9),
+                  s.Bc(47),
+                  s.gc(48, 'translate'),
                   s.Qb(),
-                  s.Bc(42, '\n\n      '),
-                  s.Rb(43, 'small', 8),
-                  s.Bc(44),
-                  s.gc(45, 'translate'),
+                  s.Bc(49, '\n\n        '),
+                  s.Rb(50, 'small', 9),
+                  s.Bc(51),
+                  s.gc(52, 'translate'),
                   s.Qb(),
-                  s.Bc(46, '\n\n      '),
-                  s.Rb(47, 'small', 8),
-                  s.Bc(48),
-                  s.gc(49, 'translate'),
+                  s.Bc(53, '\n\n        '),
+                  s.Rb(54, 'small', 9),
+                  s.Bc(55),
+                  s.gc(56, 'translate'),
                   s.Qb(),
-                  s.Bc(50, '\n    '),
+                  s.Bc(57, '\n      '),
                   s.Qb(),
-                  s.Bc(51, '\n  '),
+                  s.Bc(58, '\n    '),
                   s.Qb(),
-                  s.Bc(52, '\n\n  '),
-                  s.Rb(53, 'div', 11),
-                  s.Bc(54, '\n    '),
-                  s.Rb(55, 'div', 8),
-                  s.Bc(56, '\n      Error. Try again\n    '),
+                  s.Bc(59, '\n  '),
                   s.Qb(),
-                  s.Bc(57, '\n\n    '),
-                  s.Rb(58, 'div', 12),
-                  s.Bc(59, '\n      Payment was successfully sent\n    '),
+                  s.Bc(60, '\n\n  '),
+                  s.Rb(61, 'div', 12),
+                  s.Bc(62, '\n    '),
+                  s.Rb(63, 'div', 13),
+                  s.Bc(64, '\n      '),
+                  s.Nb(65, 'i', 14),
+                  s.Bc(66),
+                  s.gc(67, 'translate'),
                   s.Qb(),
-                  s.Bc(60, '\n\n    '),
-                  s.Rb(61, 'button', 13),
-                  s.Bc(62, '\n      '),
-                  s.Rb(63, 'span', 14),
-                  s.Bc(64, 'Pay'),
+                  s.Bc(68, '\n\n    '),
+                  s.Rb(69, 'div', 15),
+                  s.Bc(70, '\n      '),
+                  s.Nb(71, 'i', 16),
+                  s.Bc(72),
+                  s.gc(73, 'translate'),
                   s.Qb(),
-                  s.Bc(65, '\n    '),
+                  s.Bc(74, '\n\n    '),
+                  s.Rb(75, 'button', 17),
+                  s.Bc(76),
+                  s.gc(77, 'translate'),
                   s.Qb(),
-                  s.Bc(66, '\n  '),
+                  s.Bc(78, '\n  '),
                   s.Qb(),
-                  s.Bc(67, '\n'),
+                  s.Bc(79, '\n'),
                   s.Qb(),
-                  s.Bc(68, '\n')),
+                  s.Bc(80, '\n')),
                   2 & t &&
                     (s.kc('formGroup', e.paymentForm),
                     s.zb(8),
                     s.Eb('is-valid', e.isPhoneNumberValid)('is-invalid', e.isPhoneNumberInvalid),
-                    s.kc('placeholder', s.hc(9, 23, 'Phone number'))('showMaskTyped', !0),
-                    s.zb(12),
+                    s.kc('placeholder', s.hc(9, 28, 'Phone number'))('showMaskTyped', !0),
+                    s.zb(14),
                     s.kc('hidden', !e.isPhoneNumberRequiredErrorVisible),
-                    s.zb(8),
+                    s.zb(1),
+                    s.Dc('\n          ', s.hc(24, 30, 'Phone number is required'), '\n        '),
+                    s.zb(9),
                     s.Eb('is-invalid', e.isPaymentAmountInvalid)('is-valid', e.isPaymentAmountValid),
-                    s.kc('placeholder', s.hc(29, 25, 'Payment amount')),
-                    s.zb(12),
+                    s.kc('placeholder', s.hc(33, 32, 'Payment amount')),
+                    s.zb(14),
                     s.kc('hidden', !e.isPaymentAmountRequiredErrorVisible),
+                    s.zb(1),
+                    s.Dc('\n          ', s.hc(48, 34, 'Payment amount is required'), '\n        '),
                     s.zb(3),
                     s.kc('hidden', !e.isPaymentAmountMaxValueErrorVisible),
                     s.zb(1),
                     s.Ec(
-                      '\n        ',
-                      s.hc(45, 27, 'Payment amount must be less than'),
+                      '\n          ',
+                      s.hc(52, 36, 'Payment amount must be less than'),
                       ' ',
                       e.maxValueOfPaymentAmount + 1,
-                      '\n      '
+                      '\n        '
                     ),
                     s.zb(3),
                     s.kc('hidden', !e.isPaymentAmountMinValueErrorVisible),
                     s.zb(1),
                     s.Ec(
-                      '\n        ',
-                      s.hc(49, 29, 'Payment amount must be more than'),
+                      '\n          ',
+                      s.hc(56, 38, 'Payment amount must be more than'),
                       ' ',
                       e.minValueOfPaymentAmount - 1,
-                      '\n      '
+                      '\n        '
                     ),
-                    s.zb(7),
+                    s.zb(8),
                     s.kc('hidden', e.isErrorHidden),
+                    s.zb(3),
+                    s.Dc('\n      ', s.hc(67, 40, 'Error. Try again'), '\n    '),
                     s.zb(3),
                     s.kc('hidden', e.isSuccessMessageHidden),
                     s.zb(3),
-                    s.kc('disabled', !e.isPaymentFormValid));
+                    s.Dc('\n      ', s.hc(73, 42, 'Payment was successfully sent'), '\n    '),
+                    s.zb(3),
+                    s.kc('disabled', !e.isPaymentFormValid),
+                    s.zb(1),
+                    s.Dc('\n      ', s.hc(77, 44, 'Pay'), '\n    '));
               },
-              directives: [ft, k, bt, b, x, xt, ja, Et, Kn, At, It],
-              pipes: [Qn],
+              directives: [ft, k, bt, b, x, xt, Ma, Et, At, It],
+              pipes: [Kn],
               styles: [
-                '.button-container[_ngcontent-%COMP%]{display:-webkit-box;display:flex;-webkit-box-pack:end;justify-content:flex-end;-webkit-box-align:center;align-items:center}.btn[_ngcontent-%COMP%]{margin-left:20px}'
+                '.button-container[_ngcontent-%COMP%]{display:-webkit-box;display:flex;-webkit-box-pack:end;justify-content:flex-end;-webkit-box-align:center;align-items:center;height:50px}.btn[_ngcontent-%COMP%]{margin-left:20px}.error-spacer[_ngcontent-%COMP%]{height:20px}.alert[_ngcontent-%COMP%]{-webkit-box-flex:1;flex:1}.alert[_ngcontent-%COMP%], .form-group[_ngcontent-%COMP%]{margin-bottom:0}'
               ],
               changeDetection: 0
             })),
             t
           );
         })();
-      const Ua = function() {
+      const Fa = function() {
           return { operator: 'beeline' };
         },
-        $a = function() {
+        Ha = function() {
           return { operator: 'megafon' };
         },
-        Ba = function() {
+        Ua = function() {
           return { operator: 'mts' };
         },
-        za = [
+        $a = [
           class {
             static childRoutes(t) {
-              return { path: '', component: Fa, children: t, data: { reuse: !0 } };
+              return { path: '', component: Va, children: t, data: { reuse: !0 } };
             }
           }.childRoutes([
             {
@@ -11648,10 +11561,10 @@
                   (t.ɵcmp = s.Gb({
                     type: t,
                     selectors: [['app-operators']],
-                    decls: 23,
-                    vars: 6,
+                    decls: 24,
+                    vars: 9,
                     consts: [
-                      ['translate', '', 1, 'text-center', 'text-dark'],
+                      [1, 'text-center', 'text-dark'],
                       [1, 'operators-list'],
                       [
                         'routerLink',
@@ -11670,55 +11583,59 @@
                     template: function(t, e) {
                       1 & t &&
                         (s.Rb(0, 'h1', 0),
-                        s.Bc(1, '\n  Choose operator\n'),
+                        s.Bc(1),
+                        s.gc(2, 'translate'),
                         s.Qb(),
-                        s.Bc(2, '\n\n'),
-                        s.Rb(3, 'div', 1),
-                        s.Bc(4, '\n  '),
-                        s.Rb(5, 'a', 2),
-                        s.Bc(6, '\n    '),
-                        s.Nb(7, 'img', 3),
-                        s.Bc(8, '\n  '),
+                        s.Bc(3, '\n\n'),
+                        s.Rb(4, 'div', 1),
+                        s.Bc(5, '\n  '),
+                        s.Rb(6, 'a', 2),
+                        s.Bc(7, '\n    '),
+                        s.Nb(8, 'img', 3),
+                        s.Bc(9, '\n  '),
                         s.Qb(),
-                        s.Bc(9, '\n\n  '),
-                        s.Rb(10, 'a', 2),
-                        s.Bc(11, '\n    '),
-                        s.Nb(12, 'img', 4),
-                        s.Bc(13, '\n  '),
+                        s.Bc(10, '\n\n  '),
+                        s.Rb(11, 'a', 2),
+                        s.Bc(12, '\n    '),
+                        s.Nb(13, 'img', 4),
+                        s.Bc(14, '\n  '),
                         s.Qb(),
-                        s.Bc(14, '\n\n  '),
-                        s.Rb(15, 'a', 2),
-                        s.Bc(16, '\n    '),
-                        s.Nb(17, 'img', 5),
-                        s.Bc(18, '\n  '),
+                        s.Bc(15, '\n\n  '),
+                        s.Rb(16, 'a', 2),
+                        s.Bc(17, '\n    '),
+                        s.Nb(18, 'img', 5),
+                        s.Bc(19, '\n  '),
                         s.Qb(),
-                        s.Bc(19, '\n'),
+                        s.Bc(20, '\n'),
                         s.Qb(),
-                        s.Bc(20, '\n\n'),
-                        s.Nb(21, 'router-outlet'),
-                        s.Bc(22, '\n')),
+                        s.Bc(21, '\n\n'),
+                        s.Nb(22, 'router-outlet'),
+                        s.Bc(23, '\n')),
                         2 & t &&
-                          (s.zb(5),
-                          s.kc('queryParams', s.nc(3, Ua)),
+                          (s.zb(1),
+                          s.Dc('\n  ', s.hc(2, 4, 'Choose operator'), '\n'),
                           s.zb(5),
-                          s.kc('queryParams', s.nc(4, $a)),
+                          s.kc('queryParams', s.nc(6, Fa)),
                           s.zb(5),
-                          s.kc('queryParams', s.nc(5, Ba)));
+                          s.kc('queryParams', s.nc(7, Ha)),
+                          s.zb(5),
+                          s.kc('queryParams', s.nc(8, Ua)));
                     },
-                    directives: [Kn, $o, zo, Go],
+                    directives: [Uo, Bo, Zo],
+                    pipes: [Kn],
                     styles: [
-                      '.operators-list[_ngcontent-%COMP%]{flex-wrap:wrap;margin:60px auto}.operators-list[_ngcontent-%COMP%], .operators-list__link[_ngcontent-%COMP%]{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center}.operators-list__link[_ngcontent-%COMP%]{margin:0 20px;border:2px solid transparent;border-radius:10px;width:170px;height:100px;overflow:hidden;-webkit-transition:border-color .3s linear;transition:border-color .3s linear;background-color:#fff}.operators-list__link[_ngcontent-%COMP%]:hover{border-color:#ccc}.operators-list__link--active[_ngcontent-%COMP%], .operators-list__link--active[_ngcontent-%COMP%]:hover{border-color:#28a745;cursor:default}.operators-list__logo[_ngcontent-%COMP%]{display:block;width:150px;height:auto}'
+                      '.operators-list[_ngcontent-%COMP%]{flex-wrap:wrap;margin:40px auto}.operators-list[_ngcontent-%COMP%], .operators-list__link[_ngcontent-%COMP%]{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center}.operators-list__link[_ngcontent-%COMP%]{margin:0 20px;border:2px solid transparent;border-radius:10px;width:170px;height:100px;overflow:hidden;-webkit-transition:border-color .3s linear;transition:border-color .3s linear;background-color:#fff}.operators-list__link[_ngcontent-%COMP%]:hover{border-color:#ccc}.operators-list__link--active[_ngcontent-%COMP%], .operators-list__link--active[_ngcontent-%COMP%]:hover{border-color:#28a745;cursor:default}.operators-list__logo[_ngcontent-%COMP%]{display:block;width:150px;height:auto}'
                     ],
                     changeDetection: 0
                   })),
                   t
                 );
               })(),
-              children: [{ path: 'pay', component: Ha }]
+              children: [{ path: 'pay', component: La }]
             }
           ])
         ];
-      let qa = (() => {
+      let Ba = (() => {
           class t {}
           return (
             (t.ɵmod = s.Kb({ type: t })),
@@ -11727,7 +11644,33 @@
                 return new (e || t)();
               },
               providers: [],
-              imports: [[ra.forChild(za)], ra]
+              imports: [[na.forChild($a)], na]
+            })),
+            t
+          );
+        })(),
+        za = (() => {
+          class t {}
+          return (
+            (t.ɵmod = s.Kb({ type: t })),
+            (t.ɵinj = s.Jb({
+              factory: function(e) {
+                return new (e || t)();
+              },
+              imports: [[jt, Qn, Ra.forRoot(), Ba]]
+            })),
+            t
+          );
+        })(),
+        qa = (() => {
+          class t {}
+          return (
+            (t.ɵmod = s.Kb({ type: t })),
+            (t.ɵinj = s.Jb({
+              factory: function(e) {
+                return new (e || t)();
+              },
+              imports: [[za]]
             })),
             t
           );
@@ -11735,37 +11678,34 @@
         Za = (() => {
           class t {}
           return (
-            (t.ɵmod = s.Kb({ type: t })),
-            (t.ɵinj = s.Jb({
-              factory: function(e) {
-                return new (e || t)();
+            (t.ɵfac = function(e) {
+              return new (e || t)();
+            }),
+            (t.ɵcmp = s.Gb({
+              type: t,
+              selectors: [['app-loader']],
+              decls: 2,
+              vars: 0,
+              consts: [[1, 'fas', 'fa-cog', 'fa-spin', 'fa-3x', 'text-light']],
+              template: function(t, e) {
+                1 & t && (s.Nb(0, 'i', 0), s.Bc(1, '\n'));
               },
-              imports: [[jt, Jn, Na.forRoot(), qa]]
-            })),
-            t
-          );
-        })(),
-        Ga = (() => {
-          class t {}
-          return (
-            (t.ɵmod = s.Kb({ type: t })),
-            (t.ɵinj = s.Jb({
-              factory: function(e) {
-                return new (e || t)();
-              },
-              imports: [[Za]]
+              styles: [
+                '[_nghost-%COMP%]{position:fixed;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.fa[_ngcontent-%COMP%]{vertical-align:middle}'
+              ],
+              changeDetection: 0
             })),
             t
           );
         })();
-      function Wa(t, e) {
+      function Ga(t, e) {
         1 & t && s.Nb(0, 'app-loader');
       }
-      function Ka(t, e) {
+      function Wa(t, e) {
         1 & t && s.Nb(0, 'router-outlet');
       }
-      const Qa = new ba('App');
-      let Ja = (() => {
+      const Ka = new ma('App');
+      let Qa = (() => {
         class t {
           constructor(t, e, n, r, s, i) {
             (this.router = t),
@@ -11777,10 +11717,10 @@
               (this.isLoading = !0);
           }
           ngOnInit() {
-            as.a.production && ba.enableProductionMode(),
-              Qa.debug('init'),
-              this.i18nService.init(as.a.defaultLanguage, as.a.supportedLanguages);
-            const t = this.router.events.pipe($t(t => t instanceof ks));
+            os.a.production && ma.enableProductionMode(),
+              Ka.debug('init'),
+              this.i18nService.init(os.a.defaultLanguage, os.a.supportedLanguages);
+            const t = this.router.events.pipe($t(t => t instanceof xs));
             Object(De.a)(this.translateService.onLangChange, t)
               .pipe(
                 Object(l.a)(() => {
@@ -11796,12 +11736,12 @@
                       s = 'function' == typeof r;
                     if (!s) throw new Error(`${t.constructor.name} is using untilDestroyed but doesn't implement ${e}`);
                     return (
-                      t[Ca] ||
-                        ((t[Ca] = new Re.a()),
+                      t[wa] ||
+                        ((t[wa] = new Re.a()),
                         (t[e] = function() {
-                          s && r.apply(this, arguments), t[Ca].next(), t[Ca].complete();
+                          s && r.apply(this, arguments), t[wa].next(), t[wa].complete();
                         })),
-                      n.pipe(ir(t[Ca]))
+                      n.pipe(sr(t[wa]))
                     );
                   };
                 })(this)
@@ -11820,7 +11760,7 @@
         }
         return (
           (t.ɵfac = function(e) {
-            return new (e || t)(s.Mb(Ho), s.Mb(Ii), s.Mb(r.b), s.Mb(Wn), s.Mb(wa), s.Mb(s.h));
+            return new (e || t)(s.Mb(Fo), s.Mb(Ti), s.Mb(r.b), s.Mb(Wn), s.Mb(_a), s.Mb(s.h));
           }),
           (t.ɵcmp = s.Gb({
             type: t,
@@ -11830,23 +11770,23 @@
             consts: [[4, 'ngIf']],
             template: function(t, e) {
               1 & t &&
-                (s.zc(0, Wa, 1, 0, 'app-loader', 0),
+                (s.zc(0, Ga, 1, 0, 'app-loader', 0),
                 s.Bc(1, '\n'),
-                s.zc(2, Ka, 1, 0, 'router-outlet', 0),
+                s.zc(2, Wa, 1, 0, 'router-outlet', 0),
                 s.Bc(3, '\n')),
                 2 & t && (s.kc('ngIf', e.isLoading), s.zb(2), s.kc('ngIf', !e.isLoading));
             },
-            directives: [i.j, xa, Go],
+            directives: [i.j, Za, Zo],
             styles: [
-              '[_nghost-%COMP%]{height:100%;width:100%;display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;background:url(main-background.3e1c8cdbf966ab00c444.jpg)}'
+              '[_nghost-%COMP%]{height:100%;width:100%;display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;background:url(main-background.3e1c8cdbf966ab00c444.jpg);overflow:scroll;padding:30px}'
             ],
             changeDetection: 0
           })),
           t
         );
       })();
-      const Ya = [{ path: '**', redirectTo: '', pathMatch: 'full' }];
-      let Xa = (() => {
+      const Ja = [{ path: '**', redirectTo: '', pathMatch: 'full' }];
+      let Ya = (() => {
         class t {}
         return (
           (t.ɵmod = s.Kb({ type: t })),
@@ -11855,18 +11795,18 @@
               return new (e || t)();
             },
             providers: [],
-            imports: [[ra.forRoot(Ya)], ra]
+            imports: [[na.forRoot(Ja)], na]
           })),
           t
         );
       })();
       n.d(e, 'a', function() {
-        return tl;
+        return Xa;
       });
-      let tl = (() => {
+      let Xa = (() => {
         class t {}
         return (
-          (t.ɵmod = s.Kb({ type: t, bootstrap: [Ja] })),
+          (t.ɵmod = s.Kb({ type: t, bootstrap: [Qa] })),
           (t.ɵinj = s.Jb({
             factory: function(e) {
               return new (e || t)();
@@ -11875,16 +11815,16 @@
             imports: [
               [
                 r.a,
-                bn.register('./ngsw-worker.js', { enabled: as.a.production }),
+                bn.register('./ngsw-worker.js', { enabled: os.a.production }),
                 Rt,
                 Ce,
-                Jn.forRoot(),
-                os,
-                ga,
+                Qn.forRoot(),
+                is,
+                fa,
+                Ca,
                 Sa,
-                ka,
-                Ga,
-                Xa
+                qa,
+                Ya
               ]
             ]
           })),
