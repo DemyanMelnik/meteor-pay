@@ -8,7 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { environment } from '@env/environment';
 import { CoreModule } from '@app/core';
-import { SharedModule } from '@app/shared';
+import { SharedModule } from '@app/shared/shared.module';
 import { ShellModule } from './shell/shell.module';
 import { FeatureModule } from './feature/feature.module';
 import { AppComponent } from './app.component';

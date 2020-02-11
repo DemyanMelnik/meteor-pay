@@ -2,8 +2,22 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  height: 50px;
 }
 
 .btn {
   margin-left: 20px;
+}
+
+.error-spacer {
+  height: 20px;
+}
+
+.alert {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.form-group {
+  margin-bottom: 0;
 }

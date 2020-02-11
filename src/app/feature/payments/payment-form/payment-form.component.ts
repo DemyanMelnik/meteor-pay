@@ -39,6 +39,7 @@ export class PaymentFormComponent {
       response => {
         this.isSuccessMessageHidden = false;
         this.isErrorHidden = true;
+        this.paymentForm.reset();
         console.info(response);
       },
       error => {

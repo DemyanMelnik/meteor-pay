@@ -28,4 +28,30 @@ describe('PaymentFormComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should validation work correctly', () => {
+    const form = fixture.componentInstance.paymentForm;
+
+    form.setValue({ phoneNumber: null, paymentAmount: null });
+    form.markAllAsTouched();
+    fixture.detectChanges();
+
+    expect(fixture.componentInstance.isPhoneNumberValid).toBe(false);
+    expect(fixture.componentInstance.isPhoneNumberInvalid).toBe(true);
+    expect(fixture.componentInstance.isPhoneNumberRequiredErrorVisible).toBe(true);
+
+    expect(fixture.componentInstance.isPaymentAmountValid).toBe(false);
+    expect(fixture.componentInstance.isPaymentAmountInvalid).toBe(true);
+    expect(fixture.componentInstance.isPaymentAmountRequiredErrorVisible).toBe(true);
+
+    expect(fixture.componentInstance.isPaymentFormValid).toBe(false);
+
+    form.controls.paymentAmount.setValue(1002);
+    fixture.detectChanges();
+    expect(fixture.componentInstance.isPaymentAmountMaxValueErrorVisible).toBe(true);
+
+    form.controls.paymentAmount.setValue(0);
+    fixture.detectChanges();
+    expect(fixture.componentInstance.isPaymentAmountMinValueErrorVisible).toBe(true);
+  });
 });
