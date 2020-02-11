@@ -1,8 +1,8 @@
-# link to build
+# Link to build
 
 https://kelvinom.github.io/meteor-pay/dist/
 
-# powered by ngX-Rocket
+# Powered by ngX-Rocket
 
 Generated using [ngX-Rocket](https://github.com/ngx-rocket/generator-ngx-rocket).
 
@@ -28,7 +28,7 @@ npm install
 npm start
 ```
 
-# TOTO
+# TODO
 
 1. More tests
 2. Optimize images
